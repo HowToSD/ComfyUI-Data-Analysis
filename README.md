@@ -48,7 +48,7 @@ These custom nodes aim to make data exploration and analysis more efficient and 
 5. Start ComfyUI.
 
 ### Troubleshooting for installation
-This package requires pandas and matplotlib that are not 
+This custom node module requires pandas and matplotlib, which are not included in the default ComfyUI installation. If you install this module using ComfyUI Manager, these packages should be installed automatically. However, if the installation fails, refer to the pandas and matplotlib documentation for manual installation.
 
 ## How to Use
 
