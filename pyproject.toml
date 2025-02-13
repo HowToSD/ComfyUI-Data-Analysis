@@ -9,6 +9,6 @@ Repository = "https://github.com/HowToSD/ComfyUI-Data-Analysis"
 #  Used by Comfy Registry https://comfyregistry.org
 
 [tool.comfy]
-PublisherId = ""
+PublisherId = "how-to-sd"
 DisplayName = "ComfyUI-Data-Analysis"
 Icon = ""
