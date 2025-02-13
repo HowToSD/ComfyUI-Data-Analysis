@@ -53,7 +53,7 @@ class MPLScatter:
 
         # Create the plot
         fig, ax = plt.subplots()
-        ax.plot(df[x_column_name], df[y_column_name])
+        ax.scatter(df[x_column_name], df[y_column_name])
 
         return plot_post_steps(
             fig,
