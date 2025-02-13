@@ -1,0 +1,14 @@
+[project]
+name = "data-analysis"
+description = "Data analysis custom modules for ComfyUI - Use Pandas & Matplotlib from within ComfyUI"
+version = "1.0.0"
+license = {file = "LICENSE"}
+
+[project.urls]
+Repository = "https://github.com/HowToSD/ComfyUI-Data-Analysis"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI-Data-Analysis"
+Icon = ""
