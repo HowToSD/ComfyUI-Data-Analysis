@@ -55,3 +55,9 @@ You can right-click, select **Add Node**, go to **Data Analysis**, and look for 
 | **MPL Scatter Plot**    | Generate a scatter plot            |
 
 A faster way is to double-click the canvas to open the node search dialog.
+
+The examples directory contains workflows that load data from an example dataset included in this package. These workflows should give you a good idea about how to use these nodes.
+
+# Notes
+* To connect the output from a previous Pandas node to another Pandas node, move the wire toward the top-left of the text field.
+* CSV file path is relative to the ComfyUI installation directory unless you specify the absolute file path.
