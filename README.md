@@ -22,9 +22,15 @@ You can also use other Comfy custom nodes to fit your needs (e.g., combining ima
 These custom nodes aim to make data exploration and analysis more efficient and enjoyable.
 
 ## Installation
+### Installation via ComfyUI Manager
+1. Press Manager button on the top menu bar to display ComfyUI Manager Menu.
+2. Click Custom Node Manager.
+3. In the search field, enter Data analysis.
+4. "ComfyUI-Data-Analysis" should be displayed. Select Install.
+5. Restart ComfyUI.
+6. Reload browser page.
 
-Installation via ComfyUI Manager is not supported yet, so please follow these steps:
-
+### Installation via git
 1. Navigate to the `custom_nodes` directory within your ComfyUI installation.
 2. Run the following command:
 
@@ -32,8 +38,17 @@ Installation via ComfyUI Manager is not supported yet, so please follow these st
     git clone https://github.com/HowToSD/ComfyUI-Data-Analysis.git
     ```
     This will create a new subdirectory ComfyUI-Data-Analysis.
+3. Rename the folder name from ComfyUI-Data-Analysis to data-analysis.
+   If you skip this, example workflows will not work as those flows use this folder name.
+4. Check if your ComfyUI environment already has pandas and matplotlib. If not, install them using pip.
+   ```
+   pip install -r requirements.txt
+   ```
+   Refer to requirements.txt for the right versions.
+5. Start ComfyUI.
 
-3. Restart ComfyUI.
+### Troubleshooting for installation
+This package requires pandas and matplotlib that are not 
 
 ## How to Use
 
