@@ -51,28 +51,4 @@ These custom nodes aim to make data exploration and analysis more efficient and 
 This custom node module requires pandas and matplotlib, which are not included in the default ComfyUI installation. If you install this module using ComfyUI Manager, these packages should be installed automatically. However, if the installation fails, refer to the pandas and matplotlib documentation for manual installation.
 
 ## How to Use
-
-You can right-click, select **Add Node**, go to **Data Analysis**, and look for the following nodes:
-
-| Node Name               | Functionality                        |
-|-------------------------|-------------------------------------|
-| **Pandas Load CSV**     | Load a CSV file                    |
-| **Pandas Select Columns** | Select specific columns from a DataFrame |
-| **Pandas Select Rows**  | Filter rows based on conditions    |
-| **Pandas Join**         | Join two DataFrames                |
-| **Pandas Head**         | Extract the first few rows         |
-| **Pandas Show DataFrame** | Display DataFrame contents        |
-| **Pandas Summary**      | Show DataFrame statistics          |
-| **Pandas Sort**         | Sort DataFrame by a column         |
-| **Pandas To String**    | Convert DataFrame to a string      |
-| **MPL Bar Chart**       | Generate a bar chart               |
-| **MPL Line Plot**       | Generate a line plot               |
-| **MPL Scatter Plot**    | Generate a scatter plot            |
-
-A faster way is to double-click the canvas to open the node search dialog.
-
-The examples directory contains workflows that load data from an example dataset included in this package. These workflows should give you a good idea about how to use these nodes.
-
-# Notes
-* To connect the output from a previous Pandas node to another Pandas node, move the wire toward the top-left of the text field.
-* CSV file path is relative to the ComfyUI installation directory unless you specify the absolute file path.
+Refer to [User's Guide](docs/ug.md)
