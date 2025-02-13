@@ -1,6 +1,6 @@
 [project]
 name = "data-analysis"
-description = "Data analysis custom modules for ComfyUI - Use Pandas & Matplotlib from within ComfyUI"
+description = "Data analysis custom modules for ComfyUI - Use Pandas & Matplotlib within ComfyUI"
 version = "1.0.0"
 license = {file = "LICENSE"}
 
