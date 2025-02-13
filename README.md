@@ -22,6 +22,8 @@ You can also use other Comfy custom nodes to fit your needs (e.g., combining ima
 These custom nodes aim to make data exploration and analysis more efficient and enjoyable.
 
 ## Installation
+Note: GPU is not required to run this custom module.
+
 ### Installation via ComfyUI Manager
 1. Press Manager button on the top menu bar to display ComfyUI Manager Menu.
 2. Click Custom Node Manager.
