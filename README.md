@@ -50,7 +50,7 @@ Note: GPU is not required to run this custom module.
 5. Start ComfyUI.
 
 ### Troubleshooting for installation
-This custom node module requires pandas and matplotlib, which are not included in the default ComfyUI installation. If you install this module using ComfyUI Manager, these packages should be installed automatically. However, if the installation fails, refer to the pandas and matplotlib documentation for manual installation.
+This custom node module requires pandas and matplotlib, which are not included in the default ComfyUI installation. If you install this module using ComfyUI Manager, these packages should be installed automatically. However, if installation fails, refer to the pandas and matplotlib documentation for manual installation.
 
 ## How to Use
 Refer to [User's Guide](docs/ug.md)

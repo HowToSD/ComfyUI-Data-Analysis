@@ -40,8 +40,29 @@ Use **Pandas Select Columns** for selecting columns, **Pandas Select Rows** to s
 
 ![Pandas select subset](images/subset.jpg)
 
-## Joining DataFrames.
+## Joining DataFrames
 Use **Pandas Join**.  You can select from inner, left, right, outer joins.
+First, use two **Pandas Load CSV** nodes to load two CSVs for the left DataFrame and right DataFrame.
+
+![Load two CSVs into DataFrames](images/join_data_load.png)
+
+### Inner join
+Specify the common column in the "on column name" field, and set the join method to **inner** in the **Pandas Join** node.
+![Inner join](images/inner_join.png)
+
+### Left join
+Specify the common column in the "on column name" field, and set the join method to **left** in the **Pandas Join** node.
+![Left join](images/left_join.png)
+
+### Right join
+Specify the common column in the "on column name" field, and set the join method to **right** in the **Pandas Join** node.
+![Right join](images/right_join.png)
+
+### Outer join
+Specify the common column in the "on column name" field, and set the join method to **outer** in the **Pandas Join** node.
+![Outer join](images/outer_join.png)
+
+The workflow file examples/workflows/join.json contains all of the above cases.
 
 ## Extract the first few rows
 Use **Pandas Head**.
@@ -62,6 +83,8 @@ Use **Pandas To String**. This node is to convert the DataFrame to a displayable
 
 ## Displaying charts or plots
 Use one of the below:
+| Node | Purpose |
+|---|---|
 | **MPL Bar Chart**       | Generate a bar chart               |
 | **MPL Line Plot**       | Generate a line plot               |
 | **MPL Scatter Plot**    | Generate a scatter plot            |
