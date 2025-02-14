@@ -15,6 +15,8 @@ You can right-click, select **Add Node**, go to **Data Analysis**, and look for 
 |-------------------------|-------------------------------------|
 | **Pandas Load CSV**     | Load a CSV file                    |
 | **Pandas Save CSV**     | Save a DataFrame to a CSV file     |
+| **Pandas Create**     | Create a DataFrame from CSV text field |
+| **Pandas Create with Index**     | Create a DataFrame from CSV text field containing index |
 | **Pandas Columns**      | Extract column labels     |
 | **Pandas Index**        | Extract row labels (index)     |
 | **Pandas Select Columns** | Select specific columns from a DataFrame |
@@ -23,7 +25,7 @@ You can right-click, select **Add Node**, go to **Data Analysis**, and look for 
 | **Pandas Head**         | Extract the first few rows         |
 | **Pandas Show DataFrame** | Display DataFrame contents        |
 | **Pandas Show Text**    | Display Text        |
-| **Pandas Summary**      | Show DataFrame statistics          |
+| **Pandas Summary**      | Extract DataFrame statistics          |
 | **Pandas Sort**         | Sort DataFrame by a column         |
 | **Pandas To String**    | Convert DataFrame to a string      |
 | **MPL Bar Chart**       | Generate a bar chart               |
@@ -44,10 +46,16 @@ CSV file path is relative to the ComfyUI installation directory unless you speci
 ## Saving data
 Use **Pandas Save CSV** node to save the DataFrame to a CSV file.
 
-## Extracting column and row labels
-Use **Pandas Columns** and **Pandas Index** nodes.  As these nodes outputs JSON-serialized Index object, to display the value, use **Pandas Show Text** node as shown below:
+## Creating DataFrame on the UI
+Use **Pandas Create** or **Pandas Create with Index** nodes. These nodes display the multiline text area where you can enter the data in CSV format.
+If the data contains an index column, use **Pandas Create with Index** and specify the index column.
 
 ![Pandas Columns and Pandas Index](images/columns_index.png)
+
+## Extracting column and row labels
+Use **Pandas Columns** and **Pandas Index** nodes.  As these nodes output JSON-serialized Index object, to display the value, use **Pandas Show Text** node as shown below:
+
+![Pandas Create and Pandas Create With Index](images/create.png)
 
 ## Selecting columns and rows
 Use **Pandas Select Columns** for selecting columns, **Pandas Select Rows** to select rows by a filter condition.
@@ -91,8 +99,9 @@ This node has been copied to display text without requiring the user to install 
 ## Displaying DataFrame contents
 Use **Pandas Show DataFrame** node. When the number of rows is large, Pandas automatically hides middle rows during string conversion, so the display size should be always manageable.
 
-## Showing Show DataFrame statistics
-Use **Pandas Summary**.
+## Extracting DataFrame statistics
+Use **Pandas Summary** to extract statistics then connect the output to **Pandas Show Text** for display.
+![Pandas Summary](images/summary.png)
 
 ## Sorting DataFrame by a column
 Use **Pandas Sort**.

@@ -3,6 +3,8 @@ from .modules.matplotlib.mpl_bar import MPLBar
 from .modules.matplotlib.mpl_line import MPLLine
 from .modules.matplotlib.mpl_scatter import MPLScatter
 from .modules.pandas_wrapper.pandas_columns import PandasColumns
+from .modules.pandas_wrapper.pandas_create import PandasCreate
+from .modules.pandas_wrapper.pandas_create_with_index import PandasCreateWithIndex
 from .modules.pandas_wrapper.pandas_head import PandasHead
 from .modules.pandas_wrapper.pandas_index import PandasIndex
 from .modules.pandas_wrapper.pandas_join import PandasJoin
@@ -23,6 +25,8 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "MPLLine": MPLLine,
     "MPLScatter": MPLScatter,
     "PandasColumns": PandasColumns,
+    "PandasCreate": PandasCreate,
+    "PandasCreateWithIndex": PandasCreateWithIndex,
     "PandasHead": PandasHead,
     "PandasIndex": PandasIndex,
     "PandasJoin": PandasJoin,
@@ -46,6 +50,8 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "MPLLine": "MPL Line Plot",
     "MPLScatter": "MPL Scatter Plot",
     "PandasColumns": "Pandas Columns",
+    "PandasCreate": "Pandas Create",
+    "PandasCreateWithIndex": "Pandas Create with Index",
     "PandasHead": "Pandas Head",
     "PandasIndex": "Pandas Index",
     "PandasJoin": "Pandas Join",
