@@ -12,6 +12,7 @@ You can right-click, select **Add Node**, go to **Data Analysis**, and look for 
 | Node Name               | Functionality                        |
 |-------------------------|-------------------------------------|
 | **Pandas Load CSV**     | Load a CSV file                    |
+| **Pandas Save CSV**     | Save a DataFrame to a CSV file     |
 | **Pandas Select Columns** | Select specific columns from a DataFrame |
 | **Pandas Select Rows**  | Filter rows based on conditions    |
 | **Pandas Join**         | Join two DataFrames                |
