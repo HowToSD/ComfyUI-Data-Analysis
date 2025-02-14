@@ -12,7 +12,7 @@ class PandasJoin:
     @classmethod
     def INPUT_TYPES(cls) -> Dict[str, Any]:
         """
-        Defines the input types for the `sort_rows` function.
+        Defines the input types for the `join` function.
 
         Returns:
             Dict[str, Any]: A dictionary specifying required input types.

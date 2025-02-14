@@ -3,6 +3,8 @@
 ### How DataFrames is passed between nodes
 DataFrames are transmitted as JSON strings. When a DataFrame enters a node, it is reconstructed by deserializing the JSON string. Upon exiting, it is serialized back into a JSON string.
 
+Pandas's Index object is also processed the same way. For example, Pandas Columns and Pandas Index node return labels in a serialized Index format.
+
 ### How to connect nodes for DataFrame JSON strings
 To connect the DataFrame JSON string output from one Pandas node to another, move the wire toward the top-left of the text field. You may need to hover around the corner to find the correct connection point.
 
@@ -13,11 +15,14 @@ You can right-click, select **Add Node**, go to **Data Analysis**, and look for 
 |-------------------------|-------------------------------------|
 | **Pandas Load CSV**     | Load a CSV file                    |
 | **Pandas Save CSV**     | Save a DataFrame to a CSV file     |
+| **Pandas Columns**      | Extract column labels     |
+| **Pandas Index**        | Extract row labels (index)     |
 | **Pandas Select Columns** | Select specific columns from a DataFrame |
 | **Pandas Select Rows**  | Filter rows based on conditions    |
 | **Pandas Join**         | Join two DataFrames                |
 | **Pandas Head**         | Extract the first few rows         |
 | **Pandas Show DataFrame** | Display DataFrame contents        |
+| **Pandas Show Text**    | Display Text        |
 | **Pandas Summary**      | Show DataFrame statistics          |
 | **Pandas Sort**         | Sort DataFrame by a column         |
 | **Pandas To String**    | Convert DataFrame to a string      |
@@ -38,6 +43,11 @@ CSV file path is relative to the ComfyUI installation directory unless you speci
 
 ## Saving data
 Use **Pandas Save CSV** node to save the DataFrame to a CSV file.
+
+## Extracting column and row labels
+Use **Pandas Columns** and **Pandas Index** nodes.  As these nodes outputs JSON-serialized Index object, to display the value, use **Pandas Show Text** node as shown below:
+
+![Pandas Columns and Pandas Index](images/columns_index.png)
 
 ## Selecting columns and rows
 Use **Pandas Select Columns** for selecting columns, **Pandas Select Rows** to select rows by a filter condition.
@@ -70,6 +80,13 @@ The workflow file examples/workflows/join.json contains all of the above cases.
 
 ## Extract the first few rows
 Use **Pandas Head**.
+
+## Display text ##
+Use **Pandas Show Text** node.
+
+Currently this node is using the code taken from ComfyUI-Custom-Scripts's Show Text custom node (
+https://github.com/pythongosssss/ComfyUI-Custom-Scripts/blob/main/py/show_text.py).
+This node has been copied to display text without requiring the user to install the above custom nodes package. However, if you already have ComfyUI-Custom-Scripts, you can also use the Show Text node from the package.
 
 ## Displaying DataFrame contents
 Use **Pandas Show DataFrame** node. When the number of rows is large, Pandas automatically hides middle rows during string conversion, so the display size should be always manageable.
