@@ -1,5 +1,5 @@
-import ast
 from typing import Any, Dict
+from io import StringIO
 import pandas as pd
 
 class PandasSelectRows:
@@ -39,7 +39,7 @@ class PandasSelectRows:
             tuple: A tuple containing a JSON string of the filtered DataFrame.
         """
         # Deserialize JSON string to DataFrame
-        df = pd.read_json(dataframe_json)
+        df = pd.read_json(StringIO(dataframe_json))
         
         # Apply condition
         df2 = df.query(condition)

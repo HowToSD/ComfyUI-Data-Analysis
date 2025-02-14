@@ -1,4 +1,5 @@
 from typing import Any, Dict
+from io import StringIO
 import pandas as pd
 
 class PandasSelectColumns:
@@ -38,7 +39,7 @@ class PandasSelectColumns:
             tuple: A tuple containing a JSON string of the DataFrame with selected columns.
         """
         # Deserialize JSON string to DataFrame
-        df = pd.read_json(dataframe_json)
+        df = pd.read_json(StringIO(dataframe_json))
 
         # Process column names
         selected_columns = [col.strip() for col in column_names.split(",")]

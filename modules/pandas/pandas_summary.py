@@ -1,4 +1,5 @@
 from typing import Any, Dict
+from io import StringIO
 import pandas as pd
 
 class PandasSummary:
@@ -36,7 +37,7 @@ class PandasSummary:
             tuple: A tuple containing a string representation of the DataFrame summary.
         """
         # Deserialize JSON string to DataFrame
-        df = pd.read_json(dataframe_json)
+        df = pd.read_json(StringIO(dataframe_json))
 
         # Perform summary operation
         summary = df.describe()

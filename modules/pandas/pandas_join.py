@@ -1,4 +1,5 @@
 from typing import Any, Dict
+from io import StringIO
 import pandas as pd
 
 
@@ -43,8 +44,8 @@ class PandasJoin:
             tuple: A tuple containing a JSON string of the merged DataFrame.
         """
         # Deserialize JSON string to DataFrame
-        df_left = pd.read_json(left_dataframe_json)
-        df_right = pd.read_json(right_dataframe_json)
+        df_left = pd.read_json(StringIO(left_dataframe_json))
+        df_right = pd.read_json(StringIO(right_dataframe_json))
 
         df_out = pd.merge(df_left, df_right, on=on_column_name, how=join_method)
         return (df_out.to_json(),)

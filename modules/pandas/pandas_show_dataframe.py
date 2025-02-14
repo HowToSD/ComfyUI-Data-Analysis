@@ -4,6 +4,7 @@ https://github.com/pythongosssss/ComfyUI-Custom-Scripts/blob/main/py/show_text.p
 
 See credit/credit.md for the full license.
 """
+from io import StringIO
 import pandas as pd
 
 class PandasShowDataFrame:
@@ -39,7 +40,7 @@ class PandasShowDataFrame:
                 print("Error: extra_pnginfo[0] is not a dict or missing 'workflow' key")
             else:
                 # Deserialize JSON string to DataFrame
-                df = pd.read_json(dataframe_json[0])
+                df = pd.read_json(StringIO(dataframe_json[0]))
                 text = [str(df)]  # wrap in list
                 workflow = extra_pnginfo[0]["workflow"]
                 node = next(

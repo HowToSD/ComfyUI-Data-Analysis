@@ -1,5 +1,6 @@
 from typing import Any, Dict
 from matplotlib import pyplot as plt
+from io import StringIO
 import pandas as pd
 from .common import common_input_types
 from .util import plot_post_steps
@@ -49,7 +50,7 @@ class MPLScatter:
             tuple: A tuple containing the image tensor representation of the plot.
         """
         # Deserialize JSON string to DataFrame
-        df = pd.read_json(dataframe_json)
+        df = pd.read_json(StringIO(dataframe_json))
 
         # Create the plot
         fig, ax = plt.subplots()

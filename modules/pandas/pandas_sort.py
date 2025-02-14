@@ -1,4 +1,5 @@
 from typing import Any, Dict
+from io import StringIO
 import pandas as pd
 
 class PandasSort:
@@ -40,7 +41,7 @@ class PandasSort:
             tuple: A tuple containing a JSON string of the sorted DataFrame.
         """
         # Deserialize JSON string to DataFrame
-        df = pd.read_json(dataframe_json)
+        df = pd.read_json(StringIO(dataframe_json))
         
         # Sort DataFrame
         df2 = df.sort_values(by=column_name, ascending=ascending)

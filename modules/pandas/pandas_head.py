@@ -1,4 +1,5 @@
 from typing import Any, Dict
+from io import StringIO
 import pandas as pd
 
 
@@ -39,6 +40,6 @@ class PandasHead:
             tuple: A tuple containing a JSON string of the resulting DataFrame.
         """
         # Deserialize JSON string to DataFrame
-        df = pd.read_json(dataframe_json)
+        df = pd.read_json(StringIO(dataframe_json))
         df2 = df.head(rows)
         return (df2.to_json(),)
