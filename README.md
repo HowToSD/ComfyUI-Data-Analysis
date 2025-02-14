@@ -1,5 +1,8 @@
 # ComfyUI-Data-Analysis
 
+![Load two CSVs into DataFrames](docs/images/join_data_load.png)
+![Inner join](docs/images/inner_join.png)
+
 ComfyUI-Data-Analysis is a custom module for analyzing data using Pandas and Matplotlib within ComfyUI.
 
 Currently, it supports the following nodes:
