@@ -14,6 +14,7 @@ You can right-click, select **Add Node**, go to **Data Analysis**, and look for 
 | Node Name               | Functionality                        |
 |-------------------------|-------------------------------------|
 | **Pandas Load CSV**     | Load a CSV file                    |
+| **Pandas Load CSV with Index**     | Load a CSV file containing index |
 | **Pandas Save CSV**     | Save a DataFrame to a CSV file     |
 | **Pandas Create**     | Create a DataFrame from CSV text field |
 | **Pandas Create with Index**     | Create a DataFrame from CSV text field containing index |
@@ -37,7 +38,7 @@ A faster way is to double-click the canvas to open the node search dialog.
 The examples directory contains workflows that load data from an example dataset included in this package. These workflows should give you a good idea about how to use these nodes.
 
 ## Loading data
-Use **Pandas Load CSV** node to load a CSV.
+Use **Pandas Load CSV** node to load a CSV, or **Pandas Load CSV with Index** node if the CSV contains an index column.
 ![Pandas Load CSV node](images/load.jpg)
 
 This will emit the DataFrame in a JSON string.

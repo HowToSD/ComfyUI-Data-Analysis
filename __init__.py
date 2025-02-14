@@ -9,6 +9,7 @@ from .modules.pandas_wrapper.pandas_head import PandasHead
 from .modules.pandas_wrapper.pandas_index import PandasIndex
 from .modules.pandas_wrapper.pandas_join import PandasJoin
 from .modules.pandas_wrapper.pandas_load_csv import PandasLoadCSV
+from .modules.pandas_wrapper.pandas_load_csv_with_index import PandasLoadCSVWithIndex
 from .modules.pandas_wrapper.pandas_save_csv import PandasSaveCSV
 from .modules.pandas_wrapper.pandas_select_columns import PandasSelectColumns
 from .modules.pandas_wrapper.pandas_select_rows import PandasSelectRows
@@ -31,6 +32,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasIndex": PandasIndex,
     "PandasJoin": PandasJoin,
     "PandasLoadCSV": PandasLoadCSV,
+    "PandasLoadCSVWithIndex": PandasLoadCSVWithIndex,
     "PandasSaveCSV": PandasSaveCSV,
     "PandasSelectColumns": PandasSelectColumns,
     "PandasSelectRows": PandasSelectRows,
@@ -56,6 +58,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasIndex": "Pandas Index",
     "PandasJoin": "Pandas Join",
     "PandasLoadCSV": "Pandas Load CSV",
+    "PandasLoadCSVWithIndex": "Pandas Load CSV with Index",
     "PandasSaveCSV": "Pandas Save CSV",
     "PandasSelectColumns": "Pandas Select Columns",
     "PandasSelectRows": "Pandas Select Rows",

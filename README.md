@@ -5,7 +5,7 @@
 
 ComfyUI-Data-Analysis is a custom module for analyzing data using Pandas and Matplotlib within ComfyUI.
 
-Nodes include:
+Here are some of the included nodes:
 
 - Loading a CSV file as a DataFrame
 - Saving a DataFrame to a CSV file
