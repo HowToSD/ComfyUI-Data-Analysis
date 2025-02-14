@@ -35,6 +35,9 @@ Use **Pandas Load CSV** node to load a CSV.
 This will emit the DataFrame in a JSON string.
 CSV file path is relative to the ComfyUI installation directory unless you specify the absolute file path.
 
+## Saving data
+Use **Pandas Save CSV** node to save the DataFrame to a CSV file.
+
 ## Selecting columns and rows
 Use **Pandas Select Columns** for selecting columns, **Pandas Select Rows** to select rows by a filter condition.
 

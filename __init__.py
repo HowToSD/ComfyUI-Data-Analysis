@@ -5,6 +5,7 @@ from .modules.matplotlib.mpl_scatter import MPLScatter
 from .modules.pandas.pandas_head import PandasHead
 from .modules.pandas.pandas_join import PandasJoin
 from .modules.pandas.pandas_load_csv import PandasLoadCSV
+from .modules.pandas.pandas_save_csv import PandasSaveCSV
 from .modules.pandas.pandas_select_columns import PandasSelectColumns
 from .modules.pandas.pandas_select_rows import PandasSelectRows
 from .modules.pandas.pandas_show_dataframe import PandasShowDataFrame
@@ -21,6 +22,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasHead": PandasHead,
     "PandasJoin": PandasJoin,
     "PandasLoadCSV": PandasLoadCSV,
+    "PandasSaveCSV": PandasSaveCSV,
     "PandasSelectColumns": PandasSelectColumns,
     "PandasSelectRows": PandasSelectRows,
     "PandasShowDataFrame": PandasShowDataFrame,
@@ -38,6 +40,7 @@ NODE_CLASS_MAPPINGS (Dict[str, Type[T]]):
     - "PandasHead": Handles retrieving the first few rows of a DataFrame.
     - "PandasJoin": Provides functionality to join multiple DataFrames.
     - "PandasLoadCSV": Loads CSV data into a DataFrame.
+    - "PandasSaveCSV": Save a DataFrame to a CSV file.
     - "PandasSelectColumns": Selects specific columns from a DataFrame.
     - "PandasSelectRows": Filters specific rows from a DataFrame.
     - "PandasShowDataFrame": Displays the content of the DataFrame.
@@ -53,6 +56,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasHead": "Pandas Head",
     "PandasJoin": "Pandas Join",
     "PandasLoadCSV": "Pandas Load CSV",
+    "PandasSaveCSV": "Pandas Save CSV",
     "PandasSelectColumns": "Pandas Select Columns",
     "PandasSelectRows": "Pandas Select Rows",
     "PandasShowDataFrame": "Pandas Show DataFrame",
