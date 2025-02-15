@@ -2,6 +2,7 @@ import os
 import sys
 import unittest
 import json
+import numpy as np
 import pandas as pd
 
 PROJECT_ROOT = os.path.realpath(os.path.join(__file__, "..", "..", ".."))

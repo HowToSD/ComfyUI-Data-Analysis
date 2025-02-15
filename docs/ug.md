@@ -22,6 +22,7 @@ You can right-click, select **Add Node**, go to **Data Analysis**, and look for 
 | **Pandas Index**        | Extract row labels (index)     |
 | **Pandas Select Columns** | Select specific columns from a DataFrame |
 | **Pandas Select Rows**  | Filter rows based on conditions    |
+| **Pandas Loc Row Series**  | Select a row by row label (index) |
 | **Pandas Loc Cell Str**  | Select a cell by row label (index) and column label (index) |
 | **Pandas Join**         | Join two DataFrames                |
 | **Pandas Head**         | Extract the first few rows         |
@@ -29,7 +30,8 @@ You can right-click, select **Add Node**, go to **Data Analysis**, and look for 
 | **Pandas Show Text**    | Display Text        |
 | **Pandas Summary**      | Extract DataFrame statistics          |
 | **Pandas Sort**         | Sort DataFrame by a column         |
-| **Pandas To String**    | Convert DataFrame to a string      |
+| **Pandas Series To String**  | Convert Series to a displayable string      |
+| **Pandas To String**    | Convert DataFrame to a displayable string      |
 | **MPL Bar Chart**       | Generate a bar chart               |
 | **MPL Line Plot**       | Generate a line plot               |
 | **MPL Scatter Plot**    | Generate a scatter plot            |
@@ -63,6 +65,10 @@ Use **Pandas Columns** and **Pandas Index** nodes.  As these nodes output JSON-s
 Use **Pandas Select Columns** for selecting columns, **Pandas Select Rows** to select rows by a filter condition.
 
 ![Pandas select subset](images/subset.jpg)
+
+You can use **Pandas Loc Row Series** to select a row by row label (index). This node returns a JSON-serialized Series object. Data type of the labels needs to be specified as shown below:
+
+![Pandas Loc Row Series](images/loc_row_series.png)
 
 ## Selecting a cell by row label (index) and column label (index)
 Use **Pandas Loc Cell Str**  for selecting a cell by row label (index) and column label (index). Data type of the labels needs to be specified as shown below:
@@ -119,6 +125,9 @@ Use **Pandas Sort**.
 
 ## Convert DataFrame to a string
 Use **Pandas To String**. This node is to convert the DataFrame to a displayable string, and this truncates the data when the data is large.  This can be used to display the data content in a text display node (e.g. Show Text node). However, you can use Show DataFrame nodes to display the DataFrame content, so you do not normally need to use this.
+
+## Convert Series to a string
+Use **Pandas Series To String**. This node converts a Pandas Series to a displayable string. You can use this as an input to the **Pandas Show Text** node.
 
 ## Displaying charts or plots
 Use one of the below:

@@ -11,9 +11,11 @@ from .modules.pandas_wrapper.pandas_join import PandasJoin
 from .modules.pandas_wrapper.pandas_load_csv import PandasLoadCSV
 from .modules.pandas_wrapper.pandas_load_csv_with_index import PandasLoadCSVWithIndex
 from .modules.pandas_wrapper.pandas_loc_cell_str import PandasLocCellStr
+from .modules.pandas_wrapper.pandas_loc_row_series import PandasLocRowSeries
 from .modules.pandas_wrapper.pandas_save_csv import PandasSaveCSV
 from .modules.pandas_wrapper.pandas_select_columns import PandasSelectColumns
 from .modules.pandas_wrapper.pandas_select_rows import PandasSelectRows
+from .modules.pandas_wrapper.pandas_series_to_string import PandasSeriesToString
 from .modules.pandas_wrapper.pandas_show_dataframe import PandasShowDataFrame
 from .modules.pandas_wrapper.pandas_show_text import PandasShowText
 from .modules.pandas_wrapper.pandas_sort import PandasSort
@@ -35,9 +37,11 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasLoadCSV": PandasLoadCSV,
     "PandasLoadCSVWithIndex": PandasLoadCSVWithIndex,
     "PandasLocCellStr": PandasLocCellStr,
+    "PandasLocRowSeries": PandasLocRowSeries,
     "PandasSaveCSV": PandasSaveCSV,
     "PandasSelectColumns": PandasSelectColumns,
     "PandasSelectRows": PandasSelectRows,
+    "PandasSeriesToString": PandasSeriesToString,
     "PandasShowDataFrame": PandasShowDataFrame,
     "PandasShowText": PandasShowText,
     "PandasSort": PandasSort,
@@ -62,9 +66,11 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasLoadCSV": "Pandas Load CSV",
     "PandasLoadCSVWithIndex": "Pandas Load CSV with Index",
     "PandasLocCellStr": "Pandas Loc Cell Str",
+    "PandasLocRowSeries": "Pandas Loc Row Series",
     "PandasSaveCSV": "Pandas Save CSV",
     "PandasSelectColumns": "Pandas Select Columns",
     "PandasSelectRows": "Pandas Select Rows",
+    "PandasSeriesToString": "Pandas Series To String",
     "PandasShowDataFrame": "Pandas Show DataFrame",
     "PandasShowText": "Pandas Show Text",
     "PandasSort": "Pandas Sort",

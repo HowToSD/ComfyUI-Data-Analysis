@@ -1,4 +1,5 @@
 import json
+import numpy as np
 import pandas as pd
 
 def series_to_jsons(series: pd.Series) -> str:
@@ -11,13 +12,13 @@ def series_to_jsons(series: pd.Series) -> str:
     Returns:
         str: A JSON string representing the Series, including its data, index, and name.
     """
-    array = [x.item() if hasattr(x, "item") else x for x in series.tolist()]  # Convert NumPy types to Python types
+    array = [x.item() if hasattr(x, "item") else x for x in series.array.tolist()]  # Convert NumPy types to Python types
     index = [x.item() if hasattr(x, "item") else x for x in series.index.tolist()]  # Convert index to Python types
     name = series.name
 
     d = {"array": array, "index": index, "name": name}
 
-    return json.dumps(d)
+    return json.dumps(d, cls=NpEncoder)  # See license for NpEncoder(json.JSONEncoder) below
 
 def jsons_to_series(s: str) -> pd.Series:
     """
@@ -61,3 +62,23 @@ def jsons_to_index(s: str) -> pd.Index:
     """
     d = json.loads(s)
     return pd.Index(d["index"], name=d.get("name"))  # Restore index with name
+
+
+class NpEncoder(json.JSONEncoder):
+    """
+    Source: https://stackoverflow.com/questions/50916422/python-typeerror-object-of-type-int64-is-not-json-serializable
+    Author: Jie Yang, Tommy
+    Licensed under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+    """
+    def default(self, obj):
+        if isinstance(obj, np.integer):
+            return int(obj)
+        if isinstance(obj, np.floating):
+            return float(obj)
+        if isinstance(obj, np.bool_):
+            return bool(obj)
+        if isinstance(obj, np.ndarray):
+            return obj.tolist()
+        return super(NpEncoder, self).default(obj)
+
+
