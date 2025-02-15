@@ -9,6 +9,7 @@ from .modules.pandas_wrapper.pandas_head import PandasHead
 from .modules.pandas_wrapper.pandas_index import PandasIndex
 from .modules.pandas_wrapper.pandas_join import PandasJoin
 from .modules.pandas_wrapper.pandas_load_csv import PandasLoadCSV
+from .modules.pandas_wrapper.pandas_load_csv_with_encoding import PandasLoadCSVWithEncoding
 from .modules.pandas_wrapper.pandas_load_csv_with_index import PandasLoadCSVWithIndex
 from .modules.pandas_wrapper.pandas_loc_cell_str import PandasLocCellStr
 from .modules.pandas_wrapper.pandas_loc_row_series import PandasLocRowSeries
@@ -35,6 +36,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasIndex": PandasIndex,
     "PandasJoin": PandasJoin,
     "PandasLoadCSV": PandasLoadCSV,
+    "PandasLoadCSVWithEncoding": PandasLoadCSVWithEncoding,
     "PandasLoadCSVWithIndex": PandasLoadCSVWithIndex,
     "PandasLocCellStr": PandasLocCellStr,
     "PandasLocRowSeries": PandasLocRowSeries,
@@ -59,12 +61,13 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "MPLScatter": "MPL Scatter Plot",
     "PandasColumns": "Pandas Columns",
     "PandasCreate": "Pandas Create",
-    "PandasCreateWithIndex": "Pandas Create with Index",
+    "PandasCreateWithIndex": "Pandas Create With Index",
     "PandasHead": "Pandas Head",
     "PandasIndex": "Pandas Index",
     "PandasJoin": "Pandas Join",
     "PandasLoadCSV": "Pandas Load CSV",
-    "PandasLoadCSVWithIndex": "Pandas Load CSV with Index",
+    "PandasLoadCSVWithEncoding": "Pandas Load CSV With Encoding",
+    "PandasLoadCSVWithIndex": "Pandas Load CSV With Index",
     "PandasLocCellStr": "Pandas Loc Cell Str",
     "PandasLocRowSeries": "Pandas Loc Row Series",
     "PandasSaveCSV": "Pandas Save CSV",

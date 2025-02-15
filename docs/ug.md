@@ -14,10 +14,11 @@ You can right-click, select **Add Node**, go to **Data Analysis**, and look for 
 | Node Name               | Functionality                        |
 |-------------------------|-------------------------------------|
 | **Pandas Load CSV**     | Load a CSV file                    |
-| **Pandas Load CSV with Index**     | Load a CSV file containing index |
+| **Pandas Load CSV With Encoding**     | Load a CSV file not encoded in utf-8 |
+| **Pandas Load CSV With Index**     | Load a CSV file containing index |
 | **Pandas Save CSV**     | Save a DataFrame to a CSV file     |
 | **Pandas Create**     | Create a DataFrame from CSV text field |
-| **Pandas Create with Index**     | Create a DataFrame from CSV text field containing index |
+| **Pandas Create With Index**     | Create a DataFrame from CSV text field containing index |
 | **Pandas Columns**      | Extract column labels     |
 | **Pandas Index**        | Extract row labels (index)     |
 | **Pandas Select Columns** | Select specific columns from a DataFrame |
@@ -41,10 +42,10 @@ A faster way is to double-click the canvas to open the node search dialog.
 The examples directory contains workflows that load data from an example dataset included in this package. These workflows should give you a good idea about how to use these nodes.
 
 ## Loading data
-Use **Pandas Load CSV** node to load a CSV, or **Pandas Load CSV with Index** node if the CSV contains an index column.
+Use **Pandas Load CSV** node to load a CSV, or **Pandas Load CSV With Index** node if the CSV contains an index column.  These nodes assume that the file is encoded in utf-8. If the file is not encoded in utf-8, use **Pandas Load CSV With Encoding** to specify the encoding of the file.  This is necessary if the data was collected before utf-8 encoding became popular.  For example, you can try "latin_1" for a file that contains accented characters in the US and Western Europe.
 ![Pandas Load CSV node](images/load.jpg)
 
-This will emit the DataFrame in a JSON string.
+These nodes emit the DataFrame in a JSON string.
 CSV file path is relative to the ComfyUI installation directory unless you specify the absolute file path.
 
 ## Saving data
