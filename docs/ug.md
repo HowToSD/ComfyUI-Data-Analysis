@@ -22,6 +22,7 @@ You can right-click, select **Add Node**, go to **Data Analysis**, and look for 
 | **Pandas Index**        | Extract row labels (index)     |
 | **Pandas Select Columns** | Select specific columns from a DataFrame |
 | **Pandas Select Rows**  | Filter rows based on conditions    |
+| **Pandas Loc Cell Str**  | Select a cell by row label (index) and column label (index) |
 | **Pandas Join**         | Join two DataFrames                |
 | **Pandas Head**         | Extract the first few rows         |
 | **Pandas Show DataFrame** | Display DataFrame contents        |
@@ -62,6 +63,13 @@ Use **Pandas Columns** and **Pandas Index** nodes.  As these nodes output JSON-s
 Use **Pandas Select Columns** for selecting columns, **Pandas Select Rows** to select rows by a filter condition.
 
 ![Pandas select subset](images/subset.jpg)
+
+## Selecting a cell by row label (index) and column label (index)
+Use **Pandas Loc Cell Str**  for selecting a cell by row label (index) and column label (index). Data type of the labels needs to be specified as shown below:
+
+![Pandas Loc Cell Str](images/loc_cell_str.png)
+
+This node outputs the cell value as a string irrespective of the actual cell data type.
 
 ## Joining DataFrames
 Use **Pandas Join**.  You can select from inner, left, right, outer joins.
