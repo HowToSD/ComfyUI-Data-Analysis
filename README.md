@@ -1,7 +1,6 @@
 # ComfyUI-Data-Analysis
 
-![Load two CSVs into DataFrames](docs/images/join_data_load.png)
-![Inner join](docs/images/inner_join.png)
+![Baseball tutorial](docs/images/baseball_final.png)
 
 ComfyUI-Data-Analysis is a custom module for analyzing data using Pandas and Matplotlib within ComfyUI.
 
@@ -58,3 +57,6 @@ This custom node module requires pandas and matplotlib, which are not included i
 
 ## How to Use
 Refer to [User's Guide](docs/ug.md)
+
+For a practical example, see the tutorial on baseball data: [How to Find Out Who Had the Most Hits](docs/baseball_example1.md).
+
