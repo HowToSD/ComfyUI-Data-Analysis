@@ -8,7 +8,7 @@ class PandasIlocRowSeries:
     PandasLocRowSeries:
         A class for selecting a row from a pandas DataFrame and returning it as a Series.
         The row is specified by its integer position, similar to an index in other software.
-        Note: In Pandas, "index" refers to a unique label assigned to each row or column. See https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.iloc.html
+        Note: In Pandas, "index" refers to a unique label assigned to each row. See https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.iloc.html
     """
 
     @classmethod

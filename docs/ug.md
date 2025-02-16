@@ -33,7 +33,7 @@ You can right-click, select **Add Node**, go to **Data Analysis**, and look for 
 | **Pandas Iloc Row Series**  | Select a row by row integer position |
 | **Pandas Iloc Rows DataFrame**  | Select rows by the list of row integer positions |
 | **Pandas Loc Row Series**  | Select a row by row label (index) |
-| **Pandas Loc Cell Str**  | Select a cell by row label (index) and column label (index) |
+| **Pandas Loc Cell Str**  | Select a cell by row label (index) and column label |
 | **Pandas Head**         | Extract the first few rows         |
 
 **Manipulating data**
@@ -111,10 +111,10 @@ For  **Pandas Iloc Row Series**, you only need to specify the row integer positi
 ![Pandas Iloc Row Series](images/iloc_row_series.png)
 
 Note that in Pandas, integer position is an equivalent of an index in other software,
-while "index" means a unique label assigned to each row or column. See [pandas.DataFrame.iloc.html](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.iloc.html).
+while "index" means a unique label assigned to each row. See [pandas.DataFrame.iloc.html](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.iloc.html).
 
-## Selecting a cell by row label (index) and column label (index)
-Use **Pandas Loc Cell Str**  for selecting a cell by row label (index) and column label (index). Data type of the labels needs to be specified as shown below:
+## Selecting a cell by row label (index) and column label
+Use **Pandas Loc Cell Str**  for selecting a cell by row label (index) and column label. Data type of the labels needs to be specified as shown below:
 
 ![Pandas Loc Cell Str](images/loc_cell_str.png)
 
