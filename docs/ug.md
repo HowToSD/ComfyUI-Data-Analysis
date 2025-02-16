@@ -11,6 +11,8 @@ To connect the DataFrame JSON string output from one Pandas node to another, mov
 ### How to add a node
 You can right-click, select **Add Node**, go to **Data Analysis**, and look for the following nodes:
 
+### List of nodes
+**Data loading, creation, saving**
 | Node Name               | Functionality                        |
 |-------------------------|-------------------------------------|
 | **Pandas Load CSV**     | Load a CSV file                    |
@@ -19,21 +21,43 @@ You can right-click, select **Add Node**, go to **Data Analysis**, and look for 
 | **Pandas Save CSV**     | Save a DataFrame to a CSV file     |
 | **Pandas Create**     | Create a DataFrame from CSV text field |
 | **Pandas Create With Index**     | Create a DataFrame from CSV text field containing index |
+| **CDA JSON Create**     | Create JSON from a string entered in a text field |
+
+**Selecting subset of data**
+| Node Name               | Functionality                        |
+|-------------------------|-------------------------------------|
 | **Pandas Columns**      | Extract column labels     |
 | **Pandas Index**        | Extract row labels (index)     |
 | **Pandas Select Columns** | Select specific columns from a DataFrame |
 | **Pandas Select Rows**  | Filter rows based on conditions    |
 | **Pandas Iloc Row Series**  | Select a row by row integer position |
+| **Pandas Iloc Rows DataFrame**  | Select rows by the list of row integer positions |
 | **Pandas Loc Row Series**  | Select a row by row label (index) |
 | **Pandas Loc Cell Str**  | Select a cell by row label (index) and column label (index) |
-| **Pandas Join**         | Join two DataFrames                |
 | **Pandas Head**         | Extract the first few rows         |
+
+**Manipulating data**
+| Node Name               | Functionality                        |
+|-------------------------|-------------------------------------|
+| **Pandas Join**         | Join two DataFrames                |
+| **Pandas Sort**         | Sort DataFrame by a column         |
+
+**Displaying data**
+| Node Name               | Functionality                        |
+|-------------------------|-------------------------------------|
 | **Pandas Show DataFrame** | Display DataFrame contents        |
 | **Pandas Show Text**    | Display Text        |
 | **Pandas Summary**      | Extract DataFrame statistics          |
-| **Pandas Sort**         | Sort DataFrame by a column         |
+
+**Converting to displayable string**
+| Node Name               | Functionality                        |
+|-------------------------|-------------------------------------|
 | **Pandas Series To String**  | Convert Series to a displayable string      |
 | **Pandas To String**    | Convert DataFrame to a displayable string      |
+
+**Plot, chart**
+| Node Name               | Functionality                        |
+|-------------------------|-------------------------------------|
 | **MPL Bar Chart**       | Generate a bar chart               |
 | **MPL Line Plot**       | Generate a line plot               |
 | **MPL Scatter Plot**    | Generate a scatter plot            |
@@ -52,11 +76,13 @@ CSV file path is relative to the ComfyUI installation directory unless you speci
 ## Saving data
 Use **Pandas Save CSV** node to save the DataFrame to a CSV file.
 
-## Creating DataFrame on the UI
-Use **Pandas Create** or **Pandas Create with Index** nodes. These nodes display the multiline text area where you can enter the data in CSV format.
+## Creating data on the UI
+To construct a DataFrame on the UI, use **Pandas Create** or **Pandas Create with Index** nodes. These nodes display the multiline text area where you can enter the data in CSV format.
 If the data contains an index column, use **Pandas Create with Index** and specify the index column.
 
 ![Pandas Columns and Pandas Index](images/columns_index.png)
+
+Use **CDA JSON Create** to create JSON from a string entered in a text field.  For example, if you want to create a list for a node that requires the list of integers for input, this node is ideal.
 
 ## Extracting column and row labels
 Use **Pandas Columns** and **Pandas Index** nodes.  As these nodes output JSON-serialized Index object, to display the value, use **Pandas Show Text** node as shown below:
@@ -70,7 +96,13 @@ Use **Pandas Select Rows** to select rows by a filter condition.
 
 ![Pandas select subset](images/subset.jpg)
 
-You can use **Pandas Loc Row Series** to select a row by row label (index), or you can use  **Pandas Iloc Row Series** to select a row by row integer position. Both nodes returns a JSON-serialized Series object.
+You can use **Pandas Loc Row Series** to select a row by row label (index).
+You can use  **Pandas Iloc Row Series** to select a row by row integer position.
+These nodes returns a JSON-serialized Series object.
+
+You can use  **Pandas Iloc Rows DataFrame** to select rows by the list of row integer positions. This node returns a JSON-serialized DataFrame object.
+You need to pass the list of integers to this node. This can be done by using the **CDA JSON Create** node.
+![Pandas Iloc Rows DataFrame](images/iloc_rows_dataframe.png)
 
 For  **Pandas Loc Row Series**, data type of the labels needs to be specified as shown below:
 ![Pandas Loc Row Series](images/loc_row_series.png)

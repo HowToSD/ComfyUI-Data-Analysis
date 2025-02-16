@@ -1,12 +1,10 @@
 from typing import Any, Dict
-from io import StringIO
-import pandas as pd
+import json
 
-
-class PandasCreate:
+class CDAJSONCreate:
     """
-    PandasCreate:
-        A class for creating a pandas DataFrame using values entered in the text field.
+    CDAJSONCreate:
+        A class for creating a serialized JSON object using values entered in the text field.
     """
     
     @classmethod
@@ -29,18 +27,19 @@ class PandasCreate:
 
     def create(self, data: str) -> tuple:
         """
-        Create a pandas DataFrame using values entered in the text field and converts it to a JSON string.
-
+        creating a serialized JSON object using values entered in the text field.
+        
         Args:
             data (str): String value in the text field.
 
         Returns:
             tuple: A tuple containing a JSON string representation of the DataFrame.
         """
-        # Read CSV file into DataFrame
-        df = pd.read_csv(StringIO(data))
+        # Convert to JSON
+        json_obj = json.loads(data)
 
-        # Convert DataFrame to JSON
-        result_json = df.to_json()
+        # Serialize to a string
+        result_jsons = json.dumps(json_obj)
 
-        return (result_json,)
+        return (result_jsons,)
+

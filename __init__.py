@@ -1,4 +1,5 @@
 from typing import Dict, Type, TypeVar
+from .modules.cda.cda_json_create import CDAJSONCreate
 from .modules.matplotlib.mpl_bar import MPLBar
 from .modules.matplotlib.mpl_line import MPLLine
 from .modules.matplotlib.mpl_scatter import MPLScatter
@@ -7,6 +8,7 @@ from .modules.pandas_wrapper.pandas_create import PandasCreate
 from .modules.pandas_wrapper.pandas_create_with_index import PandasCreateWithIndex
 from .modules.pandas_wrapper.pandas_head import PandasHead
 from .modules.pandas_wrapper.pandas_iloc_row_series import PandasIlocRowSeries
+from .modules.pandas_wrapper.pandas_iloc_rows_dataframe import PandasIlocRowsDataFrame
 from .modules.pandas_wrapper.pandas_index import PandasIndex
 from .modules.pandas_wrapper.pandas_join import PandasJoin
 from .modules.pandas_wrapper.pandas_load_csv import PandasLoadCSV
@@ -27,6 +29,7 @@ from .modules.pandas_wrapper.pandas_to_string import PandasToString
 T = TypeVar("T")
 
 NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
+    "CDAJSONCreate": CDAJSONCreate,
     "MPLBar": MPLBar,
     "MPLLine": MPLLine,
     "MPLScatter": MPLScatter,
@@ -35,6 +38,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasCreateWithIndex": PandasCreateWithIndex,
     "PandasHead": PandasHead,
     "PandasIlocRowSeries": PandasIlocRowSeries,
+    "PandasIlocRowsDataFrame": PandasIlocRowsDataFrame,
     "PandasIndex": PandasIndex,
     "PandasJoin": PandasJoin,
     "PandasLoadCSV": PandasLoadCSV,
@@ -58,6 +62,7 @@ NODE_CLASS_MAPPINGS (Dict[str, Type[T]]):
 """
 
 NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
+    "CDAJSONCreate": "CDA JSON Create",
     "MPLBar": "MPL Bar Chart",
     "MPLLine": "MPL Line Plot",
     "MPLScatter": "MPL Scatter Plot",
@@ -66,6 +71,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasCreateWithIndex": "Pandas Create With Index",
     "PandasHead": "Pandas Head",
     "PandasIlocRowSeries": "Pandas Iloc Row Series",
+    "PandasIlocRowsDataFrame": "Pandas Iloc Rows DataFrame",
     "PandasIndex": "Pandas Index",
     "PandasJoin": "Pandas Join",
     "PandasLoadCSV": "Pandas Load CSV",

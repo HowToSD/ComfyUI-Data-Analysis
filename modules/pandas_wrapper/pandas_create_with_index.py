@@ -5,7 +5,7 @@ import pandas as pd
 
 class PandasCreateWithIndex:
     """
-    PandasLoadCSV:
+    PandasCreateWithIndex:
         A class for creating a pandas DataFrame using values entered in the text field.
         Input data is assume to have an index.
     """
@@ -35,7 +35,8 @@ class PandasCreateWithIndex:
         Input data is assume to have an index.
 
         Args:
-            file_path (str): The path to the CSV file.
+            data (str): String value in the text field.
+            index_col (int): Position of the index column.
 
         Returns:
             tuple: A tuple containing a JSON string representation of the DataFrame.
