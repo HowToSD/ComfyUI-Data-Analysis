@@ -1,4 +1,18 @@
 # ComfyUI-Data-Analysis
+![Baseball tutorial](docs/images/baseball_question.jpg)
+## How Can We Figure Out Which MLB Player Had the Most Hits Per Year?
+
+If you love ComfyUI, it's likely because of its incredible flexibility—allowing you to customize workflows to achieve exactly the results you want, primarily in image generation.  
+
+ComfyUI was designed to make Stable Diffusion accessible to non-engineers while offering extensive customization. However, it doesn’t natively support structured data like baseball statistics. That’s why I created this ComfyUI extension—to bridge that gap.  
+
+This project is still in the conceptual stage, with limited Pandas and Matplotlib functionality, but it works. At the end of this page, you’ll find a tutorial on how to use this package to answer the MLB hits question.  
+
+I hope you enjoy using it and have a great time exploring data.  
+
+— Hide Inada  
+
+<hr>
 
 ![Baseball tutorial](docs/images/baseball_final.png)
 
@@ -60,3 +74,5 @@ Refer to [User's Guide](docs/ug.md)
 
 For a practical example, see the tutorial on baseball data: [How to Find Out Who Had the Most Hits](docs/baseball_example1.md).
 
+## Note  
+The cover baseball image was generated using FLUX.1-dev. **Commercial use of this image is not permitted.**
