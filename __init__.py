@@ -6,6 +6,7 @@ from .modules.pandas_wrapper.pandas_columns import PandasColumns
 from .modules.pandas_wrapper.pandas_create import PandasCreate
 from .modules.pandas_wrapper.pandas_create_with_index import PandasCreateWithIndex
 from .modules.pandas_wrapper.pandas_head import PandasHead
+from .modules.pandas_wrapper.pandas_iloc_row_series import PandasIlocRowSeries
 from .modules.pandas_wrapper.pandas_index import PandasIndex
 from .modules.pandas_wrapper.pandas_join import PandasJoin
 from .modules.pandas_wrapper.pandas_load_csv import PandasLoadCSV
@@ -33,6 +34,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasCreate": PandasCreate,
     "PandasCreateWithIndex": PandasCreateWithIndex,
     "PandasHead": PandasHead,
+    "PandasIlocRowSeries": PandasIlocRowSeries,
     "PandasIndex": PandasIndex,
     "PandasJoin": PandasJoin,
     "PandasLoadCSV": PandasLoadCSV,
@@ -63,6 +65,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasCreate": "Pandas Create",
     "PandasCreateWithIndex": "Pandas Create With Index",
     "PandasHead": "Pandas Head",
+    "PandasIlocRowSeries": "Pandas Iloc Row Series",
     "PandasIndex": "Pandas Index",
     "PandasJoin": "Pandas Join",
     "PandasLoadCSV": "Pandas Load CSV",

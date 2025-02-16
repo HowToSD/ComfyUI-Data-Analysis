@@ -23,6 +23,7 @@ You can right-click, select **Add Node**, go to **Data Analysis**, and look for 
 | **Pandas Index**        | Extract row labels (index)     |
 | **Pandas Select Columns** | Select specific columns from a DataFrame |
 | **Pandas Select Rows**  | Filter rows based on conditions    |
+| **Pandas Iloc Row Series**  | Select a row by row integer position |
 | **Pandas Loc Row Series**  | Select a row by row label (index) |
 | **Pandas Loc Cell Str**  | Select a cell by row label (index) and column label (index) |
 | **Pandas Join**         | Join two DataFrames                |
@@ -63,13 +64,22 @@ Use **Pandas Columns** and **Pandas Index** nodes.  As these nodes output JSON-s
 ![Pandas Create and Pandas Create With Index](images/create.png)
 
 ## Selecting columns and rows
-Use **Pandas Select Columns** for selecting columns, **Pandas Select Rows** to select rows by a filter condition.
+Use **Pandas Select Columns** for selecting columns.
+For rows, there are multiple options.
+Use **Pandas Select Rows** to select rows by a filter condition.
 
 ![Pandas select subset](images/subset.jpg)
 
-You can use **Pandas Loc Row Series** to select a row by row label (index). This node returns a JSON-serialized Series object. Data type of the labels needs to be specified as shown below:
+You can use **Pandas Loc Row Series** to select a row by row label (index), or you can use  **Pandas Iloc Row Series** to select a row by row integer position. Both nodes returns a JSON-serialized Series object.
 
+For  **Pandas Loc Row Series**, data type of the labels needs to be specified as shown below:
 ![Pandas Loc Row Series](images/loc_row_series.png)
+
+For  **Pandas Iloc Row Series**, you only need to specify the row integer position:
+![Pandas Iloc Row Series](images/iloc_row_series.png)
+
+Note that in Pandas, integer position is an equivalent of an index in other software,
+while "index" means a unique label assigned to each row or column. See [pandas.DataFrame.iloc.html](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.iloc.html).
 
 ## Selecting a cell by row label (index) and column label (index)
 Use **Pandas Loc Cell Str**  for selecting a cell by row label (index) and column label (index). Data type of the labels needs to be specified as shown below:
