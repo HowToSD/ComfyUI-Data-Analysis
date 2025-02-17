@@ -49,6 +49,7 @@ You can right-click, select **Add Node**, go to **Data Analysis**, and look for 
 | Node Name               | Functionality                        |
 |-------------------------|-------------------------------------|
 | **Pandas Show DataFrame** | Display DataFrame contents        |
+| **Pandas Show Series** | Display Series contents        |
 | **Pandas Show Text**    | Display Text        |
 | **Pandas Summary**      | Extract DataFrame statistics          |
 
@@ -57,6 +58,19 @@ You can right-click, select **Add Node**, go to **Data Analysis**, and look for 
 |-------------------------|-------------------------------------|
 | **Pandas Is NA**  | Check DataFrame for missing values      |
 | **Pandas Drop NA**  | Drop missing values from DataFrame    |
+
+**Summary statistics**
+| Node Name               | Functionality                        |
+|-------------------------|-------------------------------------|
+| **Pandas Count**  | Number of rows     |
+| **Pandas Max**  | Maximum value of row values     |
+| **Pandas Mean**  | Mean of row values     |
+| **Pandas Median**  | Median of row values     |
+| **Pandas Min**  | Minimum value of row values     |
+| **Pandas Mode**  | Mode of row values     |
+| **Pandas Std**  | Standard deviation of row values     |
+| **Pandas Sum**  | Sum of row values     |
+| **Pandas Var**  | Variance of row values     |
 
 **Converting to displayable string**
 | Node Name               | Functionality                        |
@@ -192,7 +206,10 @@ https://github.com/pythongosssss/ComfyUI-Custom-Scripts/blob/main/py/show_text.p
 This node has been copied to display text without requiring the user to install the above custom nodes package. However, if you already have ComfyUI-Custom-Scripts, you can also use the Show Text node from the package.
 
 ## Displaying DataFrame contents
-Use **Pandas Show DataFrame** node. When the number of rows is large, Pandas automatically hides middle rows during string conversion, so the display size should be always manageable.
+Use **Pandas Show DataFrame** node. When the number of rows is large, This node automatically hides middle rows during string conversion, so the display size should be always manageable.
+
+## Displaying Series contents
+Use **Pandas Show Series** node.
 
 ## Extracting DataFrame statistics
 Use **Pandas Summary** to extract statistics then connect the output to **Pandas Show Text** for display.
@@ -202,6 +219,31 @@ Use **Pandas Summary** to extract statistics then connect the output to **Pandas
 Use **Pandas Sort**.
 
 ![Pandas Sort](images/sort.jpg)
+
+## Summary statistics
+You can compute summary statistics for each row in a DataFrame using below nodes:
+* **Pandas Count** to get the number of rows.
+* **Pandas Min** to get the minimum row value.
+* **Pandas Max** to get the maximum value of row values.
+* **Pandas Mean** to get the mean of row values.
+* **Pandas Median** to get the median of row values.
+* **Pandas Mode** to get the mode of row values.
+* **Pandas Sum** to get the sum of row values.
+* **Pandas Std** to get the standard deviation of row values.
+* **Pandas Var** to get the variance of row values.
+
+All nodes return a Series except for Pandas Mode, which returns a DataFrame. This is necessary because multiple values may occur with the highest frequency. For example:
+```
+apple
+apple
+apple
+banana
+donut
+coconut
+coconut
+coconut
+```
+In this case, both apple and coconut are the mode.
 
 ## Convert DataFrame to a string
 Use **Pandas To String**. This node is to convert the DataFrame to a displayable string, and this truncates the data when the data is large.  This can be used to display the data content in a text display node (e.g. Show Text node). However, you can use Show DataFrame nodes to display the DataFrame content, so you do not normally need to use this.
