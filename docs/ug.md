@@ -221,16 +221,16 @@ Use **Pandas Sort**.
 ![Pandas Sort](images/sort.jpg)
 
 ## Summary statistics
-You can compute summary statistics for each row in a DataFrame using below nodes:
-* **Pandas Count** to get the number of rows.
-* **Pandas Min** to get the minimum row value.
-* **Pandas Max** to get the maximum value of row values.
-* **Pandas Mean** to get the mean of row values.
-* **Pandas Median** to get the median of row values.
-* **Pandas Mode** to get the mode of row values.
-* **Pandas Sum** to get the sum of row values.
-* **Pandas Std** to get the standard deviation of row values.
-* **Pandas Var** to get the variance of row values.
+You can compute summary statistics for each column in a DataFrame using below nodes:
+* **Pandas Count** to get the number of rows for the column.
+* **Pandas Min** to get the minimum row value within a column.
+* **Pandas Max** to get the maximum value of row values within a column.
+* **Pandas Mean** to get the mean of row values within a column.
+* **Pandas Median** to get the median of row values within a column.
+* **Pandas Mode** to get the mode of row values within a column.
+* **Pandas Sum** to get the sum of row values within a column.
+* **Pandas Std** to get the standard deviation of row values within a column.
+* **Pandas Var** to get the variance of row values within a column.
 
 All nodes return a Series except for Pandas Mode, which returns a DataFrame. This is necessary because multiple values may occur with the highest frequency. For example:
 ```
