@@ -36,9 +36,10 @@ You can right-click, select **Add Node**, go to **Data Analysis**, and look for 
 | **Pandas Loc Cell Str**  | Select a cell by row label (index) and column label |
 | **Pandas Head**         | Extract the first few rows         |
 
-**Manipulating data**
+**Transforming data**
 | Node Name               | Functionality                        |
 |-------------------------|-------------------------------------|
+| **Pandas Group By**     | Group rows and apply aggregation functions |
 | **Pandas Join**         | Join two DataFrames                |
 | **Pandas Sort**         | Sort DataFrame by a column         |
 
@@ -119,6 +120,26 @@ Use **Pandas Loc Cell Str**  for selecting a cell by row label (index) and colum
 ![Pandas Loc Cell Str](images/loc_cell_str.png)
 
 This node outputs the cell value as a string irrespective of the actual cell data type.
+
+## Grouping Rows
+Use **Pandas Group By** to group rows and apply aggregation functions.
+Currently below aggregation functions are supported:
+* sum
+* mean
+* count
+* std
+* min
+* max
+
+Below shows an example of using sum, mean, count functions:
+![Group By](images/group_by1.png)
+
+Below shows an example of using std, min, max functions:
+
+![Group By](images/group_by2.png)
+
+You can also have multiple columns to apply aggregation functions. In the below example, Qty and Price columns are aggregated for the Fruit column:
+![Group By](images/group_by3.png)
 
 ## Joining DataFrames
 Use **Pandas Join**.  You can select from inner, left, right, outer joins.

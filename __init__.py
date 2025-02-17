@@ -6,6 +6,7 @@ from .modules.matplotlib.mpl_scatter import MPLScatter
 from .modules.pandas_wrapper.pandas_columns import PandasColumns
 from .modules.pandas_wrapper.pandas_create import PandasCreate
 from .modules.pandas_wrapper.pandas_create_with_index import PandasCreateWithIndex
+from .modules.pandas_wrapper.pandas_group_by import PandasGroupBy
 from .modules.pandas_wrapper.pandas_head import PandasHead
 from .modules.pandas_wrapper.pandas_iloc_row_series import PandasIlocRowSeries
 from .modules.pandas_wrapper.pandas_iloc_rows_dataframe import PandasIlocRowsDataFrame
@@ -36,6 +37,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasColumns": PandasColumns,
     "PandasCreate": PandasCreate,
     "PandasCreateWithIndex": PandasCreateWithIndex,
+    "PandasGroupBy": PandasGroupBy,
     "PandasHead": PandasHead,
     "PandasIlocRowSeries": PandasIlocRowSeries,
     "PandasIlocRowsDataFrame": PandasIlocRowsDataFrame,
@@ -69,6 +71,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasColumns": "Pandas Columns",
     "PandasCreate": "Pandas Create",
     "PandasCreateWithIndex": "Pandas Create With Index",
+    "PandasGroupBy": "Pandas Group By",
     "PandasHead": "Pandas Head",
     "PandasIlocRowSeries": "Pandas Iloc Row Series",
     "PandasIlocRowsDataFrame": "Pandas Iloc Rows DataFrame",
