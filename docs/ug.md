@@ -52,6 +52,12 @@ You can right-click, select **Add Node**, go to **Data Analysis**, and look for 
 | **Pandas Show Text**    | Display Text        |
 | **Pandas Summary**      | Extract DataFrame statistics          |
 
+**Missing value processing**
+| Node Name               | Functionality                        |
+|-------------------------|-------------------------------------|
+| **Pandas Is NA**  | Check DataFrame for missing values      |
+| **Pandas Drop NA**  | Drop missing values from DataFrame    |
+
 **Converting to displayable string**
 | Node Name               | Functionality                        |
 |-------------------------|-------------------------------------|
@@ -172,6 +178,11 @@ The workflow file examples/workflows/join.json contains all of the above cases.
 
 ## Extract the first few rows
 Use **Pandas Head**.
+
+## Missing value processing
+Use **Pandas Is NA** for checking DataFrame for missing values, and **Pandas Drop NA** for dropping missing values from DataFrame.
+
+![Pandas Is NA](images/isna.png)
 
 ## Display text ##
 Use **Pandas Show Text** node.
