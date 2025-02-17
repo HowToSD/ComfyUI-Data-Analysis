@@ -18,7 +18,9 @@ You can right-click, select **Add Node**, go to **Data Analysis**, and look for 
 | **Pandas Load CSV**     | Load a CSV file                    |
 | **Pandas Load CSV With Encoding**     | Load a CSV file not encoded in utf-8 |
 | **Pandas Load CSV With Index**     | Load a CSV file containing index |
+| **Pandas Load JSON**     | Load a JSON file                    |
 | **Pandas Save CSV**     | Save a DataFrame to a CSV file     |
+| **Pandas Save JSON**     | Save a DataFrame to a JSON file     |
 | **Pandas Create**     | Create a DataFrame from CSV text field |
 | **Pandas Create With Index**     | Create a DataFrame from CSV text field containing index |
 | **CDA JSON Create**     | Create JSON from a string entered in a text field |
@@ -71,11 +73,14 @@ The examples directory contains workflows that load data from an example dataset
 Use **Pandas Load CSV** node to load a CSV, or **Pandas Load CSV With Index** node if the CSV contains an index column.  These nodes assume that the file is encoded in utf-8. If the file is not encoded in utf-8, use **Pandas Load CSV With Encoding** to specify the encoding of the file.  This is necessary if the data was collected before utf-8 encoding became popular.  For example, you can try "latin_1" for a file that contains accented characters in the US and Western Europe.
 ![Pandas Load CSV node](images/load.jpg)
 
+Use **Pandas Load JSON** node to load a JSON file.
+
 These nodes emit the DataFrame in a JSON string.
 CSV file path is relative to the ComfyUI installation directory unless you specify the absolute file path.
 
 ## Saving data
 Use **Pandas Save CSV** node to save the DataFrame to a CSV file.
+Use **Pandas Save JSON** node to save the DataFrame to a JSON file.
 
 ## Creating data on the UI
 To construct a DataFrame on the UI, use **Pandas Create** or **Pandas Create with Index** nodes. These nodes display the multiline text area where you can enter the data in CSV format.

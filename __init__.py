@@ -15,9 +15,11 @@ from .modules.pandas_wrapper.pandas_join import PandasJoin
 from .modules.pandas_wrapper.pandas_load_csv import PandasLoadCSV
 from .modules.pandas_wrapper.pandas_load_csv_with_encoding import PandasLoadCSVWithEncoding
 from .modules.pandas_wrapper.pandas_load_csv_with_index import PandasLoadCSVWithIndex
+from .modules.pandas_wrapper.pandas_load_json import PandasLoadJSON
 from .modules.pandas_wrapper.pandas_loc_cell_str import PandasLocCellStr
 from .modules.pandas_wrapper.pandas_loc_row_series import PandasLocRowSeries
 from .modules.pandas_wrapper.pandas_save_csv import PandasSaveCSV
+from .modules.pandas_wrapper.pandas_save_json import PandasSaveJSON
 from .modules.pandas_wrapper.pandas_select_columns import PandasSelectColumns
 from .modules.pandas_wrapper.pandas_select_rows import PandasSelectRows
 from .modules.pandas_wrapper.pandas_series_to_string import PandasSeriesToString
@@ -46,9 +48,11 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasLoadCSV": PandasLoadCSV,
     "PandasLoadCSVWithEncoding": PandasLoadCSVWithEncoding,
     "PandasLoadCSVWithIndex": PandasLoadCSVWithIndex,
+    "PandasLoadJSON": PandasLoadJSON,
     "PandasLocCellStr": PandasLocCellStr,
     "PandasLocRowSeries": PandasLocRowSeries,
     "PandasSaveCSV": PandasSaveCSV,
+    "PandasSaveJSON": PandasSaveJSON,
     "PandasSelectColumns": PandasSelectColumns,
     "PandasSelectRows": PandasSelectRows,
     "PandasSeriesToString": PandasSeriesToString,
@@ -80,9 +84,11 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasLoadCSV": "Pandas Load CSV",
     "PandasLoadCSVWithEncoding": "Pandas Load CSV With Encoding",
     "PandasLoadCSVWithIndex": "Pandas Load CSV With Index",
+    "PandasLoadJSON": "Pandas Load JSON",
     "PandasLocCellStr": "Pandas Loc Cell Str",
     "PandasLocRowSeries": "Pandas Loc Row Series",
     "PandasSaveCSV": "Pandas Save CSV",
+    "PandasSaveJSON": "Pandas Save JSON",
     "PandasSelectColumns": "Pandas Select Columns",
     "PandasSelectRows": "Pandas Select Rows",
     "PandasSeriesToString": "Pandas Series To String",
