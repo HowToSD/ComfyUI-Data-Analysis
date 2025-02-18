@@ -17,6 +17,7 @@ from .modules.pandas_wrapper.pandas_div_series import PandasDivSeries
 from .modules.pandas_wrapper.pandas_dropna import PandasDropNA
 from .modules.pandas_wrapper.pandas_group_by import PandasGroupBy
 from .modules.pandas_wrapper.pandas_head import PandasHead
+from .modules.pandas_wrapper.pandas_horizontal_concat import PandasHorizontalConcat
 from .modules.pandas_wrapper.pandas_iloc_row_series import PandasIlocRowSeries
 from .modules.pandas_wrapper.pandas_iloc_rows_dataframe import PandasIlocRowsDataFrame
 from .modules.pandas_wrapper.pandas_index import PandasIndex
@@ -55,6 +56,7 @@ from .modules.pandas_wrapper.pandas_sum import PandasSum
 from .modules.pandas_wrapper.pandas_summary import PandasSummary
 from .modules.pandas_wrapper.pandas_to_string import PandasToString
 from .modules.pandas_wrapper.pandas_var import PandasVar
+from .modules.pandas_wrapper.pandas_vertical_concat import PandasVerticalConcat
 
 
 T = TypeVar("T")
@@ -78,6 +80,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasDropNA": PandasDropNA,
     "PandasGroupBy": PandasGroupBy,
     "PandasHead": PandasHead,
+    "PandasHorizontalConcat": PandasHorizontalConcat,
     "PandasIlocRowSeries": PandasIlocRowSeries,
     "PandasIlocRowsDataFrame": PandasIlocRowsDataFrame,
     "PandasIndex": PandasIndex,
@@ -115,7 +118,8 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasSum": PandasSum,
     "PandasSummary": PandasSummary,
     "PandasToString": PandasToString,
-    "PandasVar": PandasVar
+    "PandasVar": PandasVar,
+    "PandasVerticalConcat": PandasVerticalConcat
 }
 """
 NODE_CLASS_MAPPINGS (Dict[str, Type[T]]):
@@ -141,6 +145,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasDropNA": "Pandas Drop NA",
     "PandasGroupBy": "Pandas Group By",
     "PandasHead": "Pandas Head",
+    "PandasHorizontalConcat": "Pandas Horizontal Concat",
     "PandasIlocRowSeries": "Pandas Iloc Row Series",
     "PandasIlocRowsDataFrame": "Pandas Iloc Rows DataFrame",
     "PandasIndex": "Pandas Index",
@@ -179,6 +184,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasSummary": "Pandas Summary",
     "PandasToString": "Pandas To String",
     "PandasVar": "Pandas Var",
+    "PandasVerticalConcat": "Pandas Vertical Concat"
 }
 """
 NODE_DISPLAY_NAME_MAPPINGS (Dict[str, str]):

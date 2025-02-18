@@ -79,6 +79,8 @@ This page was initially created using an older version of ComfyUI Data Analysis,
 | **Pandas Mul**  | Multiply two DataFrames    |
 | **Pandas Pow**  | Raise a DataFrame to the power of another DataFrame      |
 | **Pandas Sub**  | Subtract a DataFrame from another DataFrame     |
+| **Pandas Horizontal Concat**  | Concatenate two DataFrames horizontally (axis=1)    |
+| **Pandas Vertical Concat**  | Concatenate two DataFrames vertically (axis=0)    |
 
 **Binary operators for a DataFrame and a Series**
 | Node Name               | Functionality                        |
@@ -272,6 +274,10 @@ For binary operation for two DataFrames, you can use below operators:
 | **Pandas Mul**  | Multiply two DataFrames    |
 | **Pandas Pow**  | Raise a DataFrame to the power of another DataFrame      |
 | **Pandas Sub**  | Subtract a DataFrame from another DataFrame     |
+| **Pandas Horizontal Concat**  | Concatenate two DataFrames horizontally (axis=1)    |
+| **Pandas Vertical Concat**  | Concatenate two DataFrames vertically (axis=0)    |
+
+![Pandas Vertical Concat & Horizontal Concat](images/concat.png)
 
 For binary operation for a DataFrame and a Series, you can use below operators:
 | Node Name               | Functionality                        |
