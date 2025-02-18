@@ -115,7 +115,7 @@ Use **Pandas Load CSV** node to load a CSV, or **Pandas Load CSV With Index** no
 
 Use **Pandas Load JSON** node to load a JSON file.
 
-These nodes emit the DataFrame in a JSON string.
+These nodes emit a DataFrame object.
 CSV file path is relative to the ComfyUI installation directory unless you specify the absolute file path.
 
 ## Saving data
