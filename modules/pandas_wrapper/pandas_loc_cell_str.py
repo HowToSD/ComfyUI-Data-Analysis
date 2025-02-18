@@ -18,7 +18,7 @@ class PandasLocCellStr:
         """
         return {
             "required": {
-                "dataframe_json": ("STRING", {"multiline": True}),
+                "dataframe": ("DATAFRAME", {}),
                 "row_index": ("STRING", {"default": ""}),
                 "row_index_type":(("string", "int"),),
                 "column_label": ("STRING", {"default": ""}),
@@ -30,7 +30,7 @@ class PandasLocCellStr:
     FUNCTION: str = "cell"
     CATEGORY: str = "Data Analysis"
 
-    def cell(self, dataframe_json: str,
+    def cell(self, dataframe: pd.DataFrame,
              row_index: str,
              row_index_type: str,
              column_label: str,
@@ -39,7 +39,7 @@ class PandasLocCellStr:
         Selects specific cell from a pandas DataFrame.
 
         Args:
-            dataframe_json (str): A JSON string representation of the DataFrame.
+            dataframe (DataFrame): The DataFrame.
             row_index (str): The row index (row label) for the cell.
             row_index_type (str): The data type of the row index.
             column_label (str): The column label for the cell.
@@ -48,10 +48,8 @@ class PandasLocCellStr:
         Returns:
             tuple: A tuple containing the value of the cell in string.
         """
-        # Deserialize JSON string to DataFrame
-        df = pd.read_json(StringIO(dataframe_json))
         row_index = int(row_index) if row_index_type == "int" else row_index
         column_label = int(column_label) if column_label_type == "int" else column_label
 
-        value = df.loc[row_index, column_label]
+        value = dataframe.loc[row_index, column_label]
         return (str(value),)

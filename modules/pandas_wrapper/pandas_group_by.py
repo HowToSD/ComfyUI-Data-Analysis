@@ -20,46 +20,43 @@ class PandasGroupBy:
         """
         return {
             "required": {
-                "dataframe_json": ("STRING", {"multiline": True}),
+                "dataframe": ("DATAFRAME", {}),
                 "column_name": ("STRING", {"default": ""}),
                 "aggragate_function":(("sum", "mean", "count", "std", "min", "max"),)
             }
         }
 
-    RETURN_TYPES: tuple = ("STRING",)
+    RETURN_TYPES: tuple = ("DATAFRAME",)
     FUNCTION: str = "groupby_dataframes"
     CATEGORY: str = "Data Analysis"
 
     def groupby_dataframes(self,
-                           dataframe_json: str,
+                           dataframe: pd.DataFrame,
                            column_name: str,
                            aggragate_function: str) -> tuple:
         """
         Compute aggregate values for groups in a DataFrame
 
         Args:
-            dataframe_json (str): A JSON string representation of the DataFrame.
+            dataframe (DataFrame): The DataFrame.
             column_name (str): The name of the column for use as groups.
             aggregate_function (str): The type of aggregate function to perform.
 
         Returns:
             tuple: A tuple containing a JSON string of the merged DataFrame.
         """
-        # Deserialize JSON string to DataFrame
-        df = pd.read_json(StringIO(dataframe_json))
-
         if aggragate_function == "max":
-            df_out = df.groupby(column_name).max()
+            df_out = dataframe.groupby(column_name).max()
         elif aggragate_function == "min":
-            df_out = df.groupby(column_name).min()
+            df_out = dataframe.groupby(column_name).min()
         elif aggragate_function == "std":
-            df_out = df.groupby(column_name).std()
+            df_out = dataframe.groupby(column_name).std()
         elif aggragate_function == "count":
-            df_out = df.groupby(column_name).count()
+            df_out = dataframe.groupby(column_name).count()
         elif aggragate_function == "sum":
-            df_out = df.groupby(column_name).sum()
+            df_out = dataframe.groupby(column_name).sum()
         elif aggragate_function == "mean":
-            df_out = df.groupby(column_name).mean()
+            df_out = dataframe.groupby(column_name).mean()
         else:
             raise ValueError("Unsupported aggregate function.")
-        return (df_out.to_json(),)
+        return (df_out,)

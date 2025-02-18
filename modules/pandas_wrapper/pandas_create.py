@@ -23,7 +23,7 @@ class PandasCreate:
             }
         }
 
-    RETURN_TYPES: tuple = ("STRING",)
+    RETURN_TYPES: tuple = ("DATAFRAME",)
     FUNCTION: str = "create"
     CATEGORY: str = "Data Analysis"
 
@@ -39,8 +39,4 @@ class PandasCreate:
         """
         # Read CSV file into DataFrame
         df = pd.read_csv(StringIO(data))
-
-        # Convert DataFrame to JSON
-        result_json = df.to_json()
-
-        return (result_json,)
+        return (df,)

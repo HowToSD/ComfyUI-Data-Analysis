@@ -1,7 +1,5 @@
 from typing import Any, Dict
-from io import StringIO
 import pandas as pd
-from .utils import index_to_jsons
 
 class PandasDropNA:
     """
@@ -19,24 +17,22 @@ class PandasDropNA:
         """
         return {
             "required": {
-                "dataframe_json": ("STRING", {"multiline": True})
+                "dataframe": ("DATAFRAME", {})
             }
         }
 
-    RETURN_TYPES: tuple = ("STRING",)
+    RETURN_TYPES: tuple = ("DATAFRAME",)
     FUNCTION: str = "dropna"
     CATEGORY: str = "Data Analysis"
 
-    def dropna(self, dataframe_json: str) -> tuple:
+    def dropna(self, dataframe: pd.DataFrame) -> tuple:
         """
         Returns a DataFrame with missing values removed.
 
         Args:
-            dataframe_json (str): A JSON string representation of the DataFrame.
+            dataframe (DataFrame): The DataFrame.
 
         Returns:
-            tuple: A tuple containing a JSON string for the DataFrame.
+            tuple: A tuple containing the DataFrame.
         """
-        # Deserialize JSON string to DataFrame
-        df = pd.read_json(StringIO(dataframe_json))
-        return (df.dropna().to_json(),)
+        return (dataframe.dropna().to_json(),)

@@ -18,24 +18,22 @@ class PandasMode:
         """
         return {
             "required": {
-                "dataframe_json": ("STRING", {"multiline": True})
+                "dataframe": ("DATAFRAME", {})
             }
         }
 
-    RETURN_TYPES: tuple = ("STRING",)
+    RETURN_TYPES: tuple = ("DATAFRAME",)
     FUNCTION: str = "f"
     CATEGORY: str = "Data Analysis"
 
-    def f(self, dataframe_json: str) -> tuple:
+    def f(self, dataframe: pd.DataFrame) -> tuple:
         """
         Returns a DataFrame with mode for each column.
 
         Args:
-            dataframe_json (str): A JSON string representation of the DataFrame.
+            dataframe (DataFrame): The DataFrame.
 
         Returns:
-            tuple: A tuple containing a JSON string for the DataFrame.
+            tuple: A tuple containing the DataFrame.
         """
-        # Deserialize JSON string to DataFrame
-        df = pd.read_json(StringIO(dataframe_json))
-        return (df.mode().to_json(),)
+        return (dataframe.mode(),)

@@ -17,7 +17,7 @@ class PandasSaveCSV:
     def INPUT_TYPES(s):
         return {
             "required": {
-                "dataframe_json": ("STRING", {"forceInput": True}),
+                "dataframe": ("DATAFRAME", {}),
                 "file_path": ("STRING", {"multiline": False})
             },
             "hidden": {
@@ -34,7 +34,7 @@ class PandasSaveCSV:
 
     CATEGORY = "Data Analysis"
 
-    def save_csv(self, dataframe_json,file_path=None, unique_id=None, extra_pnginfo=None):
+    def save_csv(self, dataframe, file_path=None, unique_id=None, extra_pnginfo=None):
         text = None
         if unique_id is not None and extra_pnginfo is not None:
             if not isinstance(extra_pnginfo, list):
@@ -47,8 +47,7 @@ class PandasSaveCSV:
             elif file_path is None or len(file_path) == 0:
                 print("Error: file path is not specified")
             else:
-                # Deserialize JSON string to DataFrame
-                df = pd.read_json(StringIO(dataframe_json[0]))
+                df = dataframe[0]
                 df.to_csv(path_or_buf=file_path[0])  # Save as CSV
                 text = [str(df)]  # wrap in list
                 workflow = extra_pnginfo[0]["workflow"]

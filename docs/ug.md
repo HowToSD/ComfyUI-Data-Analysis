@@ -1,15 +1,13 @@
 # User's Guide
 ## Basic Concepts
-### How DataFrames is passed between nodes
-DataFrames are transmitted as JSON strings. When a DataFrame enters a node, it is reconstructed by deserializing the JSON string. Upon exiting, it is serialized back into a JSON string.
-
-Pandas's Index object is also processed the same way. For example, Pandas Columns and Pandas Index node return labels in a serialized Index format.
-
-### How to connect nodes for DataFrame JSON strings
-To connect the DataFrame JSON string output from one Pandas node to another, move the wire toward the top-left of the text field. You may need to hover around the corner to find the correct connection point.
+### How to connect nodes for DataFrame
+To connect the DataFrame output from one Pandas node to another, move the wire toward the top-left of the text field. You may need to hover around the corner to find the correct connection point.
 
 ### How to add a node
 You can right-click, select **Add Node**, go to **Data Analysis**, and look for the following nodes:
+
+**Note**
+This page was initially created using an older version of ComfyUI Data Analysis, so some of screenshots contain the names of deprecated nodes.  Use the node name in text if there is any mismatch between text and screenshots.
 
 ### List of nodes
 **Data loading, creation, saving**
@@ -50,6 +48,7 @@ You can right-click, select **Add Node**, go to **Data Analysis**, and look for 
 |-------------------------|-------------------------------------|
 | **Pandas Show DataFrame** | Display DataFrame contents        |
 | **Pandas Show Series** | Display Series contents        |
+| **Pandas Show Index** | Display Index contents        |
 | **Pandas Show Text**    | Display Text        |
 | **Pandas Summary**      | Extract DataFrame statistics          |
 
@@ -72,9 +71,28 @@ You can right-click, select **Add Node**, go to **Data Analysis**, and look for 
 | **Pandas Sum**  | Sum of row values     |
 | **Pandas Var**  | Variance of row values     |
 
+**Binary operators for two DataFrames**
+| Node Name               | Functionality                        |
+|-------------------------|-------------------------------------|
+| **Pandas Add**  | Add two DataFrames     |
+| **Pandas Div**  | Divide a DataFrame by another DataFrame     |
+| **Pandas Mul**  | Multiply two DataFrames    |
+| **Pandas Pow**  | Raise a DataFrame to the power of another DataFrame      |
+| **Pandas Sub**  | Subtract a DataFrame from another DataFrame     |
+
+**Binary operators for a DataFrame and a Series**
+| Node Name               | Functionality                        |
+|-------------------------|-------------------------------------|
+| **Pandas Add Series**  | Add a DataFrame and a Series     |
+| **Pandas Div Series**  | Divide a DataFrame by a Series     |
+| **Pandas Mul Series**  | Multiply a DataFrame by a Series    |
+| **Pandas Pow Series**  | Raise a DataFrame to the power of a Series      |
+| **Pandas Sub Series**  | Subtract a Series from another DataFrame     |
+
 **Converting to displayable string**
 | Node Name               | Functionality                        |
 |-------------------------|-------------------------------------|
+| **Pandas Index To String**  | Convert Index to a displayable string      |
 | **Pandas Series To String**  | Convert Series to a displayable string      |
 | **Pandas To String**    | Convert DataFrame to a displayable string      |
 
@@ -244,6 +262,25 @@ coconut
 coconut
 ```
 In this case, both apple and coconut are the mode.
+
+## Binary operators for DataFrames and Series
+For binary operation for two DataFrames, you can use below operators:
+| Node Name               | Functionality                        |
+|-------------------------|-------------------------------------|
+| **Pandas Add**  | Add two DataFrames     |
+| **Pandas Div**  | Divide a DataFrame by another DataFrame     |
+| **Pandas Mul**  | Multiply two DataFrames    |
+| **Pandas Pow**  | Raise a DataFrame to the power of another DataFrame      |
+| **Pandas Sub**  | Subtract a DataFrame from another DataFrame     |
+
+For binary operation for a DataFrame and a Series, you can use below operators:
+| Node Name               | Functionality                        |
+|-------------------------|-------------------------------------|
+| **Pandas Add Series**  | Add a DataFrame and a Series     |
+| **Pandas Div Series**  | Divide a DataFrame by a Series     |
+| **Pandas Mul Series**  | Multiply a DataFrame by a Series    |
+| **Pandas Pow Series**  | Raise a DataFrame to the power of a Series      |
+| **Pandas Sub Series**  | Subtract a Series from another DataFrame     |
 
 ## Convert DataFrame to a string
 Use **Pandas To String**. This node is to convert the DataFrame to a displayable string, and this truncates the data when the data is large.  This can be used to display the data content in a text display node (e.g. Show Text node). However, you can use Show DataFrame nodes to display the DataFrame content, so you do not normally need to use this.

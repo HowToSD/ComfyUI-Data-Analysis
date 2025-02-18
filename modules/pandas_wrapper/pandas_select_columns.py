@@ -18,31 +18,26 @@ class PandasSelectColumns:
         """
         return {
             "required": {
-                "dataframe_json": ("STRING", {"multiline": True}),
+                "dataframe": ("DATAFRAME", {}),
                 "column_names": ("STRING", {"default": ""})
             }
         }
 
-    RETURN_TYPES: tuple = ("STRING",)
+    RETURN_TYPES: tuple = ("DATAFRAME",)
     FUNCTION: str = "select_columns"
     CATEGORY: str = "Data Analysis"
 
-    def select_columns(self, dataframe_json: str, column_names: str) -> tuple:
+    def select_columns(self, dataframe: pd.DataFrame, column_names: str) -> tuple:
         """
         Selects specific columns from a pandas DataFrame.
 
         Args:
-            dataframe_json (str): A JSON string representation of the DataFrame.
+            dataframe (DataFrame): The DataFrame.
             column_names (str): A comma-separated string of column names to select.
 
         Returns:
-            tuple: A tuple containing a JSON string of the DataFrame with selected columns.
+            tuple: A tuple containing the DataFrame with selected columns.
         """
-        # Deserialize JSON string to DataFrame
-        df = pd.read_json(StringIO(dataframe_json))
-
-        # Process column names
         selected_columns = [col.strip() for col in column_names.split(",")]
-        df2 = df[selected_columns]
-        
-        return (df2.to_json(),)
+        df2 = dataframe[selected_columns]
+        return (df2,)

@@ -24,7 +24,7 @@ class PandasLoadCSVWithEncoding:
             }
         }
 
-    RETURN_TYPES: tuple = ("STRING",)
+    RETURN_TYPES: tuple = ("DATAFRAME",)
     FUNCTION: str = "load_csv"
     CATEGORY: str = "Data Analysis"
 
@@ -44,8 +44,4 @@ class PandasLoadCSVWithEncoding:
         """
         # Read CSV file into DataFrame
         df = pd.read_csv(file_path, encoding=encoding)
-
-        # Convert DataFrame to JSON
-        result_json = df.to_json()
-
-        return (result_json,)
+        return (df,)

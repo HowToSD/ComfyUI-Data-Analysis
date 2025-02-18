@@ -1,7 +1,5 @@
 from typing import Any, Dict
-from io import StringIO
 import pandas as pd
-from .utils import index_to_jsons
 
 class PandasIndex:
     """
@@ -19,25 +17,23 @@ class PandasIndex:
         """
         return {
             "required": {
-                "dataframe_json": ("STRING", {"multiline": True})
+                "dataframe": ("DATAFRAME", {})
             }
         }
 
-    RETURN_TYPES: tuple = ("STRING",)
+    RETURN_TYPES: tuple = ("PDINDEX",)
     FUNCTION: str = "row_index"
     CATEGORY: str = "Data Analysis"
 
-    def row_index(self, dataframe_json: str) -> tuple:
+    def row_index(self, dataframe: pd.DataFrame) -> tuple:
         """
         Returns the row labels (index) of a pandas DataFrame.
 
         Args:
-            dataframe_json (str): A JSON string representation of the DataFrame.
+            dataframe (DataFrame): The DataFrame.
 
         Returns:
-            tuple: A tuple containing a JSON string for the serialized pandas.Index containing row labels.
+            tuple: A tuple containing a pandas.Index for row labels.
         """
-        # Deserialize JSON string to DataFrame
-        df = pd.read_json(StringIO(dataframe_json))
-        row_index = df.index
-        return (index_to_jsons(row_index),)
+        row_index = dataframe.index
+        return (row_index,)

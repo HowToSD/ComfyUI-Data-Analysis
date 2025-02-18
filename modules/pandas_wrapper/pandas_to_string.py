@@ -18,7 +18,7 @@ class PandasToString:
         """
         return {
             "required": {
-                "dataframe_json": ("STRING", {"multiline": True}),
+                "dataframe": ("DATAFRAME", {}),
             }
         }
 
@@ -26,16 +26,14 @@ class PandasToString:
     FUNCTION: str = "to_string"
     CATEGORY: str = "Data Analysis"
 
-    def to_string(self, dataframe_json: str) -> tuple:
+    def to_string(self, dataframe: pd.DataFrame) -> tuple:
         """
         Converts a pandas DataFrame to a string representation.
 
         Args:
-            dataframe_json (str): A JSON string representation of the DataFrame.
+            dataframe (DataFrame): The DataFrame.
 
         Returns:
             tuple: A tuple containing the string representation of the DataFrame.
         """
-        # Deserialize JSON string to DataFrame
-        df = pd.read_json(StringIO(dataframe_json))
-        return (str(df),)
+        return (str(dataframe),)

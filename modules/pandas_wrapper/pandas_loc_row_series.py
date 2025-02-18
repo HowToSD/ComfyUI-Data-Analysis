@@ -19,35 +19,31 @@ class PandasLocRowSeries:
         """
         return {
             "required": {
-                "dataframe_json": ("STRING", {"multiline": True}),
+                "dataframe": ("DATAFRAME", {}),
                 "row_index": ("STRING", {"default": ""}),
                 "row_index_type":(("string", "int"),)
             }
         }
 
-    RETURN_TYPES: tuple = ("STRING",)
+    RETURN_TYPES: tuple = ("PDSERIES",)
     FUNCTION: str = "select_row"
     CATEGORY: str = "Data Analysis"
 
-    def select_row(self, dataframe_json: str,
+    def select_row(self, dataframe: pd.DataFrame,
              row_index: str,
              row_index_type: str) -> tuple:
         """
         Selects a specific row using a row label (row index) from a pandas DataFrame,
-        and returns the JSON serialized Series object.
+        and returns the Series object.
 
         Args:
-            dataframe_json (str): A JSON string representation of the DataFrame.
+            dataframe (DataFrame): The DataFrame.
             row_index (str): The row index (row label) for the row.
             row_index_type (str): The data type of the row index.
 
         Returns:
-            tuple: A tuple containing the value of the row in string. The string is
-                   a JSON string containing the serialized Pandas Series object.
+            tuple: A tuple containing the value of the row in the serialized Pandas Series object.
         """
-        # Deserialize JSON string to DataFrame
-        df = pd.read_json(StringIO(dataframe_json))
         row_index = int(row_index) if row_index_type == "int" else row_index
-
-        value = df.loc[row_index]
-        return (series_to_jsons(value),)
+        value = dataframe.loc[row_index]
+        return (value,)

@@ -26,7 +26,7 @@ class MPLLine:
     CATEGORY: str = "Data Analysis"
 
     def line_plot(self,
-                  dataframe_json: str,
+                  dataframe: pd.DataFrame,
                   x_column_name: str,
                   y_column_name: str,
                   title: str,
@@ -37,7 +37,7 @@ class MPLLine:
         Generates a line plot from a pandas DataFrame.
 
         Args:
-            dataframe_json (str): A JSON string representation of the DataFrame.
+            dataframe (DataFrame): The DataFrame.
             x_column_name (str): The column name for the x-axis.
             y_column_name (str): The column name for the y-axis.
             title (str): The title of the plot.
@@ -49,8 +49,8 @@ class MPLLine:
         Returns:
             tuple: A tuple containing the image tensor representation of the plot.
         """
-        # Deserialize JSON string to DataFrame
-        df = pd.read_json(StringIO(dataframe_json))
+
+        df = dataframe
 
         # Create the plot
         fig, ax = plt.subplots()

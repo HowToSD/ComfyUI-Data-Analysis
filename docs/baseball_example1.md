@@ -5,6 +5,9 @@ The objective is to determine which Major League Baseball player has the most hi
 
 Fortunately, the [Lahman Baseball Database](http://seanlahman.com/) contains the necessary data, and CDA simplifies the extraction process. Let's dive in.
 
+**Note**
+This tutorial was created using an older version of ComfyUI Data Analysis, so screenshots contain the names of deprecated nodes.  Use the node name in text if there is any mismatch between text and screenshots.
+
 # Obtaining data
 Our first step is to obtain data.
 1. Access http://seanlahman.com/.
@@ -62,7 +65,7 @@ If you see the screenshots, you can see that People data has more than 21000 row
 
    First we want to extract the names from People data. The reason for this is that Batting table contains the ID of the player and not the full name. So we need names defined in the People table. But how do we do this? If we take a look at the screenshot, you do not see full name columns. It looks like the column names are hidden. So we need to first figure out what columns are avaialbe in the People table.
    To do so, add a new node **Pandas Columns** and connect it to Load CSV for People.
-   Then add another node **Pandas Show Text** and connect it to the Pandas Columns node. Press Queue, you should see below.
+   Then add another node **Pandas Show Index** and connect it to the Pandas Columns node. Press Queue, you should see below.
 
    ![Pandas Columns](images/people_columns.png)
 
@@ -131,12 +134,12 @@ In this final section, we will be fixing the name issue where the names are IDs 
    ![Pandas Join](images/baseball_join1.png)   
 
    Drag it next to the **Select Colums** node of the Batting table.
-   Connect the output of the Head node to the "left_dataframe_json" input of the join node.
+   Connect the output of the Head node to the "left_dataframe" input of the join node.
 
 2. Connect to the People table
 
    Now drag the join node so that it sits next to the **Select Colums** node of the People table.
-   Connect the output of the Select Columns node to the "right_dataframe_json" input of the join node. Note that you may need to hover your mouse around the top-left corner of the blank area that contains "right_dataframe_json" to find the connection point.
+   Connect the output of the Select Columns node to the "right_dataframe" input of the join node. Note that you may need to hover your mouse around the top-left corner of the blank area that contains "right_dataframe" to find the connection point.
 
    ![Pandas Join](images/baseball_join2.png)
 

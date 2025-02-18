@@ -21,30 +21,28 @@ class PandasIlocRowSeries:
         """
         return {
             "required": {
-                "dataframe_json": ("STRING", {"multiline": True}),
+                "dataframe": ("DATAFRAME", {}),
                 "row_integer_position": ("INT", {"default": 0, "min": 0, "max": 2**31})
             }
         }
 
-    RETURN_TYPES: tuple = ("STRING",)
+    RETURN_TYPES: tuple = ("DATAFRAME",)
     FUNCTION: str = "select_row"
     CATEGORY: str = "Data Analysis"
 
-    def select_row(self, dataframe_json: str,
+    def select_row(self, dataframe: pd.DataFrame,
              row_integer_position: int) -> tuple:
         """
         Selects a specific row using a row label (row index) from a pandas DataFrame,
         and returns the JSON serialized Series object.
 
         Args:
-            dataframe_json (str): A JSON string representation of the DataFrame.
+            dataframe (DataFrame): The DataFrame.
             row_integer_position (int): The row integer position.
 
         Returns:
             tuple: A tuple containing the value of the row in string. The string is
                    a JSON string containing the serialized Pandas Series object.
         """
-        # Deserialize JSON string to DataFrame
-        df = pd.read_json(StringIO(dataframe_json))
-        value = df.iloc[row_integer_position]
-        return (series_to_jsons(value),)
+        value = dataframe.iloc[row_integer_position]
+        return (value,)

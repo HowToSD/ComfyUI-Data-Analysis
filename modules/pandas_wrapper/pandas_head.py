@@ -19,27 +19,25 @@ class PandasHead:
         """
         return {
             "required": {
-                "dataframe_json": ("STRING", {"multiline": True}),
+                "dataframe": ("DATAFRAME", {}),
                 "rows": ("INT", {"default": 10, "min": 0, "max": 50})
             }
         }
 
-    RETURN_TYPES: tuple = ("STRING",)
+    RETURN_TYPES: tuple = ("DATAFRAME",)
     FUNCTION: str = "head"
     CATEGORY: str = "Data Analysis"
 
-    def head(self, dataframe_json: str, rows: int) -> tuple:
+    def head(self, dataframe: pd.DataFrame, rows: int) -> tuple:
         """
         Returns the first `rows` rows of a pandas DataFrame.
 
         Args:
-            dataframe_json (str): A JSON string representation of the DataFrame.
+            dataframe (DataFrame): The DataFrame.
             rows (int): The number of rows to retrieve.
 
         Returns:
             tuple: A tuple containing a JSON string of the resulting DataFrame.
         """
-        # Deserialize JSON string to DataFrame
-        df = pd.read_json(StringIO(dataframe_json))
-        df2 = df.head(rows)
-        return (df2.to_json(),)
+        df2 = dataframe.head(rows)
+        return (df2,)

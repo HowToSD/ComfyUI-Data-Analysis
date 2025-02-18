@@ -1,7 +1,6 @@
 from typing import Any, Dict
-from io import StringIO
 import pandas as pd
-from .utils import index_to_jsons
+
 
 class PandasIsNA:
     """
@@ -19,24 +18,22 @@ class PandasIsNA:
         """
         return {
             "required": {
-                "dataframe_json": ("STRING", {"multiline": True})
+                "dataframe": ("DATAFRAME", {})
             }
         }
 
-    RETURN_TYPES: tuple = ("STRING",)
+    RETURN_TYPES: tuple = ("DATAFRAME",)
     FUNCTION: str = "isna"
     CATEGORY: str = "Data Analysis"
 
-    def isna(self, dataframe_json: str) -> tuple:
+    def isna(self, dataframe: pd.DataFrame) -> tuple:
         """
         Returns a DataFrame with boolean values with True indicating a missing value.
 
         Args:
-            dataframe_json (str): A JSON string representation of the DataFrame.
+            dataframe (DataFrame): The DataFrame.
 
         Returns:
-            tuple: A tuple containing a JSON string for the DataFrame.
+            tuple: A tuple containing the DataFrame.
         """
-        # Deserialize JSON string to DataFrame
-        df = pd.read_json(StringIO(dataframe_json))
-        return (df.isna().to_json(),)
+        return (dataframe.isna(),)

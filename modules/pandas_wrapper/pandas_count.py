@@ -19,24 +19,23 @@ class PandasCount:
         """
         return {
             "required": {
-                "dataframe_json": ("STRING", {"multiline": True})
+                "dataframe": ("DATAFRAME", {})
             }
         }
 
-    RETURN_TYPES: tuple = ("STRING",)
+    RETURN_TYPES: tuple = ("PDSERIES",)
     FUNCTION: str = "f"
     CATEGORY: str = "Data Analysis"
 
-    def f(self, dataframe_json: str) -> tuple:
+    def f(self, dataframe: pd.DataFrame) -> tuple:
         """
         Returns a Series with count for each column.
 
         Args:
-            dataframe_json (str): A JSON string representation of the DataFrame.
+            dataframe (DataFrame): The DataFrame.
 
         Returns:
-            tuple: A tuple containing a JSON string for the Series.
+            tuple: A tuple containing the Series.
         """
-        # Deserialize JSON string to DataFrame
-        df = pd.read_json(StringIO(dataframe_json))
-        return (series_to_jsons(df.count()),)
+        df = dataframe
+        return (df.count(),)

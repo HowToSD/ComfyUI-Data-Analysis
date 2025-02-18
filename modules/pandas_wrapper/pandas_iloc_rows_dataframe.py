@@ -21,16 +21,16 @@ class PandasIlocRowsDataFrame:
         """
         return {
             "required": {
-                "dataframe_json": ("STRING", {"multiline": True}),
+                "dataframe": ("DATAFRAME", {}),
                 "row_int_pos_list_json": ("STRING", {"multiline": False})
             }
         }
 
-    RETURN_TYPES: tuple = ("STRING",)
+    RETURN_TYPES: tuple = ("DATAFRAME",)
     FUNCTION: str = "select_rows"
     CATEGORY: str = "Data Analysis"
 
-    def select_rows(self, dataframe_json: str,
+    def select_rows(self, dataframe: pd.DataFrame,
              row_int_pos_list_json: str) -> tuple:
         """
         Select rows from a pandas DataFrame and returning it as a DataFrame.
@@ -38,15 +38,13 @@ class PandasIlocRowsDataFrame:
         the JSON serialized DataFrame object.
 
         Args:
-            dataframe_json (str): A JSON string representation of the DataFrame.
+            dataframe (DataFrame): The DataFrame.
             row_int_pos_list_json (str): A list containing row integer positions.
 
         Returns:
             tuple: A tuple containing the value of the row in string. The string is
                    a JSON string containing the serialized Pandas Series object.
         """
-        # Deserialize JSON string to DataFrame
-        df = pd.read_json(StringIO(dataframe_json))
         row_int_pos_list = json.loads(row_int_pos_list_json)
-        df2 = df.iloc[row_int_pos_list]
-        return (df2.to_json(),)
+        df2 = dataframe.iloc[row_int_pos_list]
+        return (df2,)

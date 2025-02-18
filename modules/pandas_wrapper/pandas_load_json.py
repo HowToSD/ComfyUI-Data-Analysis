@@ -23,7 +23,7 @@ class PandasLoadJSON:
             }
         }
 
-    RETURN_TYPES: tuple = ("STRING",)
+    RETURN_TYPES: tuple = ("DATAFRAME",)
     FUNCTION: str = "load_json"
     CATEGORY: str = "Data Analysis"
 
@@ -39,8 +39,4 @@ class PandasLoadJSON:
         """
         # Read JSON file into DataFrame
         df = pd.read_json(file_path)
-
-        # Convert DataFrame to JSON
-        result_json = df.to_json()
-
-        return (result_json,)
+        return (df,)

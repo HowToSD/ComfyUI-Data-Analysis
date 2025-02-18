@@ -25,7 +25,7 @@ class PandasLoadCSVWithIndex:
             }
         }
 
-    RETURN_TYPES: tuple = ("STRING",)
+    RETURN_TYPES: tuple = ("DATAFRAME",)
     FUNCTION: str = "load_csv"
     CATEGORY: str = "Data Analysis"
 
@@ -42,8 +42,4 @@ class PandasLoadCSVWithIndex:
         """
         # Read CSV file into DataFrame
         df = pd.read_csv(file_path, index_col=index_col)
-
-        # Convert DataFrame to JSON
-        result_json = df.to_json()
-
-        return (result_json,)
+        return (df,)

@@ -1,14 +1,13 @@
 from typing import Any, Dict
-from io import StringIO
 import pandas as pd
-from .utils import index_to_jsons
+
 
 class PandasColumns:
     """
     PandasColumns:
         A class for retrieving the column labels of a pandas DataFrame.
     """
-    
+
     @classmethod
     def INPUT_TYPES(cls) -> Dict[str, Any]:
         """
@@ -19,25 +18,23 @@ class PandasColumns:
         """
         return {
             "required": {
-                "dataframe_json": ("STRING", {"multiline": True})
+                "dataframe": ("DATAFRAME", {})
             }
         }
 
-    RETURN_TYPES: tuple = ("STRING",)
+    RETURN_TYPES: tuple = ("PDINDEX",)
     FUNCTION: str = "columns"
     CATEGORY: str = "Data Analysis"
 
-    def columns(self, dataframe_json: str) -> tuple:
+    def columns(self, dataframe: pd.DataFrame) -> tuple:
         """
         Returns the column labels of a pandas DataFrame.
 
         Args:
-            dataframe_json (str): A JSON string representation of the DataFrame.
+            dataframe (DataFrame): The DataFrame.
 
         Returns:
-            tuple: A tuple containing a JSON string for the serialized pandas.Index containing columns.
+            tuple: A tuple containing a pandas.Index for columns.
         """
-        # Deserialize JSON string to DataFrame
-        df = pd.read_json(StringIO(dataframe_json))
-        columns = df.columns
-        return (index_to_jsons(columns),)
+        columns = dataframe.columns
+        return (columns,)

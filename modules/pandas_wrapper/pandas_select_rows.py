@@ -18,30 +18,26 @@ class PandasSelectRows:
         """
         return {
             "required": {
-                "dataframe_json": ("STRING", {"multiline": True}),
+                "dataframe": ("DATAFRAME", {}),
                 "condition": ("STRING", {"default": ""})
             }
         }
 
-    RETURN_TYPES: tuple = ("STRING",)
+    RETURN_TYPES: tuple = ("DATAFRAME",)
     FUNCTION: str = "select_rows"
     CATEGORY: str = "Data Analysis"
 
-    def select_rows(self, dataframe_json: str, condition: str) -> tuple:
+    def select_rows(self, dataframe: pd.DataFrame, condition: str) -> tuple:
         """
         Selects specific rows from a pandas DataFrame based on a given condition.
 
         Args:
-            dataframe_json (str): A JSON string representation of the DataFrame.
+            dataframe (DataFrame): The DataFrame.
             condition (str): A string representing the condition to filter rows.
 
         Returns:
             tuple: A tuple containing a JSON string of the filtered DataFrame.
         """
-        # Deserialize JSON string to DataFrame
-        df = pd.read_json(StringIO(dataframe_json))
-        
         # Apply condition
-        df2 = df.query(condition)
-        
-        return (df2.to_json(),)
+        df2 = dataframe.query(condition)
+        return (df2,)

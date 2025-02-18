@@ -1,12 +1,12 @@
 from typing import Any, Dict
 from io import StringIO
 import pandas as pd
-from .utils import series_to_jsons
 
-class PandasMedian:
+
+class PandasAsFloat:
     """
-    PandasMin:
-        A class for computing the median of a pandas DataFrame.
+    PandasAsFloat:
+        A class for converting all cells in a pandas DataFrame to float type.
     """
     
     @classmethod
@@ -23,18 +23,20 @@ class PandasMedian:
             }
         }
 
-    RETURN_TYPES: tuple = ("PDSERIES",)
+    RETURN_TYPES: tuple = ("DATAFRAME",)
     FUNCTION: str = "f"
     CATEGORY: str = "Data Analysis"
 
     def f(self, dataframe: pd.DataFrame) -> tuple:
         """
-        Returns a Series with median for each column.
+        Converts all cells in the DataFrame to float type.
 
         Args:
             dataframe (DataFrame): The DataFrame.
 
         Returns:
-            tuple: A tuple containing the Series.
+            tuple: A tuple containing the DataFrame with all values as floats.
         """
-        return (dataframe.median(),)
+        # Convert all values to float, non-numeric values become NaN
+        df = dataframe.apply(pd.to_numeric, errors='coerce').astype(float)
+        return (df,)

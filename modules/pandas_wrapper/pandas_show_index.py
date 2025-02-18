@@ -4,15 +4,14 @@ https://github.com/pythongosssss/ComfyUI-Custom-Scripts/blob/main/py/show_text.p
 
 See credit/credit.md for the full license.
 """
-from io import StringIO
 import pandas as pd
 
-class PandasShowDataFrame:
+class PandasShowIndex:
     @classmethod
     def INPUT_TYPES(s):
         return {
             "required": {
-                "dataframe": ("DATAFRAME", {})
+                "index_list": ("PDINDEX", {}),
             },
             "hidden": {
                 "unique_id": "UNIQUE_ID",
@@ -28,7 +27,7 @@ class PandasShowDataFrame:
 
     CATEGORY = "Data Analysis"
 
-    def notify(self, dataframe, unique_id=None, extra_pnginfo=None):
+    def notify(self, index_list, unique_id=None, extra_pnginfo=None):
         text = None
         if unique_id is not None and extra_pnginfo is not None:
             if not isinstance(extra_pnginfo, list):
@@ -39,19 +38,15 @@ class PandasShowDataFrame:
             ):
                 print("Error: extra_pnginfo[0] is not a dict or missing 'workflow' key")
             else:
-                df = dataframe[0]
-                text = [str(df)]  # wrap in list
+                ind = index_list[0]
+                text = [str(ind)]  # wrap in list
                 workflow = extra_pnginfo[0]["workflow"]
                 node = next(
                     (x for x in workflow["nodes"] if str(x["id"]) == str(unique_id[0])),
                     None,
                 )
                 if node:
-                    node["widgets_values"] = text  # [text]
+                    node["widgets_values"] = [text]
         else:
             print("unique_id or extra_pnginfo is None.")
-
-        # "ui" value is the one that is shown on the node UI.
-        # Note that "ui" return value needs to a list of strings.
-        return {"ui": {"text": text},
-                "result": (text,)}
+        return {"ui": {"text": text}, "result": (text,)}

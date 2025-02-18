@@ -1,4 +1,7 @@
 # ComfyUI-Data-Analysis
+## Update
+v1.1.0 was released which contains backward incompatible changes for worklows created using the prior version of ComfyUI Data Analysis custom nodes. Please read the Release Note.
+
 ![Baseball tutorial](docs/images/baseball_question.jpg)
 ## How Can We Figure Out Which MLB Player Had the Most Hits Per Year?
 

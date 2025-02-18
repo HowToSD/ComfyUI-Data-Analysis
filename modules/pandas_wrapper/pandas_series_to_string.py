@@ -19,7 +19,7 @@ class PandasSeriesToString:
         """
         return {
             "required": {
-                "series_json": ("STRING", {"multiline": True}),
+                "series": ("PDSERIES", {}),
             }
         }
 
@@ -27,16 +27,14 @@ class PandasSeriesToString:
     FUNCTION: str = "series_to_string"
     CATEGORY: str = "Data Analysis"
 
-    def series_to_string(self, series_json: str) -> tuple:
+    def series_to_string(self, series: pd.Series) -> tuple:
         """
         Converts a Pandas Series to a string representation.
 
         Args:
-            series_json (str): A JSON string representation of the Series.
+            series (Series): The Series.
 
         Returns:
             tuple: A tuple containing the string representation of the Series.
         """
-        # Deserialize JSON string to DataFrame
-        series = jsons_to_series(series_json)
         return (str(series),)

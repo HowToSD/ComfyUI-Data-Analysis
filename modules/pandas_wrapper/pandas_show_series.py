@@ -14,7 +14,7 @@ class PandasShowSeries:
     def INPUT_TYPES(s):
         return {
             "required": {
-                "series_json": ("STRING", {"forceInput": True}),
+                "series_list": ("PDSERIES", {}),
             },
             "hidden": {
                 "unique_id": "UNIQUE_ID",
@@ -30,7 +30,7 @@ class PandasShowSeries:
 
     CATEGORY = "Data Analysis"
 
-    def notify(self, series_json, unique_id=None, extra_pnginfo=None):
+    def notify(self, series_list, unique_id=None, extra_pnginfo=None):
         text = None
         if unique_id is not None and extra_pnginfo is not None:
             if not isinstance(extra_pnginfo, list):
@@ -41,8 +41,7 @@ class PandasShowSeries:
             ):
                 print("Error: extra_pnginfo[0] is not a dict or missing 'workflow' key")
             else:
-                # Deserialize JSON string to DataFrame
-                series = jsons_to_series(series_json[0])
+                series = series_list[0]
                 text = [series_to_jsons(series)]  # wrap in list
                 workflow = extra_pnginfo[0]["workflow"]
                 node = next(

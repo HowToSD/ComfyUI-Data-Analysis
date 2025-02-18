@@ -21,7 +21,7 @@ class CDAJSONCreate:
             }
         }
 
-    RETURN_TYPES: tuple = ("STRING",)
+    RETURN_TYPES: tuple = ("DATAFRAME",)
     FUNCTION: str = "create"
     CATEGORY: str = "Data Analysis"
 

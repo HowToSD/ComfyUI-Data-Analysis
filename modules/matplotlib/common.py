@@ -7,7 +7,7 @@ def common_input_types():
     """
     return {
         "required": {
-            "dataframe_json": ("STRING", {"multiscatter": True}),
+            "dataframe": ("STRING", {"multiscatter": True}),
             "x_column_name": ("STRING", {"default": ""}),
             "y_column_name": ("STRING", {"default": ""}),
             "title": ("STRING", {"default": ""}),

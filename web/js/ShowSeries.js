@@ -15,18 +15,20 @@ app.registerExtension({
 		if (nodeData.name === "PandasShowSeries") {  // This needs to match NODE_CLASS_MAPPINGS in Python
 			function populate(text) {
 				if (this.widgets) {
-					for (let i = 1; i < this.widgets.length; i++) {
+					// Clear all widgets on the node
+					for (let i = 0; i < this.widgets.length; i++) {
+						// if onRemove method exists, call it.
 						this.widgets[i].onRemove?.();
 					}
-					this.widgets.length = 1;
+					this.widgets.length = 0;
 				}
 
-				const v = [...text];
+				const v = [...text]; // Copy the text list (e.g. text.copy())
 				if (!v[0]) {
 					v.shift();
 				}
 				for (const list of v) {
-					const w = ComfyWidgets["STRING"](this, "text2", ["STRING", { multiline: true }], app).widget;
+					const w = ComfyWidgets["STRING"](this, "text0", ["STRING", { multiline: true }], app).widget;
 					w.inputEl.readOnly = true;
 					w.inputEl.style.opacity = 0.6;
 					w.value = list;
