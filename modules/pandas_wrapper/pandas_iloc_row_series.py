@@ -26,7 +26,7 @@ class PandasIlocRowSeries:
             }
         }
 
-    RETURN_TYPES: tuple = ("DATAFRAME",)
+    RETURN_TYPES: tuple = ("PDSERIES",)
     FUNCTION: str = "select_row"
     CATEGORY: str = "Data Analysis"
 
@@ -41,8 +41,7 @@ class PandasIlocRowSeries:
             row_integer_position (int): The row integer position.
 
         Returns:
-            tuple: A tuple containing the value of the row in string. The string is
-                   a JSON string containing the serialized Pandas Series object.
+            tuple: A tuple containing the value of the row in a Pandas Series object.
         """
         value = dataframe.iloc[row_integer_position]
         return (value,)
