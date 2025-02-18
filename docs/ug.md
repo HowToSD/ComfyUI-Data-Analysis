@@ -301,3 +301,5 @@ Use one of the below:
 | **MPL Bar Chart**       | Generate a bar chart               |
 | **MPL Line Plot**       | Generate a line plot               |
 | **MPL Scatter Plot**    | Generate a scatter plot            |
+
+![Plots](images/plots.png)
