@@ -23,6 +23,7 @@ from .modules.pandas_wrapper.pandas_tan import PandasTan
 from .modules.pandas_wrapper.pandas_group_by import PandasGroupBy
 from .modules.pandas_wrapper.pandas_head import PandasHead
 from .modules.pandas_wrapper.pandas_horizontal_concat import PandasHorizontalConcat
+from .modules.pandas_wrapper.pandas_horizontal_split import PandasHorizontalSplit
 from .modules.pandas_wrapper.pandas_iloc_row_series import PandasIlocRowSeries
 from .modules.pandas_wrapper.pandas_iloc_rows_dataframe import PandasIlocRowsDataFrame
 from .modules.pandas_wrapper.pandas_index import PandasIndex
@@ -62,7 +63,7 @@ from .modules.pandas_wrapper.pandas_summary import PandasSummary
 from .modules.pandas_wrapper.pandas_to_string import PandasToString
 from .modules.pandas_wrapper.pandas_var import PandasVar
 from .modules.pandas_wrapper.pandas_vertical_concat import PandasVerticalConcat
-
+from .modules.pandas_wrapper.pandas_vertical_split import PandasVerticalSplit
 
 T = TypeVar("T")
 
@@ -91,6 +92,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasGroupBy": PandasGroupBy,
     "PandasHead": PandasHead,
     "PandasHorizontalConcat": PandasHorizontalConcat,
+    "PandasHorizontalSplit": PandasHorizontalSplit,
     "PandasIlocRowSeries": PandasIlocRowSeries,
     "PandasIlocRowsDataFrame": PandasIlocRowsDataFrame,
     "PandasIndex": PandasIndex,
@@ -129,7 +131,8 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasSummary": PandasSummary,
     "PandasToString": PandasToString,
     "PandasVar": PandasVar,
-    "PandasVerticalConcat": PandasVerticalConcat
+    "PandasVerticalConcat": PandasVerticalConcat,
+    "PandasVerticalSplit": PandasVerticalSplit
 }
 """
 NODE_CLASS_MAPPINGS (Dict[str, Type[T]]):
@@ -161,6 +164,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasGroupBy": "Pandas Group By",
     "PandasHead": "Pandas Head",
     "PandasHorizontalConcat": "Pandas Horizontal Concat",
+    "PandasHorizontalSplit": "Pandas Horizontal Split",
     "PandasIlocRowSeries": "Pandas Iloc Row Series",
     "PandasIlocRowsDataFrame": "Pandas Iloc Rows DataFrame",
     "PandasIndex": "Pandas Index",
@@ -199,7 +203,8 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasSummary": "Pandas Summary",
     "PandasToString": "Pandas To String",
     "PandasVar": "Pandas Var",
-    "PandasVerticalConcat": "Pandas Vertical Concat"
+    "PandasVerticalConcat": "Pandas Vertical Concat",
+    "PandasVerticalSplit": "Pandas Vertical Split"
 }
 """
 NODE_DISPLAY_NAME_MAPPINGS (Dict[str, str]):

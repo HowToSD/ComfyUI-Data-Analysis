@@ -95,6 +95,8 @@
 | Node | Description |
 | --- | --- |
 | [Pandas Horizontal Concat](pandas_horizontal_concat.md) | Horizontally concatenates two pandas DataFrames. |
+| [Pandas Horizontal Split](pandas_horizontal_split.md) | Horizontally splits a Pandas DataFrame into two pandas DataFrames. |
 | [Pandas Join](pandas_join.md) | Merges two pandas DataFrames based on a common column. |
 | [Pandas Sort](pandas_sort.md) | Sorts a pandas DataFrame by a specified column. |
 | [Pandas Vertical Concat](pandas_vertical_concat.md) | Vertically concatenates two pandas DataFrames. |
+| [Pandas Vertical Split](pandas_vertical_split.md) | Vertically splits a Pandas DataFrame into two pandas DataFrames. |
