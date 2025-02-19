@@ -5,8 +5,9 @@ import pandas as pd
 
 class PandasJoin:
     """
-    PandasJoin:
-        A class for merging two pandas DataFrames based on a common column.
+    Merges two pandas DataFrames based on a common column.
+
+    category: Transformation
     """
     
     @classmethod

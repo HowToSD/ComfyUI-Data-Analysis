@@ -4,8 +4,9 @@ import pandas as pd
 
 class PandasColumns:
     """
-    PandasColumns:
-        A class for retrieving the column labels of a pandas DataFrame.
+    Retrieves the column labels of a pandas DataFrame.
+
+    category: DataFrame information
     """
 
     @classmethod

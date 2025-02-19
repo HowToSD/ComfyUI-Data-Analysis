@@ -3,8 +3,9 @@ import pandas as pd
 
 class PandasAddSeries:
     """
-    PandasAdd:
-        A class for adding a Pandas Series to a pandas DataFrames.
+    Adds a Pandas Series to a pandas DataFrames.
+
+    category: Arithmetic method
     """
     
     @classmethod

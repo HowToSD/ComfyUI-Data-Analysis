@@ -10,8 +10,10 @@ import pandas as pd
 
 class PandasSaveJSON:
     """
-    PandasSaveJSON:
-        A class for saving a PandasDataFrame to a JSON file.
+    Pandas Save JSON:
+    Saves a PandasDataFrame to a JSON file.
+
+    category: IO
     """
     @classmethod
     def INPUT_TYPES(s):

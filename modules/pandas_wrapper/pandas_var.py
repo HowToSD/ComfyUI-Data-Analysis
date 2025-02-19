@@ -5,8 +5,9 @@ from .utils import series_to_jsons
 
 class PandasVar:
     """
-    PandasVar:
-        A class for computing the variance of a pandas DataFrame.
+    Computes the variance of a pandas DataFrame.
+ 
+    category: Summary statistics
     """
     
     @classmethod

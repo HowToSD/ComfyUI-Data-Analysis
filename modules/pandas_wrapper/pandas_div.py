@@ -5,8 +5,9 @@ import pandas as pd
 
 class PandasDiv:
     """
-    PandasDiv:
-        A class for dividing two pandas DataFrames.
+    Divides two pandas DataFrames.
+
+    category: Arithmetic method
     """
     
     @classmethod

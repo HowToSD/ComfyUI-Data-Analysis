@@ -4,8 +4,9 @@ import pandas as pd
 
 class PandasSelectRows:
     """
-    PandasSelectRows:
-        A class for selecting specific rows from a pandas DataFrame based on a condition.
+    Selects specific rows from a pandas DataFrame based on a condition.
+
+    category: Data subset selection
     """
     
     @classmethod

@@ -4,8 +4,9 @@ import pandas as pd
 
 class PandasHorizontalConcat:
     """
-    PandasHorizontalConcat:
-        A class for horizontally concatenating two pandas DataFrames.
+    Horizontally concatenates two pandas DataFrames.
+
+    category: Transformation
     """
     
     @classmethod

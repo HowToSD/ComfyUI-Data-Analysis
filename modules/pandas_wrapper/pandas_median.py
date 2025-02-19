@@ -5,8 +5,9 @@ from .utils import series_to_jsons
 
 class PandasMedian:
     """
-    PandasMin:
-        A class for computing the median of a pandas DataFrame.
+    Computes the median of a pandas DataFrame.
+
+    category: Summary statistics
     """
     
     @classmethod

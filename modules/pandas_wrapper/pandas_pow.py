@@ -5,8 +5,9 @@ import pandas as pd
 
 class PandasPow:
     """
-    PandasPow:
-        A class for exponentiating two pandas DataFrames.
+    Exponentiates two pandas DataFrames.
+
+    category: Arithmetic method
     """
     
     @classmethod

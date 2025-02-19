@@ -5,8 +5,9 @@ from .utils import series_to_jsons
 
 class PandasStd:
     """
-    PandasStd:
-        A class for computing the standard deviation of a pandas DataFrame.
+    Computes the standard deviation of a pandas DataFrame.
+
+    category: Summary statistics
     """
     
     @classmethod

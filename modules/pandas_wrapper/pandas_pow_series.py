@@ -5,8 +5,9 @@ from .utils import jsons_to_series
 
 class PandasPowSeries:
     """
-    PandasPowSeries:
-        A class for raising a Pandas DataFrame to the power of a Pandas Series.
+    Raises a Pandas DataFrame to the power of a Pandas Series.
+
+    category: Arithmetic method
     """
     
     @classmethod

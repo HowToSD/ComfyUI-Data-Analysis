@@ -5,8 +5,9 @@ import pandas as pd
 
 class PandasCreate:
     """
-    PandasCreate:
-        A class for creating a pandas DataFrame using values entered in the text field.
+    Creates a pandas DataFrame using values entered in the text field.
+
+    category: IO
     """
     
     @classmethod

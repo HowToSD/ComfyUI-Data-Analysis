@@ -7,8 +7,10 @@ from .util import plot_post_steps
 
 class MPLBar:
     """
-    MPLBar:
-        A class for generating bar charts from a pandas DataFrame.
+    MPL Bar Chart:
+        Generates a bar chart from a Pandas DataFrame.
+
+    category: Plot
     """
     
     @classmethod

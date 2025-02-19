@@ -7,6 +7,11 @@ See credit/credit.md for the full license.
 import pandas as pd
 
 class PandasShowIndex:
+    """
+    Displays a Pandas Index as text.
+
+    category: Display data
+    """
     @classmethod
     def INPUT_TYPES(s):
         return {

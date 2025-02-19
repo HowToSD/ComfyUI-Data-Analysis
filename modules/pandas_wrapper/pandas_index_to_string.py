@@ -4,8 +4,9 @@ import pandas as pd
 
 class PandasIndexToString:
     """
-    PandasIndexToString:
-        A class for converting a pandas Index to a string representation.
+    Converts a pandas Index to a string representation.
+
+    category: Display data
     """
     
     @classmethod

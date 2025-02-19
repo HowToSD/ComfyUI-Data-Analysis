@@ -5,8 +5,9 @@ from .utils import series_to_jsons
 
 class PandasMax:
     """
-    PandasMin:
-        A class for computing the max of a pandas DataFrame.
+    Computes the max of a pandas DataFrame.
+
+    category: Summary statistics
     """
     
     @classmethod

@@ -4,8 +4,9 @@ import pandas as pd
 
 class PandasAsString:
     """
-    PandasAsString:
-        A class for converting all cells in a pandas DataFrame to string type.
+    Converts all cells in a pandas DataFrame to string type.
+    
+    category: Data type conversion
     """
     
     @classmethod

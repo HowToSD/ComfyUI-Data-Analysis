@@ -5,8 +5,9 @@ import pandas as pd
 
 class PandasAsInt:
     """
-    PandasAsInt:
-        A class for converting all cells in a pandas DataFrame to integer type.
+    Converts all cells in a pandas DataFrame to integer type.
+
+    category: Data type conversion
     """
     
     @classmethod

@@ -7,8 +7,10 @@ from .util import plot_post_steps
 
 class MPLScatter:
     """
-    MPLPlotScatter:
-        A class for generating scatter plots from a pandas DataFrame.
+    MPL Scatter Plot:
+        Generates a scatter plot from a pandas DataFrame.
+
+    category: Plot
     """
     
     @classmethod

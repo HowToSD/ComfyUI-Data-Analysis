@@ -4,8 +4,9 @@ import pandas as pd
 
 class PandasLocCellStr:
     """
-    PandasLocCellStr:
-        A class for selecting a cell from a pandas DataFrame and output as a string.
+    Selects a cell from a pandas DataFrame and output as a string.
+
+    category: Data subset selection
     """
     
     @classmethod

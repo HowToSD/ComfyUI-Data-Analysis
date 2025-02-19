@@ -5,8 +5,9 @@ from .utils import jsons_to_series
 
 class PandasSubSeries:
     """
-    PandasSubSeries:
-        A class for subtracting a Pandas Series from a Pandas DataFrame.
+    Subtracts a Pandas Series from a Pandas DataFrame.
+
+    category: Arithmetic method
     """
     
     @classmethod

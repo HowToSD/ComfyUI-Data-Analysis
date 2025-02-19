@@ -5,8 +5,9 @@ from .utils import series_to_jsons
 
 class PandasSum:
     """
-    PandasSum:
-        A class for computing the sum of a pandas DataFrame.
+    Computes the sum of a pandas DataFrame.
+
+    category: Summary statistics
     """
     
     @classmethod

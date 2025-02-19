@@ -5,8 +5,10 @@ import pandas as pd
 
 class PandasLoadJSON:
     """
-    PandasLoadJSON:
-        A class for loading JSON files into a pandas DataFrame.
+    Pandas Load JSON:
+    Loads JSON files into a pandas DataFrame.
+
+    category: IO
     """
     
     @classmethod

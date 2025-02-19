@@ -6,9 +6,10 @@ from .utils import series_to_jsons
 
 class PandasIlocRowsDataFrame:
     """
-    PandasIlocRowsDataFrame:
-        A class for selecting rows from a pandas DataFrame and returning it as a DataFrame.
-        Rows are specified by the list of integer positions.
+    Selects rows from a pandas DataFrame and returning it as a DataFrame.
+    Rows are specified by the list of integer positions.
+
+    category: Data subset selection
     """
 
     @classmethod

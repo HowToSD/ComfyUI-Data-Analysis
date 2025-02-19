@@ -5,8 +5,9 @@ from .utils import series_to_jsons
 
 class PandasLocRowSeries:
     """
-    PandasLocRowSeries:
-        A class for selecting a row from a pandas DataFrame and output as a Series.
+    Selects a row from a pandas DataFrame and output as a Series.
+
+    category: Data subset selection
     """
     
     @classmethod

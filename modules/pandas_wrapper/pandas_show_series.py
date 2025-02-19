@@ -10,6 +10,11 @@ from .utils import series_to_jsons
 from .utils import jsons_to_series
 
 class PandasShowSeries:
+    """
+    Displays a Pandas Series as text.
+
+    category: Display data
+    """
     @classmethod
     def INPUT_TYPES(s):
         return {

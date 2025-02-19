@@ -5,9 +5,11 @@ import pandas as pd
 
 class PandasLoadCSVWithIndex:
     """
-    PandasLoadCSV:
-        A class for loading CSV files into a pandas DataFrame.
-        Input data is assume to have an index.
+    Pandas Load CSV With Index:
+    Loads CSV files into a pandas DataFrame.
+    Input data is assume to have an index.
+
+    category: IO
     """
     
     @classmethod

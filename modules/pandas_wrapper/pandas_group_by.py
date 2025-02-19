@@ -5,8 +5,9 @@ import pandas as pd
 
 class PandasGroupBy:
     """
-    PandasGroupBy:
-        A class for computing aggregate values for groups in a DataFrame.
+    Computes aggregate values for groups in a DataFrame.
+
+    category: Aggregation
     """
     
     @classmethod

@@ -5,8 +5,9 @@ import pandas as pd
 
 class PandasSub:
     """
-    PandasSub:
-        A class for subtracting two pandas DataFrames.
+    Subtracts a Pandas DataFrame from another DataFrame.
+
+    category: Arithmetic method
     """
     
     @classmethod
@@ -30,7 +31,7 @@ class PandasSub:
 
     def f(self, a_dataframe: pd.DataFrame, b_dataframe: pd.DataFrame) -> tuple:
         """
-        Subtract two pandas DataFrames.
+        Subtracts a Pandas DataFrame from another DataFrame.
 
         Args:
             a_dataframe (DataFrame): The left DataFrame.

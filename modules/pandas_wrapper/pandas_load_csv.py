@@ -5,8 +5,10 @@ import pandas as pd
 
 class PandasLoadCSV:
     """
-    PandasLoadCSV:
-        A class for loading CSV files into a pandas DataFrame.
+    Pandas Load CSV:
+    Loads CSV files into a pandas DataFrame.
+
+    category: IO
     """
     
     @classmethod

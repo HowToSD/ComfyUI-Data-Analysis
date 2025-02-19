@@ -5,8 +5,9 @@ import pandas as pd
 
 class PandasAsFloat:
     """
-    PandasAsFloat:
-        A class for converting all cells in a pandas DataFrame to float type.
+    Converts all cells in a pandas DataFrame to float type.
+
+    category: Data type conversion
     """
     
     @classmethod

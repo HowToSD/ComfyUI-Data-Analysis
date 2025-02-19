@@ -5,8 +5,9 @@ from .utils import jsons_to_series
 
 class PandasMulSeries:
     """
-    PandasMulSeries:
-        A class for multiplying a Pandas DataFrame by a Pandas Series.
+    Multiplies a Pandas DataFrame by a Pandas Series.
+
+    category: Arithmetic method
     """
     
     @classmethod

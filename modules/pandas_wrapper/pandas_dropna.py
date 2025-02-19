@@ -3,8 +3,10 @@ import pandas as pd
 
 class PandasDropNA:
     """
-    PandasColumns:
-        A class for droping missing values from a pandas DataFrame.
+    Pandas Drop NA:
+    Drops missing values from a pandas DataFrame.
+
+    category: Data cleansing
     """
     
     @classmethod

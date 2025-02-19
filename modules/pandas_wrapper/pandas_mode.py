@@ -4,8 +4,9 @@ import pandas as pd
 
 class PandasMode:
     """
-    PandasMode:
-        A class for computing the mode of a pandas DataFrame.
+    Computes the mode of a pandas DataFrame.
+
+    category: Summary statistics
     """
     
     @classmethod

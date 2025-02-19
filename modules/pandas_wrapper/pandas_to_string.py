@@ -4,8 +4,9 @@ import pandas as pd
 
 class PandasToString:
     """
-    PandasToString:
-        A class for converting a pandas DataFrame to a string representation.
+    Converts a pandas DataFrame to a string representation.
+
+    category: Display data
     """
     
     @classmethod

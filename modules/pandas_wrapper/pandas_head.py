@@ -5,8 +5,9 @@ import pandas as pd
 
 class PandasHead:
     """
-    PandasHead:
-        A class for retrieving the first few rows of a pandas DataFrame.
+    Retrieves the first few rows of a pandas DataFrame.
+
+    category: Data subset selection
     """
     
     @classmethod

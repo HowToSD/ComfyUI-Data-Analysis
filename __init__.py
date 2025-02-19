@@ -15,6 +15,11 @@ from .modules.pandas_wrapper.pandas_create_with_index import PandasCreateWithInd
 from .modules.pandas_wrapper.pandas_div import PandasDiv
 from .modules.pandas_wrapper.pandas_div_series import PandasDivSeries
 from .modules.pandas_wrapper.pandas_dropna import PandasDropNA
+from .modules.pandas_wrapper.pandas_exp import PandasExp
+from .modules.pandas_wrapper.pandas_log import PandasLog
+from .modules.pandas_wrapper.pandas_sin import PandasSin
+from .modules.pandas_wrapper.pandas_cos import PandasCos
+from .modules.pandas_wrapper.pandas_tan import PandasTan
 from .modules.pandas_wrapper.pandas_group_by import PandasGroupBy
 from .modules.pandas_wrapper.pandas_head import PandasHead
 from .modules.pandas_wrapper.pandas_horizontal_concat import PandasHorizontalConcat
@@ -78,6 +83,11 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasDiv": PandasDiv,
     "PandasDivSeries": PandasDivSeries,
     "PandasDropNA": PandasDropNA,
+    "PandasExp": PandasExp,
+    "PandasLog": PandasLog,
+    "PandasSin": PandasSin,
+    "PandasCos": PandasCos,
+    "PandasTan": PandasTan,
     "PandasGroupBy": PandasGroupBy,
     "PandasHead": PandasHead,
     "PandasHorizontalConcat": PandasHorizontalConcat,
@@ -143,6 +153,11 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasDiv": "Pandas Div",
     "PandasDivSeries": "Pandas Div Series",
     "PandasDropNA": "Pandas Drop NA",
+    "PandasExp": "Pandas Exp",
+    "PandasLog": "Pandas Log",
+    "PandasSin": "Pandas Sin",
+    "PandasCos": "Pandas Cos",
+    "PandasTan": "Pandas Tan",
     "PandasGroupBy": "Pandas Group By",
     "PandasHead": "Pandas Head",
     "PandasHorizontalConcat": "Pandas Horizontal Concat",

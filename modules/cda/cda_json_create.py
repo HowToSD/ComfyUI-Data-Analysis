@@ -3,8 +3,10 @@ import json
 
 class CDAJSONCreate:
     """
-    CDAJSONCreate:
-        A class for creating a serialized JSON object using values entered in the text field.
+    CDA JSON Create:
+    Creates a serialized JSON object using values entered in the text field.
+
+    category: IO
     """
     
     @classmethod

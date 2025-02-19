@@ -4,8 +4,9 @@ import pandas as pd
 
 class PandasSummary:
     """
-    PandasSummary:
-        A class for analyzing and summarizing a pandas DataFrame.
+    Analyzes and summarizes a pandas DataFrame.
+
+    category: Summary statistics
     """
     
     @classmethod
@@ -34,7 +35,7 @@ class PandasSummary:
             dataframe (DataFrame): The DataFrame.
 
         Returns:
-            tuple: A tuple containing a string representation of the DataFrame summary.
+            tuple: A tuple containing the DataFrame summary.
         """
         summary = dataframe.describe()
-        return (str(summary),)
+        return (summary,)

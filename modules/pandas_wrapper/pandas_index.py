@@ -3,8 +3,9 @@ import pandas as pd
 
 class PandasIndex:
     """
-    PandasColumns:
-        A class for retrieving the row labels (index) of a pandas DataFrame.
+    Retrieves the row labels (index) of a pandas DataFrame.
+
+    category: DataFrame information
     """
     
     @classmethod

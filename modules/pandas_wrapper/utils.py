@@ -69,6 +69,8 @@ class NpEncoder(json.JSONEncoder):
     Source: https://stackoverflow.com/questions/50916422/python-typeerror-object-of-type-int64-is-not-json-serializable
     Author: Jie Yang, Tommy
     Licensed under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+
+    pragma: skip_doc
     """
     def default(self, obj):
         if isinstance(obj, np.integer):

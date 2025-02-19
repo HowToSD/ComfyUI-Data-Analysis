@@ -4,8 +4,9 @@ import pandas as pd
 
 class PandasVerticalConcat:
     """
-    PandasVerticalConcat:
-        A class for vertically concatenating two pandas DataFrames.
+    Vertically concatenates two pandas DataFrames.
+
+    category: Transformation
     """
     
     @classmethod

@@ -5,9 +5,9 @@ import pandas as pd
 
 class PandasCreateWithIndex:
     """
-    PandasCreateWithIndex:
-        A class for creating a pandas DataFrame using values entered in the text field.
-        Input data is assume to have an index.
+    Creates a pandas DataFrame using values entered in the text field. Input data is assumed to have an index.
+
+    category: IO
     """
     
     @classmethod

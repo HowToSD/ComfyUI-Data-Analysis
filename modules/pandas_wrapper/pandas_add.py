@@ -4,8 +4,9 @@ import pandas as pd
 
 class PandasAdd:
     """
-    PandasAdd:
-        A class for adding two pandas DataFrames.
+    Adds two pandas DataFrames.
+
+    category: Arithmetic method
     """
     
     @classmethod

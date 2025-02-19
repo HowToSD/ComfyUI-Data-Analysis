@@ -10,8 +10,10 @@ import pandas as pd
 
 class PandasSaveCSV:
     """
-    PandasSaveCSV:
-        A class for saving a PandasDataFrame to a CSV file.
+    Pandas Save CSV:
+    Saves a PandasDataFrame to a CSV file.
+
+    category: IO
     """
     @classmethod
     def INPUT_TYPES(s):

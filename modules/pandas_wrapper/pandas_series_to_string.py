@@ -5,8 +5,9 @@ from .utils import jsons_to_series
 
 class PandasSeriesToString:
     """
-    PandasSeriesToString:
-        A class for converting a pandas Series to a string representation.
+    Converts a pandas Series to a string representation.
+
+    category: Display data
     """
     
     @classmethod

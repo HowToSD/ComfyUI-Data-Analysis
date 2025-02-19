@@ -8,6 +8,11 @@ from io import StringIO
 import pandas as pd
 
 class PandasShowDataFrame:
+    """
+    Displays a Pandas DataFrame as text.
+
+    category: Display data
+    """
     @classmethod
     def INPUT_TYPES(s):
         return {

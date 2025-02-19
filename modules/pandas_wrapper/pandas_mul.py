@@ -5,8 +5,9 @@ import pandas as pd
 
 class PandasMul:
     """
-    PandasMul:
-        A class for multiplying two pandas DataFrames.
+    Multiplies two pandas DataFrames.
+
+    category: Arithmetic method
     """
     
     @classmethod

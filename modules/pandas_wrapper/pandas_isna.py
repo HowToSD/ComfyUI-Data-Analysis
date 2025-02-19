@@ -4,8 +4,10 @@ import pandas as pd
 
 class PandasIsNA:
     """
-    PandasColumns:
-        A class for checking a pandas DataFrame for missing values.
+    Pandas Is NA:
+    Checks a pandas DataFrame for missing values.
+
+    category: Data cleansing
     """
     
     @classmethod

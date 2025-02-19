@@ -5,8 +5,10 @@ import pandas as pd
 
 class PandasLoadCSVWithEncoding:
     """
-    PandasLoadCSVWithEncoding:
-        A class for loading CSV files into a pandas DataFrame.
+    Pandas Load CSV With Encoding:
+    Loads CSV files into a pandas DataFrame.
+
+    category: IO
     """
     
     @classmethod

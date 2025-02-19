@@ -1,4 +1,7 @@
 # User's Guide
+
+For a complete list of nodes, refer to [the Node reference](reference/node_reference.md).
+
 ## Basic Concepts
 ### How to connect nodes for DataFrame
 To connect the DataFrame output from one Pandas node to another, move the wire toward the top-left of the text field. You may need to hover around the corner to find the correct connection point.

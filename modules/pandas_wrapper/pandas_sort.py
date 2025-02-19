@@ -4,8 +4,9 @@ import pandas as pd
 
 class PandasSort:
     """
-    PandasSort:
-        A class for sorting a pandas DataFrame by a specified column.
+    Sorts a pandas DataFrame by a specified column.
+
+    category: Transformation
     """
     
     @classmethod

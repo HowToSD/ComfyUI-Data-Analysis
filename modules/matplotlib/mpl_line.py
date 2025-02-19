@@ -7,8 +7,10 @@ from .util import plot_post_steps
 
 class MPLLine:
     """
-    MPLPlotLine:
-        A class for generating line plots from a pandas DataFrame.
+    MPL Line Plot:
+        Generates a line plot from a pandas DataFrame.
+
+    category: Plot
     """
     
     @classmethod

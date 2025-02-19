@@ -4,8 +4,9 @@ import pandas as pd
 
 class PandasSelectColumns:
     """
-    PandasSelectColumns:
-        A class for selecting specific columns from a pandas DataFrame.
+    Selects specific columns from a pandas DataFrame.
+
+    category: Data subset selection
     """
     
     @classmethod

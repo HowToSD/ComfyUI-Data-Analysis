@@ -5,8 +5,9 @@ from .utils import series_to_jsons
 
 class PandasMean:
     """
-    PandasMin:
-        A class for computing the mean of a pandas DataFrame.
+    Computes the mean of a pandas DataFrame.
+
+    category: Summary statistics
     """
     
     @classmethod

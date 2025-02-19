@@ -6,6 +6,11 @@ See credit/credit.md for the full license.
 """
 
 class PandasShowText:
+    """
+    Displays a string.
+
+    category: Display data
+    """
     @classmethod
     def INPUT_TYPES(s):
         return {

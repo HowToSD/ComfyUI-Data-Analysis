@@ -5,8 +5,9 @@ from .utils import jsons_to_series
 
 class PandasDivSeries:
     """
-    PandasDivSeries:
-        A class for dividing a Pandas DataFrame by a Pandas Series.
+    Divides a Pandas DataFrame by a Pandas Series.
+
+    category: Arithmetic method
     """
     
     @classmethod
