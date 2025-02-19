@@ -12,7 +12,7 @@ import { ComfyWidgets } from "../../../scripts/widgets.js";
 app.registerExtension({
 	name: "HowToSD.ShowText",
 	async beforeRegisterNodeDef(nodeType, nodeData, app) {
-		if (nodeData.name === "PandasShowText") {  // This needs to match NODE_CLASS_MAPPINGS in Python
+		if (["PandasShowText", "CDAShowInt", "CDAShowFloat"].includes(nodeData.name)) {  // This needs to match NODE_CLASS_MAPPINGS in Python
 			function populate(text) {
 				if (this.widgets) {
 					for (let i = 1; i < this.widgets.length; i++) {

@@ -1,5 +1,11 @@
 from typing import Dict, Type, TypeVar
+from .modules.cda.cda_float_create import CDAFloatCreate
+from .modules.cda.cda_int_create import CDAIntCreate
 from .modules.cda.cda_json_create import CDAJSONCreate
+from .modules.cda.cda_show_float import CDAShowFloat
+from .modules.cda.cda_show_int import CDAShowInt
+from .modules.cda.cda_string_create import CDAStringCreate
+from .modules.cda.cda_text_create import CDATextCreate
 from .modules.matplotlib.mpl_bar import MPLBar
 from .modules.matplotlib.mpl_line import MPLLine
 from .modules.matplotlib.mpl_scatter import MPLScatter
@@ -33,6 +39,7 @@ from .modules.pandas_wrapper.pandas_join import PandasJoin
 from .modules.pandas_wrapper.pandas_load_csv import PandasLoadCSV
 from .modules.pandas_wrapper.pandas_load_csv_with_encoding import PandasLoadCSVWithEncoding
 from .modules.pandas_wrapper.pandas_load_csv_with_index import PandasLoadCSVWithIndex
+from .modules.pandas_wrapper.pandas_load_html import PandasLoadHTML
 from .modules.pandas_wrapper.pandas_load_json import PandasLoadJSON
 from .modules.pandas_wrapper.pandas_loc_cell_str import PandasLocCellStr
 from .modules.pandas_wrapper.pandas_loc_row_series import PandasLocRowSeries
@@ -68,7 +75,13 @@ from .modules.pandas_wrapper.pandas_vertical_split import PandasVerticalSplit
 T = TypeVar("T")
 
 NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
+    "CDAFloatCreate": CDAFloatCreate,
+    "CDAIntCreate": CDAIntCreate,
     "CDAJSONCreate": CDAJSONCreate,
+    "CDAShowFloat": CDAShowFloat,
+    "CDAShowInt": CDAShowInt,
+    "CDAStringCreate": CDAStringCreate,
+    "CDATextCreate": CDATextCreate,
     "MPLBar": MPLBar,
     "MPLLine": MPLLine,
     "MPLScatter": MPLScatter,
@@ -102,6 +115,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasLoadCSV": PandasLoadCSV,
     "PandasLoadCSVWithEncoding": PandasLoadCSVWithEncoding,
     "PandasLoadCSVWithIndex": PandasLoadCSVWithIndex,
+    "PandasLoadHTML": PandasLoadHTML,
     "PandasLoadJSON": PandasLoadJSON,
     "PandasLocCellStr": PandasLocCellStr,
     "PandasLocRowSeries": PandasLocRowSeries,
@@ -140,7 +154,13 @@ NODE_CLASS_MAPPINGS (Dict[str, Type[T]]):
 """
 
 NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
+    "CDAFloatCreate": "CDA Float Create",
+    "CDAIntCreate": "CDA Int Create",
     "CDAJSONCreate": "CDA JSON Create",
+    "CDAShowFloat": "CDA Show Float",
+    "CDAShowInt": "CDA Show Int",
+    "CDAStringCreate": "CDA String Create",
+    "CDATextCreate": "CDA Text Create",
     "MPLBar": "MPL Bar Chart",
     "MPLLine": "MPL Line Plot",
     "MPLScatter": "MPL Scatter Plot",
@@ -174,6 +194,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasLoadCSV": "Pandas Load CSV",
     "PandasLoadCSVWithEncoding": "Pandas Load CSV With Encoding",
     "PandasLoadCSVWithIndex": "Pandas Load CSV With Index",
+    "PandasLoadHTML": "Pandas Load HTML",
     "PandasLoadJSON": "Pandas Load JSON",
     "PandasLocCellStr": "Pandas Loc Cell Str",
     "PandasLocRowSeries": "Pandas Loc Row Series",

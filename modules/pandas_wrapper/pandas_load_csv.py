@@ -31,13 +31,13 @@ class PandasLoadCSV:
 
     def load_csv(self, file_path: str) -> tuple:
         """
-        Loads a CSV file into a pandas DataFrame and converts it to a JSON string.
+        Loads a CSV file into a pandas DataFrame.
 
         Args:
             file_path (str): The path to the CSV file.
 
         Returns:
-            tuple: A tuple containing a JSON string representation of the DataFrame.
+            tuple: A tuple containing a DataFrame.
         """
         # Read CSV file into DataFrame
         df = pd.read_csv(file_path)

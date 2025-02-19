@@ -45,6 +45,8 @@
 ## Display data
 | Node | Description |
 | --- | --- |
+| [C D A Show Float](cda_show_float.md) | Displays a floating-point number as text. |
+| [C D A Show Int](cda_show_int.md) | Displays a Pandas Int as text. |
 | [Pandas Index To String](pandas_index_to_string.md) | Converts a pandas Index to a string representation. |
 | [Pandas Series To String](pandas_series_to_string.md) | Converts a pandas Series to a string representation. |
 | [Pandas Show Data Frame](pandas_show_dataframe.md) | Displays a Pandas DataFrame as text. |
@@ -55,12 +57,17 @@
 ## IO
 | Node | Description |
 | --- | --- |
+| [CDA Float Create](cda_float_create.md) | Creates a Python float using a value entered in the text field. |
+| [CDA Int Create](cda_int_create.md) | Creates a Python int using a value entered in the text field. |
 | [CDA JSON Create](cda_json_create.md) | Creates a serialized JSON object using values entered in the text field. |
+| [CDA String Create](cda_string_create.md) | Creates a Python String using a value entered in a single-line text field. |
+| [CDA Text Create](cda_text_create.md) | Creates a Python String using a value entered in a multi-line text field. |
 | [Pandas Create](pandas_create.md) | Creates a pandas DataFrame using values entered in the text field. |
 | [Pandas Create With Index](pandas_create_with_index.md) | Creates a pandas DataFrame using values entered in the text field. Input data is assumed to have an index. |
 | [Pandas Load CSV](pandas_load_csv.md) | Loads CSV files into a pandas DataFrame. |
 | [Pandas Load CSV With Encoding](pandas_load_csv_with_encoding.md) | Loads CSV files into a pandas DataFrame. |
 | [Pandas Load CSV With Index](pandas_load_csv_with_index.md) | Loads CSV files into a pandas DataFrame. |
+| [Pandas Load HTML](pandas_load_html.md) | Scans HTML files for tables and returns the number of DataFrames, with each table represented as a separate DataFrame and the list of those DataFrames. |
 | [Pandas Load JSON](pandas_load_json.md) | Loads JSON files into a pandas DataFrame. |
 | [Pandas Save CSV](pandas_save_csv.md) | Saves a PandasDataFrame to a CSV file. |
 | [Pandas Save JSON](pandas_save_json.md) | Saves a PandasDataFrame to a JSON file. |

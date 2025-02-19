@@ -31,13 +31,13 @@ class PandasLoadJSON:
 
     def load_json(self, file_path: str) -> tuple:
         """
-        Loads a JSON file into a pandas DataFrame and converts it to a JSON string.
+        Loads a JSON file into a pandas DataFrame.
 
         Args:
             file_path (str): The path to the JSON file.
 
         Returns:
-            tuple: A tuple containing a JSON string representation of the DataFrame.
+            tuple: A tuple containing a DataFrame.
         """
         # Read JSON file into DataFrame
         df = pd.read_json(file_path)

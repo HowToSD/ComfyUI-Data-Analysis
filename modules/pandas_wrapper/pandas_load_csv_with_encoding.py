@@ -32,7 +32,7 @@ class PandasLoadCSVWithEncoding:
 
     def load_csv(self, file_path: str, encoding: str) -> tuple:
         """
-        Loads a CSV file into a pandas DataFrame and converts it to a JSON string. Allows specifying the file encoding to support formats other than UTF-8.
+        Loads a CSV file into a pandas DataFrame. Allows specifying the file encoding to support formats other than UTF-8.
 
         Refer to the below documents for the list of encodings:
         https://docs.python.org/3/library/codecs.html#standard-encodings
@@ -42,7 +42,7 @@ class PandasLoadCSVWithEncoding:
             encoding (str): Encoding of the file.
 
         Returns:
-            tuple: A tuple containing a JSON string representation of the DataFrame.
+            tuple: A tuple containing a DataFrame.
         """
         # Read CSV file into DataFrame
         df = pd.read_csv(file_path, encoding=encoding)

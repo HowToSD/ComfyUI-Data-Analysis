@@ -33,14 +33,14 @@ class PandasLoadCSVWithIndex:
 
     def load_csv(self, file_path: str, index_col: int=0) -> tuple:
         """
-        Loads a CSV file into a pandas DataFrame and converts it to a JSON string.
+        Loads a CSV file into a pandas DataFrame.
         Input data is assume to have an index.
 
         Args:
             file_path (str): The path to the CSV file.
 
         Returns:
-            tuple: A tuple containing a JSON string representation of the DataFrame.
+            tuple: A tuple containing a DataFrame.
         """
         # Read CSV file into DataFrame
         df = pd.read_csv(file_path, index_col=index_col)
