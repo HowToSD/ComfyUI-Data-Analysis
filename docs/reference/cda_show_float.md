@@ -1,4 +1,4 @@
-# C D A Show Float
+# CDAShowFloat
 Displays a floating-point number as text.
 
 ## Input

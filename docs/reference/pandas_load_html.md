@@ -1,5 +1,10 @@
 # Pandas Load HTML
-Scans HTML files for tables and returns the number of DataFrames, with each table represented as a separate DataFrame and the list of those DataFrames.
+Scans an HTML file or webpage for tables and returns the number of DataFrames 
+found, followed by a list of up to 10 DataFrames. Each table is represented 
+as a separate DataFrame. If fewer than 10 tables are found, empty DataFrames 
+fill the remaining slots.
+
+When loading from a URL, additional cleanup may be required.
 
 ## Input
 | Name | Data type |
