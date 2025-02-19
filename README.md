@@ -73,7 +73,7 @@ Note: GPU is not required to run this custom module.
 This custom node module requires pandas and matplotlib, which are not included in the default ComfyUI installation. If you install this module using ComfyUI Manager, these packages should be installed automatically. However, if installation fails, refer to the pandas and matplotlib documentation for manual installation.
 
 ## How to Use
-Refer to [User's Guide](docs/ug.md) or check out [Node Reference](reference/node_reference.md)
+Refer to [User's Guide](docs/ug.md) or check out [Node Reference](docs/reference/node_reference.md)
 
 For a practical example, see the tutorial on baseball data: [How to Find Out Who Had the Most Hits](docs/baseball_example1.md).
 
