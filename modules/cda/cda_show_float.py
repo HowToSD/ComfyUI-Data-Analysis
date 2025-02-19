@@ -9,7 +9,7 @@ import sys
 
 class CDAShowFloat:
     """
-    CDAShowFloat:
+    CDA Show Float:
     Displays a floating-point number as text.
 
     category: Display data

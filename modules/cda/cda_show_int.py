@@ -7,7 +7,7 @@ See credit/credit.md for the full license.
 
 class CDAShowInt:
     """
-    CDAShowInt:
+    CDA Show Int:
     Displays a Pandas Int as text.
 
     category: Display data

@@ -45,8 +45,8 @@
 ## Display data
 | Node | Description |
 | --- | --- |
-| [CDAShowFloat](cda_show_float.md) | Displays a floating-point number as text. |
-| [CDAShowInt](cda_show_int.md) | Displays a Pandas Int as text. |
+| [CDA Show Float](cda_show_float.md) | Displays a floating-point number as text. |
+| [CDA Show Int](cda_show_int.md) | Displays a Pandas Int as text. |
 | [Pandas Index To String](pandas_index_to_string.md) | Converts a pandas Index to a string representation. |
 | [Pandas Series To String](pandas_series_to_string.md) | Converts a pandas Series to a string representation. |
 | [Pandas Show Data Frame](pandas_show_dataframe.md) | Displays a Pandas DataFrame as text. |

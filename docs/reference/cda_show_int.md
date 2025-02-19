@@ -1,4 +1,4 @@
-# CDAShowInt
+# CDA Show Int
 Displays a Pandas Int as text.
 
 ## Input
