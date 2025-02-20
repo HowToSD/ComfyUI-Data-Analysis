@@ -1,10 +1,9 @@
 from typing import Any, Dict
 import pandas as pd
 
-class PandasDropNA:
+class PandasDropDuplicates:
     """
-    Pandas Drop NA:
-    Drops missing values from a pandas DataFrame.
+    Drops duplicate rows from a Pandas DataFrame.
 
     category: Data cleansing
     """
@@ -24,12 +23,12 @@ class PandasDropNA:
         }
 
     RETURN_TYPES: tuple = ("DATAFRAME",)
-    FUNCTION: str = "dropna"
+    FUNCTION: str = "f"
     CATEGORY: str = "Data Analysis"
 
-    def dropna(self, dataframe: pd.DataFrame) -> tuple:
+    def f(self, dataframe: pd.DataFrame) -> tuple:
         """
-        Returns a DataFrame with missing values removed.
+        Drops duplicate rows from a Pandas DataFrame.
 
         Args:
             dataframe (DataFrame): The DataFrame.
@@ -37,4 +36,4 @@ class PandasDropNA:
         Returns:
             tuple: A tuple containing the DataFrame.
         """
-        return (dataframe.dropna(),)
+        return (dataframe.drop_duplicates(),)

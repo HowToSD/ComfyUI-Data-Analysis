@@ -36,6 +36,7 @@
 ## Data cleansing
 | Node | Description |
 | --- | --- |
+| [Pandas Drop Duplicates](pandas_drop_duplicates.md) | Drops duplicate rows from a Pandas DataFrame. |
 | [Pandas Drop NA](pandas_dropna.md) | Drops missing values from a pandas DataFrame. |
 | [Pandas Is NA](pandas_isna.md) | Checks a pandas DataFrame for missing values. |
 | [Pandas Replace](pandas_replace.md) | Replaces part or all of a string in each DataFrame cell with a specified string using a wildcard for matching.  If you want to remove some characters, then leave the replace_string field blank. |

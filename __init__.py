@@ -1,3 +1,4 @@
+# This file is auto-generated. Do not edit manually.
 from typing import Dict, Type, TypeVar
 from .modules.cda.cda_float_create import CDAFloatCreate
 from .modules.cda.cda_int_create import CDAIntCreate
@@ -17,6 +18,7 @@ from .modules.pandas_wrapper.pandas_as_float import PandasAsFloat
 from .modules.pandas_wrapper.pandas_as_int import PandasAsInt
 from .modules.pandas_wrapper.pandas_as_string import PandasAsString
 from .modules.pandas_wrapper.pandas_columns import PandasColumns
+from .modules.pandas_wrapper.pandas_cos import PandasCos
 from .modules.pandas_wrapper.pandas_count import PandasCount
 from .modules.pandas_wrapper.pandas_create import PandasCreate
 from .modules.pandas_wrapper.pandas_create_with_index import PandasCreateWithIndex
@@ -28,12 +30,9 @@ from .modules.pandas_wrapper.pandas_div import PandasDiv
 from .modules.pandas_wrapper.pandas_div_scalar_float import PandasDivScalarFloat
 from .modules.pandas_wrapper.pandas_div_scalar_int import PandasDivScalarInt
 from .modules.pandas_wrapper.pandas_div_series import PandasDivSeries
+from .modules.pandas_wrapper.pandas_drop_duplicates import PandasDropDuplicates
 from .modules.pandas_wrapper.pandas_dropna import PandasDropNA
 from .modules.pandas_wrapper.pandas_exp import PandasExp
-from .modules.pandas_wrapper.pandas_log import PandasLog
-from .modules.pandas_wrapper.pandas_sin import PandasSin
-from .modules.pandas_wrapper.pandas_cos import PandasCos
-from .modules.pandas_wrapper.pandas_tan import PandasTan
 from .modules.pandas_wrapper.pandas_group_by import PandasGroupBy
 from .modules.pandas_wrapper.pandas_head import PandasHead
 from .modules.pandas_wrapper.pandas_horizontal_concat import PandasHorizontalConcat
@@ -51,6 +50,7 @@ from .modules.pandas_wrapper.pandas_load_html import PandasLoadHTML
 from .modules.pandas_wrapper.pandas_load_json import PandasLoadJSON
 from .modules.pandas_wrapper.pandas_loc_cell_str import PandasLocCellStr
 from .modules.pandas_wrapper.pandas_loc_row_series import PandasLocRowSeries
+from .modules.pandas_wrapper.pandas_log import PandasLog
 from .modules.pandas_wrapper.pandas_max import PandasMax
 from .modules.pandas_wrapper.pandas_mean import PandasMean
 from .modules.pandas_wrapper.pandas_median import PandasMedian
@@ -70,12 +70,13 @@ from .modules.pandas_wrapper.pandas_save_csv import PandasSaveCSV
 from .modules.pandas_wrapper.pandas_save_json import PandasSaveJSON
 from .modules.pandas_wrapper.pandas_select_columns import PandasSelectColumns
 from .modules.pandas_wrapper.pandas_select_rows import PandasSelectRows
-from .modules.pandas_wrapper.pandas_series_to_string import PandasSeriesToString
 from .modules.pandas_wrapper.pandas_series_to_dataframe import PandasSeriesToDataFrame
+from .modules.pandas_wrapper.pandas_series_to_string import PandasSeriesToString
 from .modules.pandas_wrapper.pandas_show_dataframe import PandasShowDataFrame
 from .modules.pandas_wrapper.pandas_show_index import PandasShowIndex
 from .modules.pandas_wrapper.pandas_show_series import PandasShowSeries
 from .modules.pandas_wrapper.pandas_show_text import PandasShowText
+from .modules.pandas_wrapper.pandas_sin import PandasSin
 from .modules.pandas_wrapper.pandas_sort import PandasSort
 from .modules.pandas_wrapper.pandas_std import PandasStd
 from .modules.pandas_wrapper.pandas_sub import PandasSub
@@ -84,13 +85,19 @@ from .modules.pandas_wrapper.pandas_sub_scalar_int import PandasSubScalarInt
 from .modules.pandas_wrapper.pandas_sub_series import PandasSubSeries
 from .modules.pandas_wrapper.pandas_sum import PandasSum
 from .modules.pandas_wrapper.pandas_summary import PandasSummary
+from .modules.pandas_wrapper.pandas_tan import PandasTan
 from .modules.pandas_wrapper.pandas_to_string import PandasToString
 from .modules.pandas_wrapper.pandas_transpose import PandasTranspose
 from .modules.pandas_wrapper.pandas_var import PandasVar
 from .modules.pandas_wrapper.pandas_vertical_concat import PandasVerticalConcat
 from .modules.pandas_wrapper.pandas_vertical_split import PandasVerticalSplit
-
 T = TypeVar("T")
+
+
+"""
+NODE_CLASS_MAPPINGS (Dict[str, Type[T]]):
+    A dictionary mapping node names to their corresponding class implementations.
+"""
 
 NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "CDAFloatCreate": CDAFloatCreate,
@@ -111,6 +118,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasAsInt": PandasAsInt,
     "PandasAsString": PandasAsString,
     "PandasColumns": PandasColumns,
+    "PandasCos": PandasCos,
     "PandasCount": PandasCount,
     "PandasCreate": PandasCreate,
     "PandasCreateWithIndex": PandasCreateWithIndex,
@@ -122,12 +130,9 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasDivScalarFloat": PandasDivScalarFloat,
     "PandasDivScalarInt": PandasDivScalarInt,
     "PandasDivSeries": PandasDivSeries,
+    "PandasDropDuplicates": PandasDropDuplicates,
     "PandasDropNA": PandasDropNA,
     "PandasExp": PandasExp,
-    "PandasLog": PandasLog,
-    "PandasSin": PandasSin,
-    "PandasCos": PandasCos,
-    "PandasTan": PandasTan,
     "PandasGroupBy": PandasGroupBy,
     "PandasHead": PandasHead,
     "PandasHorizontalConcat": PandasHorizontalConcat,
@@ -145,6 +150,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasLoadJSON": PandasLoadJSON,
     "PandasLocCellStr": PandasLocCellStr,
     "PandasLocRowSeries": PandasLocRowSeries,
+    "PandasLog": PandasLog,
     "PandasMax": PandasMax,
     "PandasMean": PandasMean,
     "PandasMedian": PandasMedian,
@@ -154,22 +160,23 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasMulScalarFloat": PandasMulScalarFloat,
     "PandasMulScalarInt": PandasMulScalarInt,
     "PandasMulSeries": PandasMulSeries,
-    "PandasRename": PandasRename,
-    "PandasReplace": PandasReplace,
     "PandasPow": PandasPow,
     "PandasPowScalarFloat": PandasPowScalarFloat,
     "PandasPowScalarInt": PandasPowScalarInt,
     "PandasPowSeries": PandasPowSeries,
+    "PandasRename": PandasRename,
+    "PandasReplace": PandasReplace,
     "PandasSaveCSV": PandasSaveCSV,
     "PandasSaveJSON": PandasSaveJSON,
     "PandasSelectColumns": PandasSelectColumns,
     "PandasSelectRows": PandasSelectRows,
-    "PandasSeriesToString": PandasSeriesToString,
     "PandasSeriesToDataFrame": PandasSeriesToDataFrame,
+    "PandasSeriesToString": PandasSeriesToString,
     "PandasShowDataFrame": PandasShowDataFrame,
     "PandasShowIndex": PandasShowIndex,
     "PandasShowSeries": PandasShowSeries,
     "PandasShowText": PandasShowText,
+    "PandasSin": PandasSin,
     "PandasSort": PandasSort,
     "PandasStd": PandasStd,
     "PandasSub": PandasSub,
@@ -178,15 +185,18 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasSubSeries": PandasSubSeries,
     "PandasSum": PandasSum,
     "PandasSummary": PandasSummary,
+    "PandasTan": PandasTan,
     "PandasToString": PandasToString,
     "PandasTranspose": PandasTranspose,
     "PandasVar": PandasVar,
     "PandasVerticalConcat": PandasVerticalConcat,
-    "PandasVerticalSplit": PandasVerticalSplit
+    "PandasVerticalSplit": PandasVerticalSplit,
 }
+
+
 """
-NODE_CLASS_MAPPINGS (Dict[str, Type[T]]):
-    A dictionary mapping node names to their corresponding class implementations.
+NODE_DISPLAY_NAME_MAPPINGS (Dict[str, str]):
+    A dictionary mapping node names to user-friendly display names.
 """
 
 NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
@@ -202,12 +212,13 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "MPLScatter": "MPL Scatter Plot",
     "PandasAdd": "Pandas Add",
     "PandasAddScalarFloat": "Pandas Add Scalar Float",
-    "PandasAddScalarInt":" Pandas Add Scalar Int",
+    "PandasAddScalarInt": "Pandas Add Scalar Int",
     "PandasAddSeries": "Pandas Add Series",
     "PandasAsFloat": "Pandas As Float",
     "PandasAsInt": "Pandas As Int",
     "PandasAsString": "Pandas As String",
     "PandasColumns": "Pandas Columns",
+    "PandasCos": "Pandas Cos",
     "PandasCount": "Pandas Count",
     "PandasCreate": "Pandas Create",
     "PandasCreateWithIndex": "Pandas Create With Index",
@@ -219,12 +230,9 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasDivScalarFloat": "Pandas Div Scalar Float",
     "PandasDivScalarInt": "Pandas Div Scalar Int",
     "PandasDivSeries": "Pandas Div Series",
+    "PandasDropDuplicates": "Pandas Drop Duplicates",
     "PandasDropNA": "Pandas Drop NA",
     "PandasExp": "Pandas Exp",
-    "PandasLog": "Pandas Log",
-    "PandasSin": "Pandas Sin",
-    "PandasCos": "Pandas Cos",
-    "PandasTan": "Pandas Tan",
     "PandasGroupBy": "Pandas Group By",
     "PandasHead": "Pandas Head",
     "PandasHorizontalConcat": "Pandas Horizontal Concat",
@@ -242,6 +250,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasLoadJSON": "Pandas Load JSON",
     "PandasLocCellStr": "Pandas Loc Cell Str",
     "PandasLocRowSeries": "Pandas Loc Row Series",
+    "PandasLog": "Pandas Log",
     "PandasMax": "Pandas Max",
     "PandasMean": "Pandas Mean",
     "PandasMedian": "Pandas Median",
@@ -261,12 +270,13 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasSaveJSON": "Pandas Save JSON",
     "PandasSelectColumns": "Pandas Select Columns",
     "PandasSelectRows": "Pandas Select Rows",
-    "PandasSeriesToString": "Pandas Series To String",
     "PandasSeriesToDataFrame": "Pandas Series To DataFrame",
+    "PandasSeriesToString": "Pandas Series To String",
     "PandasShowDataFrame": "Pandas Show DataFrame",
     "PandasShowIndex": "Pandas Show Index",
     "PandasShowSeries": "Pandas Show Series",
     "PandasShowText": "Pandas Show Text",
+    "PandasSin": "Pandas Sin",
     "PandasSort": "Pandas Sort",
     "PandasStd": "Pandas Std",
     "PandasSub": "Pandas Sub",
@@ -275,21 +285,20 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasSubSeries": "Pandas Sub Series",
     "PandasSum": "Pandas Sum",
     "PandasSummary": "Pandas Summary",
+    "PandasTan": "Pandas Tan",
     "PandasToString": "Pandas To String",
     "PandasTranspose": "Pandas Transpose",
     "PandasVar": "Pandas Var",
     "PandasVerticalConcat": "Pandas Vertical Concat",
-    "PandasVerticalSplit": "Pandas Vertical Split"
+    "PandasVerticalSplit": "Pandas Vertical Split",
 }
-"""
-NODE_DISPLAY_NAME_MAPPINGS (Dict[str, str]):
-    A dictionary mapping node names to user-friendly display names.
-"""
+
 
 """
 Below two lines were taken from:
 https://github.com/pythongosssss/ComfyUI-Custom-Scripts/blob/main/__init__.py
 See credit/credit.md for the full license.
 """
+
 WEB_DIRECTORY = "./web"
 __all__ = ["NODE_CLASS_MAPPINGS", "NODE_DISPLAY_NAME_MAPPINGS", "WEB_DIRECTORY"]
