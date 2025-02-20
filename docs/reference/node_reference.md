@@ -106,6 +106,8 @@
 | [Pandas Horizontal Split](pandas_horizontal_split.md) | Horizontally splits a Pandas DataFrame into two pandas DataFrames. |
 | [Pandas Join](pandas_join.md) | Merges two pandas DataFrames based on a common column. |
 | [Pandas Rename](pandas_rename.md) | Renames an index (row label) or a column label. |
+| [Pandas Series To Data Frame](pandas_series_to_dataframe.md) | Converts a Pandas Series to a DataFrame. |
 | [Pandas Sort](pandas_sort.md) | Sorts a pandas DataFrame by a specified column. |
+| [Pandas Transpose](pandas_transpose.md) | Transposes a DataFrame. |
 | [Pandas Vertical Concat](pandas_vertical_concat.md) | Vertically concatenates two pandas DataFrames. |
 | [Pandas Vertical Split](pandas_vertical_split.md) | Vertically splits a Pandas DataFrame into two pandas DataFrames. |

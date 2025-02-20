@@ -5,7 +5,7 @@ import pandas as pd
 class PandasRename:
     """
     Renames an index (row label) or a column label.
-
+    Currently, renaming only works for string labels. Renaming of integer labels is not supported.
     Note below node parameter description is incomplete due to a reference generator's bug:
     * axis takes columns or index.
 

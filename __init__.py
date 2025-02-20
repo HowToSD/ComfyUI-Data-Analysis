@@ -59,6 +59,7 @@ from .modules.pandas_wrapper.pandas_save_json import PandasSaveJSON
 from .modules.pandas_wrapper.pandas_select_columns import PandasSelectColumns
 from .modules.pandas_wrapper.pandas_select_rows import PandasSelectRows
 from .modules.pandas_wrapper.pandas_series_to_string import PandasSeriesToString
+from .modules.pandas_wrapper.pandas_series_to_dataframe import PandasSeriesToDataFrame
 from .modules.pandas_wrapper.pandas_show_dataframe import PandasShowDataFrame
 from .modules.pandas_wrapper.pandas_show_index import PandasShowIndex
 from .modules.pandas_wrapper.pandas_show_series import PandasShowSeries
@@ -70,6 +71,7 @@ from .modules.pandas_wrapper.pandas_sub_series import PandasSubSeries
 from .modules.pandas_wrapper.pandas_sum import PandasSum
 from .modules.pandas_wrapper.pandas_summary import PandasSummary
 from .modules.pandas_wrapper.pandas_to_string import PandasToString
+from .modules.pandas_wrapper.pandas_transpose import PandasTranspose
 from .modules.pandas_wrapper.pandas_var import PandasVar
 from .modules.pandas_wrapper.pandas_vertical_concat import PandasVerticalConcat
 from .modules.pandas_wrapper.pandas_vertical_split import PandasVerticalSplit
@@ -137,6 +139,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasSelectColumns": PandasSelectColumns,
     "PandasSelectRows": PandasSelectRows,
     "PandasSeriesToString": PandasSeriesToString,
+    "PandasSeriesToDataFrame": PandasSeriesToDataFrame,
     "PandasShowDataFrame": PandasShowDataFrame,
     "PandasShowIndex": PandasShowIndex,
     "PandasShowSeries": PandasShowSeries,
@@ -148,6 +151,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasSum": PandasSum,
     "PandasSummary": PandasSummary,
     "PandasToString": PandasToString,
+    "PandasTranspose": PandasTranspose,
     "PandasVar": PandasVar,
     "PandasVerticalConcat": PandasVerticalConcat,
     "PandasVerticalSplit": PandasVerticalSplit
@@ -218,6 +222,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasSelectColumns": "Pandas Select Columns",
     "PandasSelectRows": "Pandas Select Rows",
     "PandasSeriesToString": "Pandas Series To String",
+    "PandasSeriesToDataFrame": "Pandas Series To DataFrame",
     "PandasShowDataFrame": "Pandas Show DataFrame",
     "PandasShowIndex": "Pandas Show Index",
     "PandasShowSeries": "Pandas Show Series",
@@ -229,6 +234,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasSum": "Pandas Sum",
     "PandasSummary": "Pandas Summary",
     "PandasToString": "Pandas To String",
+    "PandasTranspose": "Pandas Transpose",
     "PandasVar": "Pandas Var",
     "PandasVerticalConcat": "Pandas Vertical Concat",
     "PandasVerticalSplit": "Pandas Vertical Split"
