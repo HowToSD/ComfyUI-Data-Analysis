@@ -33,6 +33,8 @@ from .modules.pandas_wrapper.pandas_div_series import PandasDivSeries
 from .modules.pandas_wrapper.pandas_drop_duplicates import PandasDropDuplicates
 from .modules.pandas_wrapper.pandas_dropna import PandasDropNA
 from .modules.pandas_wrapper.pandas_exp import PandasExp
+from .modules.pandas_wrapper.pandas_fillna_scalar_float import PandasFillNAScalarFloat
+from .modules.pandas_wrapper.pandas_fillna_scalar_int import PandasFillNAScalarInt
 from .modules.pandas_wrapper.pandas_group_by import PandasGroupBy
 from .modules.pandas_wrapper.pandas_head import PandasHead
 from .modules.pandas_wrapper.pandas_horizontal_concat import PandasHorizontalConcat
@@ -133,6 +135,8 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasDropDuplicates": PandasDropDuplicates,
     "PandasDropNA": PandasDropNA,
     "PandasExp": PandasExp,
+    "PandasFillNAScalarFloat": PandasFillNAScalarFloat,
+    "PandasFillNAScalarInt": PandasFillNAScalarInt,
     "PandasGroupBy": PandasGroupBy,
     "PandasHead": PandasHead,
     "PandasHorizontalConcat": PandasHorizontalConcat,
@@ -233,6 +237,8 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasDropDuplicates": "Pandas Drop Duplicates",
     "PandasDropNA": "Pandas Drop NA",
     "PandasExp": "Pandas Exp",
+    "PandasFillNAScalarFloat": "Pandas Fill NA Scalar Float",
+    "PandasFillNAScalarInt": "Pandas Fill NA Scalar Int",
     "PandasGroupBy": "Pandas Group By",
     "PandasHead": "Pandas Head",
     "PandasHorizontalConcat": "Pandas Horizontal Concat",
