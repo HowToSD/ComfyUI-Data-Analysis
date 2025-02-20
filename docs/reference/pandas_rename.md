@@ -1,9 +1,8 @@
 # Pandas Rename
 Renames an index (row label) or a column label.
 
-Note below node parameter description is inaccurate due to a reference generator's bug:
-* axis takes columns or index, not DataFrame.
-* Both current_label and new_label take a String.
+Note below node parameter description is incomplete due to a reference generator's bug:
+* axis takes columns or index.
 
 ## Input
 | Name | Data type |
