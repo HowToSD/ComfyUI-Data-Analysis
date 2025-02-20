@@ -6,9 +6,14 @@ class PandasRename:
     """
     Renames an index (row label) or a column label.
 
+    Note below node parameter description is inaccurate due to a reference generator's bug:
+    * axis takes columns or index, not DataFrame.
+    * Both current_label and new_label take a String.
+
     category: Transformation
     """
-    
+    # TODO: Fix parameter description in node reference doc.
+
     @classmethod
     def INPUT_TYPES(cls) -> Dict[str, Any]:
         """
