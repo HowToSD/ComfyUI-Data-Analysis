@@ -1,11 +1,11 @@
-# Pandas Div
-Divides a Pandas DataFrame by another DataFrame.
+# Pandas Pow Scalar Float
+Raises a Pandas DataFrame to the power of a floating-point number.
 
 ## Input
 | Name | Data type |
 |---|---|
-| a_dataframe | DataFrame |
-| b_dataframe | DataFrame |
+| dataframe | DataFrame |
+| float_scalar | Float |
 
 ## Output
 | Data type |

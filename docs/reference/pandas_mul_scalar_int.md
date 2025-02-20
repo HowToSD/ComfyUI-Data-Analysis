@@ -1,11 +1,11 @@
-# Pandas Div
-Divides a Pandas DataFrame by another DataFrame.
+# Pandas Mul Scalar Int
+Multiplies a Pandas DataFrame by a floating-point number.
 
 ## Input
 | Name | Data type |
 |---|---|
-| a_dataframe | DataFrame |
-| b_dataframe | DataFrame |
+| dataframe | DataFrame |
+| int_scalar | Int |
 
 ## Output
 | Data type |

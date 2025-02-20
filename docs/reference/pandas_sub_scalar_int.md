@@ -1,11 +1,11 @@
-# Pandas Div
-Divides a Pandas DataFrame by another DataFrame.
+# Pandas Sub Scalar Int
+Subtracts an integer from a Pandas DataFrame.
 
 ## Input
 | Name | Data type |
 |---|---|
-| a_dataframe | DataFrame |
-| b_dataframe | DataFrame |
+| dataframe | DataFrame |
+| int_scalar | Int |
 
 ## Output
 | Data type |

@@ -1,11 +1,11 @@
-# Pandas Div
-Divides a Pandas DataFrame by another DataFrame.
+# Pandas Pow Scalar Int
+Raises a Pandas DataFrame to the power of an integer.
 
 ## Input
 | Name | Data type |
 |---|---|
-| a_dataframe | DataFrame |
-| b_dataframe | DataFrame |
+| dataframe | DataFrame |
+| int_scalar | Int |
 
 ## Output
 | Data type |

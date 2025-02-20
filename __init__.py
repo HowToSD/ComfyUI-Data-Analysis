@@ -10,6 +10,8 @@ from .modules.matplotlib.mpl_bar import MPLBar
 from .modules.matplotlib.mpl_line import MPLLine
 from .modules.matplotlib.mpl_scatter import MPLScatter
 from .modules.pandas_wrapper.pandas_add import PandasAdd
+from .modules.pandas_wrapper.pandas_add_scalar_float import PandasAddScalarFloat
+from .modules.pandas_wrapper.pandas_add_scalar_int import PandasAddScalarInt
 from .modules.pandas_wrapper.pandas_add_series import PandasAddSeries
 from .modules.pandas_wrapper.pandas_as_float import PandasAsFloat
 from .modules.pandas_wrapper.pandas_as_int import PandasAsInt
@@ -23,6 +25,8 @@ from .modules.pandas_wrapper.pandas_cummin import PandasCummin
 from .modules.pandas_wrapper.pandas_cumprod import PandasCumprod
 from .modules.pandas_wrapper.pandas_cumsum import PandasCumsum
 from .modules.pandas_wrapper.pandas_div import PandasDiv
+from .modules.pandas_wrapper.pandas_div_scalar_float import PandasDivScalarFloat
+from .modules.pandas_wrapper.pandas_div_scalar_int import PandasDivScalarInt
 from .modules.pandas_wrapper.pandas_div_series import PandasDivSeries
 from .modules.pandas_wrapper.pandas_dropna import PandasDropNA
 from .modules.pandas_wrapper.pandas_exp import PandasExp
@@ -53,8 +57,12 @@ from .modules.pandas_wrapper.pandas_median import PandasMedian
 from .modules.pandas_wrapper.pandas_min import PandasMin
 from .modules.pandas_wrapper.pandas_mode import PandasMode
 from .modules.pandas_wrapper.pandas_mul import PandasMul
+from .modules.pandas_wrapper.pandas_mul_scalar_float import PandasMulScalarFloat
+from .modules.pandas_wrapper.pandas_mul_scalar_int import PandasMulScalarInt
 from .modules.pandas_wrapper.pandas_mul_series import PandasMulSeries
 from .modules.pandas_wrapper.pandas_pow import PandasPow
+from .modules.pandas_wrapper.pandas_pow_scalar_float import PandasPowScalarFloat
+from .modules.pandas_wrapper.pandas_pow_scalar_int import PandasPowScalarInt
 from .modules.pandas_wrapper.pandas_pow_series import PandasPowSeries
 from .modules.pandas_wrapper.pandas_rename import PandasRename
 from .modules.pandas_wrapper.pandas_replace import PandasReplace
@@ -71,6 +79,8 @@ from .modules.pandas_wrapper.pandas_show_text import PandasShowText
 from .modules.pandas_wrapper.pandas_sort import PandasSort
 from .modules.pandas_wrapper.pandas_std import PandasStd
 from .modules.pandas_wrapper.pandas_sub import PandasSub
+from .modules.pandas_wrapper.pandas_sub_scalar_float import PandasSubScalarFloat
+from .modules.pandas_wrapper.pandas_sub_scalar_int import PandasSubScalarInt
 from .modules.pandas_wrapper.pandas_sub_series import PandasSubSeries
 from .modules.pandas_wrapper.pandas_sum import PandasSum
 from .modules.pandas_wrapper.pandas_summary import PandasSummary
@@ -94,6 +104,8 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "MPLLine": MPLLine,
     "MPLScatter": MPLScatter,
     "PandasAdd": PandasAdd,
+    "PandasAddScalarFloat": PandasAddScalarFloat,
+    "PandasAddScalarInt": PandasAddScalarInt,
     "PandasAddSeries": PandasAddSeries,
     "PandasAsFloat": PandasAsFloat,
     "PandasAsInt": PandasAsInt,
@@ -107,6 +119,8 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasCumprod": PandasCumprod,
     "PandasCumsum": PandasCumsum,
     "PandasDiv": PandasDiv,
+    "PandasDivScalarFloat": PandasDivScalarFloat,
+    "PandasDivScalarInt": PandasDivScalarInt,
     "PandasDivSeries": PandasDivSeries,
     "PandasDropNA": PandasDropNA,
     "PandasExp": PandasExp,
@@ -137,10 +151,14 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasMin": PandasMin,
     "PandasMode": PandasMode,
     "PandasMul": PandasMul,
+    "PandasMulScalarFloat": PandasMulScalarFloat,
+    "PandasMulScalarInt": PandasMulScalarInt,
     "PandasMulSeries": PandasMulSeries,
     "PandasRename": PandasRename,
     "PandasReplace": PandasReplace,
     "PandasPow": PandasPow,
+    "PandasPowScalarFloat": PandasPowScalarFloat,
+    "PandasPowScalarInt": PandasPowScalarInt,
     "PandasPowSeries": PandasPowSeries,
     "PandasSaveCSV": PandasSaveCSV,
     "PandasSaveJSON": PandasSaveJSON,
@@ -155,6 +173,8 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasSort": PandasSort,
     "PandasStd": PandasStd,
     "PandasSub": PandasSub,
+    "PandasSubScalarFloat": PandasSubScalarFloat,
+    "PandasSubScalarInt": PandasSubScalarInt,
     "PandasSubSeries": PandasSubSeries,
     "PandasSum": PandasSum,
     "PandasSummary": PandasSummary,
@@ -181,6 +201,8 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "MPLLine": "MPL Line Plot",
     "MPLScatter": "MPL Scatter Plot",
     "PandasAdd": "Pandas Add",
+    "PandasAddScalarFloat": "Pandas Add Scalar Float",
+    "PandasAddScalarInt":" Pandas Add Scalar Int",
     "PandasAddSeries": "Pandas Add Series",
     "PandasAsFloat": "Pandas As Float",
     "PandasAsInt": "Pandas As Int",
@@ -194,6 +216,8 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasCumprod": "Pandas Cumprod",
     "PandasCumsum": "Pandas Cumsum",
     "PandasDiv": "Pandas Div",
+    "PandasDivScalarFloat": "Pandas Div Scalar Float",
+    "PandasDivScalarInt": "Pandas Div Scalar Int",
     "PandasDivSeries": "Pandas Div Series",
     "PandasDropNA": "Pandas Drop NA",
     "PandasExp": "Pandas Exp",
@@ -224,8 +248,12 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasMin": "Pandas Min",
     "PandasMode": "Pandas Mode",
     "PandasMul": "Pandas Mul",
+    "PandasMulScalarFloat": "Pandas Mul Scalar Float",
+    "PandasMulScalarInt": "Pandas Mul Scalar Int",
     "PandasMulSeries": "Pandas Mul Series",
     "PandasPow": "Pandas Pow",
+    "PandasPowScalarFloat": "Pandas Pow Scalar Float",
+    "PandasPowScalarInt": "Pandas Pow Scalar Int",
     "PandasPowSeries": "Pandas Pow Series",
     "PandasRename": "Pandas Rename",
     "PandasReplace": "Pandas Replace",
@@ -242,6 +270,8 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasSort": "Pandas Sort",
     "PandasStd": "Pandas Std",
     "PandasSub": "Pandas Sub",
+    "PandasSubScalarFloat": "Pandas Sub Scalar Float",
+    "PandasSubScalarInt": "Pandas Sub Scalar Int",
     "PandasSubSeries": "Pandas Sub Series",
     "PandasSum": "Pandas Sum",
     "PandasSummary": "Pandas Summary",

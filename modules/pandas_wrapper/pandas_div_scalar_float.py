@@ -1,11 +1,10 @@
 from typing import Any, Dict
-from io import StringIO
 import pandas as pd
 
 
-class PandasDiv:
+class PandasDivScalarFloat:
     """
-    Divides a Pandas DataFrame by another DataFrame.
+    Divides a Pandas DataFrame by a floating-point number.
 
     category: Arithmetic method
     """
@@ -20,8 +19,8 @@ class PandasDiv:
         """
         return {
             "required": {
-                "a_dataframe": ("DATAFRAME", {}),
-                "b_dataframe": ("DATAFRAME", {})
+                "dataframe": ("DATAFRAME", {}),
+                "float_scalar": ("FLOAT", {"default": 1.0, "min": -2**31, "max": 2**31})
             }
         }
 
@@ -29,16 +28,16 @@ class PandasDiv:
     FUNCTION: str = "f"
     CATEGORY: str = "Data Analysis"
 
-    def f(self, a_dataframe: pd.DataFrame, b_dataframe: pd.DataFrame) -> tuple:
+    def f(self, dataframe: pd.DataFrame, float_scalar: float) -> tuple:
         """
-        Divide two pandas DataFrames.
+        Divides a Pandas DataFrame by a floating-point number.
 
         Args:
-            a_dataframe (DataFrame): The left DataFrame.
-            b_dataframe (DataFrame): The right DataFrame.
+            dataframe (DataFrame): The DataFrame to be divided.
+            float_scalar (DataFrame): The scalar value to divide by.
 
         Returns:
             tuple: A tuple containing the DataFrame containing the result of division.
         """
-        df_out = a_dataframe.div(b_dataframe)
+        df_out = dataframe / float_scalar
         return (df_out,)

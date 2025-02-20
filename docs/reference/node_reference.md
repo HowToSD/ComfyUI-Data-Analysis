@@ -7,14 +7,24 @@
 | Node | Description |
 | --- | --- |
 | [Pandas Add](pandas_add.md) | Adds two pandas DataFrames. |
+| [Pandas Add Scalar Float](pandas_add_scalar_float.md) | Adds a floating-point number to a Pandas DataFrame. |
+| [Pandas Add Scalar Int](pandas_add_scalar_int.md) | Adds an integer to a Pandas DataFrame. |
 | [Pandas Add Series](pandas_add_series.md) | Adds a Pandas Series to a pandas DataFrames. |
-| [Pandas Div](pandas_div.md) | Divides two pandas DataFrames. |
+| [Pandas Div](pandas_div.md) | Divides a Pandas DataFrame by another DataFrame. |
+| [Pandas Div Scalar Float](pandas_div_scalar_float.md) | Divides a Pandas DataFrame by a floating-point number. |
+| [Pandas Div Scalar Int](pandas_div_scalar_int.md) | Divides a Pandas DataFrame by an integer. |
 | [Pandas Div Series](pandas_div_series.md) | Divides a Pandas DataFrame by a Pandas Series. |
 | [Pandas Mul](pandas_mul.md) | Multiplies two pandas DataFrames. |
+| [Pandas Mul Scalar Float](pandas_mul_scalar_float.md) | Multiplies a Pandas DataFrame by a floating-point number. |
+| [Pandas Mul Scalar Int](pandas_mul_scalar_int.md) | Multiplies a Pandas DataFrame by a floating-point number. |
 | [Pandas Mul Series](pandas_mul_series.md) | Multiplies a Pandas DataFrame by a Pandas Series. |
 | [Pandas Pow](pandas_pow.md) | Exponentiates two pandas DataFrames. |
+| [Pandas Pow Scalar Float](pandas_pow_scalar_float.md) | Raises a Pandas DataFrame to the power of a floating-point number. |
+| [Pandas Pow Scalar Int](pandas_pow_scalar_int.md) | Raises a Pandas DataFrame to the power of an integer. |
 | [Pandas Pow Series](pandas_pow_series.md) | Raises a Pandas DataFrame to the power of a Pandas Series. |
 | [Pandas Sub](pandas_sub.md) | Subtracts a Pandas DataFrame from another DataFrame. |
+| [Pandas Sub Scalar Float](pandas_sub_scalar_float.md) | Subtracts a floating-point number from a Pandas DataFrame. |
+| [Pandas Sub Scalar Int](pandas_sub_scalar_int.md) | Subtracts an integer from a Pandas DataFrame. |
 | [Pandas Sub Series](pandas_sub_series.md) | Subtracts a Pandas Series from a Pandas DataFrame. |
 ## Cumulative calculations
 | Node | Description |
