@@ -2,6 +2,7 @@ import json
 import numpy as np
 import pandas as pd
 
+
 def series_to_jsons(series: pd.Series) -> str:
     """
     Convert a pandas Series to a JSON string.
