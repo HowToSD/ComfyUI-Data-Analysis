@@ -52,6 +52,7 @@ from .modules.pandas_wrapper.pandas_mul import PandasMul
 from .modules.pandas_wrapper.pandas_mul_series import PandasMulSeries
 from .modules.pandas_wrapper.pandas_pow import PandasPow
 from .modules.pandas_wrapper.pandas_pow_series import PandasPowSeries
+from .modules.pandas_wrapper.pandas_rename import PandasRename
 from .modules.pandas_wrapper.pandas_replace import PandasReplace
 from .modules.pandas_wrapper.pandas_save_csv import PandasSaveCSV
 from .modules.pandas_wrapper.pandas_save_json import PandasSaveJSON
@@ -127,6 +128,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasMode": PandasMode,
     "PandasMul": PandasMul,
     "PandasMulSeries": PandasMulSeries,
+    "PandasRename": PandasRename,
     "PandasReplace": PandasReplace,
     "PandasPow": PandasPow,
     "PandasPowSeries": PandasPowSeries,
@@ -209,6 +211,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasMulSeries": "Pandas Mul Series",
     "PandasPow": "Pandas Pow",
     "PandasPowSeries": "Pandas Pow Series",
+    "PandasRename": "Pandas Rename",
     "PandasReplace": "Pandas Replace",
     "PandasSaveCSV": "Pandas Save CSV",
     "PandasSaveJSON": "Pandas Save JSON",

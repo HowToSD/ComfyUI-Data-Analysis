@@ -40,4 +40,4 @@ class PandasAsInt:
         """
         # Convert all values to integer, non-numeric values become NaN
         df = dataframe.apply(pd.to_numeric, errors='coerce').astype('Int64')
-        return (df.to_json(),)
+        return (df,)
