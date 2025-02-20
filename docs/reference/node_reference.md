@@ -16,6 +16,13 @@
 | [Pandas Pow Series](pandas_pow_series.md) | Raises a Pandas DataFrame to the power of a Pandas Series. |
 | [Pandas Sub](pandas_sub.md) | Subtracts a Pandas DataFrame from another DataFrame. |
 | [Pandas Sub Series](pandas_sub_series.md) | Subtracts a Pandas Series from a Pandas DataFrame. |
+## Cumulative calculations
+| Node | Description |
+| --- | --- |
+| [Pandas Cummax](pandas_cummax.md) | Computes the cummax (cumulative max) of the DataFrame. |
+| [Pandas Cummin](pandas_cummin.md) | Computes the cummin (cumulative minimum) of the DataFrame. |
+| [Pandas Cumprod](pandas_cumprod.md) | Computes the cumprod (cumulative product) of the DataFrame. |
+| [Pandas Cumsum](pandas_cumsum.md) | Computes the cumsum (cumulative sum) of the DataFrame. |
 ## Data cleansing
 | Node | Description |
 | --- | --- |

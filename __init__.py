@@ -18,6 +18,10 @@ from .modules.pandas_wrapper.pandas_columns import PandasColumns
 from .modules.pandas_wrapper.pandas_count import PandasCount
 from .modules.pandas_wrapper.pandas_create import PandasCreate
 from .modules.pandas_wrapper.pandas_create_with_index import PandasCreateWithIndex
+from .modules.pandas_wrapper.pandas_cummax import PandasCummax
+from .modules.pandas_wrapper.pandas_cummin import PandasCummin
+from .modules.pandas_wrapper.pandas_cumprod import PandasCumprod
+from .modules.pandas_wrapper.pandas_cumsum import PandasCumsum
 from .modules.pandas_wrapper.pandas_div import PandasDiv
 from .modules.pandas_wrapper.pandas_div_series import PandasDivSeries
 from .modules.pandas_wrapper.pandas_dropna import PandasDropNA
@@ -98,6 +102,10 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasCount": PandasCount,
     "PandasCreate": PandasCreate,
     "PandasCreateWithIndex": PandasCreateWithIndex,
+    "PandasCummax": PandasCummax,
+    "PandasCummin": PandasCummin,
+    "PandasCumprod": PandasCumprod,
+    "PandasCumsum": PandasCumsum,
     "PandasDiv": PandasDiv,
     "PandasDivSeries": PandasDivSeries,
     "PandasDropNA": PandasDropNA,
@@ -181,6 +189,10 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasCount": "Pandas Count",
     "PandasCreate": "Pandas Create",
     "PandasCreateWithIndex": "Pandas Create With Index",
+    "PandasCummax": "Pandas Cummax",
+    "PandasCummin": "Pandas Cummin",
+    "PandasCumprod": "Pandas Cumprod",
+    "PandasCumsum": "Pandas Cumsum",
     "PandasDiv": "Pandas Div",
     "PandasDivSeries": "Pandas Div Series",
     "PandasDropNA": "Pandas Drop NA",
