@@ -19,7 +19,7 @@ class PandasSetIndex:
 
     This class internally calls `pandas.DataFrame.set_index()`.
     
-    category: Data transformation
+    category: Transformation
     """
     
     @classmethod

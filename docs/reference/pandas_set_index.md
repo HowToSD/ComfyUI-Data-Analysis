@@ -28,6 +28,6 @@ This class internally calls `pandas.DataFrame.set_index()`.
 | DataFrame |
 
 <HR>
-Category: Data transformation
+Category: Transformation
 
 ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

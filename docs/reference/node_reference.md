@@ -52,10 +52,6 @@
 | [Pandas Loc Row Series](pandas_loc_row_series.md) | Selects a row from a pandas DataFrame and output as a Series. |
 | [Pandas Select Columns](pandas_select_columns.md) | Selects specific columns from a pandas DataFrame. |
 | [Pandas Select Rows](pandas_select_rows.md) | Selects specific rows from a pandas DataFrame based on a condition. |
-## Data transformation
-| Node | Description |
-| --- | --- |
-| [Pandas Set Index](pandas_set_index.md) | Create index (row label) from existing column or columns. |
 ## Data type conversion
 | Node | Description |
 | --- | --- |
@@ -131,6 +127,7 @@
 | [Pandas Join](pandas_join.md) | Merges two pandas DataFrames based on a common column. |
 | [Pandas Rename](pandas_rename.md) | Renames an index (row label) or a column label. |
 | [Pandas Series To Data Frame](pandas_series_to_dataframe.md) | Converts a Pandas Series to a DataFrame. |
+| [Pandas Set Index](pandas_set_index.md) | Create index (row label) from existing column or columns. |
 | [Pandas Sort](pandas_sort.md) | Sorts a pandas DataFrame by a specified column. |
 | [Pandas Transpose](pandas_transpose.md) | Transposes a DataFrame. |
 | [Pandas Vertical Concat](pandas_vertical_concat.md) | Vertically concatenates two pandas DataFrames. |
