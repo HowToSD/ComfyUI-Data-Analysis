@@ -51,6 +51,7 @@ from .modules.pandas_wrapper.pandas_load_csv_with_index import PandasLoadCSVWith
 from .modules.pandas_wrapper.pandas_load_html import PandasLoadHTML
 from .modules.pandas_wrapper.pandas_load_json import PandasLoadJSON
 from .modules.pandas_wrapper.pandas_loc_cell_str import PandasLocCellStr
+from .modules.pandas_wrapper.pandas_loc_row_multiindex_dataframe import PandasLocRowMultiIndexDataFrame
 from .modules.pandas_wrapper.pandas_loc_row_series import PandasLocRowSeries
 from .modules.pandas_wrapper.pandas_log import PandasLog
 from .modules.pandas_wrapper.pandas_max import PandasMax
@@ -154,6 +155,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasLoadHTML": PandasLoadHTML,
     "PandasLoadJSON": PandasLoadJSON,
     "PandasLocCellStr": PandasLocCellStr,
+    "PandasLocRowMultiIndexDataFrame": PandasLocRowMultiIndexDataFrame,
     "PandasLocRowSeries": PandasLocRowSeries,
     "PandasLog": PandasLog,
     "PandasMax": PandasMax,
@@ -257,6 +259,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasLoadHTML": "Pandas Load HTML",
     "PandasLoadJSON": "Pandas Load JSON",
     "PandasLocCellStr": "Pandas Loc Cell Str",
+    "PandasLocRowMultiIndexDataFrame": "Pandas Loc Row Multi Index DataFrame",
     "PandasLocRowSeries": "Pandas Loc Row Series",
     "PandasLog": "Pandas Log",
     "PandasMax": "Pandas Max",
