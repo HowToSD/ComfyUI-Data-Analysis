@@ -74,6 +74,7 @@ from .modules.pandas_wrapper.pandas_select_columns import PandasSelectColumns
 from .modules.pandas_wrapper.pandas_select_rows import PandasSelectRows
 from .modules.pandas_wrapper.pandas_series_to_dataframe import PandasSeriesToDataFrame
 from .modules.pandas_wrapper.pandas_series_to_string import PandasSeriesToString
+from .modules.pandas_wrapper.pandas_set_index import PandasSetIndex
 from .modules.pandas_wrapper.pandas_show_dataframe import PandasShowDataFrame
 from .modules.pandas_wrapper.pandas_show_index import PandasShowIndex
 from .modules.pandas_wrapper.pandas_show_series import PandasShowSeries
@@ -176,6 +177,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasSelectRows": PandasSelectRows,
     "PandasSeriesToDataFrame": PandasSeriesToDataFrame,
     "PandasSeriesToString": PandasSeriesToString,
+    "PandasSetIndex": PandasSetIndex,
     "PandasShowDataFrame": PandasShowDataFrame,
     "PandasShowIndex": PandasShowIndex,
     "PandasShowSeries": PandasShowSeries,
@@ -278,6 +280,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasSelectRows": "Pandas Select Rows",
     "PandasSeriesToDataFrame": "Pandas Series To DataFrame",
     "PandasSeriesToString": "Pandas Series To String",
+    "PandasSetIndex": "Pandas Set Index",
     "PandasShowDataFrame": "Pandas Show DataFrame",
     "PandasShowIndex": "Pandas Show Index",
     "PandasShowSeries": "Pandas Show Series",

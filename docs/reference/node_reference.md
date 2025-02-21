@@ -52,6 +52,10 @@
 | [Pandas Loc Row Series](pandas_loc_row_series.md) | Selects a row from a pandas DataFrame and output as a Series. |
 | [Pandas Select Columns](pandas_select_columns.md) | Selects specific columns from a pandas DataFrame. |
 | [Pandas Select Rows](pandas_select_rows.md) | Selects specific rows from a pandas DataFrame based on a condition. |
+## Data transformation
+| Node | Description |
+| --- | --- |
+| [Pandas Set Index](pandas_set_index.md) | Create index (row label) from existing column or columns. |
 ## Data type conversion
 | Node | Description |
 | --- | --- |
