@@ -58,10 +58,14 @@ class PandasLocRowMultiIndexDataFrame:
         # This will throw an exception if the MultiIndex is not an int.
         if row_index_type == "int": 
             ind_list = [int(ind) for ind in ind_list]
-        
-        ind_tuple = tuple(ind_list)
+
+        ind_tuple = tuple(ind_list)  # Convert the list to a tuple
+        if len(ind_tuple) == 1:  # Do not enclose in tuple if only 1 index is specified
+            ind = ind_tuple[0]
+        else:
+            ind = ind_tuple
 
         # We need to wrap it to get the DataFrame. Otherwise, we will get a Series.
-        ind_tuple_list = [ind_tuple] 
-        value = dataframe.loc[ind_tuple_list]
+        ind_list = [ind] 
+        value = dataframe.loc[ind_list]
         return (value,)
