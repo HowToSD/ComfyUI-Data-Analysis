@@ -259,7 +259,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasLoadHTML": "Pandas Load HTML",
     "PandasLoadJSON": "Pandas Load JSON",
     "PandasLocCellStr": "Pandas Loc Cell Str",
-    "PandasLocRowMultiIndexDataFrame": "Pandas Loc Row Multi Index DataFrame",
+    "PandasLocRowMultiIndexDataFrame": "Pandas Loc Row MultiIndex DataFrame",
     "PandasLocRowSeries": "Pandas Loc Row Series",
     "PandasLog": "Pandas Log",
     "PandasMax": "Pandas Max",

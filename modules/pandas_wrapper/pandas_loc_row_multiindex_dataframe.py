@@ -3,6 +3,7 @@ import pandas as pd
 
 class PandasLocRowMultiIndexDataFrame:
     """
+    Pandas Loc Row MultiIndex DataFrame:
     Selects a row from a pandas DataFrame with MultiIndex and output as a DataFrame.
 
     Specify comma-separated MultiIndex labels (row index) and the data type for the MultiIndex to select a row.

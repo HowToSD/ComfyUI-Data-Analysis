@@ -78,6 +78,7 @@ def format_display_name(class_name):
         ("MP L", "MPL"),
         (" N A", " NA"),
         ("Data Frame", "DataFrame"),
+        ("Multi Index", "MultiIndex"),
         ("MPL Bar", "MPL Bar Chart"),
         ("MPL Line", "MPL Line Plot"),
         ("MPL Scatter", "MPL Scatter Plot")
