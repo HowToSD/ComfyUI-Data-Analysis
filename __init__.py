@@ -18,8 +18,10 @@ from .modules.pandas_wrapper.pandas_as_float import PandasAsFloat
 from .modules.pandas_wrapper.pandas_as_int import PandasAsInt
 from .modules.pandas_wrapper.pandas_as_string import PandasAsString
 from .modules.pandas_wrapper.pandas_columns import PandasColumns
+from .modules.pandas_wrapper.pandas_corr import PandasCorr
 from .modules.pandas_wrapper.pandas_cos import PandasCos
 from .modules.pandas_wrapper.pandas_count import PandasCount
+from .modules.pandas_wrapper.pandas_cov import PandasCov
 from .modules.pandas_wrapper.pandas_create import PandasCreate
 from .modules.pandas_wrapper.pandas_create_with_index import PandasCreateWithIndex
 from .modules.pandas_wrapper.pandas_cummax import PandasCummax
@@ -123,8 +125,10 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasAsInt": PandasAsInt,
     "PandasAsString": PandasAsString,
     "PandasColumns": PandasColumns,
+    "PandasCorr": PandasCorr,
     "PandasCos": PandasCos,
     "PandasCount": PandasCount,
+    "PandasCov": PandasCov,
     "PandasCreate": PandasCreate,
     "PandasCreateWithIndex": PandasCreateWithIndex,
     "PandasCummax": PandasCummax,
@@ -228,8 +232,10 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasAsInt": "Pandas As Int",
     "PandasAsString": "Pandas As String",
     "PandasColumns": "Pandas Columns",
+    "PandasCorr": "Pandas Corr",
     "PandasCos": "Pandas Cos",
     "PandasCount": "Pandas Count",
+    "PandasCov": "Pandas Cov",
     "PandasCreate": "Pandas Create",
     "PandasCreateWithIndex": "Pandas Create With Index",
     "PandasCummax": "Pandas Cummax",
