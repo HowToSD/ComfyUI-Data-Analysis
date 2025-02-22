@@ -34,6 +34,6 @@ class PandasTranspose:
             dataframe (DataFrame): The DataFrame.
 
         Returns:
-            tuple: A tuple containing a JSON string of the transposed DataFrame.
+            tuple: A tuple containing the transposed DataFrame.
         """
         return (dataframe.transpose(),)

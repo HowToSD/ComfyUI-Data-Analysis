@@ -44,7 +44,7 @@ class PandasGroupBy:
             aggregate_function (str): The type of aggregate function to perform.
 
         Returns:
-            tuple: A tuple containing a JSON string of the merged DataFrame.
+            tuple: A tuple containing the merged DataFrame.
         """
         if aggragate_function == "max":
             df_out = dataframe.groupby(column_name).max()

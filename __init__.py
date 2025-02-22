@@ -47,6 +47,7 @@ from .modules.pandas_wrapper.pandas_index import PandasIndex
 from .modules.pandas_wrapper.pandas_index_to_string import PandasIndexToString
 from .modules.pandas_wrapper.pandas_isna import PandasIsNA
 from .modules.pandas_wrapper.pandas_join import PandasJoin
+from .modules.pandas_wrapper.pandas_kurtosis import PandasKurtosis
 from .modules.pandas_wrapper.pandas_load_csv import PandasLoadCSV
 from .modules.pandas_wrapper.pandas_load_csv_with_encoding import PandasLoadCSVWithEncoding
 from .modules.pandas_wrapper.pandas_load_csv_with_index import PandasLoadCSVWithIndex
@@ -83,6 +84,7 @@ from .modules.pandas_wrapper.pandas_show_index import PandasShowIndex
 from .modules.pandas_wrapper.pandas_show_series import PandasShowSeries
 from .modules.pandas_wrapper.pandas_show_text import PandasShowText
 from .modules.pandas_wrapper.pandas_sin import PandasSin
+from .modules.pandas_wrapper.pandas_skew import PandasSkew
 from .modules.pandas_wrapper.pandas_sort import PandasSort
 from .modules.pandas_wrapper.pandas_std import PandasStd
 from .modules.pandas_wrapper.pandas_sub import PandasSub
@@ -154,6 +156,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasIndexToString": PandasIndexToString,
     "PandasIsNA": PandasIsNA,
     "PandasJoin": PandasJoin,
+    "PandasKurtosis": PandasKurtosis,
     "PandasLoadCSV": PandasLoadCSV,
     "PandasLoadCSVWithEncoding": PandasLoadCSVWithEncoding,
     "PandasLoadCSVWithIndex": PandasLoadCSVWithIndex,
@@ -190,6 +193,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasShowSeries": PandasShowSeries,
     "PandasShowText": PandasShowText,
     "PandasSin": PandasSin,
+    "PandasSkew": PandasSkew,
     "PandasSort": PandasSort,
     "PandasStd": PandasStd,
     "PandasSub": PandasSub,
@@ -261,6 +265,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasIndexToString": "Pandas Index To String",
     "PandasIsNA": "Pandas Is NA",
     "PandasJoin": "Pandas Join",
+    "PandasKurtosis": "Pandas Kurtosis",
     "PandasLoadCSV": "Pandas Load CSV",
     "PandasLoadCSVWithEncoding": "Pandas Load CSV With Encoding",
     "PandasLoadCSVWithIndex": "Pandas Load CSV With Index",
@@ -297,6 +302,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasShowSeries": "Pandas Show Series",
     "PandasShowText": "Pandas Show Text",
     "PandasSin": "Pandas Sin",
+    "PandasSkew": "Pandas Skew",
     "PandasSort": "Pandas Sort",
     "PandasStd": "Pandas Std",
     "PandasSub": "Pandas Sub",

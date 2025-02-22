@@ -45,7 +45,7 @@ class PandasRename:
             new_label (str): The new label.
 
         Returns:
-            tuple: A tuple containing a JSON string of the renamed DataFrame.
+            tuple: A tuple containing the DataFrame.
         """
         if axis=="index":
             df_out = dataframe.rename(index={current_label:new_label})

@@ -37,7 +37,7 @@ class PandasCumprod:
             axis (str): Specify the direction to compute: Index (row label) or column label.
 
         Returns:
-            tuple: A tuple containing a JSON string of the renamed DataFrame.
+            tuple: A tuple containing the DataFrame.
         """
         if axis=="index":
             df_out = dataframe.cumprod(axis=0)

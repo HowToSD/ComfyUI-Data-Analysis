@@ -43,8 +43,7 @@ class PandasIlocRowsDataFrame:
             row_int_pos_list_json (str): A list containing row integer positions.
 
         Returns:
-            tuple: A tuple containing the value of the row in string. The string is
-                   a JSON string containing the serialized Pandas Series object.
+            tuple: A tuple containing the DataFrame.
         """
         row_int_pos_list = json.loads(row_int_pos_list_json)
         df2 = dataframe.iloc[row_int_pos_list]

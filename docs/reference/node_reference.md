@@ -114,11 +114,13 @@
 | [Pandas Corr](pandas_corr.md) | Computes the correlation of the DataFrame. You can select from the Pearson, Kendall or Spearman methods. |
 | [Pandas Count](pandas_count.md) | Computes the count of a pandas DataFrame. |
 | [Pandas Cov](pandas_cov.md) | Computes the covariance of the DataFrame. |
+| [Pandas Kurtosis](pandas_kurtosis.md) | Computes the unbiased kurtosis of the DataFrame. |
 | [Pandas Max](pandas_max.md) | Computes the max of a pandas DataFrame. |
 | [Pandas Mean](pandas_mean.md) | Computes the mean of a pandas DataFrame. |
 | [Pandas Median](pandas_median.md) | Computes the median of a pandas DataFrame. |
 | [Pandas Min](pandas_min.md) | Computes the min of a pandas DataFrame. |
 | [Pandas Mode](pandas_mode.md) | Computes the mode of a pandas DataFrame. |
+| [Pandas Skew](pandas_skew.md) | Computes the unbiased skewness of the DataFrame. |
 | [Pandas Std](pandas_std.md) | Computes the standard deviation of a pandas DataFrame. |
 | [Pandas Sum](pandas_sum.md) | Computes the sum of a pandas DataFrame. |
 | [Pandas Summary](pandas_summary.md) | Analyzes and summarizes a pandas DataFrame. |

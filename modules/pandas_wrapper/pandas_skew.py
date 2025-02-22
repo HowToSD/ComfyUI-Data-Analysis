@@ -2,11 +2,11 @@ from typing import Any, Dict
 import pandas as pd
 
 
-class PandasCumsum:
+class PandasSkew:
     """
-    Computes the cumsum (cumulative sum) of the DataFrame.
+    Computes the unbiased skewness of the DataFrame.
 
-    category: Cumulative calculations
+    category: Summary statistics
     """
 
     @classmethod
@@ -24,25 +24,25 @@ class PandasCumsum:
             }
         }
 
-    RETURN_TYPES: tuple = ("DATAFRAME",)
+    RETURN_TYPES: tuple = ("PDSERIES",)
     FUNCTION: str = "f"
     CATEGORY: str = "Data Analysis"
 
     def f(self, dataframe: pd.DataFrame, axis: str) -> tuple:
         """
-        Computes the cumsum (cumulative sum) of the DataFrame.
+        Computes the unbiased skewness of the DataFrame.
 
         Args:
             dataframe (DataFrame): The DataFrame.
             axis (str): Specify the direction to compute: Index (row label) or column label.
 
         Returns:
-            tuple: A tuple containing the DataFrame.
+            tuple: A tuple containing the series.
         """
         if axis=="index":
-            df_out = dataframe.cumsum(axis=0)
+            series = dataframe.skew(axis=0)
         elif axis=="columns":
-            df_out = dataframe.cumsum(axis=1)
+            series = dataframe.skew(axis=1)
         else:
             raise ValueError("Invalid axis. Only index or columns are supported.")
-        return (df_out,)
+        return (series,)

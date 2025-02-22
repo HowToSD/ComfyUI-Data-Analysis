@@ -38,7 +38,7 @@ class PandasHead:
             rows (int): The number of rows to retrieve.
 
         Returns:
-            tuple: A tuple containing a JSON string of the resulting DataFrame.
+            tuple: A tuple containing the resulting DataFrame.
         """
         df2 = dataframe.head(rows)
         return (df2,)

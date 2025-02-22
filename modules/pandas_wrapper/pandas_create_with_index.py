@@ -31,7 +31,7 @@ class PandasCreateWithIndex:
 
     def create(self, data: str, index_col: int=0) -> tuple:
         """
-        Create a pandas DataFrame using values entered in the text field and converts it to a JSON string.
+        Create a pandas DataFrame using values entered in the text field and converts it to a DataFrame.
         Input data is assume to have an index.
 
         Args:
@@ -39,7 +39,7 @@ class PandasCreateWithIndex:
             index_col (int): Position of the index column.
 
         Returns:
-            tuple: A tuple containing a JSON string representation of the DataFrame.
+            tuple: A tuple containing the DataFrame.
         """
         # Read CSV file into DataFrame
         df = pd.read_csv(StringIO(data), index_col=index_col)

@@ -30,13 +30,13 @@ class PandasCreate:
 
     def create(self, data: str) -> tuple:
         """
-        Create a pandas DataFrame using values entered in the text field and converts it to a JSON string.
+        Create a pandas DataFrame using values entered in the text field and converts it to a DataFrame.
 
         Args:
             data (str): String value in the text field.
 
         Returns:
-            tuple: A tuple containing a JSON string representation of the DataFrame.
+            tuple: A tuple containing a the DataFrame.
         """
         # Read CSV file into DataFrame
         df = pd.read_csv(StringIO(data))

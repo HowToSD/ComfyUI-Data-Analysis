@@ -39,7 +39,7 @@ class PandasSort:
             ascending (bool): Whether to sort in ascending order.
 
         Returns:
-            tuple: A tuple containing a JSON string of the sorted DataFrame.
+            tuple: A tuple containing the sorted DataFrame.
         """
         df2 = dataframe.sort_values(by=column_name, ascending=ascending)
         return (df2,)

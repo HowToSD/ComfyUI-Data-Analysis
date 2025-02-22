@@ -37,7 +37,7 @@ class PandasSelectRows:
             condition (str): A string representing the condition to filter rows.
 
         Returns:
-            tuple: A tuple containing a JSON string of the filtered DataFrame.
+            tuple: A tuple containing the filtered DataFrame.
         """
         # Apply condition
         df2 = dataframe.query(condition)

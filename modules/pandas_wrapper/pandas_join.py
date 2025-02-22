@@ -42,7 +42,7 @@ class PandasJoin:
             join_method (str): The type of join to perform ("inner", "left", "right", "outer").
 
         Returns:
-            tuple: A tuple containing a JSON string of the merged DataFrame.
+            tuple: A tuple containing the merged DataFrame.
         """
         df_out = pd.merge(left_dataframe, right_dataframe, on=on_column_name, how=join_method)
         return (df_out,)
