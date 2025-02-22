@@ -77,7 +77,7 @@ Refer to [User's Guide](docs/ug.md) or check out [Node Reference](docs/reference
 
 For a practical example, see the tutorial on baseball data: [How to Find Out Who Had the Most Hits](docs/baseball_example1.md).
 
-# Contribution
+## Contribution
 🚫 **This project does not accept pull requests.**  
 Unsolicited PRs will be **closed without review**.  
 
