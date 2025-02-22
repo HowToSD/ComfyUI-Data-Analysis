@@ -95,6 +95,7 @@ from .modules.pandas_wrapper.pandas_transpose import PandasTranspose
 from .modules.pandas_wrapper.pandas_var import PandasVar
 from .modules.pandas_wrapper.pandas_vertical_concat import PandasVerticalConcat
 from .modules.pandas_wrapper.pandas_vertical_split import PandasVerticalSplit
+from .modules.pandas_wrapper.pandas_xs import PandasXs
 T = TypeVar("T")
 
 
@@ -199,6 +200,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasVar": PandasVar,
     "PandasVerticalConcat": PandasVerticalConcat,
     "PandasVerticalSplit": PandasVerticalSplit,
+    "PandasXs": PandasXs,
 }
 
 
@@ -303,6 +305,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasVar": "Pandas Var",
     "PandasVerticalConcat": "Pandas Vertical Concat",
     "PandasVerticalSplit": "Pandas Vertical Split",
+    "PandasXs": "Pandas Xs",
 }
 
 

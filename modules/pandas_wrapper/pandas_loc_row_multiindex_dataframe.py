@@ -60,12 +60,14 @@ class PandasLocRowMultiIndexDataFrame:
             ind_list = [int(ind) for ind in ind_list]
 
         ind_tuple = tuple(ind_list)  # Convert the list to a tuple
-        if len(ind_tuple) == 1:  # Do not enclose in tuple if only 1 index is specified
-            ind = ind_tuple[0]
-        else:
-            ind = ind_tuple
+        # Ensure partial indexing is supported by adding slice(None) for missing levels
+        if len(ind_tuple) < dataframe.index.nlevels:
+            filler_count = dataframe.index.nlevels - len(ind_tuple)
+            for _ in range(filler_count):
+                ind_tuple += (slice(None),)
 
-        # We need to wrap it to get the DataFrame. Otherwise, we will get a Series.
-        ind_list = [ind] 
-        value = dataframe.loc[ind_list]
-        return (value,)
+        result = dataframe.loc[ind_tuple]
+        if isinstance(result, pd.Series):  # loc can return Series so convert to DataFrame
+            result = result.to_frame().T
+
+        return (result,)
