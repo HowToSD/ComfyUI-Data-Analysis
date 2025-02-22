@@ -1,5 +1,5 @@
 # Pandas Select Rows
-Selects specific rows from a pandas DataFrame based on a condition.
+Selects specific rows from a pandas DataFrame based on a condition.  This node internally calls DataFrame.query().
 
 ## Input
 | Name | Data type |

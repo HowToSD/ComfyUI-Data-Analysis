@@ -4,7 +4,7 @@ import pandas as pd
 
 class PandasSelectRows:
     """
-    Selects specific rows from a pandas DataFrame based on a condition.
+    Selects specific rows from a pandas DataFrame based on a condition.  This node internally calls DataFrame.query().
 
     category: Data subset selection
     """

@@ -52,7 +52,7 @@
 | [Pandas Loc Row MultiIndex DataFrame](pandas_loc_row_multiindex_dataframe.md) | Selects a row or rows from a pandas DataFrame with MultiIndex and output as a DataFrame. |
 | [Pandas Loc Row Series](pandas_loc_row_series.md) | Selects a row from a pandas DataFrame and output as a Series. |
 | [Pandas Select Columns](pandas_select_columns.md) | Selects specific columns from a pandas DataFrame. |
-| [Pandas Select Rows](pandas_select_rows.md) | Selects specific rows from a pandas DataFrame based on a condition. |
+| [Pandas Select Rows](pandas_select_rows.md) | Selects specific rows from a pandas DataFrame based on a condition.  This node internally calls DataFrame.query(). |
 | [Pandas Xs](pandas_xs.md) | Selects a subset of a Pandas DataFrame using specified index labels or positions. |
 ## Data type conversion
 | Node | Description |

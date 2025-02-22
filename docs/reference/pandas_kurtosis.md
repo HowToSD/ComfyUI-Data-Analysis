@@ -14,7 +14,7 @@ which offsets it relative to the kurtosis of a normal distribution.
 ## Output
 | Data type |
 |---|
-| DataFrame |
+| Series |
 
 <HR>
 Category: Summary statistics

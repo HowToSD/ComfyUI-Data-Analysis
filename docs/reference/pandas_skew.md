@@ -10,7 +10,7 @@ Computes the unbiased skewness of the DataFrame.
 ## Output
 | Data type |
 |---|
-| DataFrame |
+| Series |
 
 <HR>
 Category: Summary statistics
