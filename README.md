@@ -77,5 +77,12 @@ Refer to [User's Guide](docs/ug.md) or check out [Node Reference](docs/reference
 
 For a practical example, see the tutorial on baseball data: [How to Find Out Who Had the Most Hits](docs/baseball_example1.md).
 
+# Contribution
+🚫 **This project does not accept pull requests.**  
+Unsolicited PRs will be **closed without review**.  
+
+If you have a feature request or improvement suggestion, **please create an Issue instead**.  
+All submitted issues will be reviewed and prioritized accordingly.
+
 ## Note  
 The cover baseball image was generated using FLUX.1-dev. **Commercial use of this image is not permitted.**
