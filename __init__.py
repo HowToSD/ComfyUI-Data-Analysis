@@ -60,6 +60,7 @@ from .modules.pandas_wrapper.pandas_log import PandasLog
 from .modules.pandas_wrapper.pandas_max import PandasMax
 from .modules.pandas_wrapper.pandas_mean import PandasMean
 from .modules.pandas_wrapper.pandas_median import PandasMedian
+from .modules.pandas_wrapper.pandas_melt import PandasMelt
 from .modules.pandas_wrapper.pandas_min import PandasMin
 from .modules.pandas_wrapper.pandas_mode import PandasMode
 from .modules.pandas_wrapper.pandas_mul import PandasMul
@@ -172,6 +173,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasMax": PandasMax,
     "PandasMean": PandasMean,
     "PandasMedian": PandasMedian,
+    "PandasMelt": PandasMelt,
     "PandasMin": PandasMin,
     "PandasMode": PandasMode,
     "PandasMul": PandasMul,
@@ -284,6 +286,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasMax": "Pandas Max",
     "PandasMean": "Pandas Mean",
     "PandasMedian": "Pandas Median",
+    "PandasMelt": "Pandas Melt",
     "PandasMin": "Pandas Min",
     "PandasMode": "Pandas Mode",
     "PandasMul": "Pandas Mul",

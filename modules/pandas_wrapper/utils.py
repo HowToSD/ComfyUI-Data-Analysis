@@ -1,11 +1,34 @@
-from typing import List, Union
+from typing import Any, List, Tuple, Union, Set
 import json
 import numpy as np
 import pandas as pd
-import pandas as pd
 
 
-def column_labels_string_to_list(dataframe: pd.DataFrame, s: str) -> List[Union[str, int]]:
+def flatten_list_tuple_unique(lst: Union[List[Any], Tuple[Any, ...]]) -> Set[Any]:
+    """
+    Flattens a nested list or tuple and returns a set of unique elements.
+
+    Args:
+        lst (Union[List[Any], Tuple[Any, ...]]): 
+            A list or tuple containing elements of any type, including nested lists/tuples.
+
+    Returns:
+        Set[Any]: A set containing unique elements from the input, flattened.
+    """
+    result: Set[Any] = set()
+
+    def recurse(sublist: Union[List[Any], Tuple[Any, ...]]) -> None:
+        for item in sublist:
+            if isinstance(item, (list, tuple)):
+                recurse(item)
+            else:
+                result.add(item)
+
+    recurse(lst)
+    return result
+
+
+def column_labels_string_to_list(dataframe:pd.DataFrame, s:str, no_check:bool=False) -> List[Union[str, int]]:
     """
     Converts a comma-separated string of column labels into a list of valid column names for a Pandas DataFrame.
 
@@ -16,6 +39,8 @@ def column_labels_string_to_list(dataframe: pd.DataFrame, s: str) -> List[Union[
     Args:
         dataframe (pd.DataFrame): The DataFrame to validate column names against.
         s (str): A comma-separated string representing column labels.
+        no_check (str): If True, input string is processed as a string without checking the column labels
+                        of the DataFrame.
 
     Returns:
         List[Union[str, int]]: A list of valid column labels.
@@ -24,11 +49,12 @@ def column_labels_string_to_list(dataframe: pd.DataFrame, s: str) -> List[Union[
         ValueError: If any label in `s` does not match an existing column name.
     """
     columns = [col.strip() for col in s.split(",")]
-    valid_columns = set(dataframe.columns)  # Use a set for faster lookups
+    
+    valid_columns = flatten_list_tuple_unique(dataframe.columns)
     output_columns = []
 
     for c in columns:
-        if c in valid_columns:
+        if c in valid_columns or no_check:
             output_columns.append(c)
         else:
             try:

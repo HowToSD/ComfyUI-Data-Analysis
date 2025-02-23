@@ -21,6 +21,8 @@ class TestColumnLabelsStringToList(unittest.TestCase):
             20: [13, 14, 15]   # Another integer column name
         })
 
+        self.no_check_labels = ["X", "Y"]
+
     def test_valid_column_strings(self):
         """Test valid column name conversion from string to list."""
         self.assertEqual(column_labels_string_to_list(self.df, "A,B"), ["A", "B"])
@@ -59,6 +61,12 @@ class TestColumnLabelsStringToList(unittest.TestCase):
         with self.assertRaises(ValueError) as context:
             column_labels_string_to_list(self.df, "A,xyz")
         self.assertIn("Column 'xyz' not found in the DataFrame.", str(context.exception))
+
+    def test_no_check_labels(self):
+        """Test no check labels"""
+        self.assertEquals(
+            column_labels_string_to_list(self.df, "X,Y", no_check=True),
+            self.no_check_labels)
 
 
 if __name__ == "__main__":
