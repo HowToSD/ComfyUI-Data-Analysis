@@ -1,6 +1,6 @@
 from typing import Any, Dict
-from io import StringIO
 import pandas as pd
+from .utils import column_labels_string_to_list
 
 class PandasSelectColumns:
     """
@@ -8,7 +8,7 @@ class PandasSelectColumns:
 
     category: Data subset selection
     """
-    
+
     @classmethod
     def INPUT_TYPES(cls) -> Dict[str, Any]:
         """
@@ -25,10 +25,10 @@ class PandasSelectColumns:
         }
 
     RETURN_TYPES: tuple = ("DATAFRAME",)
-    FUNCTION: str = "select_columns"
+    FUNCTION: str = "f"
     CATEGORY: str = "Data Analysis"
 
-    def select_columns(self, dataframe: pd.DataFrame, column_names: str) -> tuple:
+    def f(self, dataframe: pd.DataFrame, column_names: str) -> tuple:
         """
         Selects specific columns from a pandas DataFrame.
 
@@ -39,6 +39,6 @@ class PandasSelectColumns:
         Returns:
             tuple: A tuple containing the DataFrame with selected columns.
         """
-        selected_columns = [col.strip() for col in column_names.split(",")]
+        selected_columns = column_labels_string_to_list(dataframe, column_names)
         df2 = dataframe[selected_columns]
         return (df2,)

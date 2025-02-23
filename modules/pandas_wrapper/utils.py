@@ -1,11 +1,51 @@
+from typing import List, Union
 import json
 import numpy as np
 import pandas as pd
+import pandas as pd
+
+
+def column_labels_string_to_list(dataframe: pd.DataFrame, s: str) -> List[Union[str, int]]:
+    """
+    Converts a comma-separated string of column labels into a list of valid column names for a Pandas DataFrame.
+
+    This function ensures that each label in the input string corresponds to an existing column in the DataFrame.
+    If a label is a numeric string and corresponds to an integer column name, it will be converted to an integer.
+    If a column name does not exist in the DataFrame, a ValueError is raised.
+
+    Args:
+        dataframe (pd.DataFrame): The DataFrame to validate column names against.
+        s (str): A comma-separated string representing column labels.
+
+    Returns:
+        List[Union[str, int]]: A list of valid column labels.
+
+    Raises:
+        ValueError: If any label in `s` does not match an existing column name.
+    """
+    columns = [col.strip() for col in s.split(",")]
+    valid_columns = set(dataframe.columns)  # Use a set for faster lookups
+    output_columns = []
+
+    for c in columns:
+        if c in valid_columns:
+            output_columns.append(c)
+        else:
+            try:
+                numeric_c = int(c)
+                if numeric_c in valid_columns:
+                    output_columns.append(numeric_c)
+                else:
+                    raise ValueError(f"Column '{c}' not found in the DataFrame.")
+            except ValueError:
+                raise ValueError(f"Column '{c}' not found in the DataFrame.")
+
+    return output_columns
 
 
 def series_to_jsons(series: pd.Series) -> str:
     """
-    Convert a pandas Series to a JSON string.
+    Converts a pandas Series to a JSON string.
 
     Args:
         series (pd.Series): The pandas Series to convert.
