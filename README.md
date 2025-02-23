@@ -1,7 +1,4 @@
 # ComfyUI-Data-Analysis
-## Update
-v1.1.0 was released which contains backward incompatible changes for worklows created using the prior version of ComfyUI Data Analysis custom nodes. Please read the Release Note.
-
 ![Baseball tutorial](docs/images/baseball_question.jpg)
 ## How Can We Figure Out Which MLB Player Had the Most Hits Per Year?
 
@@ -9,7 +6,7 @@ If you love ComfyUI, it's likely because of its incredible flexibility—allowin
 
 ComfyUI was designed to make Stable Diffusion accessible to non-engineers while offering extensive customization. However, it doesn’t natively support structured data like baseball statistics. That’s why I created this ComfyUI extension—to bridge that gap.  
 
-This project is still in the conceptual stage, with limited Pandas and Matplotlib functionality, but it works. At the end of this page, you’ll find a tutorial on how to use this package to answer the MLB hits question.  
+At the end of this page, you’ll find a tutorial on how to use this package to answer the MLB hits question.  
 
 I hope you enjoy using it and have a great time exploring data.  
 
@@ -21,7 +18,7 @@ I hope you enjoy using it and have a great time exploring data.
 
 ComfyUI-Data-Analysis is a custom module for analyzing data using Pandas and Matplotlib within ComfyUI.
 
-Here are some of the included nodes:
+Here are just some of the included nodes. For a complete list of nodes, check out [Node Reference](docs/reference/node_reference.md):
 
 - Loading a CSV file as a DataFrame
 - Saving a DataFrame to a CSV file
@@ -76,6 +73,9 @@ This custom node module requires pandas and matplotlib, which are not included i
 Refer to [User's Guide](docs/ug.md) or check out [Node Reference](docs/reference/node_reference.md)
 
 For a practical example, see the tutorial on baseball data: [How to Find Out Who Had the Most Hits](docs/baseball_example1.md).
+
+## Update
+Please refer to the release notes. I try to avoid backward-incompatible changes as much as possible, but sometimes they are unavoidable because the project is still in its early stage and I discover issues along the way. The release notes contain those changes so that you know what to expect before upgrading your version.
 
 ## Contribution
 🚫 **This project does not accept pull requests.**  
