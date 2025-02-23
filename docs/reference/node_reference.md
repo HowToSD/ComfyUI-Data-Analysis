@@ -48,6 +48,7 @@
 | [Pandas Head](pandas_head.md) | Retrieves the first few rows of a pandas DataFrame. |
 | [Pandas Iloc Row Series](pandas_iloc_row_series.md) | Selects a row from a pandas DataFrame and returning it as a Series. |
 | [Pandas Iloc Rows Data Frame](pandas_iloc_rows_dataframe.md) | Selects rows from a pandas DataFrame and returning it as a DataFrame. |
+| [Pandas Iloc Rows Slice Data Frame](pandas_iloc_rows_slice_dataframe.md) | Selects rows from a pandas DataFrame using a slice defined by a start and end integer position. The start position is inclusive, while the end position is exclusive. Returns the selected rows as a DataFrame. |
 | [Pandas Loc Cell Str](pandas_loc_cell_str.md) | Selects a cell from a pandas DataFrame and output as a string. |
 | [Pandas Loc Row MultiIndex DataFrame](pandas_loc_row_multiindex_dataframe.md) | Selects a row or rows from a pandas DataFrame with MultiIndex and output as a DataFrame. |
 | [Pandas Loc Row Series](pandas_loc_row_series.md) | Selects a row from a pandas DataFrame and output as a Series. |

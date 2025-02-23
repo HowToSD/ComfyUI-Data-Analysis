@@ -43,6 +43,7 @@ from .modules.pandas_wrapper.pandas_horizontal_concat import PandasHorizontalCon
 from .modules.pandas_wrapper.pandas_horizontal_split import PandasHorizontalSplit
 from .modules.pandas_wrapper.pandas_iloc_row_series import PandasIlocRowSeries
 from .modules.pandas_wrapper.pandas_iloc_rows_dataframe import PandasIlocRowsDataFrame
+from .modules.pandas_wrapper.pandas_iloc_rows_slice_dataframe import PandasIlocRowsSliceDataFrame
 from .modules.pandas_wrapper.pandas_index import PandasIndex
 from .modules.pandas_wrapper.pandas_index_to_string import PandasIndexToString
 from .modules.pandas_wrapper.pandas_isna import PandasIsNA
@@ -156,6 +157,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasHorizontalSplit": PandasHorizontalSplit,
     "PandasIlocRowSeries": PandasIlocRowSeries,
     "PandasIlocRowsDataFrame": PandasIlocRowsDataFrame,
+    "PandasIlocRowsSliceDataFrame": PandasIlocRowsSliceDataFrame,
     "PandasIndex": PandasIndex,
     "PandasIndexToString": PandasIndexToString,
     "PandasIsNA": PandasIsNA,
@@ -269,6 +271,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasHorizontalSplit": "Pandas Horizontal Split",
     "PandasIlocRowSeries": "Pandas Iloc Row Series",
     "PandasIlocRowsDataFrame": "Pandas Iloc Rows DataFrame",
+    "PandasIlocRowsSliceDataFrame": "Pandas Iloc Rows Slice DataFrame",
     "PandasIndex": "Pandas Index",
     "PandasIndexToString": "Pandas Index To String",
     "PandasIsNA": "Pandas Is NA",
