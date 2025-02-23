@@ -65,6 +65,11 @@
 | --- | --- |
 | [Pandas Columns](pandas_columns.md) | Retrieves the column labels of a pandas DataFrame. |
 | [Pandas Index](pandas_index.md) | Retrieves the row labels (index) of a pandas DataFrame. |
+## Date and time processing
+| Node | Description |
+| --- | --- |
+| [Pandas Strftime](pandas_strftime.md) | Converts one or more datetime columns in a DataFrame to string columns. |
+| [Pandas To Datetime](pandas_to_datetime.md) | Converts one or more string columns in a DataFrame to datetime columns. |
 ## Display data
 | Node | Description |
 | --- | --- |

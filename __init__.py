@@ -87,6 +87,7 @@ from .modules.pandas_wrapper.pandas_sin import PandasSin
 from .modules.pandas_wrapper.pandas_skew import PandasSkew
 from .modules.pandas_wrapper.pandas_sort import PandasSort
 from .modules.pandas_wrapper.pandas_std import PandasStd
+from .modules.pandas_wrapper.pandas_strftime import PandasStrftime
 from .modules.pandas_wrapper.pandas_sub import PandasSub
 from .modules.pandas_wrapper.pandas_sub_scalar_float import PandasSubScalarFloat
 from .modules.pandas_wrapper.pandas_sub_scalar_int import PandasSubScalarInt
@@ -94,6 +95,7 @@ from .modules.pandas_wrapper.pandas_sub_series import PandasSubSeries
 from .modules.pandas_wrapper.pandas_sum import PandasSum
 from .modules.pandas_wrapper.pandas_summary import PandasSummary
 from .modules.pandas_wrapper.pandas_tan import PandasTan
+from .modules.pandas_wrapper.pandas_to_datetime import PandasToDatetime
 from .modules.pandas_wrapper.pandas_to_string import PandasToString
 from .modules.pandas_wrapper.pandas_transpose import PandasTranspose
 from .modules.pandas_wrapper.pandas_var import PandasVar
@@ -196,6 +198,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasSkew": PandasSkew,
     "PandasSort": PandasSort,
     "PandasStd": PandasStd,
+    "PandasStrftime": PandasStrftime,
     "PandasSub": PandasSub,
     "PandasSubScalarFloat": PandasSubScalarFloat,
     "PandasSubScalarInt": PandasSubScalarInt,
@@ -203,6 +206,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasSum": PandasSum,
     "PandasSummary": PandasSummary,
     "PandasTan": PandasTan,
+    "PandasToDatetime": PandasToDatetime,
     "PandasToString": PandasToString,
     "PandasTranspose": PandasTranspose,
     "PandasVar": PandasVar,
@@ -305,6 +309,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasSkew": "Pandas Skew",
     "PandasSort": "Pandas Sort",
     "PandasStd": "Pandas Std",
+    "PandasStrftime": "Pandas Strftime",
     "PandasSub": "Pandas Sub",
     "PandasSubScalarFloat": "Pandas Sub Scalar Float",
     "PandasSubScalarInt": "Pandas Sub Scalar Int",
@@ -312,6 +317,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasSum": "Pandas Sum",
     "PandasSummary": "Pandas Summary",
     "PandasTan": "Pandas Tan",
+    "PandasToDatetime": "Pandas To Datetime",
     "PandasToString": "Pandas To String",
     "PandasTranspose": "Pandas Transpose",
     "PandasVar": "Pandas Var",
