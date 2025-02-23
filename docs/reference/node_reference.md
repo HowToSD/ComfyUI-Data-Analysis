@@ -136,6 +136,7 @@
 | [Pandas Horizontal Concat](pandas_horizontal_concat.md) | Horizontally concatenates two pandas DataFrames. |
 | [Pandas Horizontal Split](pandas_horizontal_split.md) | Horizontally splits a Pandas DataFrame into two pandas DataFrames. |
 | [Pandas Join](pandas_join.md) | Merges two pandas DataFrames based on a common column. |
+| [Pandas Pivot](pandas_pivot.md) | Computes a pivot table from a pandas DataFrame. |
 | [Pandas Rename](pandas_rename.md) | Renames an index (row label) or a column label. |
 | [Pandas Series To Data Frame](pandas_series_to_dataframe.md) | Converts a Pandas Series to a DataFrame. |
 | [Pandas Set Index](pandas_set_index.md) | Create index (row label) from existing column or columns. |

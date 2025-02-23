@@ -66,6 +66,7 @@ from .modules.pandas_wrapper.pandas_mul import PandasMul
 from .modules.pandas_wrapper.pandas_mul_scalar_float import PandasMulScalarFloat
 from .modules.pandas_wrapper.pandas_mul_scalar_int import PandasMulScalarInt
 from .modules.pandas_wrapper.pandas_mul_series import PandasMulSeries
+from .modules.pandas_wrapper.pandas_pivot import PandasPivot
 from .modules.pandas_wrapper.pandas_pow import PandasPow
 from .modules.pandas_wrapper.pandas_pow_scalar_float import PandasPowScalarFloat
 from .modules.pandas_wrapper.pandas_pow_scalar_int import PandasPowScalarInt
@@ -177,6 +178,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasMulScalarFloat": PandasMulScalarFloat,
     "PandasMulScalarInt": PandasMulScalarInt,
     "PandasMulSeries": PandasMulSeries,
+    "PandasPivot": PandasPivot,
     "PandasPow": PandasPow,
     "PandasPowScalarFloat": PandasPowScalarFloat,
     "PandasPowScalarInt": PandasPowScalarInt,
@@ -288,6 +290,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasMulScalarFloat": "Pandas Mul Scalar Float",
     "PandasMulScalarInt": "Pandas Mul Scalar Int",
     "PandasMulSeries": "Pandas Mul Series",
+    "PandasPivot": "Pandas Pivot",
     "PandasPow": "Pandas Pow",
     "PandasPowScalarFloat": "Pandas Pow Scalar Float",
     "PandasPowScalarInt": "Pandas Pow Scalar Int",
