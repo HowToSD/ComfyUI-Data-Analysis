@@ -16,27 +16,32 @@ I hope you find it useful and engaging for data exploration.
 
 ![Baseball tutorial](docs/images/baseball_final.png)
 
-ComfyUI-Data-Analysis is a custom module for analyzing data using Pandas and Matplotlib within ComfyUI.
+ComfyUI-Data-Analysis is an extension for ComfyUI consisting of many custom nodes for analyzing data using Pandas, Seaborn and Matplotlib within ComfyUI.
 
-Here are just some of the included nodes. For a complete list of nodes, check out [Node Reference](docs/reference/node_reference.md):
-
-- Loading a CSV file as a DataFrame
-- Saving a DataFrame to a CSV file
-- Selecting a subset of columns from a DataFrame
-- Selecting a subset of rows from a DataFrame by specifying a filter condition
-- Sorting a DataFrame by a column
-- Displaying the content of a DataFrame
-- Extracting the first part of a DataFrame
-- Joining two DataFrames (inner, left, right, outer joins)
-- Outputting statistics of a DataFrame (e.g., standard deviation)
-- Line plot
-- Scatter plot
-- Bar chart
+ComfyUI-Data-Analysis supports a wide range of custom nodes in the categories below. For a complete list, see [Node Reference](docs/reference/node_reference.md):
+* Aggregation
+* Arithmetic method
+* Cumulative calculations
+* Data cleansing
+* Data subset selection
+* Data type conversion
+* DataFrame information
+* Date and time processing
+* Display data
+* IO
+* Math
+* Plot
+* Summary statistics
+* Data transformation
 
 You can connect these nodes to conduct complex analysis in an intuitive graphical way.  
 You can also use other Comfy custom nodes to fit your needs (e.g., combining images).
 
 These custom nodes enhance efficiency and usability in data exploration and analysis.
+
+Creating sample data and plotting it is incredibly simple, as shown below:
+![SNS Line Plot](docs/images/sns_line.png)
+An example plot
 
 ## Installation
 Note: GPU is not required to run this custom module.
