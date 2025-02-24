@@ -29,6 +29,10 @@ class PandasLoadCSV:
     FUNCTION: str = "load_csv"
     CATEGORY: str = "Data Analysis"
 
+    @classmethod
+    def IS_CHANGED(cls, **kw):
+        return float("NaN")
+
     def load_csv(self, file_path: str) -> tuple:
         """
         Loads a CSV file into a pandas DataFrame.

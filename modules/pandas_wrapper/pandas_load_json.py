@@ -29,6 +29,13 @@ class PandasLoadJSON:
     FUNCTION: str = "load_json"
     CATEGORY: str = "Data Analysis"
 
+    # Mark this class to always execute.
+    # Refer to
+    # https://docs.comfy.org/custom-nodes/backend/server_overview
+    @classmethod
+    def IS_CHANGED(cls, **kw):
+        return float("NaN")
+
     def load_json(self, file_path: str) -> tuple:
         """
         Loads a JSON file into a pandas DataFrame.

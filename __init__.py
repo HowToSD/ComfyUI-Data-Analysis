@@ -7,6 +7,9 @@ from .modules.cda.cda_show_float import CDAShowFloat
 from .modules.cda.cda_show_int import CDAShowInt
 from .modules.cda.cda_string_create import CDAStringCreate
 from .modules.cda.cda_text_create import CDATextCreate
+from .modules.cda.py_kv_float_create import PyKvFloatCreate
+from .modules.cda.py_kv_int_create import PyKvIntCreate
+from .modules.cda.py_kv_string_create import PyKvStringCreate
 from .modules.matplotlib.mpl_bar import MPLBar
 from .modules.matplotlib.mpl_line import MPLLine
 from .modules.matplotlib.mpl_scatter import MPLScatter
@@ -23,6 +26,9 @@ from .modules.pandas_wrapper.pandas_cos import PandasCos
 from .modules.pandas_wrapper.pandas_count import PandasCount
 from .modules.pandas_wrapper.pandas_cov import PandasCov
 from .modules.pandas_wrapper.pandas_create import PandasCreate
+from .modules.pandas_wrapper.pandas_create_from_dict import PandasCreateFromDict
+from .modules.pandas_wrapper.pandas_create_from_multiple_dict import PandasCreateFromMultipleDict
+from .modules.pandas_wrapper.pandas_create_series_from_dict import PandasCreateSeriesFromDict
 from .modules.pandas_wrapper.pandas_create_with_index import PandasCreateWithIndex
 from .modules.pandas_wrapper.pandas_cummax import PandasCummax
 from .modules.pandas_wrapper.pandas_cummin import PandasCummin
@@ -141,6 +147,9 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasCount": PandasCount,
     "PandasCov": PandasCov,
     "PandasCreate": PandasCreate,
+    "PandasCreateFromDict": PandasCreateFromDict,
+    "PandasCreateFromMultipleDict": PandasCreateFromMultipleDict,
+    "PandasCreateSeriesFromDict": PandasCreateSeriesFromDict,
     "PandasCreateWithIndex": PandasCreateWithIndex,
     "PandasCummax": PandasCummax,
     "PandasCummin": PandasCummin,
@@ -223,6 +232,9 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasVerticalConcat": PandasVerticalConcat,
     "PandasVerticalSplit": PandasVerticalSplit,
     "PandasXs": PandasXs,
+    "PyKvFloatCreate": PyKvFloatCreate,
+    "PyKvIntCreate": PyKvIntCreate,
+    "PyKvStringCreate": PyKvStringCreate,
     "SNSBar": SNSBar,
     "SNSHistogram": SNSHistogram,
     "SNSLine": SNSLine,
@@ -259,6 +271,9 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasCount": "Pandas Count",
     "PandasCov": "Pandas Cov",
     "PandasCreate": "Pandas Create",
+    "PandasCreateFromDict": "Pandas Create From Dict",
+    "PandasCreateFromMultipleDict": "Pandas Create From Multiple Dict",
+    "PandasCreateSeriesFromDict": "Pandas Create Series From Dict",
     "PandasCreateWithIndex": "Pandas Create With Index",
     "PandasCummax": "Pandas Cummax",
     "PandasCummin": "Pandas Cummin",
@@ -341,6 +356,9 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasVerticalConcat": "Pandas Vertical Concat",
     "PandasVerticalSplit": "Pandas Vertical Split",
     "PandasXs": "Pandas Xs",
+    "PyKvFloatCreate": "Py Kv Float Create",
+    "PyKvIntCreate": "Py Kv Int Create",
+    "PyKvStringCreate": "Py Kv String Create",
     "SNSBar": "SNS Bar Chart",
     "SNSHistogram": "SNS Histogram",
     "SNSLine": "SNS Line Plot",

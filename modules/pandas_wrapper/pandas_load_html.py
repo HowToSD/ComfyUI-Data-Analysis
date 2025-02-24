@@ -43,6 +43,10 @@ class PandasLoadHTML:
     FUNCTION: str = "f"
     CATEGORY: str = "Data Analysis"
 
+    @classmethod
+    def IS_CHANGED(cls, **kw):
+        return float("NaN")
+
     def f(self, file_path: str) -> tuple:
         """
         Loads an HTML file into a pandas DataFrame.

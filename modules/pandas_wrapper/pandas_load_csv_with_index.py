@@ -31,6 +31,10 @@ class PandasLoadCSVWithIndex:
     FUNCTION: str = "load_csv"
     CATEGORY: str = "Data Analysis"
 
+    @classmethod
+    def IS_CHANGED(cls, **kw):
+        return float("NaN")
+
     def load_csv(self, file_path: str, index_col: int=0) -> tuple:
         """
         Loads a CSV file into a pandas DataFrame.

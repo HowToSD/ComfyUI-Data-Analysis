@@ -5,10 +5,9 @@ import json
 import numpy as np
 import pandas as pd
 
-PROJECT_ROOT = os.path.realpath(os.path.join(__file__, "..", "..", ".."))
+PROJECT_ROOT = os.path.realpath(os.path.join(os.path.dirname(__file__), "..", ".."))
 MODULE_ROOT = os.path.join(PROJECT_ROOT, "modules")
 sys.path.append(MODULE_ROOT)
-print(MODULE_ROOT)
 from pandas_wrapper.utils import series_to_jsons
 from pandas_wrapper.utils import jsons_to_series
 

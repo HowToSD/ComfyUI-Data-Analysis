@@ -92,6 +92,9 @@
 | [CDA String Create](cda_string_create.md) | Creates a Python String using a value entered in a single-line text field. |
 | [CDA Text Create](cda_text_create.md) | Creates a Python String using a value entered in a multi-line text field. |
 | [Pandas Create](pandas_create.md) | Creates a pandas DataFrame using values entered in the text field. |
+| [Pandas Create From Dict](pandas_create_from_dict.md) | Creates a pandas DataFrame from a Python dictionary. |
+| [Pandas Create From Multiple Dict](pandas_create_from_multiple_dict.md) | Creates a pandas DataFrame from multiple Python dictionaries. |
+| [Pandas Create Series From Dict](pandas_create_series_from_dict.md) | Creates a Pandas Series from a Python dictionary. |
 | [Pandas Create With Index](pandas_create_with_index.md) | Creates a pandas DataFrame using values entered in the text field. Input data is assumed to have an index. |
 | [Pandas Load CSV](pandas_load_csv.md) | Loads CSV files into a pandas DataFrame. |
 | [Pandas Load CSV With Encoding](pandas_load_csv_with_encoding.md) | Loads CSV files into a pandas DataFrame. |
@@ -118,6 +121,12 @@
 | [SNS Histogram](sns_histogram.md) | Generates a histogram from a Pandas DataFrame using Seaborn. |
 | [SNS Line Plot](sns_line.md) | Generates a line plot from a pandas DataFrame using Seaborn. |
 | [SNS Scatter Plot](sns_scatter.md) | Generates a scatter plot from a pandas DataFrame using Seaborn. |
+## Python wrapper
+| Node | Description |
+| --- | --- |
+| [Py Kv Float Create](py_kv_float_create.md) | Creates a Python dictionary with a string key and a float value. |
+| [Py Kv Int Create](py_kv_int_create.md) |  Creates a Python dictionary with an string key and an integer value. |
+| [Py Kv String Create](py_kv_string_create.md) | Creates a Python dictionary with a string key and a string value. |
 ## Summary statistics
 | Node | Description |
 | --- | --- |

@@ -30,6 +30,10 @@ class PandasLoadCSVWithEncoding:
     FUNCTION: str = "load_csv"
     CATEGORY: str = "Data Analysis"
 
+    @classmethod
+    def IS_CHANGED(cls, **kw):
+        return float("NaN")
+
     def load_csv(self, file_path: str, encoding: str) -> tuple:
         """
         Loads a CSV file into a pandas DataFrame. Allows specifying the file encoding to support formats other than UTF-8.
