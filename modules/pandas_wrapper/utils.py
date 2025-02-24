@@ -27,6 +27,21 @@ def flatten_list_tuple_unique(lst: Union[List[Any], Tuple[Any, ...]]) -> Set[Any
     recurse(lst)
     return result
 
+def comma_separated_labels_string_to_list(s:str) -> List[str]:
+    """
+    Converts a comma-separated labels string into a list of string labels.
+
+    Args:
+        s (str): A comma-separated labels.
+
+    Returns:
+        List[str]: A list of valid labels.
+    """
+    if s is None or s == "":
+        return []
+    label_list = [e.strip() for e in s.split(",")]
+    return label_list
+
 
 def column_labels_string_to_list(dataframe:pd.DataFrame, s:str, no_check:bool=False) -> List[Union[str, int]]:
     """

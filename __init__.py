@@ -105,6 +105,9 @@ from .modules.pandas_wrapper.pandas_var import PandasVar
 from .modules.pandas_wrapper.pandas_vertical_concat import PandasVerticalConcat
 from .modules.pandas_wrapper.pandas_vertical_split import PandasVerticalSplit
 from .modules.pandas_wrapper.pandas_xs import PandasXs
+from .modules.seaborn_wrapper.sns_bar import SNSBar
+from .modules.seaborn_wrapper.sns_line import SNSLine
+from .modules.seaborn_wrapper.sns_scatter import SNSScatter
 T = TypeVar("T")
 
 
@@ -219,6 +222,9 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasVerticalConcat": PandasVerticalConcat,
     "PandasVerticalSplit": PandasVerticalSplit,
     "PandasXs": PandasXs,
+    "SNSBar": SNSBar,
+    "SNSLine": SNSLine,
+    "SNSScatter": SNSScatter,
 }
 
 
@@ -333,6 +339,9 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasVerticalConcat": "Pandas Vertical Concat",
     "PandasVerticalSplit": "Pandas Vertical Split",
     "PandasXs": "Pandas Xs",
+    "SNSBar": "SNS Bar Chart",
+    "SNSLine": "SNS Line Plot",
+    "SNSScatter": "SNS Scatter Plot",
 }
 
 

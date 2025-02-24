@@ -76,12 +76,16 @@ def format_display_name(class_name):
         ("CD A", "CDA"),
         ("H T M L", "HTML"),
         ("MP L", "MPL"),
+        ("SN S", "SNS"),
         (" N A", " NA"),
         ("Data Frame", "DataFrame"),
         ("Multi Index", "MultiIndex"),
         ("MPL Bar", "MPL Bar Chart"),
         ("MPL Line", "MPL Line Plot"),
-        ("MPL Scatter", "MPL Scatter Plot")
+        ("MPL Scatter", "MPL Scatter Plot"),
+        ("SNS Bar", "SNS Bar Chart"),
+        ("SNS Line", "SNS Line Plot"),
+        ("SNS Scatter", "SNS Scatter Plot")
     ]
     for p in replace_pairs:
         final_result = final_result.replace(p[0], p[1])

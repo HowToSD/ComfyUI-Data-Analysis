@@ -8,7 +8,7 @@ ComfyUI was designed to make Stable Diffusion accessible to non-engineers while 
 
 At the end of this page, you’ll find a tutorial on how to use this package to answer the MLB hits question.  
 
-I hope you enjoy using it and have a great time exploring data.  
+I hope you find it useful and engaging for data exploration.
 
 — Hide Inada  
 
@@ -36,7 +36,7 @@ Here are just some of the included nodes. For a complete list of nodes, check ou
 You can connect these nodes to conduct complex analysis in an intuitive graphical way.  
 You can also use other Comfy custom nodes to fit your needs (e.g., combining images).
 
-These custom nodes aim to make data exploration and analysis more efficient and enjoyable.
+These custom nodes enhance efficiency and usability in data exploration and analysis.
 
 ## Installation
 Note: GPU is not required to run this custom module.
@@ -58,7 +58,7 @@ Note: GPU is not required to run this custom module.
     ```
     This will create a new subdirectory ComfyUI-Data-Analysis.
 3. Rename the folder name from ComfyUI-Data-Analysis to data-analysis.
-   If you skip this, example workflows will not work as those flows use this folder name.
+   Skipping this step will cause example workflows to fail, as they rely on this folder name.
 4. Check if your ComfyUI environment already has pandas and matplotlib. If not, install them using pip.
    ```
    pip install -r requirements.txt
@@ -75,7 +75,7 @@ Refer to [User's Guide](docs/ug.md) or check out [Node Reference](docs/reference
 For a practical example, see the tutorial on baseball data: [How to Find Out Who Had the Most Hits](docs/baseball_example1.md).
 
 ## Update
-Please refer to the release notes. I try to avoid backward-incompatible changes as much as possible, but sometimes they are unavoidable because the project is still in its early stage and I discover issues along the way. The release notes contain those changes so that you know what to expect before upgrading your version.
+Refer to the release notes. While backward-incompatible changes are minimized, some may be necessary. The release notes contain those changes so that you know what to expect before upgrading your version.
 
 ## Contribution
 🚫 **This project does not accept pull requests.**  
