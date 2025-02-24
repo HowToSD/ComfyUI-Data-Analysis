@@ -64,7 +64,7 @@ Note: GPU is not required to run this custom module.
     This will create a new subdirectory ComfyUI-Data-Analysis.
 3. Rename the folder name from ComfyUI-Data-Analysis to data-analysis.
    Skipping this step will cause example workflows to fail, as they rely on this folder name.
-4. Check if your ComfyUI environment already has pandas and matplotlib. If not, install them using pip.
+4. Check if your ComfyUI environment already has pandas, matplotlib, scipy and seaborn. If not, install them using pip.
    ```
    pip install -r requirements.txt
    ```
