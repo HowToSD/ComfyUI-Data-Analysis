@@ -90,7 +90,8 @@ def plot_post_steps(
 
     # Set title and labels
     ax.set_title(title)
-    ax.set_xlabel(x_axis_label)
+    if x_axis_label:
+        ax.set_xlabel(x_axis_label)
     ax.set_ylabel(y_axis_label)
 
     # Save the plot to a buffer

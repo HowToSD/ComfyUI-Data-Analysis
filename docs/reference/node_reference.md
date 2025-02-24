@@ -115,6 +115,7 @@
 | [MPL Line Plot](mpl_line.md) |     Generates a line plot from a pandas DataFrame. |
 | [MPL Scatter Plot](mpl_scatter.md) |     Generates a scatter plot from a pandas DataFrame. |
 | [SNS Bar Chart](sns_bar.md) | Generates a bar chart from a Pandas DataFrame using Seaborn. |
+| [SNS Histogram](sns_histogram.md) | Generates a histogram from a Pandas DataFrame using Seaborn. |
 | [SNS Line Plot](sns_line.md) | Generates a line plot from a pandas DataFrame using Seaborn. |
 | [SNS Scatter Plot](sns_scatter.md) | Generates a scatter plot from a pandas DataFrame using Seaborn. |
 ## Summary statistics
