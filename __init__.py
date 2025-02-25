@@ -133,6 +133,7 @@ from .modules.pytorch_wrapper.pt_to_latent import PtToLatent
 from .modules.pytorch_wrapper.pt_to_numpy import PtToNumpy
 from .modules.pytorch_wrapper.pt_to_rgb_tensors import PtToRgbTensors
 from .modules.seaborn_wrapper.sns_bar import SNSBar
+from .modules.seaborn_wrapper.sns_boxplot import SNSBoxplot
 from .modules.seaborn_wrapper.sns_histogram import SNSHistogram
 from .modules.seaborn_wrapper.sns_line import SNSLine
 from .modules.seaborn_wrapper.sns_scatter import SNSScatter
@@ -278,6 +279,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PyKvIntCreate": PyKvIntCreate,
     "PyKvStringCreate": PyKvStringCreate,
     "SNSBar": SNSBar,
+    "SNSBoxplot": SNSBoxplot,
     "SNSHistogram": SNSHistogram,
     "SNSLine": SNSLine,
     "SNSScatter": SNSScatter,
@@ -423,6 +425,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PyKvIntCreate": "Py Kv Int Create",
     "PyKvStringCreate": "Py Kv String Create",
     "SNSBar": "SNS Bar Chart",
+    "SNSBoxplot": "SNS Boxplot",
     "SNSHistogram": "SNS Histogram",
     "SNSLine": "SNS Line Plot",
     "SNSScatter": "SNS Scatter Plot",
