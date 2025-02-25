@@ -115,14 +115,20 @@ from .modules.pandas_wrapper.pandas_var import PandasVar
 from .modules.pandas_wrapper.pandas_vertical_concat import PandasVerticalConcat
 from .modules.pandas_wrapper.pandas_vertical_split import PandasVerticalSplit
 from .modules.pandas_wrapper.pandas_xs import PandasXs
+from .modules.pytorch_wrapper.pt_flatten import PtFlatten
 from .modules.pytorch_wrapper.pt_float_create import PtFloatCreate
 from .modules.pytorch_wrapper.pt_from_image import PtFromImage
 from .modules.pytorch_wrapper.pt_from_latent import PtFromLatent
 from .modules.pytorch_wrapper.pt_from_numpy import PtFromNumpy
 from .modules.pytorch_wrapper.pt_int_create import PtIntCreate
+from .modules.pytorch_wrapper.pt_size import PtSize
+from .modules.pytorch_wrapper.pt_size_create import PtSizeCreate
+from .modules.pytorch_wrapper.pt_size_to_numpy import PtSizeToNumpy
+from .modules.pytorch_wrapper.pt_size_to_string import PtSizeToString
 from .modules.pytorch_wrapper.pt_to_image import PtToImage
 from .modules.pytorch_wrapper.pt_to_latent import PtToLatent
 from .modules.pytorch_wrapper.pt_to_numpy import PtToNumpy
+from .modules.pytorch_wrapper.pt_to_rgb_tensors import PtToRgbTensors
 from .modules.seaborn_wrapper.sns_bar import SNSBar
 from .modules.seaborn_wrapper.sns_histogram import SNSHistogram
 from .modules.seaborn_wrapper.sns_line import SNSLine
@@ -248,14 +254,20 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasVerticalConcat": PandasVerticalConcat,
     "PandasVerticalSplit": PandasVerticalSplit,
     "PandasXs": PandasXs,
+    "PtFlatten": PtFlatten,
     "PtFloatCreate": PtFloatCreate,
     "PtFromImage": PtFromImage,
     "PtFromLatent": PtFromLatent,
     "PtFromNumpy": PtFromNumpy,
     "PtIntCreate": PtIntCreate,
+    "PtSize": PtSize,
+    "PtSizeCreate": PtSizeCreate,
+    "PtSizeToNumpy": PtSizeToNumpy,
+    "PtSizeToString": PtSizeToString,
     "PtToImage": PtToImage,
     "PtToLatent": PtToLatent,
     "PtToNumpy": PtToNumpy,
+    "PtToRgbTensors": PtToRgbTensors,
     "PyKvFloatCreate": PyKvFloatCreate,
     "PyKvIntCreate": PyKvIntCreate,
     "PyKvStringCreate": PyKvStringCreate,
@@ -384,14 +396,20 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasVerticalConcat": "Pandas Vertical Concat",
     "PandasVerticalSplit": "Pandas Vertical Split",
     "PandasXs": "Pandas Xs",
+    "PtFlatten": "Pt Flatten",
     "PtFloatCreate": "Pt Float Create",
     "PtFromImage": "Pt From Image",
     "PtFromLatent": "Pt From Latent",
     "PtFromNumpy": "Pt From Numpy",
     "PtIntCreate": "Pt Int Create",
+    "PtSize": "Pt Size",
+    "PtSizeCreate": "Pt Size Create",
+    "PtSizeToNumpy": "Pt Size To Numpy",
+    "PtSizeToString": "Pt Size To String",
     "PtToImage": "Pt To Image",
     "PtToLatent": "Pt To Latent",
     "PtToNumpy": "Pt To Numpy",
+    "PtToRgbTensors": "Pt To Rgb Tensors",
     "PyKvFloatCreate": "Py Kv Float Create",
     "PyKvIntCreate": "Py Kv Int Create",
     "PyKvStringCreate": "Py Kv String Create",

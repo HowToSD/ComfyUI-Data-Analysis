@@ -43,6 +43,9 @@ Creating sample data and plotting it is incredibly simple, as shown below:
 ![SNS Line Plot](docs/images/sns_line.png)
 An example plot
 
+You can also analyze images generated in ComfyUI's image generation workflows. Below screenshot shows a histogram of red channel pixels.
+![Red channel pixel distribution](docs/images/red_pixel_distribution.png)
+
 ## Installation
 Note: GPU is not required to run this custom module.
 

@@ -2,9 +2,9 @@ from typing import Any, Dict
 import torch
 
 
-class PtToLatent:
+class PtSizeToString:
     """
-    Casts a PyTorch tensor as a latent tensor.
+    Converts PyTorch Size object to a Python string.
 
     category: PyTorch wrapper
     """
@@ -19,22 +19,22 @@ class PtToLatent:
         """
         return {
             "required": {
-                "tens": ("TENSOR", {}),
+                "sz": ("PTSIZE", {}),
             }
         }
 
-    RETURN_TYPES: tuple = ("LATENT",)
+    RETURN_TYPES: tuple = ("STRING",)
     FUNCTION: str = "f"
     CATEGORY: str = "PyTorch wrapper"
 
-    def f(self, tens: torch.Tensor) -> tuple:
+    def f(self, sz: torch.Size) -> tuple:
         """
-        Casts a PyTorch tensor as a latent tensor.
+        Converts PyTorch Size object to a Python string.
 
         Args:
-            tens (torch.Tensor): PyTorch Tensor
+            sz (torch.Size): PyTorch Size
 
         Returns:
-            tuple: A tuple containing the latent tensor.
+            tuple: A tuple containing the string.
         """
-        return ({"samples":tens},)
+        return (str(sz),)

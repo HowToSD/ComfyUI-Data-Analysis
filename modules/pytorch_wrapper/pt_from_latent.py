@@ -37,4 +37,4 @@ class PtFromLatent:
         Returns:
             tuple: A tuple containing the PyTorch tensor.
         """
-        return (latent,)
+        return (latent["samples"],)

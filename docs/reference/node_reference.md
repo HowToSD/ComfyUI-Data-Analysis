@@ -113,6 +113,11 @@
 | [Pandas Log](pandas_log.md) | Applying the natural logarithm function to a pandas DataFrame and converting non-numeric values to NaN. |
 | [Pandas Sin](pandas_sin.md) | Applies the sine function to a pandas DataFrame and converting non-numeric values to NaN. |
 | [Pandas Tan](pandas_tan.md) | Applies the tangent function to a pandas DataFrame and converting non-numeric values to NaN. |
+## Miscellaneous
+| Node | Description |
+| --- | --- |
+| [Pt Flatten](pt_flatten.md) | Flattens a PyTorch tensor into a 1D tensor. |
+| [Pt To Rgb Tensors](pt_to_rgb_tensors.md) | Splits a PyTorch tensor into R, G, and B tensors. |
 ## Numpy
 | Node | Description |
 | --- | --- |
@@ -136,6 +141,10 @@
 | [Pt From Latent](pt_from_latent.md) | Casts a latent tensor as a PyTorch tensor. |
 | [Pt From Numpy](pt_from_numpy.md) | Converts a NumPy ndarray to a PyTorch tensor while preserving its data type. |
 | [Pt Int Create](pt_int_create.md) | Creates a PyTorch tensor with 32-bit integer  |
+| [Pt Size](pt_size.md) | Extracts the PyTorch Size object of a PyTorch tensor using the size() method. |
+| [Pt Size Create](pt_size_create.md) | Creates a PyTorch Size using values entered in the text field. |
+| [Pt Size To Numpy](pt_size_to_numpy.md) | Converts PyTorch Size object to NumPy ndarray. |
+| [Pt Size To String](pt_size_to_string.md) | Converts PyTorch Size object to a Python string. |
 | [Pt To Image](pt_to_image.md) | Casts a PyTorch tensor as an Image tensor. |
 | [Pt To Latent](pt_to_latent.md) | Casts a PyTorch tensor as a latent tensor. |
 | [Pt To Numpy](pt_to_numpy.md) | Converts PyTorch tensor to NumPy ndarray. |

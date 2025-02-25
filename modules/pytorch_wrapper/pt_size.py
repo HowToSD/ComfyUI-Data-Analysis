@@ -1,11 +1,12 @@
 from typing import Any, Dict
 import torch
+import ast
 
 
-class PtToLatent:
+class PtSize:
     """
-    Casts a PyTorch tensor as a latent tensor.
-
+    Extracts the PyTorch Size object of a PyTorch tensor using the size() method.
+    
     category: PyTorch wrapper
     """
     
@@ -19,22 +20,22 @@ class PtToLatent:
         """
         return {
             "required": {
-                "tens": ("TENSOR", {}),
+                "tens": ("TENSOR",),
             }
         }
 
-    RETURN_TYPES: tuple = ("LATENT",)
+    RETURN_TYPES: tuple = ("PTSIZE",)
     FUNCTION: str = "f"
     CATEGORY: str = "PyTorch wrapper"
 
     def f(self, tens: torch.Tensor) -> tuple:
         """
-        Casts a PyTorch tensor as a latent tensor.
+        Extracts the PyTorch Size object of a PyTorch tensor using the size() method.
 
         Args:
-            tens (torch.Tensor): PyTorch Tensor
+            tens (torch.Tensor): The tensor.
 
         Returns:
-            tuple: A tuple containing the latent tensor.
+            tuple: A tuple containing the PyTorch Size.
         """
-        return ({"samples":tens},)
+        return (tens.size(),)
