@@ -26,6 +26,11 @@
 | [Pandas Sub Scalar Float](pandas_sub_scalar_float.md) | Subtracts a floating-point number from a Pandas DataFrame. |
 | [Pandas Sub Scalar Int](pandas_sub_scalar_int.md) | Subtracts an integer from a Pandas DataFrame. |
 | [Pandas Sub Series](pandas_sub_series.md) | Subtracts a Pandas Series from a Pandas DataFrame. |
+## Categorical summary
+| Node | Description |
+| --- | --- |
+| [Pandas Crosstab](pandas_crosstab.md) | Creates a contingency table (crosstab, or cross-tabulation) from two or more columns in a DataFrame. |
+| [Pandas Value Counts](pandas_value_counts.md) | Creates a frequency table from one or more columns in a DataFrame. |
 ## Cumulative calculations
 | Node | Description |
 | --- | --- |

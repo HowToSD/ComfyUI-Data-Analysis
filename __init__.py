@@ -33,6 +33,7 @@ from .modules.pandas_wrapper.pandas_create_from_multiple_dict import PandasCreat
 from .modules.pandas_wrapper.pandas_create_from_numpy import PandasCreateFromNumpy
 from .modules.pandas_wrapper.pandas_create_series_from_dict import PandasCreateSeriesFromDict
 from .modules.pandas_wrapper.pandas_create_with_index import PandasCreateWithIndex
+from .modules.pandas_wrapper.pandas_crosstab import PandasCrosstab
 from .modules.pandas_wrapper.pandas_cummax import PandasCummax
 from .modules.pandas_wrapper.pandas_cummin import PandasCummin
 from .modules.pandas_wrapper.pandas_cumprod import PandasCumprod
@@ -111,6 +112,7 @@ from .modules.pandas_wrapper.pandas_to_datetime import PandasToDatetime
 from .modules.pandas_wrapper.pandas_to_numpy import PandasToNumpy
 from .modules.pandas_wrapper.pandas_to_string import PandasToString
 from .modules.pandas_wrapper.pandas_transpose import PandasTranspose
+from .modules.pandas_wrapper.pandas_value_counts import PandasValueCounts
 from .modules.pandas_wrapper.pandas_var import PandasVar
 from .modules.pandas_wrapper.pandas_vertical_concat import PandasVerticalConcat
 from .modules.pandas_wrapper.pandas_vertical_split import PandasVerticalSplit
@@ -172,6 +174,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasCreateFromNumpy": PandasCreateFromNumpy,
     "PandasCreateSeriesFromDict": PandasCreateSeriesFromDict,
     "PandasCreateWithIndex": PandasCreateWithIndex,
+    "PandasCrosstab": PandasCrosstab,
     "PandasCummax": PandasCummax,
     "PandasCummin": PandasCummin,
     "PandasCumprod": PandasCumprod,
@@ -250,6 +253,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasToNumpy": PandasToNumpy,
     "PandasToString": PandasToString,
     "PandasTranspose": PandasTranspose,
+    "PandasValueCounts": PandasValueCounts,
     "PandasVar": PandasVar,
     "PandasVerticalConcat": PandasVerticalConcat,
     "PandasVerticalSplit": PandasVerticalSplit,
@@ -314,6 +318,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasCreateFromNumpy": "Pandas Create From Numpy",
     "PandasCreateSeriesFromDict": "Pandas Create Series From Dict",
     "PandasCreateWithIndex": "Pandas Create With Index",
+    "PandasCrosstab": "Pandas Crosstab",
     "PandasCummax": "Pandas Cummax",
     "PandasCummin": "Pandas Cummin",
     "PandasCumprod": "Pandas Cumprod",
@@ -392,6 +397,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasToNumpy": "Pandas To Numpy",
     "PandasToString": "Pandas To String",
     "PandasTranspose": "Pandas Transpose",
+    "PandasValueCounts": "Pandas Value Counts",
     "PandasVar": "Pandas Var",
     "PandasVerticalConcat": "Pandas Vertical Concat",
     "PandasVerticalSplit": "Pandas Vertical Split",
