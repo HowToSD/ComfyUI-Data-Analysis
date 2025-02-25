@@ -1,0 +1,18 @@
+# Pt Int Create
+Creates a PyTorch tensor with 32-bit integer 
+using values entered in the text field.
+
+## Input
+| Name | Data type |
+|---|---|
+| data | String |
+
+## Output
+| Data type |
+|---|
+| Tensor |
+
+<HR>
+Category: PyTorch wrapper
+
+ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

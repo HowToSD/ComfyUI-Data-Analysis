@@ -13,6 +13,8 @@ from .modules.cda.py_kv_string_create import PyKvStringCreate
 from .modules.matplotlib.mpl_bar import MPLBar
 from .modules.matplotlib.mpl_line import MPLLine
 from .modules.matplotlib.mpl_scatter import MPLScatter
+from .modules.numpy_wrapper.numpy_float_create import NumpyFloatCreate
+from .modules.numpy_wrapper.numpy_int_create import NumpyIntCreate
 from .modules.pandas_wrapper.pandas_add import PandasAdd
 from .modules.pandas_wrapper.pandas_add_scalar_float import PandasAddScalarFloat
 from .modules.pandas_wrapper.pandas_add_scalar_int import PandasAddScalarInt
@@ -28,6 +30,7 @@ from .modules.pandas_wrapper.pandas_cov import PandasCov
 from .modules.pandas_wrapper.pandas_create import PandasCreate
 from .modules.pandas_wrapper.pandas_create_from_dict import PandasCreateFromDict
 from .modules.pandas_wrapper.pandas_create_from_multiple_dict import PandasCreateFromMultipleDict
+from .modules.pandas_wrapper.pandas_create_from_numpy import PandasCreateFromNumpy
 from .modules.pandas_wrapper.pandas_create_series_from_dict import PandasCreateSeriesFromDict
 from .modules.pandas_wrapper.pandas_create_with_index import PandasCreateWithIndex
 from .modules.pandas_wrapper.pandas_cummax import PandasCummax
@@ -105,12 +108,17 @@ from .modules.pandas_wrapper.pandas_sum import PandasSum
 from .modules.pandas_wrapper.pandas_summary import PandasSummary
 from .modules.pandas_wrapper.pandas_tan import PandasTan
 from .modules.pandas_wrapper.pandas_to_datetime import PandasToDatetime
+from .modules.pandas_wrapper.pandas_to_numpy import PandasToNumpy
 from .modules.pandas_wrapper.pandas_to_string import PandasToString
 from .modules.pandas_wrapper.pandas_transpose import PandasTranspose
 from .modules.pandas_wrapper.pandas_var import PandasVar
 from .modules.pandas_wrapper.pandas_vertical_concat import PandasVerticalConcat
 from .modules.pandas_wrapper.pandas_vertical_split import PandasVerticalSplit
 from .modules.pandas_wrapper.pandas_xs import PandasXs
+from .modules.pytorch_wrapper.pt_float_create import PtFloatCreate
+from .modules.pytorch_wrapper.pt_from_numpy import PtFromNumpy
+from .modules.pytorch_wrapper.pt_int_create import PtIntCreate
+from .modules.pytorch_wrapper.pt_to_numpy import PtToNumpy
 from .modules.seaborn_wrapper.sns_bar import SNSBar
 from .modules.seaborn_wrapper.sns_histogram import SNSHistogram
 from .modules.seaborn_wrapper.sns_line import SNSLine
@@ -134,6 +142,8 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "MPLBar": MPLBar,
     "MPLLine": MPLLine,
     "MPLScatter": MPLScatter,
+    "NumpyFloatCreate": NumpyFloatCreate,
+    "NumpyIntCreate": NumpyIntCreate,
     "PandasAdd": PandasAdd,
     "PandasAddScalarFloat": PandasAddScalarFloat,
     "PandasAddScalarInt": PandasAddScalarInt,
@@ -149,6 +159,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasCreate": PandasCreate,
     "PandasCreateFromDict": PandasCreateFromDict,
     "PandasCreateFromMultipleDict": PandasCreateFromMultipleDict,
+    "PandasCreateFromNumpy": PandasCreateFromNumpy,
     "PandasCreateSeriesFromDict": PandasCreateSeriesFromDict,
     "PandasCreateWithIndex": PandasCreateWithIndex,
     "PandasCummax": PandasCummax,
@@ -226,12 +237,17 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasSummary": PandasSummary,
     "PandasTan": PandasTan,
     "PandasToDatetime": PandasToDatetime,
+    "PandasToNumpy": PandasToNumpy,
     "PandasToString": PandasToString,
     "PandasTranspose": PandasTranspose,
     "PandasVar": PandasVar,
     "PandasVerticalConcat": PandasVerticalConcat,
     "PandasVerticalSplit": PandasVerticalSplit,
     "PandasXs": PandasXs,
+    "PtFloatCreate": PtFloatCreate,
+    "PtFromNumpy": PtFromNumpy,
+    "PtIntCreate": PtIntCreate,
+    "PtToNumpy": PtToNumpy,
     "PyKvFloatCreate": PyKvFloatCreate,
     "PyKvIntCreate": PyKvIntCreate,
     "PyKvStringCreate": PyKvStringCreate,
@@ -258,6 +274,8 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "MPLBar": "MPL Bar Chart",
     "MPLLine": "MPL Line Plot",
     "MPLScatter": "MPL Scatter Plot",
+    "NumpyFloatCreate": "Numpy Float Create",
+    "NumpyIntCreate": "Numpy Int Create",
     "PandasAdd": "Pandas Add",
     "PandasAddScalarFloat": "Pandas Add Scalar Float",
     "PandasAddScalarInt": "Pandas Add Scalar Int",
@@ -273,6 +291,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasCreate": "Pandas Create",
     "PandasCreateFromDict": "Pandas Create From Dict",
     "PandasCreateFromMultipleDict": "Pandas Create From Multiple Dict",
+    "PandasCreateFromNumpy": "Pandas Create From Numpy",
     "PandasCreateSeriesFromDict": "Pandas Create Series From Dict",
     "PandasCreateWithIndex": "Pandas Create With Index",
     "PandasCummax": "Pandas Cummax",
@@ -350,12 +369,17 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasSummary": "Pandas Summary",
     "PandasTan": "Pandas Tan",
     "PandasToDatetime": "Pandas To Datetime",
+    "PandasToNumpy": "Pandas To Numpy",
     "PandasToString": "Pandas To String",
     "PandasTranspose": "Pandas Transpose",
     "PandasVar": "Pandas Var",
     "PandasVerticalConcat": "Pandas Vertical Concat",
     "PandasVerticalSplit": "Pandas Vertical Split",
     "PandasXs": "Pandas Xs",
+    "PtFloatCreate": "Pt Float Create",
+    "PtFromNumpy": "Pt From Numpy",
+    "PtIntCreate": "Pt Int Create",
+    "PtToNumpy": "Pt To Numpy",
     "PyKvFloatCreate": "Py Kv Float Create",
     "PyKvIntCreate": "Py Kv Int Create",
     "PyKvStringCreate": "Py Kv String Create",

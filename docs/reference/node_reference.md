@@ -61,6 +61,7 @@
 | [Pandas As Float](pandas_as_float.md) | Converts all cells in a pandas DataFrame to float type. |
 | [Pandas As Int](pandas_as_int.md) | Converts all cells in a pandas DataFrame to integer type. |
 | [Pandas As String](pandas_as_string.md) | Converts all cells in a pandas DataFrame to string type. |
+| [Pandas To Numpy](pandas_to_numpy.md) | Converts a pandas DataFrame to Numpy ndarray. |
 ## DataFrame information
 | Node | Description |
 | --- | --- |
@@ -94,6 +95,7 @@
 | [Pandas Create](pandas_create.md) | Creates a pandas DataFrame using values entered in the text field. |
 | [Pandas Create From Dict](pandas_create_from_dict.md) | Creates a pandas DataFrame from a Python dictionary. |
 | [Pandas Create From Multiple Dict](pandas_create_from_multiple_dict.md) | Creates a pandas DataFrame from multiple Python dictionaries. |
+| [Pandas Create From Numpy](pandas_create_from_numpy.md) | Creates a pandas DataFrame from a NumPy ndarray. |
 | [Pandas Create Series From Dict](pandas_create_series_from_dict.md) | Creates a Pandas Series from a Python dictionary. |
 | [Pandas Create With Index](pandas_create_with_index.md) | Creates a pandas DataFrame using values entered in the text field. Input data is assumed to have an index. |
 | [Pandas Load CSV](pandas_load_csv.md) | Loads CSV files into a pandas DataFrame. |
@@ -111,6 +113,11 @@
 | [Pandas Log](pandas_log.md) | Applying the natural logarithm function to a pandas DataFrame and converting non-numeric values to NaN. |
 | [Pandas Sin](pandas_sin.md) | Applies the sine function to a pandas DataFrame and converting non-numeric values to NaN. |
 | [Pandas Tan](pandas_tan.md) | Applies the tangent function to a pandas DataFrame and converting non-numeric values to NaN. |
+## Numpy
+| Node | Description |
+| --- | --- |
+| [Numpy Float Create](numpy_float_create.md) | Creates a NumPy ndarray with 32-bit floating point precision  |
+| [Numpy Int Create](numpy_int_create.md) | Creates a NumPy ndarray with 32-bit integer  |
 ## Plot
 | Node | Description |
 | --- | --- |
@@ -121,6 +128,13 @@
 | [SNS Histogram](sns_histogram.md) | Generates a histogram from a Pandas DataFrame using Seaborn. |
 | [SNS Line Plot](sns_line.md) | Generates a line plot from a pandas DataFrame using Seaborn. |
 | [SNS Scatter Plot](sns_scatter.md) | Generates a scatter plot from a pandas DataFrame using Seaborn. |
+## PyTorch wrapper
+| Node | Description |
+| --- | --- |
+| [Pt Float Create](pt_float_create.md) | Creates a PyTorch tensor with 32-bit floating point precision  |
+| [Pt From Numpy](pt_from_numpy.md) | Converts a NumPy ndarray to a PyTorch tensor while preserving its data type. |
+| [Pt Int Create](pt_int_create.md) | Creates a PyTorch tensor with 32-bit integer  |
+| [Pt To Numpy](pt_to_numpy.md) | Converts PyTorch tensor to NumPy ndarray. |
 ## Python wrapper
 | Node | Description |
 | --- | --- |
