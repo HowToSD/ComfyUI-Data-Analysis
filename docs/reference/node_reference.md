@@ -132,8 +132,12 @@
 | Node | Description |
 | --- | --- |
 | [Pt Float Create](pt_float_create.md) | Creates a PyTorch tensor with 32-bit floating point precision  |
+| [Pt From Image](pt_from_image.md) | Casts an Image tensor as a PyTorch tensor. |
+| [Pt From Latent](pt_from_latent.md) | Casts a latent tensor as a PyTorch tensor. |
 | [Pt From Numpy](pt_from_numpy.md) | Converts a NumPy ndarray to a PyTorch tensor while preserving its data type. |
 | [Pt Int Create](pt_int_create.md) | Creates a PyTorch tensor with 32-bit integer  |
+| [Pt To Image](pt_to_image.md) | Casts a PyTorch tensor as an Image tensor. |
+| [Pt To Latent](pt_to_latent.md) | Casts a PyTorch tensor as a latent tensor. |
 | [Pt To Numpy](pt_to_numpy.md) | Converts PyTorch tensor to NumPy ndarray. |
 ## Python wrapper
 | Node | Description |
