@@ -9,7 +9,7 @@ Converts a pandas DataFrame to Numpy ndarray.
 ## Output
 | Data type |
 |---|
-| Ndrray |
+| Ndarray |
 
 <HR>
 Category: Data type conversion
