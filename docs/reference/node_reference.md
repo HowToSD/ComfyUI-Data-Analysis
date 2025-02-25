@@ -131,9 +131,9 @@
 ## Plot
 | Node | Description |
 | --- | --- |
-| [M P L Pie Chart](mpl_pie_chart.md) | :MPL Pie Chart |
 | [MPL Bar Chart](mpl_bar.md) |     Generates a bar chart from a Pandas DataFrame. |
 | [MPL Line Plot](mpl_line.md) |     Generates a line plot from a pandas DataFrame. |
+| [MPL Pie Chart](mpl_pie_chart.md) | Generates a pie chart from a pandas DataFrame. |
 | [MPL Scatter Plot](mpl_scatter.md) |     Generates a scatter plot from a pandas DataFrame. |
 | [SNS Bar Chart](sns_bar.md) | Generates a bar chart from a Pandas DataFrame using Seaborn. |
 | [SNS Boxplot](sns_boxplot.md) | Generates a boxplot from a Pandas DataFrame using Seaborn. |

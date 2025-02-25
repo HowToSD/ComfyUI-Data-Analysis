@@ -5,7 +5,7 @@ from .util import plot_post_steps
 
 class MPLPieChart:
     """
-    :MPL Pie Chart
+    MPL Pie Chart:
     Generates a pie chart from a pandas DataFrame.
 
     Below screenshot shows a workflow to generate a pie chart from categorical data.
