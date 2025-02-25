@@ -12,6 +12,7 @@ from .modules.cda.py_kv_int_create import PyKvIntCreate
 from .modules.cda.py_kv_string_create import PyKvStringCreate
 from .modules.matplotlib.mpl_bar import MPLBar
 from .modules.matplotlib.mpl_line import MPLLine
+from .modules.matplotlib.mpl_pie_chart import MPLPieChart
 from .modules.matplotlib.mpl_scatter import MPLScatter
 from .modules.numpy_wrapper.numpy_float_create import NumpyFloatCreate
 from .modules.numpy_wrapper.numpy_int_create import NumpyIntCreate
@@ -153,6 +154,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "CDATextCreate": CDATextCreate,
     "MPLBar": MPLBar,
     "MPLLine": MPLLine,
+    "MPLPieChart": MPLPieChart,
     "MPLScatter": MPLScatter,
     "NumpyFloatCreate": NumpyFloatCreate,
     "NumpyIntCreate": NumpyIntCreate,
@@ -297,6 +299,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "CDATextCreate": "CDA Text Create",
     "MPLBar": "MPL Bar Chart",
     "MPLLine": "MPL Line Plot",
+    "MPLPieChart": "MPL Pie Chart",
     "MPLScatter": "MPL Scatter Plot",
     "NumpyFloatCreate": "Numpy Float Create",
     "NumpyIntCreate": "Numpy Int Create",
