@@ -12,6 +12,6 @@ Creates a PyTorch Size using values entered in the text field.
 | Ptsize |
 
 <HR>
-Category: PyTorch wrapper
+Category: PyTorch wrapper - Size object support
 
 ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

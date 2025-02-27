@@ -6,7 +6,7 @@ class PtSizeToNumpy:
     """
     Converts PyTorch Size object to NumPy ndarray.
 
-    category: PyTorch wrapper
+    category: PyTorch wrapper - Size object support
     """
     
     @classmethod
@@ -25,7 +25,7 @@ class PtSizeToNumpy:
 
     RETURN_TYPES: tuple = ("NDARRAY",)
     FUNCTION: str = "f"
-    CATEGORY: str = "PyTorch wrapper"
+    CATEGORY: str = "Data Analysis"
 
     def f(self, sz: torch.Size) -> tuple:
         """

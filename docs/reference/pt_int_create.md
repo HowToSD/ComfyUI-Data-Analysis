@@ -13,6 +13,6 @@ using values entered in the text field.
 | Tensor |
 
 <HR>
-Category: PyTorch wrapper
+Category: PyTorch wrapper - Tensor creation
 
 ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

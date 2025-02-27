@@ -6,7 +6,7 @@ class PtToImage:
     """
     Casts a PyTorch tensor as an Image tensor.
 
-    category: PyTorch wrapper
+    category: PyTorch wrapper - Tensor data conversion
     """
     
     @classmethod
@@ -25,7 +25,7 @@ class PtToImage:
 
     RETURN_TYPES: tuple = ("IMAGE",)
     FUNCTION: str = "f"
-    CATEGORY: str = "PyTorch wrapper"
+    CATEGORY: str = "Data Analysis"
 
     def f(self, tens: torch.Tensor) -> tuple:
         """

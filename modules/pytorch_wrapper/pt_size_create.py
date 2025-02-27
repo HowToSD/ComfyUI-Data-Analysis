@@ -7,7 +7,7 @@ class PtSizeCreate:
     """
     Creates a PyTorch Size using values entered in the text field.
     
-    category: PyTorch wrapper
+    category: PyTorch wrapper - Size object support
     """
     
     @classmethod
@@ -26,7 +26,7 @@ class PtSizeCreate:
 
     RETURN_TYPES: tuple = ("PTSIZE",)
     FUNCTION: str = "f"
-    CATEGORY: str = "PyTorch wrapper"
+    CATEGORY: str = "Data Analysis"
 
     def f(self, data: str) -> tuple:
         """

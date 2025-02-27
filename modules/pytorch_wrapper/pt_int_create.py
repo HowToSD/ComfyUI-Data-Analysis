@@ -8,7 +8,7 @@ class PtIntCreate:
     Creates a PyTorch tensor with 32-bit integer 
     using values entered in the text field.
     
-    category: PyTorch wrapper
+    category: PyTorch wrapper - Tensor creation
     """
     
     @classmethod
@@ -27,7 +27,7 @@ class PtIntCreate:
 
     RETURN_TYPES: tuple = ("TENSOR",)
     FUNCTION: str = "f"
-    CATEGORY: str = "PyTorch wrapper"
+    CATEGORY: str = "Data Analysis"
 
     def f(self, data: str) -> tuple:
         """

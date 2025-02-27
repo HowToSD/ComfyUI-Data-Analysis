@@ -12,6 +12,6 @@ Casts a PyTorch tensor as an Image tensor.
 | Image |
 
 <HR>
-Category: PyTorch wrapper
+Category: PyTorch wrapper - Tensor data conversion
 
 ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

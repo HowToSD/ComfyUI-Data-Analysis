@@ -6,7 +6,7 @@ class PtToRgbTensors:
     """
     Splits a PyTorch tensor into R, G, and B tensors.
 
-    Category: PyTorch wrapper
+    category: PyTorch wrapper - Tensor data conversion
     """
     
     @classmethod
@@ -26,7 +26,7 @@ class PtToRgbTensors:
     RETURN_NAMES: tuple = ("R", "G", "B")
     RETURN_TYPES: tuple = ("TENSOR", "TENSOR", "TENSOR")
     FUNCTION: str = "f"
-    CATEGORY: str = "PyTorch wrapper"
+    CATEGORY: str = "Data Analysis"
 
     def f(self, tens: torch.Tensor) -> tuple:
         """

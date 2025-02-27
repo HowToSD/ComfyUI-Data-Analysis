@@ -6,7 +6,7 @@ class PtToLatent:
     """
     Casts a PyTorch tensor as a latent tensor.
 
-    category: PyTorch wrapper
+    category: PyTorch wrapper - Tensor data conversion
     """
     
     @classmethod
@@ -25,7 +25,7 @@ class PtToLatent:
 
     RETURN_TYPES: tuple = ("LATENT",)
     FUNCTION: str = "f"
-    CATEGORY: str = "PyTorch wrapper"
+    CATEGORY: str = "Data Analysis"
 
     def f(self, tens: torch.Tensor) -> tuple:
         """

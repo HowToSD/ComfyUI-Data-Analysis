@@ -6,7 +6,7 @@ class PtToNumpy:
     """
     Converts PyTorch tensor to NumPy ndarray.
 
-    category: PyTorch wrapper
+    category: PyTorch wrapper - Tensor data conversion
     """
     
     @classmethod
@@ -25,7 +25,7 @@ class PtToNumpy:
 
     RETURN_TYPES: tuple = ("NDARRAY",)
     FUNCTION: str = "f"
-    CATEGORY: str = "PyTorch wrapper"
+    CATEGORY: str = "Data Analysis"
 
     def f(self, tens: torch.Tensor) -> tuple:
         """

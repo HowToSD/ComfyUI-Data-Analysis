@@ -6,7 +6,7 @@ class PtSizeToString:
     """
     Converts PyTorch Size object to a Python string.
 
-    category: PyTorch wrapper
+    category: PyTorch wrapper - Size object support
     """
     
     @classmethod
@@ -25,7 +25,7 @@ class PtSizeToString:
 
     RETURN_TYPES: tuple = ("STRING",)
     FUNCTION: str = "f"
-    CATEGORY: str = "PyTorch wrapper"
+    CATEGORY: str = "Data Analysis"
 
     def f(self, sz: torch.Size) -> tuple:
         """

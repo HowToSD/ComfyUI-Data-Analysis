@@ -89,6 +89,7 @@
 | [Pandas Show Series](pandas_show_series.md) | Displays a Pandas Series as text. |
 | [Pandas Show Text](pandas_show_text.md) | Displays a string. |
 | [Pandas To String](pandas_to_string.md) | Converts a pandas DataFrame to a string representation. |
+| [Pt Show Text](pt_show_text.md) | Displays PyTorch tensor as a string. Note that the tensor is partially printed out when |
 ## IO
 | Node | Description |
 | --- | --- |
@@ -122,7 +123,6 @@
 | Node | Description |
 | --- | --- |
 | [Pt Flatten](pt_flatten.md) | Flattens a PyTorch tensor into a 1D tensor. |
-| [Pt To Rgb Tensors](pt_to_rgb_tensors.md) | Splits a PyTorch tensor into R, G, and B tensors. |
 ## Numpy
 | Node | Description |
 | --- | --- |
@@ -140,21 +140,87 @@
 | [SNS Histogram](sns_histogram.md) | Generates a histogram from a Pandas DataFrame using Seaborn. |
 | [SNS Line Plot](sns_line.md) | Generates a line plot from a pandas DataFrame using Seaborn. |
 | [SNS Scatter Plot](sns_scatter.md) | Generates a scatter plot from a pandas DataFrame using Seaborn. |
-## PyTorch wrapper
+## PyTorch wrapper - Arithmetic operations
 | Node | Description |
 | --- | --- |
+| [Pt Add](pt_add.md) | Adds two PyTorch tensors. |
+| [Pt Div](pt_div.md) | Divides one PyTorch tensor by another element-wise. |
+| [Pt Floor Div](pt_floor_divide.md) | Performs element-wise floor division on two PyTorch tensors. |
+| [Pt Mul](pt_mul.md) | Multiplies two PyTorch tensors element-wise. |
+| [Pt Pow](pt_pow.md) | Raises one PyTorch tensor to the power of another element-wise. |
+| [Pt Remainder](pt_remainder.md) | Computes the element-wise remainder of division between two PyTorch tensors. |
+| [Pt Sub](pt_sub.md) | Subtracts one PyTorch tensor from another. |
+## PyTorch wrapper - Bitwise operations
+| Node | Description |
+| --- | --- |
+| [Pt Bitwise And](pt_bitwise_and.md) | Performs a bitwise AND operation on two PyTorch tensors element-wise. |
+| [Pt Bitwise Left Shift](pt_bitwise_left_shift.md) | Performs a bitwise left shift operation on two PyTorch tensors element-wise. |
+| [Pt Bitwise Not](pt_bitwise_not.md) | Performs a bitwise NOT operation on a PyTorch tensor element-wise. |
+| [Pt Bitwise Or](pt_bitwise_or.md) | Performs a bitwise OR operation on two PyTorch tensors element-wise. |
+| [Pt Bitwise Right Shift](pt_bitwise_right_shift.md) | Performs a bitwise right shift operation on two PyTorch tensors element-wise. |
+| [Pt Bitwise Xor](pt_bitwise_xor.md) | Performs a bitwise XOR operation on two PyTorch tensors element-wise. |
+## PyTorch wrapper - Comparison operations
+| Node | Description |
+| --- | --- |
+| [Pt Eq](pt_eq.md) | Tests whether two PyTorch tensors are equal element-wise. |
+| [Pt Ge](pt_ge.md) | Tests whether elements in the first PyTorch tensor are greater than or equal to the corresponding elements in the second tensor. |
+| [Pt Gt](pt_gt.md) | Tests whether elements in the first PyTorch tensor are greater than the corresponding elements in the second tensor. |
+| [Pt Le](pt_le.md) | Tests whether elements in the first PyTorch tensor are less than or equal to the corresponding elements in the second tensor. |
+| [Pt Lt](pt_lt.md) | Tests whether elements in the first PyTorch tensor are less than the corresponding elements in the second tensor. |
+| [Pt Ne](pt_ne.md) | Tests whether two PyTorch tensors are not equal element-wise. |
+## PyTorch wrapper - Logical operations
+| Node | Description |
+| --- | --- |
+| [Pt Logical And](pt_logical_and.md) | Performs a logical AND operation on two PyTorch tensors element-wise. |
+| [Pt Logical Not](pt_logical_not.md) | Performs a logical NOT operation on a PyTorch tensor element-wise. |
+| [Pt Logical Or](pt_logical_or.md) | Performs a logical OR operation on two PyTorch tensors element-wise. |
+| [Pt Logical Xor](pt_logical_xor.md) | Performs a logical XOR operation on two PyTorch tensors element-wise. |
+## PyTorch wrapper - Math operations
+| Node | Description |
+| --- | --- |
+| [Pt Abs](pt_abs.md) | Computes the absolute value of each element in a PyTorch tensor. |
+| [Pt Acos](pt_acos.md) | Computes the arccosine (inverse cosine) of a PyTorch tensor element-wise. |
+| [Pt Asin](pt_asin.md) | Computes the arcsine (inverse sine) of a PyTorch tensor element-wise. |
+| [Pt Atan](pt_atan.md) | Computes the arc tangent (inverse tangent) of a PyTorch tensor element-wise. |
+| [Pt Cos](pt_cos.md) | Computes the cosine of a PyTorch tensor element-wise. |
+| [Pt Cosh](pt_cosh.md) | Computes the hyperbolic cosine of a PyTorch tensor element-wise. |
+| [Pt Exp](pt_exp.md) | Performs an exponential operation on a PyTorch tensor element-wise. |
+| [Pt Log](pt_log.md) | Computes the natural logarithm (log base e) of a PyTorch tensor element-wise. |
+| [Pt Neg](pt_neg.md) | Computes the negation of each element in a PyTorch tensor. |
+| [Pt Sin](pt_sin.md) | Computes the sine of a PyTorch tensor element-wise. |
+| [Pt Sinh](pt_sinh.md) | Computes the hyperbolic sine of a PyTorch tensor element-wise. |
+| [Pt Tan](pt_tan.md) | Computes the tangent of a PyTorch tensor element-wise. |
+| [Pt Tanh](pt_tanh.md) | Computes the hyperbolic tangent of a PyTorch tensor element-wise. |
+## PyTorch wrapper - Matrix operations
+| Node | Description |
+| --- | --- |
+| [Pt Bmm](pt_bmm.md) | Performs batched matrix multiplication on two 3D PyTorch tensors. |
+| [Pt Einsum](pt_einsum.md) | Performs Tensor operations specified in the Einstein summation equation. |
+| [Pt Mat Mul](pt_matmul.md) | Performs matrix multiplication on two PyTorch tensors. |
+| [Pt Mm](pt_mm.md) | Performs 2D matrix multiplication on two PyTorch tensors. |
+## PyTorch wrapper - Size object support
+| Node | Description |
+| --- | --- |
+| [Pt Size](pt_size.md) | Extracts the PyTorch Size object of a PyTorch tensor using the size() method. |
+| [Pt Size Create](pt_size_create.md) | Creates a PyTorch Size using values entered in the text field. |
+| [Pt Size To Numpy](pt_size_to_numpy.md) | Converts PyTorch Size object to NumPy ndarray. |
+| [Pt Size To String](pt_size_to_string.md) | Converts PyTorch Size object to a Python string. |
+## PyTorch wrapper - Tensor creation
+| Node | Description |
+| --- | --- |
+| [Pt Bool Create](pt_bool_create.md) | Creates a PyTorch tensor of dtype bool from True or False values entered as a list in the text field. |
 | [Pt Float Create](pt_float_create.md) | Creates a PyTorch tensor with 32-bit floating point precision  |
 | [Pt From Image](pt_from_image.md) | Casts an Image tensor as a PyTorch tensor. |
 | [Pt From Latent](pt_from_latent.md) | Casts a latent tensor as a PyTorch tensor. |
 | [Pt From Numpy](pt_from_numpy.md) | Converts a NumPy ndarray to a PyTorch tensor while preserving its data type. |
 | [Pt Int Create](pt_int_create.md) | Creates a PyTorch tensor with 32-bit integer  |
-| [Pt Size](pt_size.md) | Extracts the PyTorch Size object of a PyTorch tensor using the size() method. |
-| [Pt Size Create](pt_size_create.md) | Creates a PyTorch Size using values entered in the text field. |
-| [Pt Size To Numpy](pt_size_to_numpy.md) | Converts PyTorch Size object to NumPy ndarray. |
-| [Pt Size To String](pt_size_to_string.md) | Converts PyTorch Size object to a Python string. |
+## PyTorch wrapper - Tensor data conversion
+| Node | Description |
+| --- | --- |
 | [Pt To Image](pt_to_image.md) | Casts a PyTorch tensor as an Image tensor. |
 | [Pt To Latent](pt_to_latent.md) | Casts a PyTorch tensor as a latent tensor. |
 | [Pt To Numpy](pt_to_numpy.md) | Converts PyTorch tensor to NumPy ndarray. |
+| [Pt To Rgb Tensors](pt_to_rgb_tensors.md) | Splits a PyTorch tensor into R, G, and B tensors. |
 ## Python wrapper
 | Node | Description |
 | --- | --- |

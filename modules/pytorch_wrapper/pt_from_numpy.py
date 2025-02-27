@@ -7,7 +7,7 @@ class PtFromNumpy:
     """
     Converts a NumPy ndarray to a PyTorch tensor while preserving its data type.
 
-    category: PyTorch wrapper
+    category: PyTorch wrapper - Tensor creation
     """
 
     @classmethod
@@ -26,7 +26,7 @@ class PtFromNumpy:
 
     RETURN_TYPES: tuple = ("TENSOR",)
     FUNCTION: str = "f"
-    CATEGORY: str = "PyTorch wrapper"
+    CATEGORY: str = "Data Analysis"
 
     def f(self, array: np.ndarray) -> Tuple[torch.Tensor]:
         """

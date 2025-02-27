@@ -27,7 +27,7 @@ class NumpyFloatCreate:
 
     RETURN_TYPES: tuple = ("NDARRAY",)
     FUNCTION: str = "f"
-    CATEGORY: str = "Numpy wrapper"
+    CATEGORY: str = "Data Analysis"
 
     def f(self, data: str) -> tuple:
         """

@@ -25,7 +25,7 @@ class PtFlatten:
 
     RETURN_TYPES: tuple = ("TENSOR",)
     FUNCTION: str = "f"
-    CATEGORY: str = "PyTorch wrapper"
+    CATEGORY: str = "Data Analysis"
 
     def f(self, tens: torch.Tensor) -> tuple:
         """

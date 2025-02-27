@@ -118,16 +118,58 @@ from .modules.pandas_wrapper.pandas_var import PandasVar
 from .modules.pandas_wrapper.pandas_vertical_concat import PandasVerticalConcat
 from .modules.pandas_wrapper.pandas_vertical_split import PandasVerticalSplit
 from .modules.pandas_wrapper.pandas_xs import PandasXs
+from .modules.pytorch_wrapper.pt_abs import PtAbs
+from .modules.pytorch_wrapper.pt_acos import PtAcos
+from .modules.pytorch_wrapper.pt_add import PtAdd
+from .modules.pytorch_wrapper.pt_asin import PtAsin
+from .modules.pytorch_wrapper.pt_atan import PtAtan
+from .modules.pytorch_wrapper.pt_bitwise_and import PtBitwiseAnd
+from .modules.pytorch_wrapper.pt_bitwise_left_shift import PtBitwiseLeftShift
+from .modules.pytorch_wrapper.pt_bitwise_not import PtBitwiseNot
+from .modules.pytorch_wrapper.pt_bitwise_or import PtBitwiseOr
+from .modules.pytorch_wrapper.pt_bitwise_right_shift import PtBitwiseRightShift
+from .modules.pytorch_wrapper.pt_bitwise_xor import PtBitwiseXor
+from .modules.pytorch_wrapper.pt_bmm import PtBmm
+from .modules.pytorch_wrapper.pt_bool_create import PtBoolCreate
+from .modules.pytorch_wrapper.pt_cos import PtCos
+from .modules.pytorch_wrapper.pt_cosh import PtCosh
+from .modules.pytorch_wrapper.pt_div import PtDiv
+from .modules.pytorch_wrapper.pt_einsum import PtEinsum
+from .modules.pytorch_wrapper.pt_eq import PtEq
+from .modules.pytorch_wrapper.pt_exp import PtExp
 from .modules.pytorch_wrapper.pt_flatten import PtFlatten
 from .modules.pytorch_wrapper.pt_float_create import PtFloatCreate
+from .modules.pytorch_wrapper.pt_floor_divide import PtFloorDiv
 from .modules.pytorch_wrapper.pt_from_image import PtFromImage
 from .modules.pytorch_wrapper.pt_from_latent import PtFromLatent
 from .modules.pytorch_wrapper.pt_from_numpy import PtFromNumpy
+from .modules.pytorch_wrapper.pt_ge import PtGe
+from .modules.pytorch_wrapper.pt_gt import PtGt
 from .modules.pytorch_wrapper.pt_int_create import PtIntCreate
+from .modules.pytorch_wrapper.pt_le import PtLe
+from .modules.pytorch_wrapper.pt_log import PtLog
+from .modules.pytorch_wrapper.pt_logical_and import PtLogicalAnd
+from .modules.pytorch_wrapper.pt_logical_not import PtLogicalNot
+from .modules.pytorch_wrapper.pt_logical_or import PtLogicalOr
+from .modules.pytorch_wrapper.pt_logical_xor import PtLogicalXor
+from .modules.pytorch_wrapper.pt_lt import PtLt
+from .modules.pytorch_wrapper.pt_matmul import PtMatMul
+from .modules.pytorch_wrapper.pt_mm import PtMm
+from .modules.pytorch_wrapper.pt_mul import PtMul
+from .modules.pytorch_wrapper.pt_ne import PtNe
+from .modules.pytorch_wrapper.pt_neg import PtNeg
+from .modules.pytorch_wrapper.pt_pow import PtPow
+from .modules.pytorch_wrapper.pt_remainder import PtRemainder
+from .modules.pytorch_wrapper.pt_show_text import PtShowText
+from .modules.pytorch_wrapper.pt_sin import PtSin
+from .modules.pytorch_wrapper.pt_sinh import PtSinh
 from .modules.pytorch_wrapper.pt_size import PtSize
 from .modules.pytorch_wrapper.pt_size_create import PtSizeCreate
 from .modules.pytorch_wrapper.pt_size_to_numpy import PtSizeToNumpy
 from .modules.pytorch_wrapper.pt_size_to_string import PtSizeToString
+from .modules.pytorch_wrapper.pt_sub import PtSub
+from .modules.pytorch_wrapper.pt_tan import PtTan
+from .modules.pytorch_wrapper.pt_tanh import PtTanh
 from .modules.pytorch_wrapper.pt_to_image import PtToImage
 from .modules.pytorch_wrapper.pt_to_latent import PtToLatent
 from .modules.pytorch_wrapper.pt_to_numpy import PtToNumpy
@@ -261,16 +303,58 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasVerticalConcat": PandasVerticalConcat,
     "PandasVerticalSplit": PandasVerticalSplit,
     "PandasXs": PandasXs,
+    "PtAbs": PtAbs,
+    "PtAcos": PtAcos,
+    "PtAdd": PtAdd,
+    "PtAsin": PtAsin,
+    "PtAtan": PtAtan,
+    "PtBitwiseAnd": PtBitwiseAnd,
+    "PtBitwiseLeftShift": PtBitwiseLeftShift,
+    "PtBitwiseNot": PtBitwiseNot,
+    "PtBitwiseOr": PtBitwiseOr,
+    "PtBitwiseRightShift": PtBitwiseRightShift,
+    "PtBitwiseXor": PtBitwiseXor,
+    "PtBmm": PtBmm,
+    "PtBoolCreate": PtBoolCreate,
+    "PtCos": PtCos,
+    "PtCosh": PtCosh,
+    "PtDiv": PtDiv,
+    "PtEinsum": PtEinsum,
+    "PtEq": PtEq,
+    "PtExp": PtExp,
     "PtFlatten": PtFlatten,
     "PtFloatCreate": PtFloatCreate,
+    "PtFloorDiv": PtFloorDiv,
     "PtFromImage": PtFromImage,
     "PtFromLatent": PtFromLatent,
     "PtFromNumpy": PtFromNumpy,
+    "PtGe": PtGe,
+    "PtGt": PtGt,
     "PtIntCreate": PtIntCreate,
+    "PtLe": PtLe,
+    "PtLog": PtLog,
+    "PtLogicalAnd": PtLogicalAnd,
+    "PtLogicalNot": PtLogicalNot,
+    "PtLogicalOr": PtLogicalOr,
+    "PtLogicalXor": PtLogicalXor,
+    "PtLt": PtLt,
+    "PtMatMul": PtMatMul,
+    "PtMm": PtMm,
+    "PtMul": PtMul,
+    "PtNe": PtNe,
+    "PtNeg": PtNeg,
+    "PtPow": PtPow,
+    "PtRemainder": PtRemainder,
+    "PtShowText": PtShowText,
+    "PtSin": PtSin,
+    "PtSinh": PtSinh,
     "PtSize": PtSize,
     "PtSizeCreate": PtSizeCreate,
     "PtSizeToNumpy": PtSizeToNumpy,
     "PtSizeToString": PtSizeToString,
+    "PtSub": PtSub,
+    "PtTan": PtTan,
+    "PtTanh": PtTanh,
     "PtToImage": PtToImage,
     "PtToLatent": PtToLatent,
     "PtToNumpy": PtToNumpy,
@@ -407,16 +491,58 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasVerticalConcat": "Pandas Vertical Concat",
     "PandasVerticalSplit": "Pandas Vertical Split",
     "PandasXs": "Pandas Xs",
+    "PtAbs": "Pt Abs",
+    "PtAcos": "Pt Acos",
+    "PtAdd": "Pt Add",
+    "PtAsin": "Pt Asin",
+    "PtAtan": "Pt Atan",
+    "PtBitwiseAnd": "Pt Bitwise And",
+    "PtBitwiseLeftShift": "Pt Bitwise Left Shift",
+    "PtBitwiseNot": "Pt Bitwise Not",
+    "PtBitwiseOr": "Pt Bitwise Or",
+    "PtBitwiseRightShift": "Pt Bitwise Right Shift",
+    "PtBitwiseXor": "Pt Bitwise Xor",
+    "PtBmm": "Pt Bmm",
+    "PtBoolCreate": "Pt Bool Create",
+    "PtCos": "Pt Cos",
+    "PtCosh": "Pt Cosh",
+    "PtDiv": "Pt Div",
+    "PtEinsum": "Pt Einsum",
+    "PtEq": "Pt Eq",
+    "PtExp": "Pt Exp",
     "PtFlatten": "Pt Flatten",
     "PtFloatCreate": "Pt Float Create",
+    "PtFloorDiv": "Pt Floor Div",
     "PtFromImage": "Pt From Image",
     "PtFromLatent": "Pt From Latent",
     "PtFromNumpy": "Pt From Numpy",
+    "PtGe": "Pt Ge",
+    "PtGt": "Pt Gt",
     "PtIntCreate": "Pt Int Create",
+    "PtLe": "Pt Le",
+    "PtLog": "Pt Log",
+    "PtLogicalAnd": "Pt Logical And",
+    "PtLogicalNot": "Pt Logical Not",
+    "PtLogicalOr": "Pt Logical Or",
+    "PtLogicalXor": "Pt Logical Xor",
+    "PtLt": "Pt Lt",
+    "PtMatMul": "Pt Mat Mul",
+    "PtMm": "Pt Mm",
+    "PtMul": "Pt Mul",
+    "PtNe": "Pt Ne",
+    "PtNeg": "Pt Neg",
+    "PtPow": "Pt Pow",
+    "PtRemainder": "Pt Remainder",
+    "PtShowText": "Pt Show Text",
+    "PtSin": "Pt Sin",
+    "PtSinh": "Pt Sinh",
     "PtSize": "Pt Size",
     "PtSizeCreate": "Pt Size Create",
     "PtSizeToNumpy": "Pt Size To Numpy",
     "PtSizeToString": "Pt Size To String",
+    "PtSub": "Pt Sub",
+    "PtTan": "Pt Tan",
+    "PtTanh": "Pt Tanh",
     "PtToImage": "Pt To Image",
     "PtToLatent": "Pt To Latent",
     "PtToNumpy": "Pt To Numpy",

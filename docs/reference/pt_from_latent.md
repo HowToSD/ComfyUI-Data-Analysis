@@ -12,6 +12,6 @@ Casts a latent tensor as a PyTorch tensor.
 | Tensor |
 
 <HR>
-Category: PyTorch wrapper
+Category: PyTorch wrapper - Tensor creation
 
 ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

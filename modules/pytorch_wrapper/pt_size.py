@@ -7,7 +7,7 @@ class PtSize:
     """
     Extracts the PyTorch Size object of a PyTorch tensor using the size() method.
     
-    category: PyTorch wrapper
+    category: PyTorch wrapper - Size object support
     """
     
     @classmethod
@@ -26,7 +26,7 @@ class PtSize:
 
     RETURN_TYPES: tuple = ("PTSIZE",)
     FUNCTION: str = "f"
-    CATEGORY: str = "PyTorch wrapper"
+    CATEGORY: str = "Data Analysis"
 
     def f(self, tens: torch.Tensor) -> tuple:
         """
