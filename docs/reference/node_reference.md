@@ -213,7 +213,13 @@
 | [Pt From Image](pt_from_image.md) | Casts an Image tensor as a PyTorch tensor. |
 | [Pt From Latent](pt_from_latent.md) | Casts a latent tensor as a PyTorch tensor. |
 | [Pt From Numpy](pt_from_numpy.md) | Converts a NumPy ndarray to a PyTorch tensor while preserving its data type. |
+| [Pt Full](pt_full.md) | Creates a PyTorch tensor filled with a specified value using the size entered in the text field. |
 | [Pt Int Create](pt_int_create.md) | Creates a PyTorch tensor with 32-bit integer  |
+| [Pt Ones](pt_ones.md) | Creates a PyTorch tensor of ones using the size entered in the text field. |
+| [Pt Rand](pt_rand.md) | Creates a PyTorch tensor with values sampled from a uniform distribution  |
+| [Pt Rand Int](pt_rand_int.md) | Creates a PyTorch tensor filled with random integers within a specified range using the size entered in the text field. |
+| [Pt Randn](pt_randn.md) | Creates a PyTorch tensor with values sampled from a standard normal distribution (mean=0, std=1)  |
+| [Pt Zeros](pt_zeros.md) | Creates a PyTorch tensor of zeros using the size entered in the text field. |
 ## PyTorch wrapper - Tensor data conversion
 | Node | Description |
 | --- | --- |
@@ -221,6 +227,13 @@
 | [Pt To Latent](pt_to_latent.md) | Casts a PyTorch tensor as a latent tensor. |
 | [Pt To Numpy](pt_to_numpy.md) | Converts PyTorch tensor to NumPy ndarray. |
 | [Pt To Rgb Tensors](pt_to_rgb_tensors.md) | Splits a PyTorch tensor into R, G, and B tensors. |
+## PyTorch wrapper - Transform
+| Node | Description |
+| --- | --- |
+| [Pt Permute](pt_permute.md) | Permutes the dimensions of a PyTorch tensor according to the specified order. |
+| [Pt Squeeze](pt_squeeze.md) | Removes a dimension at the specified position in the input tensor if it is of size 1. |
+| [Pt Unsqueeze](pt_unsqueeze.md) | Adds a singleton dimension at the specified position in the input tensor. |
+| [Pt View](pt_view.md) | Reshapes a PyTorch tensor into a specified shape using `torch.view()`. |
 ## Python wrapper
 | Node | Description |
 | --- | --- |

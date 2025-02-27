@@ -143,6 +143,7 @@ from .modules.pytorch_wrapper.pt_floor_divide import PtFloorDiv
 from .modules.pytorch_wrapper.pt_from_image import PtFromImage
 from .modules.pytorch_wrapper.pt_from_latent import PtFromLatent
 from .modules.pytorch_wrapper.pt_from_numpy import PtFromNumpy
+from .modules.pytorch_wrapper.pt_full import PtFull
 from .modules.pytorch_wrapper.pt_ge import PtGe
 from .modules.pytorch_wrapper.pt_gt import PtGt
 from .modules.pytorch_wrapper.pt_int_create import PtIntCreate
@@ -158,7 +159,12 @@ from .modules.pytorch_wrapper.pt_mm import PtMm
 from .modules.pytorch_wrapper.pt_mul import PtMul
 from .modules.pytorch_wrapper.pt_ne import PtNe
 from .modules.pytorch_wrapper.pt_neg import PtNeg
+from .modules.pytorch_wrapper.pt_ones import PtOnes
+from .modules.pytorch_wrapper.pt_permute import PtPermute
 from .modules.pytorch_wrapper.pt_pow import PtPow
+from .modules.pytorch_wrapper.pt_rand import PtRand
+from .modules.pytorch_wrapper.pt_rand_int import PtRandInt
+from .modules.pytorch_wrapper.pt_randn import PtRandn
 from .modules.pytorch_wrapper.pt_remainder import PtRemainder
 from .modules.pytorch_wrapper.pt_show_text import PtShowText
 from .modules.pytorch_wrapper.pt_sin import PtSin
@@ -167,6 +173,7 @@ from .modules.pytorch_wrapper.pt_size import PtSize
 from .modules.pytorch_wrapper.pt_size_create import PtSizeCreate
 from .modules.pytorch_wrapper.pt_size_to_numpy import PtSizeToNumpy
 from .modules.pytorch_wrapper.pt_size_to_string import PtSizeToString
+from .modules.pytorch_wrapper.pt_squeeze import PtSqueeze
 from .modules.pytorch_wrapper.pt_sub import PtSub
 from .modules.pytorch_wrapper.pt_tan import PtTan
 from .modules.pytorch_wrapper.pt_tanh import PtTanh
@@ -174,6 +181,9 @@ from .modules.pytorch_wrapper.pt_to_image import PtToImage
 from .modules.pytorch_wrapper.pt_to_latent import PtToLatent
 from .modules.pytorch_wrapper.pt_to_numpy import PtToNumpy
 from .modules.pytorch_wrapper.pt_to_rgb_tensors import PtToRgbTensors
+from .modules.pytorch_wrapper.pt_unsqueeze import PtUnsqueeze
+from .modules.pytorch_wrapper.pt_view import PtView
+from .modules.pytorch_wrapper.pt_zeros import PtZeros
 from .modules.seaborn_wrapper.sns_bar import SNSBar
 from .modules.seaborn_wrapper.sns_boxplot import SNSBoxplot
 from .modules.seaborn_wrapper.sns_histogram import SNSHistogram
@@ -328,6 +338,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtFromImage": PtFromImage,
     "PtFromLatent": PtFromLatent,
     "PtFromNumpy": PtFromNumpy,
+    "PtFull": PtFull,
     "PtGe": PtGe,
     "PtGt": PtGt,
     "PtIntCreate": PtIntCreate,
@@ -343,7 +354,12 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtMul": PtMul,
     "PtNe": PtNe,
     "PtNeg": PtNeg,
+    "PtOnes": PtOnes,
+    "PtPermute": PtPermute,
     "PtPow": PtPow,
+    "PtRand": PtRand,
+    "PtRandInt": PtRandInt,
+    "PtRandn": PtRandn,
     "PtRemainder": PtRemainder,
     "PtShowText": PtShowText,
     "PtSin": PtSin,
@@ -352,6 +368,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtSizeCreate": PtSizeCreate,
     "PtSizeToNumpy": PtSizeToNumpy,
     "PtSizeToString": PtSizeToString,
+    "PtSqueeze": PtSqueeze,
     "PtSub": PtSub,
     "PtTan": PtTan,
     "PtTanh": PtTanh,
@@ -359,6 +376,9 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtToLatent": PtToLatent,
     "PtToNumpy": PtToNumpy,
     "PtToRgbTensors": PtToRgbTensors,
+    "PtUnsqueeze": PtUnsqueeze,
+    "PtView": PtView,
+    "PtZeros": PtZeros,
     "PyKvFloatCreate": PyKvFloatCreate,
     "PyKvIntCreate": PyKvIntCreate,
     "PyKvStringCreate": PyKvStringCreate,
@@ -516,6 +536,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtFromImage": "Pt From Image",
     "PtFromLatent": "Pt From Latent",
     "PtFromNumpy": "Pt From Numpy",
+    "PtFull": "Pt Full",
     "PtGe": "Pt Ge",
     "PtGt": "Pt Gt",
     "PtIntCreate": "Pt Int Create",
@@ -531,7 +552,12 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtMul": "Pt Mul",
     "PtNe": "Pt Ne",
     "PtNeg": "Pt Neg",
+    "PtOnes": "Pt Ones",
+    "PtPermute": "Pt Permute",
     "PtPow": "Pt Pow",
+    "PtRand": "Pt Rand",
+    "PtRandInt": "Pt Rand Int",
+    "PtRandn": "Pt Randn",
     "PtRemainder": "Pt Remainder",
     "PtShowText": "Pt Show Text",
     "PtSin": "Pt Sin",
@@ -540,6 +566,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtSizeCreate": "Pt Size Create",
     "PtSizeToNumpy": "Pt Size To Numpy",
     "PtSizeToString": "Pt Size To String",
+    "PtSqueeze": "Pt Squeeze",
     "PtSub": "Pt Sub",
     "PtTan": "Pt Tan",
     "PtTanh": "Pt Tanh",
@@ -547,6 +574,9 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtToLatent": "Pt To Latent",
     "PtToNumpy": "Pt To Numpy",
     "PtToRgbTensors": "Pt To Rgb Tensors",
+    "PtUnsqueeze": "Pt Unsqueeze",
+    "PtView": "Pt View",
+    "PtZeros": "Pt Zeros",
     "PyKvFloatCreate": "Py Kv Float Create",
     "PyKvIntCreate": "Py Kv Int Create",
     "PyKvStringCreate": "Py Kv String Create",
