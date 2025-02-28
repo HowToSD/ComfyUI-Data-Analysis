@@ -168,6 +168,14 @@
 | [Pt Le](pt_le.md) | Tests whether elements in the first PyTorch tensor are less than or equal to the corresponding elements in the second tensor. |
 | [Pt Lt](pt_lt.md) | Tests whether elements in the first PyTorch tensor are less than the corresponding elements in the second tensor. |
 | [Pt Ne](pt_ne.md) | Tests whether two PyTorch tensors are not equal element-wise. |
+## PyTorch wrapper - Indexing and Slicing Operations
+| Node | Description |
+| --- | --- |
+| [Pt Gather](pt_gather.md) | Generates a tensor based on the index tensor using PyTorch's `gather` function. |
+| [Pt Index Select](pt_index_select.md) | Extracts elements from the input tensor along a specified dimension using an index tensor. |
+| [Pt Masked Select](pt_masked_select.md) | Extracts elements from the input tensor whose corresponding value in `masked_tens` is `True`. |
+| [Pt Scatter](pt_scatter.md) | Generates a new tensor by replacing values at specified positions using an index tensor. |
+| [Pt Where](pt_where.md) | Generates a new tensor by selecting values based on a condition tensor. |
 ## PyTorch wrapper - Logical operations
 | Node | Description |
 | --- | --- |
@@ -189,6 +197,7 @@
 | [Pt Neg](pt_neg.md) | Computes the negation of each element in a PyTorch tensor. |
 | [Pt Sin](pt_sin.md) | Computes the sine of a PyTorch tensor element-wise. |
 | [Pt Sinh](pt_sinh.md) | Computes the hyperbolic sine of a PyTorch tensor element-wise. |
+| [Pt Sqrt](pt_sqrt.md) | Computes the square root of each element in a PyTorch tensor. |
 | [Pt Tan](pt_tan.md) | Computes the tangent of a PyTorch tensor element-wise. |
 | [Pt Tanh](pt_tanh.md) | Computes the hyperbolic tangent of a PyTorch tensor element-wise. |
 ## PyTorch wrapper - Matrix operations
@@ -198,6 +207,19 @@
 | [Pt Einsum](pt_einsum.md) | Performs Tensor operations specified in the Einstein summation equation. |
 | [Pt Mat Mul](pt_matmul.md) | Performs matrix multiplication on two PyTorch tensors. |
 | [Pt Mm](pt_mm.md) | Performs 2D matrix multiplication on two PyTorch tensors. |
+## PyTorch wrapper - Reduction operation & Summary statistics
+| Node | Description |
+| --- | --- |
+| [Pt Argmax](pt_argmax.md) | Computes the indices of the maximum values of a PyTorch tensor along the specified dimension(s). |
+| [Pt Argmin](pt_argmin.md) | Computes the indices of the minimum values of a PyTorch tensor along the specified dimension(s). |
+| [Pt Max](pt_max.md) | Computes the maximum values of a PyTorch tensor along the specified dimension(s). |
+| [Pt Mean](pt_mean.md) | Computes the mean of a PyTorch tensor along the specified dimension(s). |
+| [Pt Median](pt_median.md) | Computes the median of a PyTorch tensor along the specified dimension(s). |
+| [Pt Min](pt_min.md) | Computes the minimum values of a PyTorch tensor along the specified dimension(s). |
+| [Pt Prod](pt_prod.md) | Computes the product of a PyTorch tensor along the specified dimension(s). |
+| [Pt Std](pt_std.md) | Computes the standard deviation of a PyTorch tensor along the specified dimension(s). |
+| [Pt Sum](pt_sum.md) | Computes the sum of a PyTorch tensor along the specified dimension(s). |
+| [Pt Var](pt_var.md) | Computes the variance of a PyTorch tensor along the specified dimension(s). |
 ## PyTorch wrapper - Size object support
 | Node | Description |
 | --- | --- |
@@ -231,6 +253,7 @@
 | Node | Description |
 | --- | --- |
 | [Pt Permute](pt_permute.md) | Permutes the dimensions of a PyTorch tensor according to the specified order. |
+| [Pt Reshape](pt_reshape.md) | Reshapes a PyTorch tensor into a specified shape using `torch.reshape()`. |
 | [Pt Squeeze](pt_squeeze.md) | Removes a dimension at the specified position in the input tensor if it is of size 1. |
 | [Pt Unsqueeze](pt_unsqueeze.md) | Adds a singleton dimension at the specified position in the input tensor. |
 | [Pt View](pt_view.md) | Reshapes a PyTorch tensor into a specified shape using `torch.view()`. |

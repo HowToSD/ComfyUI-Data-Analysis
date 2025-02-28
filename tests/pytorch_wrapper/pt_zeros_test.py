@@ -2,7 +2,7 @@ import os
 import sys
 import unittest
 import torch
-import ast
+
 
 PROJECT_ROOT = os.path.realpath(os.path.join(os.path.dirname(__file__), "..", ".."))
 MODULE_ROOT = os.path.join(PROJECT_ROOT, "modules")

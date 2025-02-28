@@ -121,6 +121,8 @@ from .modules.pandas_wrapper.pandas_xs import PandasXs
 from .modules.pytorch_wrapper.pt_abs import PtAbs
 from .modules.pytorch_wrapper.pt_acos import PtAcos
 from .modules.pytorch_wrapper.pt_add import PtAdd
+from .modules.pytorch_wrapper.pt_argmax import PtArgmax
+from .modules.pytorch_wrapper.pt_argmin import PtArgmin
 from .modules.pytorch_wrapper.pt_asin import PtAsin
 from .modules.pytorch_wrapper.pt_atan import PtAtan
 from .modules.pytorch_wrapper.pt_bitwise_and import PtBitwiseAnd
@@ -144,8 +146,10 @@ from .modules.pytorch_wrapper.pt_from_image import PtFromImage
 from .modules.pytorch_wrapper.pt_from_latent import PtFromLatent
 from .modules.pytorch_wrapper.pt_from_numpy import PtFromNumpy
 from .modules.pytorch_wrapper.pt_full import PtFull
+from .modules.pytorch_wrapper.pt_gather import PtGather
 from .modules.pytorch_wrapper.pt_ge import PtGe
 from .modules.pytorch_wrapper.pt_gt import PtGt
+from .modules.pytorch_wrapper.pt_index_select import PtIndexSelect
 from .modules.pytorch_wrapper.pt_int_create import PtIntCreate
 from .modules.pytorch_wrapper.pt_le import PtLe
 from .modules.pytorch_wrapper.pt_log import PtLog
@@ -154,7 +158,12 @@ from .modules.pytorch_wrapper.pt_logical_not import PtLogicalNot
 from .modules.pytorch_wrapper.pt_logical_or import PtLogicalOr
 from .modules.pytorch_wrapper.pt_logical_xor import PtLogicalXor
 from .modules.pytorch_wrapper.pt_lt import PtLt
+from .modules.pytorch_wrapper.pt_masked_select import PtMaskedSelect
 from .modules.pytorch_wrapper.pt_matmul import PtMatMul
+from .modules.pytorch_wrapper.pt_max import PtMax
+from .modules.pytorch_wrapper.pt_mean import PtMean
+from .modules.pytorch_wrapper.pt_median import PtMedian
+from .modules.pytorch_wrapper.pt_min import PtMin
 from .modules.pytorch_wrapper.pt_mm import PtMm
 from .modules.pytorch_wrapper.pt_mul import PtMul
 from .modules.pytorch_wrapper.pt_ne import PtNe
@@ -162,10 +171,13 @@ from .modules.pytorch_wrapper.pt_neg import PtNeg
 from .modules.pytorch_wrapper.pt_ones import PtOnes
 from .modules.pytorch_wrapper.pt_permute import PtPermute
 from .modules.pytorch_wrapper.pt_pow import PtPow
+from .modules.pytorch_wrapper.pt_prod import PtProd
 from .modules.pytorch_wrapper.pt_rand import PtRand
 from .modules.pytorch_wrapper.pt_rand_int import PtRandInt
 from .modules.pytorch_wrapper.pt_randn import PtRandn
 from .modules.pytorch_wrapper.pt_remainder import PtRemainder
+from .modules.pytorch_wrapper.pt_reshape import PtReshape
+from .modules.pytorch_wrapper.pt_scatter import PtScatter
 from .modules.pytorch_wrapper.pt_show_text import PtShowText
 from .modules.pytorch_wrapper.pt_sin import PtSin
 from .modules.pytorch_wrapper.pt_sinh import PtSinh
@@ -173,8 +185,11 @@ from .modules.pytorch_wrapper.pt_size import PtSize
 from .modules.pytorch_wrapper.pt_size_create import PtSizeCreate
 from .modules.pytorch_wrapper.pt_size_to_numpy import PtSizeToNumpy
 from .modules.pytorch_wrapper.pt_size_to_string import PtSizeToString
+from .modules.pytorch_wrapper.pt_sqrt import PtSqrt
 from .modules.pytorch_wrapper.pt_squeeze import PtSqueeze
+from .modules.pytorch_wrapper.pt_std import PtStd
 from .modules.pytorch_wrapper.pt_sub import PtSub
+from .modules.pytorch_wrapper.pt_sum import PtSum
 from .modules.pytorch_wrapper.pt_tan import PtTan
 from .modules.pytorch_wrapper.pt_tanh import PtTanh
 from .modules.pytorch_wrapper.pt_to_image import PtToImage
@@ -182,7 +197,9 @@ from .modules.pytorch_wrapper.pt_to_latent import PtToLatent
 from .modules.pytorch_wrapper.pt_to_numpy import PtToNumpy
 from .modules.pytorch_wrapper.pt_to_rgb_tensors import PtToRgbTensors
 from .modules.pytorch_wrapper.pt_unsqueeze import PtUnsqueeze
+from .modules.pytorch_wrapper.pt_var import PtVar
 from .modules.pytorch_wrapper.pt_view import PtView
+from .modules.pytorch_wrapper.pt_where import PtWhere
 from .modules.pytorch_wrapper.pt_zeros import PtZeros
 from .modules.seaborn_wrapper.sns_bar import SNSBar
 from .modules.seaborn_wrapper.sns_boxplot import SNSBoxplot
@@ -316,6 +333,8 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtAbs": PtAbs,
     "PtAcos": PtAcos,
     "PtAdd": PtAdd,
+    "PtArgmax": PtArgmax,
+    "PtArgmin": PtArgmin,
     "PtAsin": PtAsin,
     "PtAtan": PtAtan,
     "PtBitwiseAnd": PtBitwiseAnd,
@@ -339,8 +358,10 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtFromLatent": PtFromLatent,
     "PtFromNumpy": PtFromNumpy,
     "PtFull": PtFull,
+    "PtGather": PtGather,
     "PtGe": PtGe,
     "PtGt": PtGt,
+    "PtIndexSelect": PtIndexSelect,
     "PtIntCreate": PtIntCreate,
     "PtLe": PtLe,
     "PtLog": PtLog,
@@ -349,7 +370,12 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtLogicalOr": PtLogicalOr,
     "PtLogicalXor": PtLogicalXor,
     "PtLt": PtLt,
+    "PtMaskedSelect": PtMaskedSelect,
     "PtMatMul": PtMatMul,
+    "PtMax": PtMax,
+    "PtMean": PtMean,
+    "PtMedian": PtMedian,
+    "PtMin": PtMin,
     "PtMm": PtMm,
     "PtMul": PtMul,
     "PtNe": PtNe,
@@ -357,10 +383,13 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtOnes": PtOnes,
     "PtPermute": PtPermute,
     "PtPow": PtPow,
+    "PtProd": PtProd,
     "PtRand": PtRand,
     "PtRandInt": PtRandInt,
     "PtRandn": PtRandn,
     "PtRemainder": PtRemainder,
+    "PtReshape": PtReshape,
+    "PtScatter": PtScatter,
     "PtShowText": PtShowText,
     "PtSin": PtSin,
     "PtSinh": PtSinh,
@@ -368,8 +397,11 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtSizeCreate": PtSizeCreate,
     "PtSizeToNumpy": PtSizeToNumpy,
     "PtSizeToString": PtSizeToString,
+    "PtSqrt": PtSqrt,
     "PtSqueeze": PtSqueeze,
+    "PtStd": PtStd,
     "PtSub": PtSub,
+    "PtSum": PtSum,
     "PtTan": PtTan,
     "PtTanh": PtTanh,
     "PtToImage": PtToImage,
@@ -377,7 +409,9 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtToNumpy": PtToNumpy,
     "PtToRgbTensors": PtToRgbTensors,
     "PtUnsqueeze": PtUnsqueeze,
+    "PtVar": PtVar,
     "PtView": PtView,
+    "PtWhere": PtWhere,
     "PtZeros": PtZeros,
     "PyKvFloatCreate": PyKvFloatCreate,
     "PyKvIntCreate": PyKvIntCreate,
@@ -514,6 +548,8 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtAbs": "Pt Abs",
     "PtAcos": "Pt Acos",
     "PtAdd": "Pt Add",
+    "PtArgmax": "Pt Argmax",
+    "PtArgmin": "Pt Argmin",
     "PtAsin": "Pt Asin",
     "PtAtan": "Pt Atan",
     "PtBitwiseAnd": "Pt Bitwise And",
@@ -537,8 +573,10 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtFromLatent": "Pt From Latent",
     "PtFromNumpy": "Pt From Numpy",
     "PtFull": "Pt Full",
+    "PtGather": "Pt Gather",
     "PtGe": "Pt Ge",
     "PtGt": "Pt Gt",
+    "PtIndexSelect": "Pt Index Select",
     "PtIntCreate": "Pt Int Create",
     "PtLe": "Pt Le",
     "PtLog": "Pt Log",
@@ -547,7 +585,12 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtLogicalOr": "Pt Logical Or",
     "PtLogicalXor": "Pt Logical Xor",
     "PtLt": "Pt Lt",
+    "PtMaskedSelect": "Pt Masked Select",
     "PtMatMul": "Pt Mat Mul",
+    "PtMax": "Pt Max",
+    "PtMean": "Pt Mean",
+    "PtMedian": "Pt Median",
+    "PtMin": "Pt Min",
     "PtMm": "Pt Mm",
     "PtMul": "Pt Mul",
     "PtNe": "Pt Ne",
@@ -555,10 +598,13 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtOnes": "Pt Ones",
     "PtPermute": "Pt Permute",
     "PtPow": "Pt Pow",
+    "PtProd": "Pt Prod",
     "PtRand": "Pt Rand",
     "PtRandInt": "Pt Rand Int",
     "PtRandn": "Pt Randn",
     "PtRemainder": "Pt Remainder",
+    "PtReshape": "Pt Reshape",
+    "PtScatter": "Pt Scatter",
     "PtShowText": "Pt Show Text",
     "PtSin": "Pt Sin",
     "PtSinh": "Pt Sinh",
@@ -566,8 +612,11 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtSizeCreate": "Pt Size Create",
     "PtSizeToNumpy": "Pt Size To Numpy",
     "PtSizeToString": "Pt Size To String",
+    "PtSqrt": "Pt Sqrt",
     "PtSqueeze": "Pt Squeeze",
+    "PtStd": "Pt Std",
     "PtSub": "Pt Sub",
+    "PtSum": "Pt Sum",
     "PtTan": "Pt Tan",
     "PtTanh": "Pt Tanh",
     "PtToImage": "Pt To Image",
@@ -575,7 +624,9 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtToNumpy": "Pt To Numpy",
     "PtToRgbTensors": "Pt To Rgb Tensors",
     "PtUnsqueeze": "Pt Unsqueeze",
+    "PtVar": "Pt Var",
     "PtView": "Pt View",
+    "PtWhere": "Pt Where",
     "PtZeros": "Pt Zeros",
     "PyKvFloatCreate": "Py Kv Float Create",
     "PyKvIntCreate": "Py Kv Int Create",

@@ -15,35 +15,29 @@ I hope you find it useful and engaging for data exploration.
 <hr>
 
 ![Baseball tutorial](docs/images/baseball_final.png)
+**ComfyUI-Data-Analysis** is an extension for ComfyUI that provides custom nodes for data analysis using Pandas, Seaborn, and Matplotlib within ComfyUI.
 
-ComfyUI-Data-Analysis is an extension for ComfyUI consisting of many custom nodes for analyzing data using Pandas, Seaborn and Matplotlib within ComfyUI.
+Originally designed for structural data analysis, this extension is for you if you:
+- Want access to PyTorch's low-level methods (e.g., `add`, `div`, `max`, `where`, `scatter`, `gather`) to manipulate PyTorch tensors or extract information.
+- Are comfortable with ComfyUI and want to learn foundational PyTorch methods **without writing a single line of code**.
+- Want to analyze structural data (tabular data) using ComfyUI's node system.
 
-ComfyUI-Data-Analysis supports a wide range of custom nodes in the categories below. For a complete list, see [Node Reference](docs/reference/node_reference.md):
-* Aggregation
-* Arithmetic method
-* Cumulative calculations
-* Data cleansing
-* Data subset selection
-* Data type conversion
-* DataFrame information
-* Date and time processing
-* Display data
-* IO
-* Math
-* Plot
-* Summary statistics
-* Data transformation
+## Features
 
-You can connect these nodes to conduct complex analysis in an intuitive graphical way.  
-You can also use other Comfy custom nodes to fit your needs (e.g., combining images).
+**ComfyUI-Data-Analysis** includes numerous custom nodes that wrap Pandas and PyTorch.
+For a complete list, see the [Node Reference](docs/reference/node_reference.md).
 
-These custom nodes enhance efficiency and usability in data exploration and analysis.
+These nodes allow you to conduct complex analyses in an intuitive, graphical way. You can also combine them with other ComfyUI custom nodes to fit your workflow needs (e.g., integrating images).
 
-Creating sample data and plotting it is incredibly simple, as shown below:
-![SNS Line Plot](docs/images/sns_line.png)
-An example plot
+## Visualization & Analysis
 
-You can also analyze images generated in ComfyUI's image generation workflows. Below screenshot shows a histogram of red channel pixels.
+These custom nodes enhance efficiency and usability in data exploration and visualization. Creating sample data and plotting it is incredibly simple:
+
+![SNS Line Plot](docs/images/sns_line.png)  
+*Example plot*
+
+Additionally, you can analyze images generated in ComfyUI’s workflows. Below is an example of a histogram showing the red channel pixel distribution:
+
 ![Red channel pixel distribution](docs/images/red_pixel_distribution.png)
 
 ## Installation
