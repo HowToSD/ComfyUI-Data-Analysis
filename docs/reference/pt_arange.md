@@ -4,8 +4,6 @@ Creates a PyTorch tensor using `torch.arange` with the specified start, end, and
 The values are parsed from string inputs and converted to numeric types. This allows users to specify
 tensor range values in text fields. The function also ensures proper dtype selection.
 
-Category: PyTorch wrapper - Tensor creation
-
 ## Input
 | Name | Data type |
 |---|---|
@@ -20,6 +18,6 @@ Category: PyTorch wrapper - Tensor creation
 | Tensor |
 
 <HR>
-Category: Miscellaneous
+Category: PyTorch wrapper - Tensor creation
 
 ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

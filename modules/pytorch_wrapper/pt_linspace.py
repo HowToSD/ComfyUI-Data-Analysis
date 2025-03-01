@@ -17,7 +17,7 @@ class PtLinspace:
     The start and end values are parsed from string inputs and converted to a float.
     The steps value is converted to an int.
 
-    Category: PyTorch wrapper - Tensor creation
+    category: PyTorch wrapper - Tensor creation
     """
 
     @classmethod

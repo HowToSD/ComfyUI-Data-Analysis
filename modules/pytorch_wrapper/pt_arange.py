@@ -17,7 +17,7 @@ class PtArange:
     The values are parsed from string inputs and converted to numeric types. This allows users to specify
     tensor range values in text fields. The function also ensures proper dtype selection.
 
-    Category: PyTorch wrapper - Tensor creation
+    category: PyTorch wrapper - Tensor creation
     """
 
     @classmethod

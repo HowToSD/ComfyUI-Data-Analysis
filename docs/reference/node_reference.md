@@ -123,9 +123,7 @@
 ## Miscellaneous
 | Node | Description |
 | --- | --- |
-| [Pt Arange](pt_arange.md) | Creates a PyTorch tensor using `torch.arange` with the specified start, end, and step values. |
 | [Pt Flatten](pt_flatten.md) | Flattens a PyTorch tensor into a 1D tensor. |
-| [Pt Linspace](pt_linspace.md) | Creates a PyTorch tensor using `torch.arange` with the specified start, end, and steps values. |
 ## Numpy
 | Node | Description |
 | --- | --- |
@@ -237,6 +235,7 @@
 ## PyTorch wrapper - Tensor creation
 | Node | Description |
 | --- | --- |
+| [Pt Arange](pt_arange.md) | Creates a PyTorch tensor using `torch.arange` with the specified start, end, and step values. |
 | [Pt Bool Create](pt_bool_create.md) | Creates a PyTorch tensor of dtype bool from True or False values entered as a list in the text field. |
 | [Pt Float Create](pt_float_create.md) | Creates a PyTorch tensor with 32-bit floating point precision  |
 | [Pt From Image](pt_from_image.md) | Casts an Image tensor as a PyTorch tensor. |
@@ -244,6 +243,7 @@
 | [Pt From Numpy](pt_from_numpy.md) | Converts a NumPy ndarray to a PyTorch tensor while preserving its data type. |
 | [Pt Full](pt_full.md) | Creates a PyTorch tensor filled with a specified value using the size entered in the text field. |
 | [Pt Int Create](pt_int_create.md) | Creates a PyTorch tensor with 32-bit integer  |
+| [Pt Linspace](pt_linspace.md) | Creates a PyTorch tensor using `torch.arange` with the specified start, end, and steps values. |
 | [Pt Ones](pt_ones.md) | Creates a PyTorch tensor of ones using the size entered in the text field. |
 | [Pt Rand](pt_rand.md) | Creates a PyTorch tensor with values sampled from a uniform distribution  |
 | [Pt Rand Int](pt_rand_int.md) | Creates a PyTorch tensor filled with random integers within a specified range using the size entered in the text field. |
