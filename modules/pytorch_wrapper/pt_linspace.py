@@ -12,7 +12,7 @@ from cda.utils import str_to_number, str_to_number_with_default
 
 class PtLinspace:
     """
-    Creates a PyTorch tensor using `torch.arange` with the specified start, end, and steps values.
+    Creates a PyTorch tensor using `torch.linspace` with the specified start, end, and steps values.
     
     The start and end values are parsed from string inputs and converted to a float.
     The steps value is converted to an int.

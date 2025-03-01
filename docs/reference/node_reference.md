@@ -243,7 +243,7 @@
 | [Pt From Numpy](pt_from_numpy.md) | Converts a NumPy ndarray to a PyTorch tensor while preserving its data type. |
 | [Pt Full](pt_full.md) | Creates a PyTorch tensor filled with a specified value using the size entered in the text field. |
 | [Pt Int Create](pt_int_create.md) | Creates a PyTorch tensor with 32-bit integer  |
-| [Pt Linspace](pt_linspace.md) | Creates a PyTorch tensor using `torch.arange` with the specified start, end, and steps values. |
+| [Pt Linspace](pt_linspace.md) | Creates a PyTorch tensor using `torch.linspace` with the specified start, end, and steps values. |
 | [Pt Ones](pt_ones.md) | Creates a PyTorch tensor of ones using the size entered in the text field. |
 | [Pt Rand](pt_rand.md) | Creates a PyTorch tensor with values sampled from a uniform distribution  |
 | [Pt Rand Int](pt_rand_int.md) | Creates a PyTorch tensor filled with random integers within a specified range using the size entered in the text field. |

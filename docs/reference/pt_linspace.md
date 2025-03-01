@@ -1,5 +1,5 @@
 # Pt Linspace
-Creates a PyTorch tensor using `torch.arange` with the specified start, end, and steps values.
+Creates a PyTorch tensor using `torch.linspace` with the specified start, end, and steps values.
 
 The start and end values are parsed from string inputs and converted to a float.
 The steps value is converted to an int.
