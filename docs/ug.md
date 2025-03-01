@@ -2,111 +2,15 @@
 
 For a complete list of nodes, refer to [the Node reference](reference/node_reference.md).
 
+## Note
+This page was originally created using an older version of ComfyUI Data Analysis, so some screenshots and references may include deprecated node names and outdated socket data types. Additionally, it covers only a portion of the current node set. Refer to the Node Reference for specific functionality.
+
 ## Basic Concepts
 ### How to connect nodes for DataFrame
 To connect the DataFrame output from one Pandas node to another, move the wire toward the top-left of the text field. You may need to hover around the corner to find the correct connection point.
 
 ### How to add a node
 You can right-click, select **Add Node**, go to **Data Analysis**, and look for the following nodes:
-
-**Note**
-This page was initially created using an older version of ComfyUI Data Analysis, so some of screenshots contain the names of deprecated nodes.  Use the node name in text if there is any mismatch between text and screenshots.
-
-### List of nodes
-**Data loading, creation, saving**
-| Node Name               | Functionality                        |
-|-------------------------|-------------------------------------|
-| **Pandas Load CSV**     | Load a CSV file                    |
-| **Pandas Load CSV With Encoding**     | Load a CSV file not encoded in utf-8 |
-| **Pandas Load CSV With Index**     | Load a CSV file containing index |
-| **Pandas Load JSON**     | Load a JSON file                    |
-| **Pandas Save CSV**     | Save a DataFrame to a CSV file     |
-| **Pandas Save JSON**     | Save a DataFrame to a JSON file     |
-| **Pandas Create**     | Create a DataFrame from CSV text field |
-| **Pandas Create With Index**     | Create a DataFrame from CSV text field containing index |
-| **CDA JSON Create**     | Create JSON from a string entered in a text field |
-
-**Selecting subset of data**
-| Node Name               | Functionality                        |
-|-------------------------|-------------------------------------|
-| **Pandas Columns**      | Extract column labels     |
-| **Pandas Index**        | Extract row labels (index)     |
-| **Pandas Select Columns** | Select specific columns from a DataFrame |
-| **Pandas Select Rows**  | Filter rows based on conditions    |
-| **Pandas Iloc Row Series**  | Select a row by row integer position |
-| **Pandas Iloc Rows DataFrame**  | Select rows by the list of row integer positions |
-| **Pandas Loc Row Series**  | Select a row by row label (index) |
-| **Pandas Loc Cell Str**  | Select a cell by row label (index) and column label |
-| **Pandas Head**         | Extract the first few rows         |
-
-**Transforming data**
-| Node Name               | Functionality                        |
-|-------------------------|-------------------------------------|
-| **Pandas Group By**     | Group rows and apply aggregation functions |
-| **Pandas Join**         | Join two DataFrames                |
-| **Pandas Sort**         | Sort DataFrame by a column         |
-
-**Displaying data**
-| Node Name               | Functionality                        |
-|-------------------------|-------------------------------------|
-| **Pandas Show DataFrame** | Display DataFrame contents        |
-| **Pandas Show Series** | Display Series contents        |
-| **Pandas Show Index** | Display Index contents        |
-| **Pandas Show Text**    | Display Text        |
-| **Pandas Summary**      | Extract DataFrame statistics          |
-
-**Missing value processing**
-| Node Name               | Functionality                        |
-|-------------------------|-------------------------------------|
-| **Pandas Is NA**  | Check DataFrame for missing values      |
-| **Pandas Drop NA**  | Drop missing values from DataFrame    |
-
-**Summary statistics**
-| Node Name               | Functionality                        |
-|-------------------------|-------------------------------------|
-| **Pandas Count**  | Number of rows     |
-| **Pandas Max**  | Maximum value of row values     |
-| **Pandas Mean**  | Mean of row values     |
-| **Pandas Median**  | Median of row values     |
-| **Pandas Min**  | Minimum value of row values     |
-| **Pandas Mode**  | Mode of row values     |
-| **Pandas Std**  | Standard deviation of row values     |
-| **Pandas Sum**  | Sum of row values     |
-| **Pandas Var**  | Variance of row values     |
-
-**Binary operators for two DataFrames**
-| Node Name               | Functionality                        |
-|-------------------------|-------------------------------------|
-| **Pandas Add**  | Add two DataFrames     |
-| **Pandas Div**  | Divide a DataFrame by another DataFrame     |
-| **Pandas Mul**  | Multiply two DataFrames    |
-| **Pandas Pow**  | Raise a DataFrame to the power of another DataFrame      |
-| **Pandas Sub**  | Subtract a DataFrame from another DataFrame     |
-| **Pandas Horizontal Concat**  | Concatenate two DataFrames horizontally (axis=1)    |
-| **Pandas Vertical Concat**  | Concatenate two DataFrames vertically (axis=0)    |
-
-**Binary operators for a DataFrame and a Series**
-| Node Name               | Functionality                        |
-|-------------------------|-------------------------------------|
-| **Pandas Add Series**  | Add a DataFrame and a Series     |
-| **Pandas Div Series**  | Divide a DataFrame by a Series     |
-| **Pandas Mul Series**  | Multiply a DataFrame by a Series    |
-| **Pandas Pow Series**  | Raise a DataFrame to the power of a Series      |
-| **Pandas Sub Series**  | Subtract a Series from another DataFrame     |
-
-**Converting to displayable string**
-| Node Name               | Functionality                        |
-|-------------------------|-------------------------------------|
-| **Pandas Index To String**  | Convert Index to a displayable string      |
-| **Pandas Series To String**  | Convert Series to a displayable string      |
-| **Pandas To String**    | Convert DataFrame to a displayable string      |
-
-**Plot, chart**
-| Node Name               | Functionality                        |
-|-------------------------|-------------------------------------|
-| **MPL Bar Chart**       | Generate a bar chart               |
-| **MPL Line Plot**       | Generate a line plot               |
-| **MPL Scatter Plot**    | Generate a scatter plot            |
 
 A faster way is to double-click the canvas to open the node search dialog.
 
