@@ -1,0 +1,25 @@
+# Pt Linspace
+Creates a PyTorch tensor using `torch.arange` with the specified start, end, and steps values.
+
+The start and end values are parsed from string inputs and converted to a float.
+The steps value is converted to an int.
+
+Category: PyTorch wrapper - Tensor creation
+
+## Input
+| Name | Data type |
+|---|---|
+| start | String |
+| end | String |
+| steps | String |
+| data_type |  |
+
+## Output
+| Data type |
+|---|
+| Tensor |
+
+<HR>
+Category: Miscellaneous
+
+ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

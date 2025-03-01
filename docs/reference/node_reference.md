@@ -123,7 +123,9 @@
 ## Miscellaneous
 | Node | Description |
 | --- | --- |
+| [Pt Arange](pt_arange.md) | Creates a PyTorch tensor using `torch.arange` with the specified start, end, and step values. |
 | [Pt Flatten](pt_flatten.md) | Flattens a PyTorch tensor into a 1D tensor. |
+| [Pt Linspace](pt_linspace.md) | Creates a PyTorch tensor using `torch.arange` with the specified start, end, and steps values. |
 ## Numpy
 | Node | Description |
 | --- | --- |

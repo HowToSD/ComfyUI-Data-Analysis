@@ -124,6 +124,7 @@ from .modules.pandas_wrapper.pandas_xs import PandasXs
 from .modules.pytorch_wrapper.pt_abs import PtAbs
 from .modules.pytorch_wrapper.pt_acos import PtAcos
 from .modules.pytorch_wrapper.pt_add import PtAdd
+from .modules.pytorch_wrapper.pt_arange import PtArange
 from .modules.pytorch_wrapper.pt_argmax import PtArgmax
 from .modules.pytorch_wrapper.pt_argmin import PtArgmin
 from .modules.pytorch_wrapper.pt_asin import PtAsin
@@ -155,6 +156,7 @@ from .modules.pytorch_wrapper.pt_gt import PtGt
 from .modules.pytorch_wrapper.pt_index_select import PtIndexSelect
 from .modules.pytorch_wrapper.pt_int_create import PtIntCreate
 from .modules.pytorch_wrapper.pt_le import PtLe
+from .modules.pytorch_wrapper.pt_linspace import PtLinspace
 from .modules.pytorch_wrapper.pt_log import PtLog
 from .modules.pytorch_wrapper.pt_logical_and import PtLogicalAnd
 from .modules.pytorch_wrapper.pt_logical_not import PtLogicalNot
@@ -342,6 +344,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtAbs": PtAbs,
     "PtAcos": PtAcos,
     "PtAdd": PtAdd,
+    "PtArange": PtArange,
     "PtArgmax": PtArgmax,
     "PtArgmin": PtArgmin,
     "PtAsin": PtAsin,
@@ -373,6 +376,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtIndexSelect": PtIndexSelect,
     "PtIntCreate": PtIntCreate,
     "PtLe": PtLe,
+    "PtLinspace": PtLinspace,
     "PtLog": PtLog,
     "PtLogicalAnd": PtLogicalAnd,
     "PtLogicalNot": PtLogicalNot,
@@ -563,6 +567,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtAbs": "Pt Abs",
     "PtAcos": "Pt Acos",
     "PtAdd": "Pt Add",
+    "PtArange": "Pt Arange",
     "PtArgmax": "Pt Argmax",
     "PtArgmin": "Pt Argmin",
     "PtAsin": "Pt Asin",
@@ -594,6 +599,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtIndexSelect": "Pt Index Select",
     "PtIntCreate": "Pt Int Create",
     "PtLe": "Pt Le",
+    "PtLinspace": "Pt Linspace",
     "PtLog": "Pt Log",
     "PtLogicalAnd": "Pt Logical And",
     "PtLogicalNot": "Pt Logical Not",
