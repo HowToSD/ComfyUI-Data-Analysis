@@ -89,10 +89,11 @@ def plot_post_steps(
         ax.xaxis.set_major_locator(mticker.MaxNLocator(integer=True))
 
     # Set title and labels
-    ax.set_title(title)
-    if x_axis_label:
-        ax.set_xlabel(x_axis_label)
-    ax.set_ylabel(y_axis_label)
+    if ax:
+        ax.set_title(title)
+        if x_axis_label:
+            ax.set_xlabel(x_axis_label)
+        ax.set_ylabel(y_axis_label)
 
     # Save the plot to a buffer
     buf = io.BytesIO()

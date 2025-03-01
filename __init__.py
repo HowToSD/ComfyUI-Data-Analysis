@@ -207,8 +207,10 @@ from .modules.pytorch_wrapper.pt_where import PtWhere
 from .modules.pytorch_wrapper.pt_zeros import PtZeros
 from .modules.seaborn_wrapper.sns_bar import SNSBar
 from .modules.seaborn_wrapper.sns_boxplot import SNSBoxplot
+from .modules.seaborn_wrapper.sns_heatmap import SNSHeatmap
 from .modules.seaborn_wrapper.sns_histogram import SNSHistogram
 from .modules.seaborn_wrapper.sns_line import SNSLine
+from .modules.seaborn_wrapper.sns_pairplot import SNSPairplot
 from .modules.seaborn_wrapper.sns_scatter import SNSScatter
 T = TypeVar("T")
 
@@ -426,8 +428,10 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PyKvStringCreate": PyKvStringCreate,
     "SNSBar": SNSBar,
     "SNSBoxplot": SNSBoxplot,
+    "SNSHeatmap": SNSHeatmap,
     "SNSHistogram": SNSHistogram,
     "SNSLine": SNSLine,
+    "SNSPairplot": SNSPairplot,
     "SNSScatter": SNSScatter,
 }
 
@@ -645,8 +649,10 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PyKvStringCreate": "Py Kv String Create",
     "SNSBar": "SNS Bar Chart",
     "SNSBoxplot": "SNS Boxplot",
+    "SNSHeatmap": "SNS Heatmap",
     "SNSHistogram": "SNS Histogram",
     "SNSLine": "SNS Line Plot",
+    "SNSPairplot": "SNS Pairplot",
     "SNSScatter": "SNS Scatter Plot",
 }
 
