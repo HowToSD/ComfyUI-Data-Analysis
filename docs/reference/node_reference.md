@@ -89,6 +89,7 @@
 | [Pandas Show Series](pandas_show_series.md) | Displays a Pandas Series as text. |
 | [Pandas Show Text](pandas_show_text.md) | Displays a string. |
 | [Pandas To String](pandas_to_string.md) | Converts a pandas DataFrame to a string representation. |
+| [Pt Show Size](pt_show_size.md) | Displays PyTorch Size object as a string. |
 | [Pt Show Text](pt_show_text.md) | Displays PyTorch tensor as a string. Note that the tensor is partially printed out when |
 ## IO
 | Node | Description |
@@ -128,6 +129,8 @@
 | --- | --- |
 | [Numpy Float Create](numpy_float_create.md) | Creates a NumPy ndarray with 32-bit floating point precision  |
 | [Numpy Int Create](numpy_int_create.md) | Creates a NumPy ndarray with 32-bit integer  |
+| [Numpy Show](numpy_show.md) | Displays a Numpy ndarray as text. |
+| [Numpy Squeeze](numpy_squeeze.md) | Removes a dimension at the specified position in the input array if it is of size 1. |
 ## Plot
 | Node | Description |
 | --- | --- |
@@ -283,6 +286,7 @@
 ## Transformation
 | Node | Description |
 | --- | --- |
+| [Pandas Feature Split To Numpy](pandas_feature_split_to_numpy.md) | Splits a Pandas DataFrame into feature Numpy ndarray and label Numpy ndarray. |
 | [Pandas Horizontal Concat](pandas_horizontal_concat.md) | Horizontally concatenates two pandas DataFrames. |
 | [Pandas Horizontal Split](pandas_horizontal_split.md) | Horizontally splits a Pandas DataFrame into two pandas DataFrames. |
 | [Pandas Join](pandas_join.md) | Merges two pandas DataFrames based on a common column. |

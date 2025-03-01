@@ -16,6 +16,8 @@ from .modules.matplotlib.mpl_pie_chart import MPLPieChart
 from .modules.matplotlib.mpl_scatter import MPLScatter
 from .modules.numpy_wrapper.numpy_float_create import NumpyFloatCreate
 from .modules.numpy_wrapper.numpy_int_create import NumpyIntCreate
+from .modules.numpy_wrapper.numpy_show import NumpyShow
+from .modules.numpy_wrapper.numpy_squeeze import NumpySqueeze
 from .modules.pandas_wrapper.pandas_add import PandasAdd
 from .modules.pandas_wrapper.pandas_add_scalar_float import PandasAddScalarFloat
 from .modules.pandas_wrapper.pandas_add_scalar_int import PandasAddScalarInt
@@ -46,6 +48,7 @@ from .modules.pandas_wrapper.pandas_div_series import PandasDivSeries
 from .modules.pandas_wrapper.pandas_drop_duplicates import PandasDropDuplicates
 from .modules.pandas_wrapper.pandas_dropna import PandasDropNA
 from .modules.pandas_wrapper.pandas_exp import PandasExp
+from .modules.pandas_wrapper.pandas_feature_split_to_numpy import PandasFeatureSplitToNumpy
 from .modules.pandas_wrapper.pandas_fillna_scalar_float import PandasFillNAScalarFloat
 from .modules.pandas_wrapper.pandas_fillna_scalar_int import PandasFillNAScalarInt
 from .modules.pandas_wrapper.pandas_group_by import PandasGroupBy
@@ -178,6 +181,7 @@ from .modules.pytorch_wrapper.pt_randn import PtRandn
 from .modules.pytorch_wrapper.pt_remainder import PtRemainder
 from .modules.pytorch_wrapper.pt_reshape import PtReshape
 from .modules.pytorch_wrapper.pt_scatter import PtScatter
+from .modules.pytorch_wrapper.pt_show_size import PtShowSize
 from .modules.pytorch_wrapper.pt_show_text import PtShowText
 from .modules.pytorch_wrapper.pt_sin import PtSin
 from .modules.pytorch_wrapper.pt_sinh import PtSinh
@@ -228,6 +232,8 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "MPLScatter": MPLScatter,
     "NumpyFloatCreate": NumpyFloatCreate,
     "NumpyIntCreate": NumpyIntCreate,
+    "NumpyShow": NumpyShow,
+    "NumpySqueeze": NumpySqueeze,
     "PandasAdd": PandasAdd,
     "PandasAddScalarFloat": PandasAddScalarFloat,
     "PandasAddScalarInt": PandasAddScalarInt,
@@ -258,6 +264,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasDropDuplicates": PandasDropDuplicates,
     "PandasDropNA": PandasDropNA,
     "PandasExp": PandasExp,
+    "PandasFeatureSplitToNumpy": PandasFeatureSplitToNumpy,
     "PandasFillNAScalarFloat": PandasFillNAScalarFloat,
     "PandasFillNAScalarInt": PandasFillNAScalarInt,
     "PandasGroupBy": PandasGroupBy,
@@ -390,6 +397,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtRemainder": PtRemainder,
     "PtReshape": PtReshape,
     "PtScatter": PtScatter,
+    "PtShowSize": PtShowSize,
     "PtShowText": PtShowText,
     "PtSin": PtSin,
     "PtSinh": PtSinh,
@@ -443,6 +451,8 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "MPLScatter": "MPL Scatter Plot",
     "NumpyFloatCreate": "Numpy Float Create",
     "NumpyIntCreate": "Numpy Int Create",
+    "NumpyShow": "Numpy Show",
+    "NumpySqueeze": "Numpy Squeeze",
     "PandasAdd": "Pandas Add",
     "PandasAddScalarFloat": "Pandas Add Scalar Float",
     "PandasAddScalarInt": "Pandas Add Scalar Int",
@@ -473,6 +483,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasDropDuplicates": "Pandas Drop Duplicates",
     "PandasDropNA": "Pandas Drop NA",
     "PandasExp": "Pandas Exp",
+    "PandasFeatureSplitToNumpy": "Pandas Feature Split To Numpy",
     "PandasFillNAScalarFloat": "Pandas Fill NA Scalar Float",
     "PandasFillNAScalarInt": "Pandas Fill NA Scalar Int",
     "PandasGroupBy": "Pandas Group By",
@@ -605,6 +616,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtRemainder": "Pt Remainder",
     "PtReshape": "Pt Reshape",
     "PtScatter": "Pt Scatter",
+    "PtShowSize": "Pt Show Size",
     "PtShowText": "Pt Show Text",
     "PtSin": "Pt Sin",
     "PtSinh": "Pt Sinh",
