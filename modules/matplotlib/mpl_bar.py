@@ -4,6 +4,7 @@ from io import StringIO
 import pandas as pd
 from .common import common_input_types
 from .util import plot_post_steps
+from ..pandas_wrapper.utils import column_label_string_to_target_type
 
 class MPLBar:
     """
@@ -56,6 +57,8 @@ class MPLBar:
 
         # Create the plot
         fig, ax = plt.subplots()
+        x_column_name = column_label_string_to_target_type(df, x_column_name)
+        y_column_name = column_label_string_to_target_type(df, y_column_name)
         ax.bar(df[x_column_name], df[y_column_name])
 
         return plot_post_steps(

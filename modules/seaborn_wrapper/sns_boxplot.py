@@ -4,7 +4,7 @@ import pandas as pd
 import seaborn as sns
 from .util import plot_post_steps
 from .util import set_up_sns_style_palette
-
+from ..pandas_wrapper.utils import column_label_string_to_target_type
 
 class SNSBoxplot:
     """
@@ -81,6 +81,8 @@ class SNSBoxplot:
         """
         df = dataframe
         set_up_sns_style_palette(style, palette)
+        category_column_name = column_label_string_to_target_type(df, category_column_name, return_none=True)
+        value_column_name = column_label_string_to_target_type(df, value_column_name)
 
         # Create the plot
         fig, ax = plt.subplots()

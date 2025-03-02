@@ -4,6 +4,7 @@ import pandas as pd
 import seaborn as sns
 from .util import plot_post_steps
 from .util import set_up_sns_style_palette
+from ..pandas_wrapper.utils import column_label_string_to_target_type
 
 
 class SNSPairplot:
@@ -60,6 +61,7 @@ class SNSPairplot:
         set_up_sns_style_palette(style, palette)
 
         # Create the plot
+        hue_column_name = column_label_string_to_target_type(df, hue_column_name, return_none=True)
         if hue_column_name:
             pp = sns.pairplot(df, hue=hue_column_name)
         else:

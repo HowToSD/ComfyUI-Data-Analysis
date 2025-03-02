@@ -2,6 +2,7 @@ from typing import Any, Dict
 from matplotlib import pyplot as plt
 import pandas as pd
 from .util import plot_post_steps
+from ..pandas_wrapper.utils import column_label_string_to_target_type
 
 class MPLPieChart:
     """
@@ -54,6 +55,8 @@ class MPLPieChart:
         """
 
         df = dataframe
+        label_column_name = column_label_string_to_target_type(df, label_column_name)
+        data_column_name = column_label_string_to_target_type(df, data_column_name)
 
         # Create the plot
         fig, ax = plt.subplots()

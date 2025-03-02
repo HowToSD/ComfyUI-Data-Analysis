@@ -103,6 +103,7 @@
 | [Pandas Create From Dict](pandas_create_from_dict.md) | Creates a pandas DataFrame from a Python dictionary. |
 | [Pandas Create From Multiple Dict](pandas_create_from_multiple_dict.md) | Creates a pandas DataFrame from multiple Python dictionaries. |
 | [Pandas Create From Numpy](pandas_create_from_numpy.md) | Creates a pandas DataFrame from a NumPy ndarray. |
+| [Pandas Create From Tensor](pandas_create_from_tensor.md) | Creates a pandas DataFrame from a PyTorch tensor. |
 | [Pandas Create Series From Dict](pandas_create_series_from_dict.md) | Creates a Pandas Series from a Python dictionary. |
 | [Pandas Create With Index](pandas_create_with_index.md) | Creates a pandas DataFrame using values entered in the text field. Input data is assumed to have an index. |
 | [Pandas Load CSV](pandas_load_csv.md) | Loads CSV files into a pandas DataFrame. |
@@ -297,6 +298,7 @@
 | [Pandas Melt](pandas_melt.md) | Performs an unpivot operation (melt) on a pandas DataFrame. |
 | [Pandas Pivot](pandas_pivot.md) | Computes a pivot table from a pandas DataFrame. |
 | [Pandas Rename](pandas_rename.md) | Renames an index (row label) or a column label. |
+| [Pandas Rename Advanced](pandas_rename_advanced.md) | Renames one or more indices (row labels) or column labels to new labels. |
 | [Pandas Series To Data Frame](pandas_series_to_dataframe.md) | Converts a Pandas Series to a DataFrame. |
 | [Pandas Set Index](pandas_set_index.md) | Create index (row label) from existing column or columns. |
 | [Pandas Sort](pandas_sort.md) | Sorts a pandas DataFrame by a specified column. |

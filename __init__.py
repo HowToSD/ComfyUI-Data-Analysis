@@ -34,6 +34,7 @@ from .modules.pandas_wrapper.pandas_create import PandasCreate
 from .modules.pandas_wrapper.pandas_create_from_dict import PandasCreateFromDict
 from .modules.pandas_wrapper.pandas_create_from_multiple_dict import PandasCreateFromMultipleDict
 from .modules.pandas_wrapper.pandas_create_from_numpy import PandasCreateFromNumpy
+from .modules.pandas_wrapper.pandas_create_from_tensor import PandasCreateFromTensor
 from .modules.pandas_wrapper.pandas_create_series_from_dict import PandasCreateSeriesFromDict
 from .modules.pandas_wrapper.pandas_create_with_index import PandasCreateWithIndex
 from .modules.pandas_wrapper.pandas_crosstab import PandasCrosstab
@@ -88,6 +89,7 @@ from .modules.pandas_wrapper.pandas_pow_scalar_float import PandasPowScalarFloat
 from .modules.pandas_wrapper.pandas_pow_scalar_int import PandasPowScalarInt
 from .modules.pandas_wrapper.pandas_pow_series import PandasPowSeries
 from .modules.pandas_wrapper.pandas_rename import PandasRename
+from .modules.pandas_wrapper.pandas_rename_advanced import PandasRenameAdvanced
 from .modules.pandas_wrapper.pandas_replace import PandasReplace
 from .modules.pandas_wrapper.pandas_save_csv import PandasSaveCSV
 from .modules.pandas_wrapper.pandas_save_json import PandasSaveJSON
@@ -254,6 +256,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasCreateFromDict": PandasCreateFromDict,
     "PandasCreateFromMultipleDict": PandasCreateFromMultipleDict,
     "PandasCreateFromNumpy": PandasCreateFromNumpy,
+    "PandasCreateFromTensor": PandasCreateFromTensor,
     "PandasCreateSeriesFromDict": PandasCreateSeriesFromDict,
     "PandasCreateWithIndex": PandasCreateWithIndex,
     "PandasCrosstab": PandasCrosstab,
@@ -308,6 +311,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasPowScalarInt": PandasPowScalarInt,
     "PandasPowSeries": PandasPowSeries,
     "PandasRename": PandasRename,
+    "PandasRenameAdvanced": PandasRenameAdvanced,
     "PandasReplace": PandasReplace,
     "PandasSaveCSV": PandasSaveCSV,
     "PandasSaveJSON": PandasSaveJSON,
@@ -477,6 +481,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasCreateFromDict": "Pandas Create From Dict",
     "PandasCreateFromMultipleDict": "Pandas Create From Multiple Dict",
     "PandasCreateFromNumpy": "Pandas Create From Numpy",
+    "PandasCreateFromTensor": "Pandas Create From Tensor",
     "PandasCreateSeriesFromDict": "Pandas Create Series From Dict",
     "PandasCreateWithIndex": "Pandas Create With Index",
     "PandasCrosstab": "Pandas Crosstab",
@@ -531,6 +536,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasPowScalarInt": "Pandas Pow Scalar Int",
     "PandasPowSeries": "Pandas Pow Series",
     "PandasRename": "Pandas Rename",
+    "PandasRenameAdvanced": "Pandas Rename Advanced",
     "PandasReplace": "Pandas Replace",
     "PandasSaveCSV": "Pandas Save CSV",
     "PandasSaveJSON": "Pandas Save JSON",

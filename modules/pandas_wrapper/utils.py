@@ -1,4 +1,4 @@
-from typing import Any, List, Tuple, Union, Set
+from typing import Any, List, Tuple, Union, Set, Optional
 import json
 import numpy as np
 import pandas as pd
@@ -54,7 +54,7 @@ def column_labels_string_to_list(dataframe:pd.DataFrame, s:str, no_check:bool=Fa
     Args:
         dataframe (pd.DataFrame): The DataFrame to validate column names against.
         s (str): A comma-separated string representing column labels.
-        no_check (str): If True, input string is processed as a string without checking the column labels
+        no_check (bool): If True, input string is processed as a string without checking the column labels
                         of the DataFrame.
 
     Returns:
@@ -82,6 +82,48 @@ def column_labels_string_to_list(dataframe:pd.DataFrame, s:str, no_check:bool=Fa
                 raise ValueError(f"Column '{c}' not found in the DataFrame.")
 
     return output_columns
+
+
+def column_label_string_to_target_type(dataframe: pd.DataFrame, label: str, return_none: bool=False) -> Optional[Union[str, int, float]]:
+    """
+    Converts a string column label into the data type used for the corresponding label in the DataFrame.
+
+    If a column name does not exist in the DataFrame, a ValueError is raised.
+
+    Args:
+        dataframe (pd.DataFrame): The DataFrame to validate column names against.
+        label (str): A string representing a column label.
+        return_none (bool): If True, if the label is not found, None is returned instead of raising an exception.
+    Returns:
+        Union[str, int, float]: The column label in the correct type used in the DataFrame.
+
+    Raises:
+        ValueError: If `s` does not match any existing column name.
+    """
+    valid_columns = flatten_list_tuple_unique(dataframe.columns)
+    s = label.strip()
+
+    if s in valid_columns:
+        return s
+
+    try:
+        numeric_c = int(s)
+        if numeric_c in valid_columns:
+            return numeric_c
+    except ValueError:
+        pass
+
+    try:
+        numeric_c = float(s)
+        if numeric_c in valid_columns:
+            return numeric_c
+    except ValueError:
+        pass
+
+    if return_none:
+        return None
+
+    raise ValueError(f"Column '{s}' not found in the DataFrame.")
 
 
 def series_to_jsons(series: pd.Series) -> str:

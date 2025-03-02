@@ -6,7 +6,7 @@ from .common import common_input_types
 from .util import plot_post_steps
 from .util import set_up_sns_style_palette
 from .util import process_y_columns_and_labels
-
+from ..pandas_wrapper.utils import column_label_string_to_target_type
 
 class SNSScatter:
     """
@@ -63,6 +63,7 @@ class SNSScatter:
         """
         df = dataframe
         set_up_sns_style_palette(style, palette)
+        x_column_name = column_label_string_to_target_type(df, x_column_name)
         y_columns, labels = process_y_columns_and_labels(df, y_column_name, legend_label)
 
         # Create the plot
