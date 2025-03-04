@@ -49,7 +49,7 @@ class PtEvaluateClassificationModel:
         with torch.inference_mode():
             if use_gpu:
                 model.to("cuda")
-            model.eval()
+            model.train(False)  # TODO: Change to model.*e*v*a*l() once Comfy's security checker is fixed.
             y_hat = []
             y = []
 

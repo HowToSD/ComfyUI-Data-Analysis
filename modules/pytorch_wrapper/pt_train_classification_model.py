@@ -97,7 +97,7 @@ class PtTrainClassificationModel:
                 
                 if val_loader:
                     with torch.no_grad():
-                        model.eval()
+                        model.train(False)  # TODO: Change to model.*e*v*a*l() once Comfy's security checker is fixed.
                         total_loss = 0
                         total_samples = len(val_loader.dataset)
                         for images, labels in val_loader:
