@@ -64,18 +64,18 @@ class PtTrainClassificationModel:
         """
 
         with torch.inference_mode(False):
-            train_loss = list()
-            val_loss = list()
+            train_loss = []
+            val_loss = []
+            if use_gpu:
+                model.to("cuda")
 
-            loss_function = nn.CrossEntropyLoss(reduction="sum")
+            loss_function = nn.CrossEntropyLoss()  # mean loss
 
             # Train the model
             for epoch in range(epochs):
-                if use_gpu:
-                    model.to("cuda")
                 model.train()
                 total_loss = 0
-
+                total_samples = len(train_loader.dataset)
                 for images, labels in train_loader:
                     if use_gpu:
                         images = images.to("cuda")
@@ -85,27 +85,38 @@ class PtTrainClassificationModel:
                     loss = loss_function(outputs, labels)
                     loss.backward()
                     optimizer.step()
-                    total_loss += loss.item()
-                epoch_loss = total_loss / len(train_loader)
+ 
+                    batch_size = labels.size(0)
+                    batch_loss = loss.item() * batch_size
+                    total_loss += batch_loss
+
+                epoch_loss = total_loss / total_samples
+                
                 print(f"Epoch (train) {epoch+1}/{epochs}, Loss: {epoch_loss:.4f}")
                 train_loss.append(epoch_loss)
                 
                 if val_loader:
-                    pass
                     with torch.no_grad():
                         model.eval()
                         total_loss = 0
+                        total_samples = len(val_loader.dataset)
                         for images, labels in val_loader:
                             if use_gpu:
                                 images = images.to("cuda")
                                 labels = labels.to("cuda")
                             outputs = model(images)
                             loss = loss_function(outputs, labels)
-                            total_loss += loss.item()
-                        epoch_loss = total_loss / len(val_loader)
+                            batch_size = labels.size(0)
+                            batch_loss = loss.item() * batch_size
+                            total_loss += batch_loss
+
+                        epoch_loss = total_loss / total_samples
                         print(f"Epoch (val) {epoch+1}/{epochs}, Loss: {epoch_loss:.4f}")
                         val_loss.append(epoch_loss)
 
+            if use_gpu:
+                model.to("cpu")
+
             return (model, 
-                    torch.Tensor(np.asarray(train_loss)), 
-                    torch.Tensor(np.asarray(val_loss)))
+                    torch.tensor(train_loss, dtype=torch.float32), 
+                    torch.tensor(val_loss, dtype=torch.float32))

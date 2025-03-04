@@ -1,7 +1,7 @@
 [project]
 name = "data-analysis"
 description = "Data analysis custom modules for ComfyUI – Integrates Pandas, Seaborn and Matplotlib into ComfyUI, featuring extensive PyTorch wrapper nodes for seamless tensor operations. Experimental PyTorch model training was added in v2.0."
-version = "2.0.1"
+version = "2.0.2"
 license = {file = "LICENSE"}
 
 [project.urls]
