@@ -1,3 +1,4 @@
+import os
 import ast
 from typing import Optional, Tuple, Union
 import torch
@@ -14,6 +15,59 @@ DTYPE_MAPPING = {
     "int64": torch.int64,
     "bool": torch.bool
 }
+
+
+def get_resource_full_path(resource_name: str, resource_path: str) -> str:
+    """
+    Resolves the absolute path to a resource file within the "resources" directory and 
+    ensures that the directory exists.
+
+    Args:
+        resource_path (str): The path to the resource file. If the path is a relative path,
+        the path is considered relative to the `resource` directory of this extension.
+
+    Returns:
+        str: The absolute path to the resource file.
+    """
+    if os.path.isabs(resource_path):
+        resource_full_path = resource_path
+    else:
+        resource_full_path = os.path.realpath(
+            os.path.join(os.path.dirname(__file__), "..", "..", resource_name, resource_path))
+        resource_dir = os.path.dirname(resource_full_path)
+        if os.path.exists(resource_dir) is False:
+            os.makedirs(resource_dir)
+    return resource_full_path
+
+
+def get_model_full_path(model_path: str) -> str:
+    """
+    Resolves the absolute path to a model file within the "models" directory and 
+    ensures that the directory exists.
+
+    Args:
+        model_path (str): The path to the model file. If the path is a relative path,
+        the path is considered relative to the `models` directory of this extension.
+
+    Returns:
+        str: The absolute path to the model file.
+    """
+    return get_resource_full_path("models", model_path)
+
+
+def get_dataset_full_path(dataset_path: str) -> str:
+    """
+    Resolves the absolute path to the datasete within the "datasets" directory and 
+    ensures that the directory exists.
+
+    Args:
+        dataset_path (str): The path to the dataset file. If the path is a relative path,
+        the path is considered relative to the `datasets` directory of this extension.
+
+    Returns:
+        str: The absolute path to the dataset file.
+    """
+    return get_resource_full_path("datasets", dataset_path)
 
 
 def str_to_dim(dim: str) -> Optional[Union[int, Tuple[int, ...]]]:

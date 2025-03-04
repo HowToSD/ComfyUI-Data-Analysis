@@ -141,9 +141,11 @@ from .modules.pytorch_wrapper.pt_bmm import PtBmm
 from .modules.pytorch_wrapper.pt_bool_create import PtBoolCreate
 from .modules.pytorch_wrapper.pt_cos import PtCos
 from .modules.pytorch_wrapper.pt_cosh import PtCosh
+from .modules.pytorch_wrapper.pt_data_loader import PtDataLoader
 from .modules.pytorch_wrapper.pt_div import PtDiv
 from .modules.pytorch_wrapper.pt_einsum import PtEinsum
 from .modules.pytorch_wrapper.pt_eq import PtEq
+from .modules.pytorch_wrapper.pt_evaluate_classification_model import PtEvaluateClassificationModel
 from .modules.pytorch_wrapper.pt_exp import PtExp
 from .modules.pytorch_wrapper.pt_flatten import PtFlatten
 from .modules.pytorch_wrapper.pt_float_create import PtFloatCreate
@@ -159,6 +161,7 @@ from .modules.pytorch_wrapper.pt_index_select import PtIndexSelect
 from .modules.pytorch_wrapper.pt_int_create import PtIntCreate
 from .modules.pytorch_wrapper.pt_le import PtLe
 from .modules.pytorch_wrapper.pt_linspace import PtLinspace
+from .modules.pytorch_wrapper.pt_load_model import PtLoadModel
 from .modules.pytorch_wrapper.pt_log import PtLog
 from .modules.pytorch_wrapper.pt_logical_and import PtLogicalAnd
 from .modules.pytorch_wrapper.pt_logical_not import PtLogicalNot
@@ -184,6 +187,7 @@ from .modules.pytorch_wrapper.pt_rand_int import PtRandInt
 from .modules.pytorch_wrapper.pt_randn import PtRandn
 from .modules.pytorch_wrapper.pt_remainder import PtRemainder
 from .modules.pytorch_wrapper.pt_reshape import PtReshape
+from .modules.pytorch_wrapper.pt_save_model import PtSaveModel
 from .modules.pytorch_wrapper.pt_scatter import PtScatter
 from .modules.pytorch_wrapper.pt_show_size import PtShowSize
 from .modules.pytorch_wrapper.pt_show_text import PtShowText
@@ -204,11 +208,17 @@ from .modules.pytorch_wrapper.pt_to_image import PtToImage
 from .modules.pytorch_wrapper.pt_to_latent import PtToLatent
 from .modules.pytorch_wrapper.pt_to_numpy import PtToNumpy
 from .modules.pytorch_wrapper.pt_to_rgb_tensors import PtToRgbTensors
+from .modules.pytorch_wrapper.pt_train_classification_model import PtTrainClassificationModel
 from .modules.pytorch_wrapper.pt_unsqueeze import PtUnsqueeze
 from .modules.pytorch_wrapper.pt_var import PtVar
 from .modules.pytorch_wrapper.pt_view import PtView
 from .modules.pytorch_wrapper.pt_where import PtWhere
 from .modules.pytorch_wrapper.pt_zeros import PtZeros
+from .modules.pytorch_wrapper.ptn_linear_model import PtnLinearModel
+from .modules.pytorch_wrapper.pto_adam import PtoAdam
+from .modules.pytorch_wrapper.ptv_dataset import PtvDataset
+from .modules.pytorch_wrapper.ptv_dataset_loader import PtvDatasetLoader
+from .modules.pytorch_wrapper.ptv_transforms_to_tensor import PtvTransformsToTensor
 from .modules.seaborn_wrapper.sns_bar import SNSBar
 from .modules.seaborn_wrapper.sns_boxplot import SNSBoxplot
 from .modules.seaborn_wrapper.sns_heatmap import SNSHeatmap
@@ -363,9 +373,11 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtBoolCreate": PtBoolCreate,
     "PtCos": PtCos,
     "PtCosh": PtCosh,
+    "PtDataLoader": PtDataLoader,
     "PtDiv": PtDiv,
     "PtEinsum": PtEinsum,
     "PtEq": PtEq,
+    "PtEvaluateClassificationModel": PtEvaluateClassificationModel,
     "PtExp": PtExp,
     "PtFlatten": PtFlatten,
     "PtFloatCreate": PtFloatCreate,
@@ -381,6 +393,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtIntCreate": PtIntCreate,
     "PtLe": PtLe,
     "PtLinspace": PtLinspace,
+    "PtLoadModel": PtLoadModel,
     "PtLog": PtLog,
     "PtLogicalAnd": PtLogicalAnd,
     "PtLogicalNot": PtLogicalNot,
@@ -406,6 +419,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtRandn": PtRandn,
     "PtRemainder": PtRemainder,
     "PtReshape": PtReshape,
+    "PtSaveModel": PtSaveModel,
     "PtScatter": PtScatter,
     "PtShowSize": PtShowSize,
     "PtShowText": PtShowText,
@@ -426,11 +440,17 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtToLatent": PtToLatent,
     "PtToNumpy": PtToNumpy,
     "PtToRgbTensors": PtToRgbTensors,
+    "PtTrainClassificationModel": PtTrainClassificationModel,
     "PtUnsqueeze": PtUnsqueeze,
     "PtVar": PtVar,
     "PtView": PtView,
     "PtWhere": PtWhere,
     "PtZeros": PtZeros,
+    "PtnLinearModel": PtnLinearModel,
+    "PtoAdam": PtoAdam,
+    "PtvDataset": PtvDataset,
+    "PtvDatasetLoader": PtvDatasetLoader,
+    "PtvTransformsToTensor": PtvTransformsToTensor,
     "PyKvFloatCreate": PyKvFloatCreate,
     "PyKvIntCreate": PyKvIntCreate,
     "PyKvStringCreate": PyKvStringCreate,
@@ -588,9 +608,11 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtBoolCreate": "Pt Bool Create",
     "PtCos": "Pt Cos",
     "PtCosh": "Pt Cosh",
+    "PtDataLoader": "Pt Data Loader",
     "PtDiv": "Pt Div",
     "PtEinsum": "Pt Einsum",
     "PtEq": "Pt Eq",
+    "PtEvaluateClassificationModel": "Pt Evaluate Classification Model",
     "PtExp": "Pt Exp",
     "PtFlatten": "Pt Flatten",
     "PtFloatCreate": "Pt Float Create",
@@ -606,6 +628,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtIntCreate": "Pt Int Create",
     "PtLe": "Pt Le",
     "PtLinspace": "Pt Linspace",
+    "PtLoadModel": "Pt Load Model",
     "PtLog": "Pt Log",
     "PtLogicalAnd": "Pt Logical And",
     "PtLogicalNot": "Pt Logical Not",
@@ -631,6 +654,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtRandn": "Pt Randn",
     "PtRemainder": "Pt Remainder",
     "PtReshape": "Pt Reshape",
+    "PtSaveModel": "Pt Save Model",
     "PtScatter": "Pt Scatter",
     "PtShowSize": "Pt Show Size",
     "PtShowText": "Pt Show Text",
@@ -651,11 +675,17 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtToLatent": "Pt To Latent",
     "PtToNumpy": "Pt To Numpy",
     "PtToRgbTensors": "Pt To Rgb Tensors",
+    "PtTrainClassificationModel": "Pt Train Classification Model",
     "PtUnsqueeze": "Pt Unsqueeze",
     "PtVar": "Pt Var",
     "PtView": "Pt View",
     "PtWhere": "Pt Where",
     "PtZeros": "Pt Zeros",
+    "PtnLinearModel": "Ptn Linear Model",
+    "PtoAdam": "Pto Adam",
+    "PtvDataset": "Ptv Dataset",
+    "PtvDatasetLoader": "Ptv Dataset Loader",
+    "PtvTransformsToTensor": "Ptv Transforms To Tensor",
     "PyKvFloatCreate": "Py Kv Float Create",
     "PyKvIntCreate": "Py Kv Int Create",
     "PyKvStringCreate": "Py Kv String Create",

@@ -1,4 +1,27 @@
 # ComfyUI-Data-Analysis
+## Update (March 3, 2025)
+Training workflow trains the FashionMNIST model from scratch with a single click of a button.
+
+Experimental PyTorch model training has been added (documentation coming soon).
+No coding required—training is as simple as a single click!
+
+Try it out:
+
+    Training: examples/fashion_mnist_train.json
+    Evaluation: examples/fashion_mnist_eval.json
+
+This workflow trains a FashionMNIST model from scratch effortlessly.
+
+**Training workflow**
+![Train](docs/images/fashion_mnist_train.png)
+
+**Eval workflow**
+![Eval](docs/images/fashion_mnist_eval.png)
+
+Note that the training feature is a proof of concept and currently supports only the dense model. Additional models may be added based on demand.
+
+<hr>
+
 ![Baseball tutorial](docs/images/baseball_question.jpg)
 ## How Can We Figure Out Which MLB Player Had the Most Hits Per Year?
 
@@ -61,7 +84,7 @@ Note: GPU is not required to run this custom module.
     This will create a new subdirectory ComfyUI-Data-Analysis.
 3. Rename the folder name from ComfyUI-Data-Analysis to data-analysis.
    Skipping this step will cause example workflows to fail, as they rely on this folder name.
-4. Check if your ComfyUI environment already has pandas, matplotlib, scipy and seaborn. If not, install them using pip.
+4. Check if your ComfyUI environment already has required packages listed in requirements.txt. If not, install them using pip.
    ```
    pip install -r requirements.txt
    ```

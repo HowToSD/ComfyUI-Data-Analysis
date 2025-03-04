@@ -113,6 +113,7 @@
 | [Pandas Load JSON](pandas_load_json.md) | Loads JSON files into a pandas DataFrame. |
 | [Pandas Save CSV](pandas_save_csv.md) | Saves a PandasDataFrame to a CSV file. |
 | [Pandas Save JSON](pandas_save_json.md) | Saves a PandasDataFrame to a JSON file. |
+| [Pt Save Model](pt_save_model.md) | A wrapper class for saving a PyTorch model. |
 ## Math
 | Node | Description |
 | --- | --- |
@@ -257,6 +258,18 @@
 | [Pt To Latent](pt_to_latent.md) | Casts a PyTorch tensor as a latent tensor. |
 | [Pt To Numpy](pt_to_numpy.md) | Converts PyTorch tensor to NumPy ndarray. |
 | [Pt To Rgb Tensors](pt_to_rgb_tensors.md) | Splits a PyTorch tensor into R, G, and B tensors. |
+| [Pto Adam](pto_adam.md) | Converts PyTorch tensor to NumPy ndarray. |
+## PyTorch wrapper - Training
+| Node | Description |
+| --- | --- |
+| [Pt Data Loader](pt_data_loader.md) | Loads data from a dataset node and creates a PyTorch DataLoader.   |
+| [Pt Evaluate Classification Model](pt_evaluate_classification_model.md) | Performs inference on test data and computes evaluation metrics. |
+| [Pt Load Model](pt_load_model.md) | A wrapper class for saving a PyTorch model. |
+| [Pt Train Classification Model](pt_train_classification_model.md) | Trains a classification model using a given dataset, optimizer, and number of epochs. |
+| [Ptn Linear Model](ptn_linear_model.md) | A linear model consisting of dense layers.   |
+| [Ptv Dataset](ptv_dataset.md) | A Torchvision Dataset class wrapper. |
+| [Ptv Dataset Loader](ptv_dataset_loader.md) | A node to combine the dataset and data loader into a single node. |
+| [Ptv Transforms To Tensor](ptv_transforms_to_tensor.md) | Transforms elements of dataset to PyTorch tensors. |
 ## PyTorch wrapper - Transform
 | Node | Description |
 | --- | --- |
