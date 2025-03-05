@@ -67,6 +67,7 @@ from .modules.pandas_wrapper.pandas_kurtosis import PandasKurtosis
 from .modules.pandas_wrapper.pandas_load_csv import PandasLoadCSV
 from .modules.pandas_wrapper.pandas_load_csv_with_encoding import PandasLoadCSVWithEncoding
 from .modules.pandas_wrapper.pandas_load_csv_with_index import PandasLoadCSVWithIndex
+from .modules.pandas_wrapper.pandas_load_excel import PandasLoadExcel
 from .modules.pandas_wrapper.pandas_load_html import PandasLoadHTML
 from .modules.pandas_wrapper.pandas_load_json import PandasLoadJSON
 from .modules.pandas_wrapper.pandas_loc_cell_str import PandasLocCellStr
@@ -300,6 +301,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasLoadCSV": PandasLoadCSV,
     "PandasLoadCSVWithEncoding": PandasLoadCSVWithEncoding,
     "PandasLoadCSVWithIndex": PandasLoadCSVWithIndex,
+    "PandasLoadExcel": PandasLoadExcel,
     "PandasLoadHTML": PandasLoadHTML,
     "PandasLoadJSON": PandasLoadJSON,
     "PandasLocCellStr": PandasLocCellStr,
@@ -536,6 +538,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasLoadCSV": "Pandas Load CSV",
     "PandasLoadCSVWithEncoding": "Pandas Load CSV With Encoding",
     "PandasLoadCSVWithIndex": "Pandas Load CSV With Index",
+    "PandasLoadExcel": "Pandas Load Excel",
     "PandasLoadHTML": "Pandas Load HTML",
     "PandasLoadJSON": "Pandas Load JSON",
     "PandasLocCellStr": "Pandas Loc Cell Str",

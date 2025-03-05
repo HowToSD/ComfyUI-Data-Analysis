@@ -109,6 +109,7 @@
 | [Pandas Load CSV](pandas_load_csv.md) | Loads CSV files into a pandas DataFrame. |
 | [Pandas Load CSV With Encoding](pandas_load_csv_with_encoding.md) | Loads CSV files into a pandas DataFrame. |
 | [Pandas Load CSV With Index](pandas_load_csv_with_index.md) | Loads CSV files into a pandas DataFrame. |
+| [Pandas Load Excel](pandas_load_excel.md) | Loads Excel files into a pandas DataFrame. |
 | [Pandas Load HTML](pandas_load_html.md) | Scans an HTML file or webpage for tables and returns the number of DataFrames  |
 | [Pandas Load JSON](pandas_load_json.md) | Loads JSON files into a pandas DataFrame. |
 | [Pandas Save CSV](pandas_save_csv.md) | Saves a PandasDataFrame to a CSV file. |

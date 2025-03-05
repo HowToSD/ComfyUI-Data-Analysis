@@ -1,5 +1,7 @@
 __pycache__/
 **/__pycache__/
-datasets/
 models/
 *.pth
+/datasets/
+!*/foo/
+examples/datasets/.~lock*
