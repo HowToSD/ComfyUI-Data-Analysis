@@ -1,24 +1,42 @@
 # ComfyUI-Data-Analysis
-## Update (March 3, 2025)
+## Update (March 5, 2025)
 Training workflow trains the FashionMNIST model from scratch with a single click of a button.
 
 Experimental PyTorch model training has been added (documentation coming soon).
 No coding required—training is as simple as a single click!
 
-Try it out:
+It is designed to be modular. For example, to switch from a linear model to a conv model, you can just replace the model node (see screenshot below).
 
-    Training: examples/fashion_mnist_train.json
-    Evaluation: examples/fashion_mnist_eval.json
+Or you can just drag and drop below workflows to ComfyUI to check it out. Model is downloaded automatically:
 
-This workflow trains a FashionMNIST model from scratch effortlessly.
+Linear model  
+* Training: examples/fashion_mnist_train.json  
+* Evaluation: examples/fashion_mnist_eval.json
 
-**Training workflow**
+Convolutional model  
+* Training: examples/fashion_mnist_train_conv.json  
+* Evaluation: examples/fashion_mnist_eval_conv.json
+
+These training workflows train a FashionMNIST model from scratch effortlessly.
+
+### Training workflow
+**Linear model**
 ![Train](docs/images/fashion_mnist_train.png)
 
-**Eval workflow**
+**Conv model**
+![Train](docs/images/conv_train.png)
+
+*Close up of the conv node*
+![Train](docs/images/conv_train2.png)
+
+### Eval workflow
+**Linear model**
 ![Eval](docs/images/fashion_mnist_eval.png)
 
-Note that the training feature is a proof of concept and currently supports only the dense model. Additional models may be added based on demand.
+**Conv model**
+![Eval](docs/images/conv_eval.png)
+
+Note that the training feature is a proof of concept and currently supports only the linear and conv models. Additional models may be added based on demand.
 
 <hr>
 

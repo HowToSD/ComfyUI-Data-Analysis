@@ -122,10 +122,6 @@
 | [Pandas Log](pandas_log.md) | Applying the natural logarithm function to a pandas DataFrame and converting non-numeric values to NaN. |
 | [Pandas Sin](pandas_sin.md) | Applies the sine function to a pandas DataFrame and converting non-numeric values to NaN. |
 | [Pandas Tan](pandas_tan.md) | Applies the tangent function to a pandas DataFrame and converting non-numeric values to NaN. |
-## Miscellaneous
-| Node | Description |
-| --- | --- |
-| [Pt Flatten](pt_flatten.md) | Flattens a PyTorch tensor into a 1D tensor. |
 ## Numpy
 | Node | Description |
 | --- | --- |
@@ -266,6 +262,7 @@
 | [Pt Evaluate Classification Model](pt_evaluate_classification_model.md) | Performs inference on test data and computes evaluation metrics. |
 | [Pt Load Model](pt_load_model.md) | A wrapper class for saving a PyTorch model. |
 | [Pt Train Classification Model](pt_train_classification_model.md) | Trains a classification model using a given dataset, optimizer, and number of epochs. |
+| [Ptn Conv Model](ptn_conv_model.md) | A convolutional model consisting of multiple convolutional layers.   |
 | [Ptn Linear Model](ptn_linear_model.md) | A linear model consisting of dense layers.   |
 | [Ptv Dataset](ptv_dataset.md) | A Torchvision Dataset class wrapper. |
 | [Ptv Dataset Loader](ptv_dataset_loader.md) | A node to combine the dataset and data loader into a single node. |
@@ -273,6 +270,7 @@
 ## PyTorch wrapper - Transform
 | Node | Description |
 | --- | --- |
+| [Pt Flatten](pt_flatten.md) | Flattens a PyTorch tensor into a 1D tensor. |
 | [Pt Permute](pt_permute.md) | Permutes the dimensions of a PyTorch tensor according to the specified order. |
 | [Pt Reshape](pt_reshape.md) | Reshapes a PyTorch tensor into a specified shape using `torch.reshape()`. |
 | [Pt Squeeze](pt_squeeze.md) | Removes a dimension at the specified position in the input tensor if it is of size 1. |

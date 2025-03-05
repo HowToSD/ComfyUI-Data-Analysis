@@ -6,7 +6,7 @@ class PtFlatten:
     """
     Flattens a PyTorch tensor into a 1D tensor.
 
-    Category: PyTorch wrapper
+    category: PyTorch wrapper - Transform
     """
     
     @classmethod

@@ -214,6 +214,7 @@ from .modules.pytorch_wrapper.pt_var import PtVar
 from .modules.pytorch_wrapper.pt_view import PtView
 from .modules.pytorch_wrapper.pt_where import PtWhere
 from .modules.pytorch_wrapper.pt_zeros import PtZeros
+from .modules.pytorch_wrapper.ptn_conv_model import PtnConvModel
 from .modules.pytorch_wrapper.ptn_linear_model import PtnLinearModel
 from .modules.pytorch_wrapper.pto_adam import PtoAdam
 from .modules.pytorch_wrapper.ptv_dataset import PtvDataset
@@ -446,6 +447,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtView": PtView,
     "PtWhere": PtWhere,
     "PtZeros": PtZeros,
+    "PtnConvModel": PtnConvModel,
     "PtnLinearModel": PtnLinearModel,
     "PtoAdam": PtoAdam,
     "PtvDataset": PtvDataset,
@@ -681,6 +683,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtView": "Pt View",
     "PtWhere": "Pt Where",
     "PtZeros": "Pt Zeros",
+    "PtnConvModel": "Ptn Conv Model",
     "PtnLinearModel": "Ptn Linear Model",
     "PtoAdam": "Pto Adam",
     "PtvDataset": "Ptv Dataset",

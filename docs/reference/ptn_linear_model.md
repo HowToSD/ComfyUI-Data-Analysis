@@ -2,7 +2,7 @@
 A linear model consisting of dense layers.  
 
 ### Fields:  
-- `dim_list`: A comma-separated string representing layer dimensions.  
+- `dim_list`: A string representing a Python list of layer dimensions.  
   It should contain the input dimension for the first layer and the output dimensions 
   for all layers. 
   
@@ -10,9 +10,10 @@ A linear model consisting of dense layers.
   - Input data: 784  
   - Layer 1: 784 → 128  
   - Layer 2: 128 → 10  
-  - Specify `"784, 128, 10"`  
+  - Specify `"[784,128,10]"`  
 
-- `bias_list`: A comma-separated string representing bias usage (True/False) per layer.  
+- `bias_list`: A string representing a Python list of bias usage (True/False) per layer.  
+   Example: "[True,False]"
 
 - `num_layers`: The number of layers in the model.
 
