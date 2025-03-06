@@ -50,11 +50,19 @@
 ## Data subset selection
 | Node | Description |
 | --- | --- |
+| [Pandas At Datetime](pandas_at_datetime.md) | Selects a cell from a pandas DataFrame and output as a Python datetime.datetime data. |
+| [Pandas At Float](pandas_at_float.md) | Selects a cell from a pandas DataFrame and output as a Python float. |
+| [Pandas At Int](pandas_at_int.md) | Selects a cell from a pandas DataFrame and output as a Python int. |
+| [Pandas At String](pandas_at_string.md) | Selects a cell from a pandas DataFrame and output as a string. |
 | [Pandas Head](pandas_head.md) | Retrieves the first few rows of a pandas DataFrame. |
+| [Pandas Iat Datetime](pandas_iat_datetime.md) | Selects a cell from a pandas DataFrame and output as a Python datetime.datetime data. |
+| [Pandas Iat Float](pandas_iat_float.md) | Selects a cell from a pandas DataFrame and output as a Python float. |
+| [Pandas Iat Int](pandas_iat_int.md) | Selects a cell from a pandas DataFrame and output as a Python int. |
+| [Pandas Iat String](pandas_iat_string.md) | Selects a cell from a pandas DataFrame and output as a string. |
 | [Pandas Iloc Row Series](pandas_iloc_row_series.md) | Selects a row from a pandas DataFrame and returning it as a Series. |
 | [Pandas Iloc Rows Data Frame](pandas_iloc_rows_dataframe.md) | Selects rows from a pandas DataFrame and returning it as a DataFrame. |
 | [Pandas Iloc Rows Slice Data Frame](pandas_iloc_rows_slice_dataframe.md) | Selects rows from a pandas DataFrame using a slice defined by a start and end integer position. The start position is inclusive, while the end position is exclusive. Returns the selected rows as a DataFrame. |
-| [Pandas Loc Cell Str](pandas_loc_cell_str.md) | Selects a cell from a pandas DataFrame and output as a string. |
+| [Pandas Loc Cell String](pandas_loc_cell_string.md) | Selects a cell from a pandas DataFrame and output as a string. |
 | [Pandas Loc Row MultiIndex DataFrame](pandas_loc_row_multiindex_dataframe.md) | Selects a row or rows from a pandas DataFrame with MultiIndex and output as a DataFrame. |
 | [Pandas Loc Row Series](pandas_loc_row_series.md) | Selects a row from a pandas DataFrame and output as a Series. |
 | [Pandas Select Columns](pandas_select_columns.md) | Selects specific columns from a pandas DataFrame. |
@@ -280,9 +288,15 @@
 ## Python wrapper
 | Node | Description |
 | --- | --- |
+| [Py Datetime To String](py_datetime_to_string.md) | Converts a Python datetime.datetime value to a Python string |
+| [Py Float To String](py_float_to_string.md) | Converts a Python float value to a Python string |
+| [Py Int To String](py_int_to_string.md) | Converts a Python int value to a Python string |
 | [Py Kv Float Create](py_kv_float_create.md) | Creates a Python dictionary with a string key and a float value. |
 | [Py Kv Int Create](py_kv_int_create.md) |  Creates a Python dictionary with an string key and an integer value. |
 | [Py Kv String Create](py_kv_string_create.md) | Creates a Python dictionary with a string key and a string value. |
+| [Py String To Datetime](py_string_to_datetime.md) | Converts a Python string to a Python datetime.datetime. |
+| [Py String To Float](py_string_to_float.md) | Converts a Python string to a float. |
+| [Py String To Int](py_string_to_int.md) | Converts a Python string to an int. |
 ## Summary statistics
 | Node | Description |
 | --- | --- |
@@ -303,9 +317,17 @@
 ## Transformation
 | Node | Description |
 | --- | --- |
+| [Pandas At Set Datetime](pandas_at_set_datetime.md) | Sets a Python datetime.datetime data in a cell in a pandas DataFrame. |
+| [Pandas At Set Float](pandas_at_set_float.md) | Sets a Python float data in a cell in a pandas DataFrame. |
+| [Pandas At Set Int](pandas_at_set_int.md) | Sets a Python int data in a cell in a pandas DataFrame. |
+| [Pandas At Set String](pandas_at_set_string.md) | Sets a Python string data in a cell in a pandas DataFrame. |
 | [Pandas Feature Split To Numpy](pandas_feature_split_to_numpy.md) | Splits a Pandas DataFrame into feature Numpy ndarray and label Numpy ndarray. |
 | [Pandas Horizontal Concat](pandas_horizontal_concat.md) | Horizontally concatenates two pandas DataFrames. |
 | [Pandas Horizontal Split](pandas_horizontal_split.md) | Horizontally splits a Pandas DataFrame into two pandas DataFrames. |
+| [Pandas Iat Set Datetime](pandas_iat_set_datetime.md) | Sets a Python datetime.datetime data in a cell in a pandas DataFrame. |
+| [Pandas Iat Set Float](pandas_iat_set_float.md) | Sets a Python float data in a cell from a pandas DataFrame. |
+| [Pandas Iat Set Int](pandas_iat_set_int.md) | Sets a Python int data in a cell from a pandas DataFrame. |
+| [Pandas Iat Set String](pandas_iat_set_string.md) | Sets a Python string in a cell in a pandas DataFrame. |
 | [Pandas Join](pandas_join.md) | Merges two pandas DataFrames based on a common column. |
 | [Pandas Melt](pandas_melt.md) | Performs an unpivot operation (melt) on a pandas DataFrame. |
 | [Pandas Pivot](pandas_pivot.md) | Computes a pivot table from a pandas DataFrame. |

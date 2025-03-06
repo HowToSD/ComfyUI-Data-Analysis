@@ -55,7 +55,7 @@ class TestPtEvaluate(unittest.TestCase):
         epochs = 1
         self.loaded_model = self.load_model.f(self.model, f"fashion_mnist_{epochs}_epochs_conv.pt")
 
-        # Instntiates evaluation node
+        # Instantiates evaluation node
         self.evaluate = PtEvaluateClassificationModel()
 
     def test_evaluation(self):

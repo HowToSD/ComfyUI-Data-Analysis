@@ -1,5 +1,7 @@
-# Pandas Loc Cell Str
-Selects a cell from a pandas DataFrame and output as a string.
+# Pandas At Set Datetime
+Sets a Python datetime.datetime data in a cell in a pandas DataFrame.
+
+This modifies the input DataFrame in place.
 
 ## Input
 | Name | Data type |
@@ -9,13 +11,14 @@ Selects a cell from a pandas DataFrame and output as a string.
 | row_index_type |  |
 | column_label | String |
 | column_label_type |  |
+| data | Pydatetime |
 
 ## Output
 | Data type |
 |---|
-| String |
+| DataFrame |
 
 <HR>
-Category: Data subset selection
+Category: Transformation
 
 ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

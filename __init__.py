@@ -7,9 +7,15 @@ from .modules.cda.cda_show_float import CDAShowFloat
 from .modules.cda.cda_show_int import CDAShowInt
 from .modules.cda.cda_string_create import CDAStringCreate
 from .modules.cda.cda_text_create import CDATextCreate
+from .modules.cda.py_datetime_to_string import PyDatetimeToString
+from .modules.cda.py_float_to_string import PyFloatToString
+from .modules.cda.py_int_to_string import PyIntToString
 from .modules.cda.py_kv_float_create import PyKvFloatCreate
 from .modules.cda.py_kv_int_create import PyKvIntCreate
 from .modules.cda.py_kv_string_create import PyKvStringCreate
+from .modules.cda.py_string_to_datetime import PyStringToDatetime
+from .modules.cda.py_string_to_float import PyStringToFloat
+from .modules.cda.py_string_to_int import PyStringToInt
 from .modules.matplotlib.mpl_bar import MPLBar
 from .modules.matplotlib.mpl_line import MPLLine
 from .modules.matplotlib.mpl_pie_chart import MPLPieChart
@@ -25,6 +31,14 @@ from .modules.pandas_wrapper.pandas_add_series import PandasAddSeries
 from .modules.pandas_wrapper.pandas_as_float import PandasAsFloat
 from .modules.pandas_wrapper.pandas_as_int import PandasAsInt
 from .modules.pandas_wrapper.pandas_as_string import PandasAsString
+from .modules.pandas_wrapper.pandas_at_datetime import PandasAtDatetime
+from .modules.pandas_wrapper.pandas_at_float import PandasAtFloat
+from .modules.pandas_wrapper.pandas_at_int import PandasAtInt
+from .modules.pandas_wrapper.pandas_at_set_datetime import PandasAtSetDatetime
+from .modules.pandas_wrapper.pandas_at_set_float import PandasAtSetFloat
+from .modules.pandas_wrapper.pandas_at_set_int import PandasAtSetInt
+from .modules.pandas_wrapper.pandas_at_set_string import PandasAtSetString
+from .modules.pandas_wrapper.pandas_at_string import PandasAtString
 from .modules.pandas_wrapper.pandas_columns import PandasColumns
 from .modules.pandas_wrapper.pandas_corr import PandasCorr
 from .modules.pandas_wrapper.pandas_cos import PandasCos
@@ -56,6 +70,14 @@ from .modules.pandas_wrapper.pandas_group_by import PandasGroupBy
 from .modules.pandas_wrapper.pandas_head import PandasHead
 from .modules.pandas_wrapper.pandas_horizontal_concat import PandasHorizontalConcat
 from .modules.pandas_wrapper.pandas_horizontal_split import PandasHorizontalSplit
+from .modules.pandas_wrapper.pandas_iat_datetime import PandasIatDatetime
+from .modules.pandas_wrapper.pandas_iat_float import PandasIatFloat
+from .modules.pandas_wrapper.pandas_iat_int import PandasIatInt
+from .modules.pandas_wrapper.pandas_iat_set_datetime import PandasIatSetDatetime
+from .modules.pandas_wrapper.pandas_iat_set_float import PandasIatSetFloat
+from .modules.pandas_wrapper.pandas_iat_set_int import PandasIatSetInt
+from .modules.pandas_wrapper.pandas_iat_set_string import PandasIatSetString
+from .modules.pandas_wrapper.pandas_iat_string import PandasIatString
 from .modules.pandas_wrapper.pandas_iloc_row_series import PandasIlocRowSeries
 from .modules.pandas_wrapper.pandas_iloc_rows_dataframe import PandasIlocRowsDataFrame
 from .modules.pandas_wrapper.pandas_iloc_rows_slice_dataframe import PandasIlocRowsSliceDataFrame
@@ -70,7 +92,7 @@ from .modules.pandas_wrapper.pandas_load_csv_with_index import PandasLoadCSVWith
 from .modules.pandas_wrapper.pandas_load_excel import PandasLoadExcel
 from .modules.pandas_wrapper.pandas_load_html import PandasLoadHTML
 from .modules.pandas_wrapper.pandas_load_json import PandasLoadJSON
-from .modules.pandas_wrapper.pandas_loc_cell_str import PandasLocCellStr
+from .modules.pandas_wrapper.pandas_loc_cell_string import PandasLocCellString
 from .modules.pandas_wrapper.pandas_loc_row_multiindex_dataframe import PandasLocRowMultiIndexDataFrame
 from .modules.pandas_wrapper.pandas_loc_row_series import PandasLocRowSeries
 from .modules.pandas_wrapper.pandas_log import PandasLog
@@ -259,6 +281,14 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasAsFloat": PandasAsFloat,
     "PandasAsInt": PandasAsInt,
     "PandasAsString": PandasAsString,
+    "PandasAtDatetime": PandasAtDatetime,
+    "PandasAtFloat": PandasAtFloat,
+    "PandasAtInt": PandasAtInt,
+    "PandasAtSetDatetime": PandasAtSetDatetime,
+    "PandasAtSetFloat": PandasAtSetFloat,
+    "PandasAtSetInt": PandasAtSetInt,
+    "PandasAtSetString": PandasAtSetString,
+    "PandasAtString": PandasAtString,
     "PandasColumns": PandasColumns,
     "PandasCorr": PandasCorr,
     "PandasCos": PandasCos,
@@ -290,6 +320,14 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasHead": PandasHead,
     "PandasHorizontalConcat": PandasHorizontalConcat,
     "PandasHorizontalSplit": PandasHorizontalSplit,
+    "PandasIatDatetime": PandasIatDatetime,
+    "PandasIatFloat": PandasIatFloat,
+    "PandasIatInt": PandasIatInt,
+    "PandasIatSetDatetime": PandasIatSetDatetime,
+    "PandasIatSetFloat": PandasIatSetFloat,
+    "PandasIatSetInt": PandasIatSetInt,
+    "PandasIatSetString": PandasIatSetString,
+    "PandasIatString": PandasIatString,
     "PandasIlocRowSeries": PandasIlocRowSeries,
     "PandasIlocRowsDataFrame": PandasIlocRowsDataFrame,
     "PandasIlocRowsSliceDataFrame": PandasIlocRowsSliceDataFrame,
@@ -304,7 +342,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasLoadExcel": PandasLoadExcel,
     "PandasLoadHTML": PandasLoadHTML,
     "PandasLoadJSON": PandasLoadJSON,
-    "PandasLocCellStr": PandasLocCellStr,
+    "PandasLocCellString": PandasLocCellString,
     "PandasLocRowMultiIndexDataFrame": PandasLocRowMultiIndexDataFrame,
     "PandasLocRowSeries": PandasLocRowSeries,
     "PandasLog": PandasLog,
@@ -455,9 +493,15 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtvDataset": PtvDataset,
     "PtvDatasetLoader": PtvDatasetLoader,
     "PtvTransformsToTensor": PtvTransformsToTensor,
+    "PyDatetimeToString": PyDatetimeToString,
+    "PyFloatToString": PyFloatToString,
+    "PyIntToString": PyIntToString,
     "PyKvFloatCreate": PyKvFloatCreate,
     "PyKvIntCreate": PyKvIntCreate,
     "PyKvStringCreate": PyKvStringCreate,
+    "PyStringToDatetime": PyStringToDatetime,
+    "PyStringToFloat": PyStringToFloat,
+    "PyStringToInt": PyStringToInt,
     "SNSBar": SNSBar,
     "SNSBoxplot": SNSBoxplot,
     "SNSHeatmap": SNSHeatmap,
@@ -496,6 +540,14 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasAsFloat": "Pandas As Float",
     "PandasAsInt": "Pandas As Int",
     "PandasAsString": "Pandas As String",
+    "PandasAtDatetime": "Pandas At Datetime",
+    "PandasAtFloat": "Pandas At Float",
+    "PandasAtInt": "Pandas At Int",
+    "PandasAtSetDatetime": "Pandas At Set Datetime",
+    "PandasAtSetFloat": "Pandas At Set Float",
+    "PandasAtSetInt": "Pandas At Set Int",
+    "PandasAtSetString": "Pandas At Set String",
+    "PandasAtString": "Pandas At String",
     "PandasColumns": "Pandas Columns",
     "PandasCorr": "Pandas Corr",
     "PandasCos": "Pandas Cos",
@@ -527,6 +579,14 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasHead": "Pandas Head",
     "PandasHorizontalConcat": "Pandas Horizontal Concat",
     "PandasHorizontalSplit": "Pandas Horizontal Split",
+    "PandasIatDatetime": "Pandas Iat Datetime",
+    "PandasIatFloat": "Pandas Iat Float",
+    "PandasIatInt": "Pandas Iat Int",
+    "PandasIatSetDatetime": "Pandas Iat Set Datetime",
+    "PandasIatSetFloat": "Pandas Iat Set Float",
+    "PandasIatSetInt": "Pandas Iat Set Int",
+    "PandasIatSetString": "Pandas Iat Set String",
+    "PandasIatString": "Pandas Iat String",
     "PandasIlocRowSeries": "Pandas Iloc Row Series",
     "PandasIlocRowsDataFrame": "Pandas Iloc Rows DataFrame",
     "PandasIlocRowsSliceDataFrame": "Pandas Iloc Rows Slice DataFrame",
@@ -541,7 +601,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasLoadExcel": "Pandas Load Excel",
     "PandasLoadHTML": "Pandas Load HTML",
     "PandasLoadJSON": "Pandas Load JSON",
-    "PandasLocCellStr": "Pandas Loc Cell Str",
+    "PandasLocCellString": "Pandas Loc Cell String",
     "PandasLocRowMultiIndexDataFrame": "Pandas Loc Row MultiIndex DataFrame",
     "PandasLocRowSeries": "Pandas Loc Row Series",
     "PandasLog": "Pandas Log",
@@ -692,9 +752,15 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtvDataset": "Ptv Dataset",
     "PtvDatasetLoader": "Ptv Dataset Loader",
     "PtvTransformsToTensor": "Ptv Transforms To Tensor",
+    "PyDatetimeToString": "Py Datetime To String",
+    "PyFloatToString": "Py Float To String",
+    "PyIntToString": "Py Int To String",
     "PyKvFloatCreate": "Py Kv Float Create",
     "PyKvIntCreate": "Py Kv Int Create",
     "PyKvStringCreate": "Py Kv String Create",
+    "PyStringToDatetime": "Py String To Datetime",
+    "PyStringToFloat": "Py String To Float",
+    "PyStringToInt": "Py String To Int",
     "SNSBar": "SNS Bar Chart",
     "SNSBoxplot": "SNS Boxplot",
     "SNSHeatmap": "SNS Heatmap",

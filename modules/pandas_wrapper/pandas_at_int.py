@@ -2,9 +2,9 @@ from typing import Any, Dict
 from io import StringIO
 import pandas as pd
 
-class PandasLocCellStr:
+class PandasAtInt:
     """
-    Selects a cell from a pandas DataFrame and output as a string.
+    Selects a cell from a pandas DataFrame and output as a Python int.
 
     category: Data subset selection
     """
@@ -27,11 +27,11 @@ class PandasLocCellStr:
             }
         }
 
-    RETURN_TYPES: tuple = ("STRING",)
-    FUNCTION: str = "cell"
+    RETURN_TYPES: tuple = ("INT",)
+    FUNCTION: str = "f"
     CATEGORY: str = "Data Analysis"
 
-    def cell(self, dataframe: pd.DataFrame,
+    def f(self, dataframe: pd.DataFrame,
              row_index: str,
              row_index_type: str,
              column_label: str,
@@ -52,5 +52,5 @@ class PandasLocCellStr:
         row_index = int(row_index) if row_index_type == "int" else row_index
         column_label = int(column_label) if column_label_type == "int" else column_label
 
-        value = dataframe.loc[row_index, column_label]
-        return (str(value),)
+        value = dataframe.at[row_index, column_label]
+        return (int(value),)
