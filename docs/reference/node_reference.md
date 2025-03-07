@@ -275,6 +275,7 @@
 | [Ptn Linear Model](ptn_linear_model.md) | A linear model consisting of dense layers.   |
 | [Ptv Dataset](ptv_dataset.md) | A Torchvision Dataset class wrapper. |
 | [Ptv Dataset Loader](ptv_dataset_loader.md) | A node to combine the dataset and data loader into a single node. |
+| [Ptv Image Folder Dataset](ptv_image_folder_dataset.md) | A Torchvision ImageFolder Dataset class wrapper. |
 | [Ptv Transforms To Tensor](ptv_transforms_to_tensor.md) | Transforms elements of dataset to PyTorch tensors. |
 ## PyTorch wrapper - Transform
 | Node | Description |

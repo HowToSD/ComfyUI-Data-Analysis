@@ -242,6 +242,7 @@ from .modules.pytorch_wrapper.ptn_linear_model import PtnLinearModel
 from .modules.pytorch_wrapper.pto_adam import PtoAdam
 from .modules.pytorch_wrapper.ptv_dataset import PtvDataset
 from .modules.pytorch_wrapper.ptv_dataset_loader import PtvDatasetLoader
+from .modules.pytorch_wrapper.ptv_image_folder_dataset import PtvImageFolderDataset
 from .modules.pytorch_wrapper.ptv_transforms_to_tensor import PtvTransformsToTensor
 from .modules.seaborn_wrapper.sns_bar import SNSBar
 from .modules.seaborn_wrapper.sns_boxplot import SNSBoxplot
@@ -492,6 +493,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtoAdam": PtoAdam,
     "PtvDataset": PtvDataset,
     "PtvDatasetLoader": PtvDatasetLoader,
+    "PtvImageFolderDataset": PtvImageFolderDataset,
     "PtvTransformsToTensor": PtvTransformsToTensor,
     "PyDatetimeToString": PyDatetimeToString,
     "PyFloatToString": PyFloatToString,
@@ -751,6 +753,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtoAdam": "Pto Adam",
     "PtvDataset": "Ptv Dataset",
     "PtvDatasetLoader": "Ptv Dataset Loader",
+    "PtvImageFolderDataset": "Ptv Image Folder Dataset",
     "PtvTransformsToTensor": "Ptv Transforms To Tensor",
     "PyDatetimeToString": "Py Datetime To String",
     "PyFloatToString": "Py Float To String",
