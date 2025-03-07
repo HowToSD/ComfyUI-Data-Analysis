@@ -54,6 +54,7 @@
 | [Pandas At Float](pandas_at_float.md) | Selects a cell from a pandas DataFrame and output as a Python float. |
 | [Pandas At Int](pandas_at_int.md) | Selects a cell from a pandas DataFrame and output as a Python int. |
 | [Pandas At String](pandas_at_string.md) | Selects a cell from a pandas DataFrame and output as a string. |
+| [Pandas Boolean Index](pandas_boolean_index.md) | Selects rows from a pandas DataFrame based on the boolean index in the Series. |
 | [Pandas Head](pandas_head.md) | Retrieves the first few rows of a pandas DataFrame. |
 | [Pandas Iat Datetime](pandas_iat_datetime.md) | Selects a cell from a pandas DataFrame and output as a Python datetime.datetime data. |
 | [Pandas Iat Float](pandas_iat_float.md) | Selects a cell from a pandas DataFrame and output as a Python float. |
@@ -65,6 +66,7 @@
 | [Pandas Loc Cell String](pandas_loc_cell_string.md) | Selects a cell from a pandas DataFrame and output as a string. |
 | [Pandas Loc Row MultiIndex DataFrame](pandas_loc_row_multiindex_dataframe.md) | Selects a row or rows from a pandas DataFrame with MultiIndex and output as a DataFrame. |
 | [Pandas Loc Row Series](pandas_loc_row_series.md) | Selects a row from a pandas DataFrame and output as a Series. |
+| [Pandas Select Column As Series](pandas_select_column_as_series.md) | Selects specific column as Series from a pandas DataFrame. |
 | [Pandas Select Columns](pandas_select_columns.md) | Selects specific columns from a pandas DataFrame. |
 | [Pandas Select Rows](pandas_select_rows.md) | Selects specific rows from a pandas DataFrame based on a condition.  This node internally calls DataFrame.query(). |
 | [Pandas Xs](pandas_xs.md) | Selects a subset of a Pandas DataFrame using specified index labels or positions. |
@@ -114,6 +116,8 @@
 | [Pandas Create From Numpy](pandas_create_from_numpy.md) | Creates a pandas DataFrame from a NumPy ndarray. |
 | [Pandas Create From Tensor](pandas_create_from_tensor.md) | Creates a pandas DataFrame from a PyTorch tensor. |
 | [Pandas Create Series From Dict](pandas_create_series_from_dict.md) | Creates a Pandas Series from a Python dictionary. |
+| [Pandas Create Series From List](pandas_create_series_from_list.md) | Creates a Pandas Series from a Python list. |
+| [Pandas Create Series From List Index List](pandas_create_series_from_list_index_list.md) | Creates a Pandas Series from a Python list of cell values and a list for index. |
 | [Pandas Create With Index](pandas_create_with_index.md) | Creates a pandas DataFrame using values entered in the text field. Input data is assumed to have an index. |
 | [Pandas Load CSV](pandas_load_csv.md) | Loads CSV files into a pandas DataFrame. |
 | [Pandas Load CSV With Encoding](pandas_load_csv_with_encoding.md) | Loads CSV files into a pandas DataFrame. |
@@ -128,11 +132,23 @@
 | Node | Description |
 | --- | --- |
 | [Pandas Eq](pandas_eq.md) | Determines whether each element in the first pandas DataFrame is equal to the corresponding element in the second DataFrame. |
+| [Pandas Eq Scalar Float](pandas_eq_scalar_float.md) | Determines whether each element in the pandas DataFrame is equal to the float. |
+| [Pandas Eq Scalar Int](pandas_eq_scalar_int.md) | Determines whether each element in the pandas DataFrame is equal to the float. |
 | [Pandas Ge](pandas_ge.md) | Determines whether each element in the first pandas DataFrame is greater than or equal to the corresponding element in the second DataFrame. |
+| [Pandas Ge Scalar Float](pandas_ge_scalar_float.md) | Determines whether each element in the pandas DataFrame is greater than or equal to the float. |
+| [Pandas Ge Scalar Int](pandas_ge_scalar_int.md) | Determines whether each element in the pandas DataFrame is greater than or equal to the int. |
 | [Pandas Gt](pandas_gt.md) | Determines whether each element in the first pandas DataFrame is greater than the corresponding element in the second DataFrame. |
+| [Pandas Gt Scalar Float](pandas_gt_scalar_float.md) | Determines whether each element in the first pandas DataFrame is greater than the corresponding element in the second DataFrame. |
+| [Pandas Gt Scalar Int](pandas_gt_scalar_int.md) | Determines whether each element in the first pandas DataFrame is greater than the corresponding element in the second DataFrame. |
 | [Pandas Le](pandas_le.md) | Determines whether each element in the first pandas DataFrame is less than or equal to the corresponding element in the second DataFrame. |
+| [Pandas Le Scalar Float](pandas_le_scalar_float.md) | Determines whether each element in the pandas DataFrame is less than or equal to the float. |
+| [Pandas Le Scalar Int](pandas_le_scalar_int.md) | Determines whether each element in the pandas DataFrame is less than or equal to the int. |
 | [Pandas Lt](pandas_lt.md) | Determines whether each element in the first pandas DataFrame is less than the corresponding element in the second DataFrame. |
+| [Pandas Lt Scalar Float](pandas_lt_scalar_float.md) | Determines whether each element in the pandas DataFrame is less than the float. |
+| [Pandas Lt Scalar Int](pandas_lt_scalar_int.md) | Determines whether each element in the pandas DataFrame is less than the int. |
 | [Pandas Ne](pandas_ne.md) | Determines whether each element in the first pandas DataFrame is not equal to the corresponding element in the second DataFrame. |
+| [Pandas Ne Scalar Float](pandas_ne_scalar_float.md) | Determines whether each element in the pandas DataFrame is not equal to the float. |
+| [Pandas Ne Scalar Int](pandas_ne_scalar_int.md) | Determines whether each element in the pandas DataFrame is not equal to the int. |
 ## Math
 | Node | Description |
 | --- | --- |

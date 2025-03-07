@@ -1,4 +1,4 @@
-from typing import Any, List
+from typing import Any, Dict
 import ast
 
 class PyStringToList:
@@ -9,12 +9,12 @@ class PyStringToList:
     """
     
     @classmethod
-    def INPUT_TYPES(cls) -> List[str]:
+    def INPUT_TYPES(cls) -> Dict[str, Any]:
         """
         Defines the input types for the `create` function.
 
         Returns:
-            List[str, Any]: A list specifying required input types.
+            Dict[str, Any]: A list specifying required input types.
         """
         return {
             "required": {
