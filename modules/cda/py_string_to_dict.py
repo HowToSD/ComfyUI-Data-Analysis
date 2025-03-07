@@ -1,12 +1,11 @@
 from typing import Any, Dict
-import json
+import ast
 
-class CDAJSONCreate:
+class PyStringToDict:
     """
-    CDA JSON Create:
-    Creates a serialized JSON object using values entered in the text field.
+    Creates a Python dictionary using the string values entered in the text field.
 
-    category: IO
+    category: Python wrapper
     """
     
     @classmethod
@@ -23,25 +22,20 @@ class CDAJSONCreate:
             }
         }
 
-    RETURN_TYPES: tuple = ("STRING",)
-    FUNCTION: str = "create"
+    RETURN_TYPES: tuple = ("PYDICT",)
+    FUNCTION: str = "f"
     CATEGORY: str = "Data Analysis"
 
-    def create(self, data: str) -> tuple:
+    def f(self, data: str) -> tuple:
         """
-        creating a serialized JSON object using values entered in the text field.
+        Creates a Python dictionary using the string values entered in the text field.
         
         Args:
             data (str): String value in the text field.
 
         Returns:
-            tuple: A tuple containing a JSON string.
+            tuple: A dict converted from the input string.
         """
-        # Convert to JSON
-        json_obj = json.loads(data)
-
-        # Serialize to a string
-        result_jsons = json.dumps(json_obj)
-
-        return (result_jsons,)
+        d = ast.literal_eval(data)
+        return (d,)
 

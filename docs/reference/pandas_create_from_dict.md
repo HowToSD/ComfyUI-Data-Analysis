@@ -1,6 +1,8 @@
 # Pandas Create From Dict
 Creates a pandas DataFrame from a Python dictionary.
 
+Use `Py String To Dict` node to generate a dict from a string.
+
 ## Input
 | Name | Data type |
 |---|---|

@@ -1,6 +1,6 @@
 import os
 import sys
-from typing import Any, Dict
+from typing import Any, Dict, List
 import pandas as pd
 
 PROJECT_ROOT = os.path.realpath(os.path.join(os.path.dirname(__file__), "..", ".."))
@@ -8,11 +8,12 @@ MODULE_ROOT = os.path.join(PROJECT_ROOT, "modules")
 sys.path.append(MODULE_ROOT)
 from cda.utils import python_dict_first_value_len
 
-class PandasCreateFromDict:
+class PandasCreateFromDictIndexList:
     """
-    Creates a pandas DataFrame from a Python dictionary.
+    Creates a pandas DataFrame from a Python dictionary and a list for index.
 
-    Use `Py String To Dict` node to generate a dict from a string. 
+    Use `Py String To Dict` node to generate a dict for cell values from a string. 
+    Use `Py String To List` node to generate a list for index from a string. 
 
     category: IO
     """
@@ -28,6 +29,7 @@ class PandasCreateFromDict:
         return {
             "required": {
                 "data": ("PYDICT", {}),
+                "index": ("PYLIST", {}),
             }
         }
 
@@ -35,12 +37,13 @@ class PandasCreateFromDict:
     FUNCTION: str = "f"
     CATEGORY: str = "Data Analysis"
 
-    def f(self, data: Dict) -> tuple:
+    def f(self, data: Dict, index: List) -> tuple:
         """
         Creates a pandas DataFrame from a Python dictionary.
 
         Args:
-            data (Dict): A Python dictionary.
+            data (Dict): A Python dictionary containing cell values.
+            index (List):  A Python list containing index.
 
         Returns:
             tuple: A tuple containing a the DataFrame.
@@ -48,7 +51,9 @@ class PandasCreateFromDict:
         if not data:
             df = pd.DataFrame()  # Return an empty DataFrame if no data is provided.
         else:
-            value_length = python_dict_first_value_len(data)
-            df = pd.DataFrame(data, index=list(range(value_length)))
-
+            if not list:
+                value_length = python_dict_first_value_len(data)
+                df = pd.DataFrame(data, index=list(range(value_length)))
+            else:
+                df = pd.DataFrame(data, index=index)
         return (df,)

@@ -109,6 +109,7 @@
 | [CDA Text Create](cda_text_create.md) | Creates a Python String using a value entered in a multi-line text field. |
 | [Pandas Create](pandas_create.md) | Creates a pandas DataFrame using values entered in the text field. |
 | [Pandas Create From Dict](pandas_create_from_dict.md) | Creates a pandas DataFrame from a Python dictionary. |
+| [Pandas Create From Dict Index List](pandas_create_from_dict_index_list.md) | Creates a pandas DataFrame from a Python dictionary and a list for index. |
 | [Pandas Create From Multiple Dict](pandas_create_from_multiple_dict.md) | Creates a pandas DataFrame from multiple Python dictionaries. |
 | [Pandas Create From Numpy](pandas_create_from_numpy.md) | Creates a pandas DataFrame from a NumPy ndarray. |
 | [Pandas Create From Tensor](pandas_create_from_tensor.md) | Creates a pandas DataFrame from a PyTorch tensor. |
@@ -123,6 +124,15 @@
 | [Pandas Save CSV](pandas_save_csv.md) | Saves a PandasDataFrame to a CSV file. |
 | [Pandas Save JSON](pandas_save_json.md) | Saves a PandasDataFrame to a JSON file. |
 | [Pt Save Model](pt_save_model.md) | A wrapper class for saving a PyTorch model. |
+## Logical operations
+| Node | Description |
+| --- | --- |
+| [Pandas Eq](pandas_eq.md) | Determines whether each element in the first pandas DataFrame is equal to the corresponding element in the second DataFrame. |
+| [Pandas Ge](pandas_ge.md) | Determines whether each element in the first pandas DataFrame is greater than or equal to the corresponding element in the second DataFrame. |
+| [Pandas Gt](pandas_gt.md) | Determines whether each element in the first pandas DataFrame is greater than the corresponding element in the second DataFrame. |
+| [Pandas Le](pandas_le.md) | Determines whether each element in the first pandas DataFrame is less than or equal to the corresponding element in the second DataFrame. |
+| [Pandas Lt](pandas_lt.md) | Determines whether each element in the first pandas DataFrame is less than the corresponding element in the second DataFrame. |
+| [Pandas Ne](pandas_ne.md) | Determines whether each element in the first pandas DataFrame is not equal to the corresponding element in the second DataFrame. |
 ## Math
 | Node | Description |
 | --- | --- |
@@ -297,8 +307,10 @@
 | [Py Kv Int Create](py_kv_int_create.md) |  Creates a Python dictionary with an string key and an integer value. |
 | [Py Kv String Create](py_kv_string_create.md) | Creates a Python dictionary with a string key and a string value. |
 | [Py String To Datetime](py_string_to_datetime.md) | Converts a Python string to a Python datetime.datetime. |
+| [Py String To Dict](py_string_to_dict.md) | Creates a Python dictionary using the string values entered in the text field. |
 | [Py String To Float](py_string_to_float.md) | Converts a Python string to a float. |
 | [Py String To Int](py_string_to_int.md) | Converts a Python string to an int. |
+| [Py String To List](py_string_to_list.md) | Creates a Python list using the string values entered in the text field. |
 ## Summary statistics
 | Node | Description |
 | --- | --- |

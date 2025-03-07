@@ -14,8 +14,10 @@ from .modules.cda.py_kv_float_create import PyKvFloatCreate
 from .modules.cda.py_kv_int_create import PyKvIntCreate
 from .modules.cda.py_kv_string_create import PyKvStringCreate
 from .modules.cda.py_string_to_datetime import PyStringToDatetime
+from .modules.cda.py_string_to_dict import PyStringToDict
 from .modules.cda.py_string_to_float import PyStringToFloat
 from .modules.cda.py_string_to_int import PyStringToInt
+from .modules.cda.py_string_to_list import PyStringToList
 from .modules.matplotlib.mpl_bar import MPLBar
 from .modules.matplotlib.mpl_line import MPLLine
 from .modules.matplotlib.mpl_pie_chart import MPLPieChart
@@ -46,6 +48,7 @@ from .modules.pandas_wrapper.pandas_count import PandasCount
 from .modules.pandas_wrapper.pandas_cov import PandasCov
 from .modules.pandas_wrapper.pandas_create import PandasCreate
 from .modules.pandas_wrapper.pandas_create_from_dict import PandasCreateFromDict
+from .modules.pandas_wrapper.pandas_create_from_dict_index_list import PandasCreateFromDictIndexList
 from .modules.pandas_wrapper.pandas_create_from_multiple_dict import PandasCreateFromMultipleDict
 from .modules.pandas_wrapper.pandas_create_from_numpy import PandasCreateFromNumpy
 from .modules.pandas_wrapper.pandas_create_from_tensor import PandasCreateFromTensor
@@ -62,11 +65,14 @@ from .modules.pandas_wrapper.pandas_div_scalar_int import PandasDivScalarInt
 from .modules.pandas_wrapper.pandas_div_series import PandasDivSeries
 from .modules.pandas_wrapper.pandas_drop_duplicates import PandasDropDuplicates
 from .modules.pandas_wrapper.pandas_dropna import PandasDropNA
+from .modules.pandas_wrapper.pandas_eq import PandasEq
 from .modules.pandas_wrapper.pandas_exp import PandasExp
 from .modules.pandas_wrapper.pandas_feature_split_to_numpy import PandasFeatureSplitToNumpy
 from .modules.pandas_wrapper.pandas_fillna_scalar_float import PandasFillNAScalarFloat
 from .modules.pandas_wrapper.pandas_fillna_scalar_int import PandasFillNAScalarInt
+from .modules.pandas_wrapper.pandas_ge import PandasGe
 from .modules.pandas_wrapper.pandas_group_by import PandasGroupBy
+from .modules.pandas_wrapper.pandas_gt import PandasGt
 from .modules.pandas_wrapper.pandas_head import PandasHead
 from .modules.pandas_wrapper.pandas_horizontal_concat import PandasHorizontalConcat
 from .modules.pandas_wrapper.pandas_horizontal_split import PandasHorizontalSplit
@@ -86,6 +92,7 @@ from .modules.pandas_wrapper.pandas_index_to_string import PandasIndexToString
 from .modules.pandas_wrapper.pandas_isna import PandasIsNA
 from .modules.pandas_wrapper.pandas_join import PandasJoin
 from .modules.pandas_wrapper.pandas_kurtosis import PandasKurtosis
+from .modules.pandas_wrapper.pandas_le import PandasLe
 from .modules.pandas_wrapper.pandas_load_csv import PandasLoadCSV
 from .modules.pandas_wrapper.pandas_load_csv_with_encoding import PandasLoadCSVWithEncoding
 from .modules.pandas_wrapper.pandas_load_csv_with_index import PandasLoadCSVWithIndex
@@ -96,6 +103,7 @@ from .modules.pandas_wrapper.pandas_loc_cell_string import PandasLocCellString
 from .modules.pandas_wrapper.pandas_loc_row_multiindex_dataframe import PandasLocRowMultiIndexDataFrame
 from .modules.pandas_wrapper.pandas_loc_row_series import PandasLocRowSeries
 from .modules.pandas_wrapper.pandas_log import PandasLog
+from .modules.pandas_wrapper.pandas_lt import PandasLt
 from .modules.pandas_wrapper.pandas_max import PandasMax
 from .modules.pandas_wrapper.pandas_mean import PandasMean
 from .modules.pandas_wrapper.pandas_median import PandasMedian
@@ -106,6 +114,7 @@ from .modules.pandas_wrapper.pandas_mul import PandasMul
 from .modules.pandas_wrapper.pandas_mul_scalar_float import PandasMulScalarFloat
 from .modules.pandas_wrapper.pandas_mul_scalar_int import PandasMulScalarInt
 from .modules.pandas_wrapper.pandas_mul_series import PandasMulSeries
+from .modules.pandas_wrapper.pandas_ne import PandasNe
 from .modules.pandas_wrapper.pandas_pivot import PandasPivot
 from .modules.pandas_wrapper.pandas_pow import PandasPow
 from .modules.pandas_wrapper.pandas_pow_scalar_float import PandasPowScalarFloat
@@ -298,6 +307,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasCov": PandasCov,
     "PandasCreate": PandasCreate,
     "PandasCreateFromDict": PandasCreateFromDict,
+    "PandasCreateFromDictIndexList": PandasCreateFromDictIndexList,
     "PandasCreateFromMultipleDict": PandasCreateFromMultipleDict,
     "PandasCreateFromNumpy": PandasCreateFromNumpy,
     "PandasCreateFromTensor": PandasCreateFromTensor,
@@ -314,11 +324,14 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasDivSeries": PandasDivSeries,
     "PandasDropDuplicates": PandasDropDuplicates,
     "PandasDropNA": PandasDropNA,
+    "PandasEq": PandasEq,
     "PandasExp": PandasExp,
     "PandasFeatureSplitToNumpy": PandasFeatureSplitToNumpy,
     "PandasFillNAScalarFloat": PandasFillNAScalarFloat,
     "PandasFillNAScalarInt": PandasFillNAScalarInt,
+    "PandasGe": PandasGe,
     "PandasGroupBy": PandasGroupBy,
+    "PandasGt": PandasGt,
     "PandasHead": PandasHead,
     "PandasHorizontalConcat": PandasHorizontalConcat,
     "PandasHorizontalSplit": PandasHorizontalSplit,
@@ -338,6 +351,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasIsNA": PandasIsNA,
     "PandasJoin": PandasJoin,
     "PandasKurtosis": PandasKurtosis,
+    "PandasLe": PandasLe,
     "PandasLoadCSV": PandasLoadCSV,
     "PandasLoadCSVWithEncoding": PandasLoadCSVWithEncoding,
     "PandasLoadCSVWithIndex": PandasLoadCSVWithIndex,
@@ -348,6 +362,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasLocRowMultiIndexDataFrame": PandasLocRowMultiIndexDataFrame,
     "PandasLocRowSeries": PandasLocRowSeries,
     "PandasLog": PandasLog,
+    "PandasLt": PandasLt,
     "PandasMax": PandasMax,
     "PandasMean": PandasMean,
     "PandasMedian": PandasMedian,
@@ -358,6 +373,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasMulScalarFloat": PandasMulScalarFloat,
     "PandasMulScalarInt": PandasMulScalarInt,
     "PandasMulSeries": PandasMulSeries,
+    "PandasNe": PandasNe,
     "PandasPivot": PandasPivot,
     "PandasPow": PandasPow,
     "PandasPowScalarFloat": PandasPowScalarFloat,
@@ -504,8 +520,10 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PyKvIntCreate": PyKvIntCreate,
     "PyKvStringCreate": PyKvStringCreate,
     "PyStringToDatetime": PyStringToDatetime,
+    "PyStringToDict": PyStringToDict,
     "PyStringToFloat": PyStringToFloat,
     "PyStringToInt": PyStringToInt,
+    "PyStringToList": PyStringToList,
     "SNSBar": SNSBar,
     "SNSBoxplot": SNSBoxplot,
     "SNSHeatmap": SNSHeatmap,
@@ -559,6 +577,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasCov": "Pandas Cov",
     "PandasCreate": "Pandas Create",
     "PandasCreateFromDict": "Pandas Create From Dict",
+    "PandasCreateFromDictIndexList": "Pandas Create From Dict Index List",
     "PandasCreateFromMultipleDict": "Pandas Create From Multiple Dict",
     "PandasCreateFromNumpy": "Pandas Create From Numpy",
     "PandasCreateFromTensor": "Pandas Create From Tensor",
@@ -575,11 +594,14 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasDivSeries": "Pandas Div Series",
     "PandasDropDuplicates": "Pandas Drop Duplicates",
     "PandasDropNA": "Pandas Drop NA",
+    "PandasEq": "Pandas Eq",
     "PandasExp": "Pandas Exp",
     "PandasFeatureSplitToNumpy": "Pandas Feature Split To Numpy",
     "PandasFillNAScalarFloat": "Pandas Fill NA Scalar Float",
     "PandasFillNAScalarInt": "Pandas Fill NA Scalar Int",
+    "PandasGe": "Pandas Ge",
     "PandasGroupBy": "Pandas Group By",
+    "PandasGt": "Pandas Gt",
     "PandasHead": "Pandas Head",
     "PandasHorizontalConcat": "Pandas Horizontal Concat",
     "PandasHorizontalSplit": "Pandas Horizontal Split",
@@ -599,6 +621,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasIsNA": "Pandas Is NA",
     "PandasJoin": "Pandas Join",
     "PandasKurtosis": "Pandas Kurtosis",
+    "PandasLe": "Pandas Le",
     "PandasLoadCSV": "Pandas Load CSV",
     "PandasLoadCSVWithEncoding": "Pandas Load CSV With Encoding",
     "PandasLoadCSVWithIndex": "Pandas Load CSV With Index",
@@ -609,6 +632,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasLocRowMultiIndexDataFrame": "Pandas Loc Row MultiIndex DataFrame",
     "PandasLocRowSeries": "Pandas Loc Row Series",
     "PandasLog": "Pandas Log",
+    "PandasLt": "Pandas Lt",
     "PandasMax": "Pandas Max",
     "PandasMean": "Pandas Mean",
     "PandasMedian": "Pandas Median",
@@ -619,6 +643,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasMulScalarFloat": "Pandas Mul Scalar Float",
     "PandasMulScalarInt": "Pandas Mul Scalar Int",
     "PandasMulSeries": "Pandas Mul Series",
+    "PandasNe": "Pandas Ne",
     "PandasPivot": "Pandas Pivot",
     "PandasPow": "Pandas Pow",
     "PandasPowScalarFloat": "Pandas Pow Scalar Float",
@@ -765,8 +790,10 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PyKvIntCreate": "Py Kv Int Create",
     "PyKvStringCreate": "Py Kv String Create",
     "PyStringToDatetime": "Py String To Datetime",
+    "PyStringToDict": "Py String To Dict",
     "PyStringToFloat": "Py String To Float",
     "PyStringToInt": "Py String To Int",
+    "PyStringToList": "Py String To List",
     "SNSBar": "SNS Bar Chart",
     "SNSBoxplot": "SNS Boxplot",
     "SNSHeatmap": "SNS Heatmap",
