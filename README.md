@@ -1,45 +1,10 @@
 # ComfyUI-Data-Analysis
-## Update (March 5, 2025)
-Training workflow trains the FashionMNIST model from scratch with a single click of a button.
+## Update (March 7, 2025)
+You can now use newly added nodes to train a machine learning model for image classification with your own image data **without any coding** from scratch.
 
-Experimental PyTorch model training has been added (documentation coming soon).
-No coding required—training is as simple as a single click!
+Check out [the new tutorial to classify dogs and cats](docs/dog_cat_classification_model_training.md)
 
-It is designed to be modular. For example, to switch from a linear model to a conv model, you can just replace the model node (see screenshot below).
-
-Or you can just drag and drop below workflows to ComfyUI to check it out. Model is downloaded automatically:
-
-Linear model  
-* Training: examples/fashion_mnist_train.json  
-* Evaluation: examples/fashion_mnist_eval.json
-
-Convolutional model  
-* Training: examples/fashion_mnist_train_conv.json  
-* Evaluation: examples/fashion_mnist_eval_conv.json
-
-These training workflows train a FashionMNIST model from scratch effortlessly.
-
-### Training workflow
-**Linear model**
-![Train](docs/images/fashion_mnist_train.png)
-
-**Conv model**
-![Train](docs/images/conv_train.png)
-
-*Close up of the conv node*
-![Train](docs/images/conv_train2.png)
-
-### Eval workflow
-**Linear model**
-![Eval](docs/images/fashion_mnist_eval.png)
-
-**Conv model**
-![Eval](docs/images/conv_eval.png)
-
-Note that the training feature is a proof of concept and currently supports only the linear and conv models. Additional models may be added based on demand.
-
-<hr>
-
+---
 ![Baseball tutorial](docs/images/baseball_question.jpg)
 ## How Can We Figure Out Which MLB Player Had the Most Hits Per Year?
 
