@@ -4,7 +4,7 @@ import pandas as pd
 
 class PandasGtScalarInt:
     """
-    Determines whether each element in the first pandas DataFrame is greater than the corresponding element in the second DataFrame.
+    Determines whether each element in the pandas DataFrame is greater than the int.
 
     category: Logical operations
     """

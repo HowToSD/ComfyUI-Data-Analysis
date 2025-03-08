@@ -4,7 +4,7 @@ import pandas as pd
 
 class PandasEqScalarInt:
     """
-    Determines whether each element in the pandas DataFrame is equal to the float.
+    Determines whether each element in the pandas DataFrame is equal to the int.
 
     category: Logical operations
     """

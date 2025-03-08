@@ -1,5 +1,5 @@
 # Pandas Gt Scalar Float
-Determines whether each element in the first pandas DataFrame is greater than the corresponding element in the second DataFrame.
+Determines whether each element in the pandas DataFrame is greater than the float.
 
 ## Input
 | Name | Data type |

@@ -133,13 +133,13 @@
 | --- | --- |
 | [Pandas Eq](pandas_eq.md) | Determines whether each element in the first pandas DataFrame is equal to the corresponding element in the second DataFrame. |
 | [Pandas Eq Scalar Float](pandas_eq_scalar_float.md) | Determines whether each element in the pandas DataFrame is equal to the float. |
-| [Pandas Eq Scalar Int](pandas_eq_scalar_int.md) | Determines whether each element in the pandas DataFrame is equal to the float. |
+| [Pandas Eq Scalar Int](pandas_eq_scalar_int.md) | Determines whether each element in the pandas DataFrame is equal to the int. |
 | [Pandas Ge](pandas_ge.md) | Determines whether each element in the first pandas DataFrame is greater than or equal to the corresponding element in the second DataFrame. |
 | [Pandas Ge Scalar Float](pandas_ge_scalar_float.md) | Determines whether each element in the pandas DataFrame is greater than or equal to the float. |
 | [Pandas Ge Scalar Int](pandas_ge_scalar_int.md) | Determines whether each element in the pandas DataFrame is greater than or equal to the int. |
 | [Pandas Gt](pandas_gt.md) | Determines whether each element in the first pandas DataFrame is greater than the corresponding element in the second DataFrame. |
-| [Pandas Gt Scalar Float](pandas_gt_scalar_float.md) | Determines whether each element in the first pandas DataFrame is greater than the corresponding element in the second DataFrame. |
-| [Pandas Gt Scalar Int](pandas_gt_scalar_int.md) | Determines whether each element in the first pandas DataFrame is greater than the corresponding element in the second DataFrame. |
+| [Pandas Gt Scalar Float](pandas_gt_scalar_float.md) | Determines whether each element in the pandas DataFrame is greater than the float. |
+| [Pandas Gt Scalar Int](pandas_gt_scalar_int.md) | Determines whether each element in the pandas DataFrame is greater than the int. |
 | [Pandas Le](pandas_le.md) | Determines whether each element in the first pandas DataFrame is less than or equal to the corresponding element in the second DataFrame. |
 | [Pandas Le Scalar Float](pandas_le_scalar_float.md) | Determines whether each element in the pandas DataFrame is less than or equal to the float. |
 | [Pandas Le Scalar Int](pandas_le_scalar_int.md) | Determines whether each element in the pandas DataFrame is less than or equal to the int. |

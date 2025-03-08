@@ -1,5 +1,5 @@
 # Pandas Eq Scalar Int
-Determines whether each element in the pandas DataFrame is equal to the float.
+Determines whether each element in the pandas DataFrame is equal to the int.
 
 ## Input
 | Name | Data type |

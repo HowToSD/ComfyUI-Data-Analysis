@@ -1,5 +1,5 @@
 # Pandas Gt Scalar Int
-Determines whether each element in the first pandas DataFrame is greater than the corresponding element in the second DataFrame.
+Determines whether each element in the pandas DataFrame is greater than the int.
 
 ## Input
 | Name | Data type |
