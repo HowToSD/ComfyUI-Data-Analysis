@@ -1,18 +1,20 @@
-# Pto Adam
-Instantiates the Adam optimizer.
+# Pt Predict Classification Model
+Performs inference on input data.
 
 ## Input
 | Name | Data type |
 |---|---|
 | model | Ptmodel |
-| learning_rate | Float |
-| beta1 | Float |
-| beta2 | Float |
+| inputs | Tensor |
+| class_id_to_name_map | Pydict |
+| use_gpu | Boolean |
 
 ## Output
 | Data type |
 |---|
-| Ptoptimizer |
+| String |
+| Int |
+| Float |
 
 <HR>
 Category: PyTorch wrapper - Training

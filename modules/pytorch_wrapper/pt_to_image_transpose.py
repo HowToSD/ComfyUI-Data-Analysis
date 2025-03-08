@@ -2,9 +2,9 @@ from typing import Any, Dict
 import torch
 
 
-class PtToImage:
+class PtToImageTranspose:
     """
-    Casts a PyTorch tensor as an Image tensor.
+    Casts a PyTorch tensor as an Image tensor and transposes it from (C, H, W) to (H, W, C). For rank-4 inputs, the batch axis remains unchanged.
 
     category: PyTorch wrapper - Image processing
     """
@@ -38,4 +38,10 @@ class PtToImage:
         Returns:
             tuple: A tuple containing the image tensor.
         """
-        return (tens,)
+        if tens.dim() == 3:
+            image = tens.permute(1, 2, 0)
+        elif tens.dim() == 4:
+            image = tens.permute(0, 2, 3, 1)
+        else:
+            raise ValueError("Only rank 3 or 4 tensors are supported.")
+        return (image,)

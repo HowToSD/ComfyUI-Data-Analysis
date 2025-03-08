@@ -5,9 +5,9 @@ import torch.nn.functional as F
 
 class PtoAdam:
     """
-    Converts PyTorch tensor to NumPy ndarray.
+    Instantiates the Adam optimizer.
 
-    category: PyTorch wrapper - Tensor data conversion
+    category: PyTorch wrapper - Training
     """
 
     @classmethod

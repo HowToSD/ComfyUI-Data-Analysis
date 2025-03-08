@@ -1,15 +1,15 @@
-# Pt From Image
-Casts an Image tensor as a PyTorch tensor.
+# Pt To Image Transpose
+Casts a PyTorch tensor as an Image tensor and transposes it from (C, H, W) to (H, W, C). For rank-4 inputs, the batch axis remains unchanged.
 
 ## Input
 | Name | Data type |
 |---|---|
-| image | Image |
+| tens | Tensor |
 
 ## Output
 | Data type |
 |---|
-| Tensor |
+| Image |
 
 <HR>
 Category: PyTorch wrapper - Image processing

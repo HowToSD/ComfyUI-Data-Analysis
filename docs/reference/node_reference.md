@@ -206,6 +206,17 @@
 | [Pt Le](pt_le.md) | Tests whether elements in the first PyTorch tensor are less than or equal to the corresponding elements in the second tensor. |
 | [Pt Lt](pt_lt.md) | Tests whether elements in the first PyTorch tensor are less than the corresponding elements in the second tensor. |
 | [Pt Ne](pt_ne.md) | Tests whether two PyTorch tensors are not equal element-wise. |
+## PyTorch wrapper - Image processing
+| Node | Description |
+| --- | --- |
+| [Pt Crop](pt_crop.md) | Crops a PyTorch tensor to the specified size. The input tensor must have a shape of (c, h, w) or (b, c, h, w). |
+| [Pt From Image](pt_from_image.md) | Casts an Image tensor as a PyTorch tensor. |
+| [Pt From Image Transpose](pt_from_image_transpose.md) | Casts an image tensor to a PyTorch tensor and transposes it from (H, W, C) to (C, H, W). For rank-4 inputs, the batch axis remains unchanged. |
+| [Pt Interpolate By Scale Factor](pt_interpolate_by_scale_factor.md) | Resizes a PyTorch tensor using interpolation by scale factor. The input tensor must have a shape of (c, h, w) or (b, c, h, w). |
+| [Pt Interpolate To Size](pt_interpolate_to_size.md) | Resizes a PyTorch tensor using interpolation. The input tensor must have a shape of (c, h, w) or (b, c, h, w). |
+| [Pt Pad](pt_pad.md) | Pads a PyTorch tensor to the specified size. Padded area will be black. The input tensor must have a shape of (c, h, w) or (b, c, h, w). |
+| [Pt To Image](pt_to_image.md) | Casts a PyTorch tensor as an Image tensor. |
+| [Pt To Image Transpose](pt_to_image_transpose.md) | Casts a PyTorch tensor as an Image tensor and transposes it from (C, H, W) to (H, W, C). For rank-4 inputs, the batch axis remains unchanged. |
 ## PyTorch wrapper - Indexing and Slicing Operations
 | Node | Description |
 | --- | --- |
@@ -271,7 +282,6 @@
 | [Pt Arange](pt_arange.md) | Creates a PyTorch tensor using `torch.arange` with the specified start, end, and step values. |
 | [Pt Bool Create](pt_bool_create.md) | Creates a PyTorch tensor of dtype bool from True or False values entered as a list in the text field. |
 | [Pt Float Create](pt_float_create.md) | Creates a PyTorch tensor with 32-bit floating point precision  |
-| [Pt From Image](pt_from_image.md) | Casts an Image tensor as a PyTorch tensor. |
 | [Pt From Latent](pt_from_latent.md) | Casts a latent tensor as a PyTorch tensor. |
 | [Pt From Numpy](pt_from_numpy.md) | Converts a NumPy ndarray to a PyTorch tensor while preserving its data type. |
 | [Pt Full](pt_full.md) | Creates a PyTorch tensor filled with a specified value using the size entered in the text field. |
@@ -285,20 +295,20 @@
 ## PyTorch wrapper - Tensor data conversion
 | Node | Description |
 | --- | --- |
-| [Pt To Image](pt_to_image.md) | Casts a PyTorch tensor as an Image tensor. |
 | [Pt To Latent](pt_to_latent.md) | Casts a PyTorch tensor as a latent tensor. |
 | [Pt To Numpy](pt_to_numpy.md) | Converts PyTorch tensor to NumPy ndarray. |
 | [Pt To Rgb Tensors](pt_to_rgb_tensors.md) | Splits a PyTorch tensor into R, G, and B tensors. |
-| [Pto Adam](pto_adam.md) | Converts PyTorch tensor to NumPy ndarray. |
 ## PyTorch wrapper - Training
 | Node | Description |
 | --- | --- |
 | [Pt Data Loader](pt_data_loader.md) | Loads data from a dataset node and creates a PyTorch DataLoader.   |
 | [Pt Evaluate Classification Model](pt_evaluate_classification_model.md) | Performs inference on test data and computes evaluation metrics. |
 | [Pt Load Model](pt_load_model.md) | A wrapper class for saving a PyTorch model. |
+| [Pt Predict Classification Model](pt_predict_classification_model.md) | Performs inference on input data. |
 | [Pt Train Classification Model](pt_train_classification_model.md) | Trains a classification model using a given dataset, optimizer, and number of epochs. |
 | [Ptn Conv Model](ptn_conv_model.md) | A convolutional model consisting of multiple convolutional layers.   |
 | [Ptn Linear Model](ptn_linear_model.md) | A linear model consisting of dense layers.   |
+| [Pto Adam](pto_adam.md) | Instantiates the Adam optimizer. |
 | [Ptv Dataset](ptv_dataset.md) | A Torchvision Dataset class wrapper. |
 | [Ptv Dataset Loader](ptv_dataset_loader.md) | A node to combine the dataset and data loader into a single node. |
 | [Ptv Image Folder Dataset](ptv_image_folder_dataset.md) | A Torchvision ImageFolder Dataset class wrapper. |

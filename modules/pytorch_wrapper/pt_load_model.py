@@ -36,6 +36,6 @@ class PtLoadModel:
 
     def f(self, model:Any, model_path: str):
         model_full_path = get_model_full_path(model_path)
-        sd = torch.load(model_full_path)
+        sd = torch.load(model_full_path, weights_only=True)
         model.load_state_dict(sd)
         return (model,)

@@ -189,6 +189,7 @@ from .modules.pytorch_wrapper.pt_bmm import PtBmm
 from .modules.pytorch_wrapper.pt_bool_create import PtBoolCreate
 from .modules.pytorch_wrapper.pt_cos import PtCos
 from .modules.pytorch_wrapper.pt_cosh import PtCosh
+from .modules.pytorch_wrapper.pt_crop import PtCrop
 from .modules.pytorch_wrapper.pt_data_loader import PtDataLoader
 from .modules.pytorch_wrapper.pt_div import PtDiv
 from .modules.pytorch_wrapper.pt_einsum import PtEinsum
@@ -199,6 +200,7 @@ from .modules.pytorch_wrapper.pt_flatten import PtFlatten
 from .modules.pytorch_wrapper.pt_float_create import PtFloatCreate
 from .modules.pytorch_wrapper.pt_floor_divide import PtFloorDiv
 from .modules.pytorch_wrapper.pt_from_image import PtFromImage
+from .modules.pytorch_wrapper.pt_from_image_transpose import PtFromImageTranspose
 from .modules.pytorch_wrapper.pt_from_latent import PtFromLatent
 from .modules.pytorch_wrapper.pt_from_numpy import PtFromNumpy
 from .modules.pytorch_wrapper.pt_full import PtFull
@@ -207,6 +209,8 @@ from .modules.pytorch_wrapper.pt_ge import PtGe
 from .modules.pytorch_wrapper.pt_gt import PtGt
 from .modules.pytorch_wrapper.pt_index_select import PtIndexSelect
 from .modules.pytorch_wrapper.pt_int_create import PtIntCreate
+from .modules.pytorch_wrapper.pt_interpolate_by_scale_factor import PtInterpolateByScaleFactor
+from .modules.pytorch_wrapper.pt_interpolate_to_size import PtInterpolateToSize
 from .modules.pytorch_wrapper.pt_le import PtLe
 from .modules.pytorch_wrapper.pt_linspace import PtLinspace
 from .modules.pytorch_wrapper.pt_load_model import PtLoadModel
@@ -227,8 +231,10 @@ from .modules.pytorch_wrapper.pt_mul import PtMul
 from .modules.pytorch_wrapper.pt_ne import PtNe
 from .modules.pytorch_wrapper.pt_neg import PtNeg
 from .modules.pytorch_wrapper.pt_ones import PtOnes
+from .modules.pytorch_wrapper.pt_pad import PtPad
 from .modules.pytorch_wrapper.pt_permute import PtPermute
 from .modules.pytorch_wrapper.pt_pow import PtPow
+from .modules.pytorch_wrapper.pt_predict_classification_model import PtPredictClassificationModel
 from .modules.pytorch_wrapper.pt_prod import PtProd
 from .modules.pytorch_wrapper.pt_rand import PtRand
 from .modules.pytorch_wrapper.pt_rand_int import PtRandInt
@@ -253,6 +259,7 @@ from .modules.pytorch_wrapper.pt_sum import PtSum
 from .modules.pytorch_wrapper.pt_tan import PtTan
 from .modules.pytorch_wrapper.pt_tanh import PtTanh
 from .modules.pytorch_wrapper.pt_to_image import PtToImage
+from .modules.pytorch_wrapper.pt_to_image_transpose import PtToImageTranspose
 from .modules.pytorch_wrapper.pt_to_latent import PtToLatent
 from .modules.pytorch_wrapper.pt_to_numpy import PtToNumpy
 from .modules.pytorch_wrapper.pt_to_rgb_tensors import PtToRgbTensors
@@ -464,6 +471,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtBoolCreate": PtBoolCreate,
     "PtCos": PtCos,
     "PtCosh": PtCosh,
+    "PtCrop": PtCrop,
     "PtDataLoader": PtDataLoader,
     "PtDiv": PtDiv,
     "PtEinsum": PtEinsum,
@@ -474,6 +482,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtFloatCreate": PtFloatCreate,
     "PtFloorDiv": PtFloorDiv,
     "PtFromImage": PtFromImage,
+    "PtFromImageTranspose": PtFromImageTranspose,
     "PtFromLatent": PtFromLatent,
     "PtFromNumpy": PtFromNumpy,
     "PtFull": PtFull,
@@ -482,6 +491,8 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtGt": PtGt,
     "PtIndexSelect": PtIndexSelect,
     "PtIntCreate": PtIntCreate,
+    "PtInterpolateByScaleFactor": PtInterpolateByScaleFactor,
+    "PtInterpolateToSize": PtInterpolateToSize,
     "PtLe": PtLe,
     "PtLinspace": PtLinspace,
     "PtLoadModel": PtLoadModel,
@@ -502,8 +513,10 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtNe": PtNe,
     "PtNeg": PtNeg,
     "PtOnes": PtOnes,
+    "PtPad": PtPad,
     "PtPermute": PtPermute,
     "PtPow": PtPow,
+    "PtPredictClassificationModel": PtPredictClassificationModel,
     "PtProd": PtProd,
     "PtRand": PtRand,
     "PtRandInt": PtRandInt,
@@ -528,6 +541,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtTan": PtTan,
     "PtTanh": PtTanh,
     "PtToImage": PtToImage,
+    "PtToImageTranspose": PtToImageTranspose,
     "PtToLatent": PtToLatent,
     "PtToNumpy": PtToNumpy,
     "PtToRgbTensors": PtToRgbTensors,
@@ -750,6 +764,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtBoolCreate": "Pt Bool Create",
     "PtCos": "Pt Cos",
     "PtCosh": "Pt Cosh",
+    "PtCrop": "Pt Crop",
     "PtDataLoader": "Pt Data Loader",
     "PtDiv": "Pt Div",
     "PtEinsum": "Pt Einsum",
@@ -760,6 +775,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtFloatCreate": "Pt Float Create",
     "PtFloorDiv": "Pt Floor Div",
     "PtFromImage": "Pt From Image",
+    "PtFromImageTranspose": "Pt From Image Transpose",
     "PtFromLatent": "Pt From Latent",
     "PtFromNumpy": "Pt From Numpy",
     "PtFull": "Pt Full",
@@ -768,6 +784,8 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtGt": "Pt Gt",
     "PtIndexSelect": "Pt Index Select",
     "PtIntCreate": "Pt Int Create",
+    "PtInterpolateByScaleFactor": "Pt Interpolate By Scale Factor",
+    "PtInterpolateToSize": "Pt Interpolate To Size",
     "PtLe": "Pt Le",
     "PtLinspace": "Pt Linspace",
     "PtLoadModel": "Pt Load Model",
@@ -788,8 +806,10 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtNe": "Pt Ne",
     "PtNeg": "Pt Neg",
     "PtOnes": "Pt Ones",
+    "PtPad": "Pt Pad",
     "PtPermute": "Pt Permute",
     "PtPow": "Pt Pow",
+    "PtPredictClassificationModel": "Pt Predict Classification Model",
     "PtProd": "Pt Prod",
     "PtRand": "Pt Rand",
     "PtRandInt": "Pt Rand Int",
@@ -814,6 +834,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtTan": "Pt Tan",
     "PtTanh": "Pt Tanh",
     "PtToImage": "Pt To Image",
+    "PtToImageTranspose": "Pt To Image Transpose",
     "PtToLatent": "Pt To Latent",
     "PtToNumpy": "Pt To Numpy",
     "PtToRgbTensors": "Pt To Rgb Tensors",
