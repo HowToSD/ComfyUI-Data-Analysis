@@ -1,9 +1,6 @@
 # ComfyUI-Data-Analysis
-## Update (March 7, 2025)
-You can now use newly added nodes to train a machine learning model for image classification with your own image data **without any coding** from scratch.
-
-Check out [the new tutorial to classify dogs and cats](docs/dog_cat_classification_model_training.md)
-
+## Update (March 10, 2025)
+All PyTorch nodes have been moved to a separate extension. If you're using PyTorch wrappers, install the [ComfyUI-Pt-Wrapper extension](https://github.com/HowToSD/ComfyUI-Pt-Wrapper).
 ---
 ![Baseball tutorial](docs/images/baseball_question.jpg)
 ## How Can We Figure Out Which MLB Player Had the Most Hits Per Year?
@@ -22,15 +19,11 @@ I hope you find it useful and engaging for data exploration.
 
 ![Baseball tutorial](docs/images/baseball_final.png)
 **ComfyUI-Data-Analysis** is an extension for ComfyUI that provides custom nodes for data analysis using Pandas, Seaborn, and Matplotlib within ComfyUI.
-
-Originally designed for structural data analysis, this extension is for you if you:
-- Want access to PyTorch's low-level methods (e.g., `add`, `div`, `max`, `where`, `scatter`, `gather`) to manipulate PyTorch tensors or extract information.
-- Are comfortable with ComfyUI and want to learn foundational PyTorch methods **without writing a single line of code**.
-- Want to analyze structural data (tabular data) using ComfyUI's node system.
+Especially, this is suited if you want to analyze structural data (tabular data) using ComfyUI's node system.
 
 ## Features
 
-**ComfyUI-Data-Analysis** includes numerous custom nodes that wrap Pandas and PyTorch.
+**ComfyUI-Data-Analysis** includes numerous custom nodes that wrap Pandas, Matplotlib and Seaborn.
 For a complete list, see the [Node Reference](docs/reference/node_reference.md).
 
 These nodes allow you to conduct complex analyses in an intuitive, graphical way. You can also combine them with other ComfyUI custom nodes to fit your workflow needs (e.g., integrating images).

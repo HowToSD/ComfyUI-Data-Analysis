@@ -12,7 +12,7 @@ import { ComfyWidgets } from "../../../scripts/widgets.js";
 app.registerExtension({
 	name: "HowToSD.ShowTextGeneric",
 	async beforeRegisterNodeDef(nodeType, nodeData, app) {
-		if (["NumpyShow", "PtShowText", "PtShowSize", "PandasShowSeries"].includes(nodeData.name)) {  // This needs to match NODE_CLASS_MAPPINGS in Python
+		if (["NumpyShow", "PandasShowSeries"].includes(nodeData.name)) {  // This needs to match NODE_CLASS_MAPPINGS in Python
 			function populate(text) {
 				if (this.widgets) {
 					// Clear all widgets on the node
