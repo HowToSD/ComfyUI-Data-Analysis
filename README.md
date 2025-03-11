@@ -35,7 +35,7 @@ These custom nodes enhance efficiency and usability in data exploration and visu
 ![SNS Line Plot](docs/images/sns_line.png)  
 *Example plot*
 
-Additionally, you can analyze images generated in ComfyUI’s workflows. Below is an example of a histogram showing the red channel pixel distribution:
+Additionally, you can analyze images generated in ComfyUI’s workflows. Below is an example of a histogram showing the red channel pixel distribution (Note that you will also need a companion extension [ComfyUI-Pt-Wrapper extension](https://github.com/HowToSD/ComfyUI-Pt-Wrapper) to access PyTorch tensors as shown in below screenshot):
 
 ![Red channel pixel distribution](docs/images/red_pixel_distribution.png)
 
