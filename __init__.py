@@ -73,6 +73,7 @@ from .modules.pandas_wrapper.pandas_eq_scalar_float import PandasEqScalarFloat
 from .modules.pandas_wrapper.pandas_eq_scalar_int import PandasEqScalarInt
 from .modules.pandas_wrapper.pandas_exp import PandasExp
 from .modules.pandas_wrapper.pandas_feature_split_to_numpy import PandasFeatureSplitToNumpy
+from .modules.pandas_wrapper.pandas_feature_split_to_pt import PandasFeatureSplitToPt
 from .modules.pandas_wrapper.pandas_fillna_scalar_float import PandasFillNAScalarFloat
 from .modules.pandas_wrapper.pandas_fillna_scalar_int import PandasFillNAScalarInt
 from .modules.pandas_wrapper.pandas_ge import PandasGe
@@ -138,6 +139,7 @@ from .modules.pandas_wrapper.pandas_pow_series import PandasPowSeries
 from .modules.pandas_wrapper.pandas_rename import PandasRename
 from .modules.pandas_wrapper.pandas_rename_advanced import PandasRenameAdvanced
 from .modules.pandas_wrapper.pandas_replace import PandasReplace
+from .modules.pandas_wrapper.pandas_replace_advanced import PandasReplaceAdvanced
 from .modules.pandas_wrapper.pandas_save_csv import PandasSaveCSV
 from .modules.pandas_wrapper.pandas_save_json import PandasSaveJSON
 from .modules.pandas_wrapper.pandas_select_column_as_series import PandasSelectColumnAsSeries
@@ -249,6 +251,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasEqScalarInt": PandasEqScalarInt,
     "PandasExp": PandasExp,
     "PandasFeatureSplitToNumpy": PandasFeatureSplitToNumpy,
+    "PandasFeatureSplitToPt": PandasFeatureSplitToPt,
     "PandasFillNAScalarFloat": PandasFillNAScalarFloat,
     "PandasFillNAScalarInt": PandasFillNAScalarInt,
     "PandasGe": PandasGe,
@@ -314,6 +317,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasRename": PandasRename,
     "PandasRenameAdvanced": PandasRenameAdvanced,
     "PandasReplace": PandasReplace,
+    "PandasReplaceAdvanced": PandasReplaceAdvanced,
     "PandasSaveCSV": PandasSaveCSV,
     "PandasSaveJSON": PandasSaveJSON,
     "PandasSelectColumnAsSeries": PandasSelectColumnAsSeries,
@@ -436,6 +440,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasEqScalarInt": "Pandas Eq Scalar Int",
     "PandasExp": "Pandas Exp",
     "PandasFeatureSplitToNumpy": "Pandas Feature Split To Numpy",
+    "PandasFeatureSplitToPt": "Pandas Feature Split To Pt",
     "PandasFillNAScalarFloat": "Pandas Fill NA Scalar Float",
     "PandasFillNAScalarInt": "Pandas Fill NA Scalar Int",
     "PandasGe": "Pandas Ge",
@@ -501,6 +506,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasRename": "Pandas Rename",
     "PandasRenameAdvanced": "Pandas Rename Advanced",
     "PandasReplace": "Pandas Replace",
+    "PandasReplaceAdvanced": "Pandas Replace Advanced",
     "PandasSaveCSV": "Pandas Save CSV",
     "PandasSaveJSON": "Pandas Save JSON",
     "PandasSelectColumnAsSeries": "Pandas Select Column As Series",

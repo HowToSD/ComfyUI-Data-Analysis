@@ -47,6 +47,7 @@
 | [Pandas Fill NA Scalar Int](pandas_fillna_scalar_int.md) | Replaces missing values in a Pandas DataFrame with an integer. |
 | [Pandas Is NA](pandas_isna.md) | Checks a pandas DataFrame for missing values. |
 | [Pandas Replace](pandas_replace.md) | Replaces part or all of a string in each DataFrame cell with a specified string using a wildcard for matching.  If you want to remove some characters, then leave the replace_string field blank. |
+| [Pandas Replace Advanced](pandas_replace_advanced.md) | Replaces strings in a DataFrame cell using a mapping specified in a dictionary. |
 ## Data subset selection
 | Node | Description |
 | --- | --- |
@@ -214,6 +215,7 @@
 | [Pandas At Set Int](pandas_at_set_int.md) | Sets a Python int data in a cell in a pandas DataFrame. |
 | [Pandas At Set String](pandas_at_set_string.md) | Sets a Python string data in a cell in a pandas DataFrame. |
 | [Pandas Feature Split To Numpy](pandas_feature_split_to_numpy.md) | Splits a Pandas DataFrame into feature Numpy ndarray and label Numpy ndarray. |
+| [Pandas Feature Split To Pt](pandas_feature_split_to_pt.md) | Splits a Pandas DataFrame into feature PyTorch tensor and label PyTorch tensor. |
 | [Pandas Horizontal Concat](pandas_horizontal_concat.md) | Horizontally concatenates two pandas DataFrames. |
 | [Pandas Horizontal Split](pandas_horizontal_split.md) | Horizontally splits a Pandas DataFrame into two pandas DataFrames. |
 | [Pandas Iat Set Datetime](pandas_iat_set_datetime.md) | Sets a Python datetime.datetime data in a cell in a pandas DataFrame. |
