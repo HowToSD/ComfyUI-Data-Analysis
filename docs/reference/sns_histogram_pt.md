@@ -1,4 +1,4 @@
-# SNS Histogram Chart Pt
+# SNS Histogram Pt
 Generates a histogram from a PyTorch tensor using Seaborn.
 
 ## Output

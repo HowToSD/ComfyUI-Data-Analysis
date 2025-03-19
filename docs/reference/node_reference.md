@@ -174,7 +174,7 @@
 | [SNS Boxplot](sns_boxplot.md) | Generates a boxplot from a Pandas DataFrame using Seaborn. |
 | [SNS Heatmap](sns_heatmap.md) | Generates a heatmap from a Pandas DataFrame using Seaborn. |
 | [SNS Histogram](sns_histogram.md) | Generates a histogram from a Pandas DataFrame using Seaborn. |
-| [SNS Histogram Chart Pt](sns_histogram_pt.md) | Generates a histogram from a PyTorch tensor using Seaborn. |
+| [SNS Histogram Pt](sns_histogram_pt.md) | Generates a histogram from a PyTorch tensor using Seaborn. |
 | [SNS Line Plot](sns_line.md) | Generates a line plot from a pandas DataFrame using Seaborn. |
 | [SNS Line Plot Pt](sns_line_pt.md) | Generates a line plot from a PyTorch tensor using Seaborn. |
 | [SNS Pairplot](sns_pairplot.md) | Generates a pairplot from a Pandas DataFrame using Seaborn. |

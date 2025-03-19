@@ -17,7 +17,7 @@ from seaborn_wrapper.util import set_up_sns_style_palette
 
 class SNSHistogramPt:
     """
-    SNS Histogram Chart Pt:
+    SNS Histogram Pt:
     Generates a histogram from a PyTorch tensor using Seaborn.
 
     category: Plot
