@@ -174,12 +174,16 @@ from .modules.pandas_wrapper.pandas_vertical_concat import PandasVerticalConcat
 from .modules.pandas_wrapper.pandas_vertical_split import PandasVerticalSplit
 from .modules.pandas_wrapper.pandas_xs import PandasXs
 from .modules.seaborn_wrapper.sns_bar import SNSBar
+from .modules.seaborn_wrapper.sns_bar_pt import SNSBarPt
 from .modules.seaborn_wrapper.sns_boxplot import SNSBoxplot
 from .modules.seaborn_wrapper.sns_heatmap import SNSHeatmap
 from .modules.seaborn_wrapper.sns_histogram import SNSHistogram
+from .modules.seaborn_wrapper.sns_histogram_pt import SNSHistogramPt
 from .modules.seaborn_wrapper.sns_line import SNSLine
+from .modules.seaborn_wrapper.sns_line_pt import SNSLinePt
 from .modules.seaborn_wrapper.sns_pairplot import SNSPairplot
 from .modules.seaborn_wrapper.sns_scatter import SNSScatter
+from .modules.seaborn_wrapper.sns_scatter_pt import SNSScatterPt
 T = TypeVar("T")
 
 
@@ -363,12 +367,16 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PyStringToInt": PyStringToInt,
     "PyStringToList": PyStringToList,
     "SNSBar": SNSBar,
+    "SNSBarPt": SNSBarPt,
     "SNSBoxplot": SNSBoxplot,
     "SNSHeatmap": SNSHeatmap,
     "SNSHistogram": SNSHistogram,
+    "SNSHistogramPt": SNSHistogramPt,
     "SNSLine": SNSLine,
+    "SNSLinePt": SNSLinePt,
     "SNSPairplot": SNSPairplot,
     "SNSScatter": SNSScatter,
+    "SNSScatterPt": SNSScatterPt,
 }
 
 
@@ -552,12 +560,16 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PyStringToInt": "Py String To Int",
     "PyStringToList": "Py String To List",
     "SNSBar": "SNS Bar Chart",
+    "SNSBarPt": "SNS Bar Chart Pt",
     "SNSBoxplot": "SNS Boxplot",
     "SNSHeatmap": "SNS Heatmap",
     "SNSHistogram": "SNS Histogram",
+    "SNSHistogramPt": "SNS Histogram Pt",
     "SNSLine": "SNS Line Plot",
+    "SNSLinePt": "SNS Line Plot Pt",
     "SNSPairplot": "SNS Pairplot",
     "SNSScatter": "SNS Scatter Plot",
+    "SNSScatterPt": "SNS Scatter Plot Pt",
 }
 
 

@@ -1,3 +1,5 @@
+import os
+import sys
 import io
 from typing import List, Tuple
 import numpy as np
@@ -11,9 +13,12 @@ import torch
 import pandas as pd
 import seaborn as sns
 from typing import Optional
-from ..pandas_wrapper.utils import column_labels_string_to_list
-from ..pandas_wrapper.utils import comma_separated_labels_string_to_list
 
+PROJECT_ROOT = os.path.realpath(os.path.join(os.path.dirname(__file__), "..", ".."))
+MODULE_ROOT = os.path.join(PROJECT_ROOT, "modules")
+sys.path.append(MODULE_ROOT)
+from pandas_wrapper.utils import column_labels_string_to_list
+from pandas_wrapper.utils import comma_separated_labels_string_to_list
 
 def process_y_columns_and_labels(df:pd.DataFrame, y_column_name: str, legend_label: str) -> Tuple[List[str], List[str]]:
     """

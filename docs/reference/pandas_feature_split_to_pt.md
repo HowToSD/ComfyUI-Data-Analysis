@@ -14,8 +14,8 @@ If output_1d_label is set, label will be output as a 1d array instead of a 2d ar
 ## Output
 | Data type |
 |---|
-| Ndarray |
-| Ndarray |
+| Tensor |
+| Tensor |
 
 <HR>
 Category: Transformation
