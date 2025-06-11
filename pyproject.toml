@@ -1,7 +1,7 @@
 [project]
 name = "data-analysis"
 description = "Data analysis custom modules for ComfyUI – Integrates Pandas, Seaborn and Matplotlib into ComfyUI."
-version = "3.0.7"
+version = "3.1.0"
 license = {file = "LICENSE"}
 
 [project.urls]

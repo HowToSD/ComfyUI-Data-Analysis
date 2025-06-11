@@ -13,6 +13,7 @@ from .modules.cda.py_int_to_string import PyIntToString
 from .modules.cda.py_kv_float_create import PyKvFloatCreate
 from .modules.cda.py_kv_int_create import PyKvIntCreate
 from .modules.cda.py_kv_string_create import PyKvStringCreate
+from .modules.cda.py_list_to_string import PyListToString
 from .modules.cda.py_string_to_datetime import PyStringToDatetime
 from .modules.cda.py_string_to_dict import PyStringToDict
 from .modules.cda.py_string_to_float import PyStringToFloat
@@ -71,6 +72,7 @@ from .modules.pandas_wrapper.pandas_dropna import PandasDropNA
 from .modules.pandas_wrapper.pandas_eq import PandasEq
 from .modules.pandas_wrapper.pandas_eq_scalar_float import PandasEqScalarFloat
 from .modules.pandas_wrapper.pandas_eq_scalar_int import PandasEqScalarInt
+from .modules.pandas_wrapper.pandas_excel_file_sheet_names import PandasExcelFileSheetNames
 from .modules.pandas_wrapper.pandas_exp import PandasExp
 from .modules.pandas_wrapper.pandas_feature_split_to_numpy import PandasFeatureSplitToNumpy
 from .modules.pandas_wrapper.pandas_feature_split_to_pt import PandasFeatureSplitToPt
@@ -253,6 +255,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PandasEq": PandasEq,
     "PandasEqScalarFloat": PandasEqScalarFloat,
     "PandasEqScalarInt": PandasEqScalarInt,
+    "PandasExcelFileSheetNames": PandasExcelFileSheetNames,
     "PandasExp": PandasExp,
     "PandasFeatureSplitToNumpy": PandasFeatureSplitToNumpy,
     "PandasFeatureSplitToPt": PandasFeatureSplitToPt,
@@ -361,6 +364,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PyKvFloatCreate": PyKvFloatCreate,
     "PyKvIntCreate": PyKvIntCreate,
     "PyKvStringCreate": PyKvStringCreate,
+    "PyListToString": PyListToString,
     "PyStringToDatetime": PyStringToDatetime,
     "PyStringToDict": PyStringToDict,
     "PyStringToFloat": PyStringToFloat,
@@ -446,6 +450,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PandasEq": "Pandas Eq",
     "PandasEqScalarFloat": "Pandas Eq Scalar Float",
     "PandasEqScalarInt": "Pandas Eq Scalar Int",
+    "PandasExcelFileSheetNames": "Pandas Excel File Sheet Names",
     "PandasExp": "Pandas Exp",
     "PandasFeatureSplitToNumpy": "Pandas Feature Split To Numpy",
     "PandasFeatureSplitToPt": "Pandas Feature Split To Pt",
@@ -554,6 +559,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PyKvFloatCreate": "Py Kv Float Create",
     "PyKvIntCreate": "Py Kv Int Create",
     "PyKvStringCreate": "Py Kv String Create",
+    "PyListToString": "Py List To String",
     "PyStringToDatetime": "Py String To Datetime",
     "PyStringToDict": "Py String To Dict",
     "PyStringToFloat": "Py String To Float",

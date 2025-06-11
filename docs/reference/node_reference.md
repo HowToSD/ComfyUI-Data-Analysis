@@ -118,6 +118,7 @@
 | [Pandas Create Series From List](pandas_create_series_from_list.md) | Creates a Pandas Series from a Python list. |
 | [Pandas Create Series From List Index List](pandas_create_series_from_list_index_list.md) | Creates a Pandas Series from a Python list of cell values and a list for index. |
 | [Pandas Create With Index](pandas_create_with_index.md) | Creates a pandas DataFrame using values entered in the text field. Input data is assumed to have an index. |
+| [Pandas Excel File Sheet Names](pandas_excel_file_sheet_names.md) | Returns the string list of sheet names contained in the Excel file. |
 | [Pandas Load CSV](pandas_load_csv.md) | Loads CSV files into a pandas DataFrame. |
 | [Pandas Load CSV With Encoding](pandas_load_csv_with_encoding.md) | Loads CSV files into a pandas DataFrame. |
 | [Pandas Load CSV With Index](pandas_load_csv_with_index.md) | Loads CSV files into a pandas DataFrame. |
@@ -189,6 +190,7 @@
 | [Py Kv Float Create](py_kv_float_create.md) | Creates a Python dictionary with a string key and a float value. |
 | [Py Kv Int Create](py_kv_int_create.md) |  Creates a Python dictionary with an string key and an integer value. |
 | [Py Kv String Create](py_kv_string_create.md) | Creates a Python dictionary with a string key and a string value. |
+| [Py List To String](py_list_to_string.md) | Converts a Python list value to a Python string |
 | [Py String To Datetime](py_string_to_datetime.md) | Converts a Python string to a Python datetime.datetime. |
 | [Py String To Dict](py_string_to_dict.md) | Creates a Python dictionary using the string values entered in the text field. |
 | [Py String To Float](py_string_to_float.md) | Converts a Python string to a float. |
